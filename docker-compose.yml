@@ -1,0 +1,54 @@
+# Tronc commun AssurConnect : MariaDB + JupyterLab (séances 1 à 4)
+networks:
+  dq_network:
+    driver: bridge
+
+volumes:
+  mariadb_data:
+  jupyter_work:
+
+services:
+  mariadb:
+    image: mariadb:11.2
+    container_name: dq_mariadb
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_nopad_bin
+    environment:
+      MARIADB_ROOT_PASSWORD: root          # développement uniquement
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d:ro   # bases et tables créées au premier démarrage
+    networks:
+      - dq_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  jupyter:
+    build:
+      context: ./jupyter
+    container_name: dq_jupyter
+    ports:
+      - "8888:8888"
+      - "8502:8502"                        # catalogue Streamlit (séance 5)
+    environment:
+      JUPYTER_TOKEN: assurconnect          # développement uniquement : http://localhost:8888/lab?token=assurconnect
+    volumes:
+      - jupyter_work:/home/jovyan/work
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./soda:/home/jovyan/work/soda
+      - ./data:/home/jovyan/work/data:ro
+      - ./reports:/home/jovyan/work/reports
+      - ./pipelines:/home/jovyan/work/pipelines
+      - ./catalogue:/home/jovyan/work/catalogue   # séance 5
+    networks:
+      - dq_network
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: unless-stopped

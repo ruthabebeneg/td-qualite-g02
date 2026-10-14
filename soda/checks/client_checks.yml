@@ -1,0 +1,33 @@
+checks for client:
+  # RQ-020 : clé primaire unique et renseignée
+  - duplicate_count(client_id) = 0
+  - missing_count(client_id) = 0
+
+  # RQ-009 : type de personne dans le domaine
+  - invalid_count(type_personne) = 0:
+      name: RQ-009 type de personne autorise
+      valid values: ['prospect', 'souscripteur', 'assure']
+
+  # RQ-003 : téléphone d'un souscripteur renseigné (nul, vide ou blanc)
+  - failed rows:
+      name: RQ-003 telephone du souscripteur renseigne
+      fail condition: type_personne = 'souscripteur' AND (telephone IS NULL OR TRIM(telephone) = '')
+
+  # RQ-005 : code postal à 5 chiffres pour une adresse en France
+  - failed rows:
+      name: RQ-005 code postal sur 5 chiffres (France)
+      fail condition: pays = 'FR' AND cp NOT REGEXP '^[0-9]{5}$'
+
+  # RQ-007 : pays dans la liste de référence
+  - failed rows:
+      name: RQ-007 pays dans la liste de reference
+      fail query: |
+        SELECT client_id FROM client WHERE pays NOT IN (SELECT code_pays FROM silver.ref_pays)
+
+  # RQ-015 : un prospect n'a aucun contrat (échoue sur les données brutes)
+  - failed rows:
+      name: RQ-015 prospect sans contrat
+      fail query: |
+        SELECT c.client_id FROM client c
+        WHERE c.type_personne = 'prospect'
+          AND EXISTS (SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id)

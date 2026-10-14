@@ -1,0 +1,33 @@
+# Une source de données par base : les mêmes fichiers de checks se lancent sur chaque couche
+# (dans bronze, les tables s'appellent crm_client, crm_contrat, crm_sinistre)
+data_source crm:
+  type: mysql
+  host: mariadb
+  port: 3306
+  username: root
+  password: root
+  database: crm
+
+data_source bronze:
+  type: mysql
+  host: mariadb
+  port: 3306
+  username: root
+  password: root
+  database: bronze
+
+data_source silver:
+  type: mysql
+  host: mariadb
+  port: 3306
+  username: root
+  password: root
+  database: silver
+
+data_source gold:
+  type: mysql
+  host: mariadb
+  port: 3306
+  username: root
+  password: root
+  database: gold

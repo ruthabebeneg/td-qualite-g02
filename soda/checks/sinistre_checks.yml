@@ -1,0 +1,28 @@
+checks for sinistre:
+  - duplicate_count(sinistre_id) = 0:
+      name: RQ-020 identifiant de sinistre unique
+
+  # RQ-014, volet format : code postal à 5 chiffres, adresse renseignée
+  - invalid_count(cp_sinistre) = 0:
+      name: RQ-014 code postal de sinistre sur 5 chiffres
+      valid regex: '^[0-9]{5}$'
+  - missing_count(adresse_sinistre) = 0
+
+  # RQ-017 : le sinistre survient pendant la période de garantie du contrat
+  - failed rows:
+      name: RQ-017 sinistre hors periode de garantie
+      fail query: |
+        SELECT s.sinistre_id FROM sinistre s JOIN contrat c ON c.contrat_id = s.contrat_id
+        WHERE s.date_survenance < c.date_debut OR s.date_survenance > c.date_fin
+
+  # RQ-014, volet BAN : seuils d'alerte sur le taux d'adresses non reconnues, comme le tableau de suivi de Yanis
+  - taux_erreur_adresse:
+      taux_erreur_adresse query: |
+        SELECT 100.0 * SUM(b.id_ban IS NULL) / COUNT(*) AS taux_erreur
+        FROM sinistre s
+        LEFT JOIN silver.ref_ban b
+               ON CONCAT(b.numero, ' ', b.voie) = s.adresse_sinistre
+              AND b.code_postal = s.cp_sinistre
+              AND b.commune = s.ville_sinistre
+      warn: when > 3
+      fail: when > 10
