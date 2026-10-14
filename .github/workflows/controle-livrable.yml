@@ -1,0 +1,17 @@
+name: Controle du depot
+
+# Rapport d'avancement a chaque push ; echec uniquement si un fichier interdit est suivi (data/, CSV, sauvegardes, .env).
+on:
+  push:
+  pull_request:
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Avancement des livrables et fichiers interdits
+        run: python3 scripts/controle_livrable.py

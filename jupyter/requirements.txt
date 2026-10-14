@@ -1,0 +1,19 @@
+# Résolu et installé sur Python 3.11 (voir enseignant/tests_stack/RESULTATS_TESTS.md)
+pandas==2.3.3
+sqlalchemy==2.0.35
+pymysql==1.1.1
+numpy==1.26.4              # Great Expectations 0.18 exige numpy < 2.0
+matplotlib==3.10.0
+scipy==1.15.3
+pyspark==3.5.0
+setuptools<81              # ydata-profiling importe pkg_resources
+
+# Data Quality et profilage
+ydata-profiling==4.17.0
+great_expectations==0.18.19
+soda-core-mysql==3.3.5     # son connecteur épinglé (8.0.30) est remplacé par 8.4.0 dans le Dockerfile (MariaDB)
+evidently==0.6.4
+sweetviz==2.3.3
+rapidfuzz==3.14.6
+
+jupyterlab==4.6.4

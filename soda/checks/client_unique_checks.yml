@@ -1,0 +1,4 @@
+# À lancer sur la source de données gold : soda scan -d gold -c soda/configuration.yml soda/checks/client_unique_checks.yml
+# RQ-019 : sur gold.client_unique, un seul CLI par personne
+checks for client_unique:
+  - duplicate_count(cli_id) = 0

@@ -1,0 +1,26 @@
+# Données du TD : fournies par l'enseignant, jamais dans le dépôt
+data/
+*.csv
+!livrables/**/*.csv
+
+# Sauvegardes et exports de base
+*.sql.gz
+*.dump
+etats/
+
+# Secrets et environnement local
+.env
+*.pem
+
+# Python et Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# Great Expectations : résultats locaux
+**/uncommitted/
+
+# Système
+.DS_Store
+Thumbs.db

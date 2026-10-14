@@ -1,0 +1,39 @@
+checks for contrat:
+  # RQ-020 : clé primaire unique et renseignée
+  - duplicate_count(contrat_id) = 0
+  - missing_count(contrat_id) = 0
+
+  # RQ-001 : la date de fin est postérieure à la date de début (lignes en échec exportées)
+  - failed rows:
+      name: RQ-001 date de fin posterieure a la date de debut
+      fail condition: date_fin <= date_debut
+
+  # RQ-010 : durée de garantie dans la liste autorisée
+  - invalid_count(duree_garantie_mois) = 0:
+      name: RQ-010 duree de garantie autorisee
+      valid values: [12, 24, 36, 60]
+
+  # RQ-011 et RQ-012 : intégrité référentielle (aucune clé étrangère n'est déclarée dans la base)
+  - values in (code_type) must exist in type_contrat (code_type):
+      name: RQ-011 type de contrat connu
+  - values in (souscripteur_id) must exist in client (client_id):
+      name: RQ-012 souscripteur existant
+
+  # RQ-018 : écart entre la définition Commerciale (au moins un contrat) et la fiche CD-001
+  # (contrat en cours ET cotisation à jour sur 3 mois), à la date de référence 2026-10-01
+  - ecart_client_actif:
+      ecart_client_actif query: |
+        SELECT COUNT(DISTINCT c.souscripteur_id)
+             - COUNT(DISTINCT CASE WHEN c.date_debut <= '2026-10-01' AND c.date_fin >= '2026-10-01'
+                                    AND c.date_derniere_cotisation >= '2026-07-01' THEN c.souscripteur_id END) AS ecart
+        FROM contrat c JOIN client k ON k.client_id = c.souscripteur_id
+      warn: when > 1000
+      fail: when > 5000
+
+# RQ-013 : la valeur sentinelle 0 de assure_id est écartée par un filtre, sinon 40 % de faux orphelins
+filter contrat [assure_renseigne]:
+  where: assure_id <> '0'
+
+checks for contrat [assure_renseigne]:
+  - values in (assure_id) must exist in client (client_id):
+      name: RQ-013 assure existant (sentinelle 0 exclue)
