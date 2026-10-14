@@ -1,0 +1,790 @@
+{
+  "perimetre": "Ingénieur qualité S1 — US-01/02/03",
+  "batch_id": "L-2026-10-01",
+  "notebook": "notebooks/S1_g02.ipynb",
+  "analyse_le": "2026-10-14",
+  "inventaire": [
+    {
+      "source": "crm",
+      "table": "client",
+      "colonnes": 13,
+      "lignes": 100000,
+      "cle_primaire": "client_id",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "crm",
+      "table": "contrat",
+      "colonnes": 9,
+      "lignes": 100000,
+      "cle_primaire": "contrat_id",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "crm",
+      "table": "sinistre",
+      "colonnes": 10,
+      "lignes": 100000,
+      "cle_primaire": "sinistre_id",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "crm",
+      "table": "type_contrat",
+      "colonnes": 3,
+      "lignes": 12,
+      "cle_primaire": "code_type",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "cif",
+      "table": "clients",
+      "colonnes": 10,
+      "lignes": 40000,
+      "cle_primaire": "column0",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "cif",
+      "table": "compte",
+      "colonnes": 4,
+      "lignes": 45000,
+      "cle_primaire": "column0",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    },
+    {
+      "source": "cif",
+      "table": "pays",
+      "colonnes": 2,
+      "lignes": 250,
+      "cle_primaire": "code_pays",
+      "nuls_pk": 0,
+      "doublons_pk": 0
+    }
+  ],
+  "colonnes_sql": [
+    {
+      "table_source": "crm.client",
+      "column_name": "client_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "type_personne",
+      "column_type": "varchar(20)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "nom",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "prenom",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "raison_sociale",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "date_naissance",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "adresse",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "cp",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "ville",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "pays",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "telephone",
+      "column_type": "varchar(25)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "email",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.client",
+      "column_name": "date_creation",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "contrat_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "souscripteur_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "assure_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "code_type",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "date_debut",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "date_fin",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "duree_garantie_mois",
+      "column_type": "int(11)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "prime_annuelle",
+      "column_type": "decimal(10,2)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.contrat",
+      "column_name": "date_derniere_cotisation",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "sinistre_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "contrat_id",
+      "column_type": "varchar(12)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "date_survenance",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "date_declaration",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "type_sinistre",
+      "column_type": "varchar(40)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "montant_estime",
+      "column_type": "decimal(12,2)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "adresse_sinistre",
+      "column_type": "varchar(160)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "cp_sinistre",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "ville_sinistre",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.sinistre",
+      "column_name": "canal_saisie",
+      "column_type": "varchar(30)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "crm.type_contrat",
+      "column_name": "code_type",
+      "column_type": "varchar(10)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "crm.type_contrat",
+      "column_name": "libelle",
+      "column_type": "varchar(80)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "crm.type_contrat",
+      "column_name": "branche",
+      "column_type": "varchar(20)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column0",
+      "column_type": "varchar(10)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column1",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column2",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column3",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column4",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column5",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column6",
+      "column_type": "varchar(80)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column7",
+      "column_type": "varchar(5)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column8",
+      "column_type": "varchar(25)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.clients",
+      "column_name": "column9",
+      "column_type": "varchar(120)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.compte",
+      "column_name": "column0",
+      "column_type": "varchar(12)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "cif.compte",
+      "column_name": "column1",
+      "column_type": "varchar(10)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.compte",
+      "column_name": "column2",
+      "column_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.compte",
+      "column_name": "column3",
+      "column_type": "char(1)",
+      "is_nullable": "YES"
+    },
+    {
+      "table_source": "cif.pays",
+      "column_name": "code_pays",
+      "column_type": "char(2)",
+      "is_nullable": "NO"
+    },
+    {
+      "table_source": "cif.pays",
+      "column_name": "nom_pays",
+      "column_type": "varchar(80)",
+      "is_nullable": "NO"
+    }
+  ],
+  "fichiers_sources": [
+    {
+      "fichier": "data/sources/crm/client.csv",
+      "lignes": 100000,
+      "sha256": "2de915d92ef8c9cb1f1bd2d0f6f6e2ee4f171842f8fc873b18daa53c0ff0b445"
+    },
+    {
+      "fichier": "data/sources/crm/contrat.csv",
+      "lignes": 100000,
+      "sha256": "e179b2275be016e148a924f64e365c9e1e008c61401d4fe678d3db6a2ea75baf"
+    },
+    {
+      "fichier": "data/sources/crm/sinistre.csv",
+      "lignes": 100000,
+      "sha256": "d65ac70235f303f06b6eb3f9bdc7ef3137380995ec7d64aba1588da55c831d33"
+    },
+    {
+      "fichier": "data/sources/crm/type_contrat.csv",
+      "lignes": 12,
+      "sha256": "79d2e1dbf030bd3013e99124f532e487a242697ef1b7869097e0ff8102e4c4cc"
+    },
+    {
+      "fichier": "data/sources/cif/clients.csv",
+      "lignes": 40000,
+      "sha256": "5cd95e5db130104f785ad14bf5f669f5c85180a3d9686431aadb973467b32c49"
+    },
+    {
+      "fichier": "data/sources/cif/compte.csv",
+      "lignes": 45000,
+      "sha256": "ed0551e3dfb14ae75c8dc27b5419912ae0e19eabd5496b5d927fa1c436ed022c"
+    },
+    {
+      "fichier": "data/sources/cif/pays.csv",
+      "lignes": 250,
+      "sha256": "ca0446b5febcb7403ee1ecb1328a54b4e5489c97449aaa4cb98a406450f7f757"
+    }
+  ],
+  "droits_reader": [
+    {
+      "table_schema": "cif",
+      "privilege_type": "SELECT"
+    },
+    {
+      "table_schema": "crm",
+      "privilege_type": "SELECT"
+    }
+  ],
+  "source_avant": {
+    "crm_client": {
+      "lignes": 100000,
+      "somme_controle": 214701936373892,
+      "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
+    },
+    "crm_contrat": {
+      "lignes": 100000,
+      "somme_controle": 214920543380008,
+      "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
+    },
+    "crm_sinistre": {
+      "lignes": 100000,
+      "somme_controle": 214256364507763,
+      "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
+    },
+    "crm_type_contrat": {
+      "lignes": 12,
+      "somme_controle": 25049111003,
+      "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
+    },
+    "cif_clients": {
+      "lignes": 40000,
+      "somme_controle": 85743772090414,
+      "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
+    },
+    "cif_compte": {
+      "lignes": 45000,
+      "somme_controle": 96942383526087,
+      "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
+    },
+    "cif_pays": {
+      "lignes": 250,
+      "somme_controle": 548069437591,
+      "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
+    }
+  },
+  "ingestion": {
+    "batch_id": "L-2026-10-01",
+    "tables": 7,
+    "lignes": 385262,
+    "transaction": "sept tables et lot",
+    "statut": "TERMINE",
+    "sources_modifiees": false
+  },
+  "porte_B": [
+    {
+      "table_bronze": "crm_client",
+      "lignes_source": 100000,
+      "lignes_bronze": 100000,
+      "ecart_comptage": 0,
+      "somme_source": 214701936373892,
+      "somme_bronze": 214701936373892,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f",
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_contrat",
+      "lignes_source": 100000,
+      "lignes_bronze": 100000,
+      "ecart_comptage": 0,
+      "somme_source": 214920543380008,
+      "somme_bronze": 214920543380008,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c",
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_sinistre",
+      "lignes_source": 100000,
+      "lignes_bronze": 100000,
+      "ecart_comptage": 0,
+      "somme_source": 214256364507763,
+      "somme_bronze": 214256364507763,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73",
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_type_contrat",
+      "lignes_source": 12,
+      "lignes_bronze": 12,
+      "ecart_comptage": 0,
+      "somme_source": 25049111003,
+      "somme_bronze": 25049111003,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d",
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_clients",
+      "lignes_source": 40000,
+      "lignes_bronze": 40000,
+      "ecart_comptage": 0,
+      "somme_source": 85743772090414,
+      "somme_bronze": 85743772090414,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890",
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_compte",
+      "lignes_source": 45000,
+      "lignes_bronze": 45000,
+      "ecart_comptage": 0,
+      "somme_source": 96942383526087,
+      "somme_bronze": 96942383526087,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c",
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_pays",
+      "lignes_source": 250,
+      "lignes_bronze": 250,
+      "ecart_comptage": 0,
+      "somme_source": 548069437591,
+      "somme_bronze": 548069437591,
+      "ecart_somme": 0,
+      "contenu_exact_identique": true,
+      "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b",
+      "conforme": true
+    }
+  ],
+  "RQ_022": [
+    {
+      "table_bronze": "crm_client",
+      "testees": 100000,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_contrat",
+      "testees": 100000,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_sinistre",
+      "testees": 100000,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "crm_type_contrat",
+      "testees": 12,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_clients",
+      "testees": 40000,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_compte",
+      "testees": 45000,
+      "echecs": 0,
+      "conforme": true
+    },
+    {
+      "table_bronze": "cif_pays",
+      "testees": 250,
+      "echecs": 0,
+      "conforme": true
+    }
+  ],
+  "historique_unites": {
+    "RQ-021": "un contrôle global par table",
+    "RQ-022": "une vérification de métadonnées par ligne"
+  },
+  "relance": {
+    "contenu_et_volumes_identiques": true,
+    "autres_lots_inchanges": true,
+    "doublons": [
+      {
+        "table_bronze": "crm_client",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "crm_contrat",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "crm_sinistre",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "crm_type_contrat",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "cif_clients",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "cif_compte",
+        "doublons_cles_metier": 0
+      },
+      {
+        "table_bronze": "cif_pays",
+        "doublons_cles_metier": 0
+      }
+    ],
+    "doublons_ajoutes": 0
+  },
+  "epreuve_copie": {
+    "table": "crm_client_test_s1_g02",
+    "lignes": 100000,
+    "ecart_comptage": 0,
+    "ecart_somme": -3465902982,
+    "contenu_exact_identique": false,
+    "porte_accepte": false,
+    "historisee": false,
+    "copie_supprimee": true
+  },
+  "conversion": {
+    "cas": "montant réel de crm.contrat",
+    "lecture_flottante": "184.1",
+    "lecture_exacte": "184.10",
+    "type_exact": "Decimal",
+    "presentation_flottante_perdue": true,
+    "somme_reference": 3810312921,
+    "somme_flottante": 3371018125,
+    "somme_exacte": 3810312921,
+    "faux_ecart_flottant_detecte": true,
+    "correction": "coerce_float=False et conversion SQL explicite en texte",
+    "distinctions_synthetiques_preservees": true
+  },
+  "historique": [
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "cif_clients",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "cif_compte",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "cif_pays",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "crm_client",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "crm_contrat",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "crm_sinistre",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-021",
+      "table_cible": "crm_type_contrat",
+      "nb_testees": 1,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "cif_clients",
+      "nb_testees": 40000,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "cif_compte",
+      "nb_testees": 45000,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "cif_pays",
+      "nb_testees": 250,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "crm_client",
+      "nb_testees": 100000,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "crm_contrat",
+      "nb_testees": 100000,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "crm_sinistre",
+      "nb_testees": 100000,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    },
+    {
+      "couche": "BRONZE",
+      "rule_id": "RQ-022",
+      "table_cible": "crm_type_contrat",
+      "nb_testees": 12,
+      "nb_echecs": 0,
+      "taux_conformite": 100.0
+    }
+  ],
+  "verification_finale": {
+    "sources_inchangees": true,
+    "csv_inchanges": true,
+    "porte_B_conforme": true,
+    "mesures_historiques": 14,
+    "erreurs": 0,
+    "stories_terminees": [
+      "US-01",
+      "US-02",
+      "US-03"
+    ],
+    "seance_S1_globale_terminee": false
+  }
+}
