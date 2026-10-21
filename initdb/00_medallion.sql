@@ -15,6 +15,7 @@ CREATE DATABASE IF NOT EXISTS crm_cible CHARACTER SET utf8mb4 COLLATE utf8mb4_no
 CREATE USER IF NOT EXISTS 'reader'@'%' IDENTIFIED BY 'reader';
 GRANT SELECT ON cif.* TO 'reader'@'%';
 GRANT SELECT ON crm.* TO 'reader'@'%';
+GRANT SELECT ON bronze.* TO 'reader'@'%';
 
 -- ---------- dq : la mémoire de la qualité ----------
 CREATE TABLE IF NOT EXISTS dq.lot_ingestion (
