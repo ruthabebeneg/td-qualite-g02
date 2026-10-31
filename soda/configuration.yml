@@ -1,5 +1,4 @@
-# Une source de données par base : les mêmes fichiers de checks se lancent sur chaque couche
-# (dans bronze, les tables s'appellent crm_client, crm_contrat, crm_sinistre)
+# Les checks actuels ciblent les tables CRM ; les tables Bronze portent le préfixe crm_.
 data_source crm:
   type: mysql
   host: mariadb
