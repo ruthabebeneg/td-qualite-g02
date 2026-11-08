@@ -44,6 +44,7 @@ services:
       - ./soda:/home/jovyan/work/soda
       - ./data:/home/jovyan/work/data:ro
       - ./reports:/home/jovyan/work/reports
+      - ./livrables:/home/jovyan/work/livrables
       - ./pipelines:/home/jovyan/work/pipelines
       - ./catalogue:/home/jovyan/work/catalogue   # séance 5
     networks:
