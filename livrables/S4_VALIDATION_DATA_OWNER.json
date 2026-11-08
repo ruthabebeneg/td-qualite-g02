@@ -20,7 +20,10 @@
     "reports/S4_tests_acceptation.json",
     "reports/S4_tests_correctifs_revue.json",
     "reports/S4_tests_population_historique.json",
-    "reports/S4_ambiguities_ban.json"
+    "reports/S4_ambiguities_ban.json",
+    "reports/S4_steward_index.json",
+    "reports/S4_steward_synthese.json",
+    "reports/S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json"
   ],
   "propositions": [
     {
@@ -235,5 +238,90 @@
     "ref_postal": "8f4ceedec5ebc92a7536421ef64c3cfe87d8686580ee1e9300476938e2d73186",
     "ref_pays": "db7b53b2bb69e32bb3ad0d12c7f8f6c0e5f7a67b6a26909749c0194bc9ec76d9"
   },
-  "catalogue_sha256": "1a60c98555674512817f8bbe9bfd7a0aa120c04339790244c9e1b5adee395145"
+  "catalogue_sha256": "1a60c98555674512817f8bbe9bfd7a0aa120c04339790244c9e1b5adee395145",
+  "instruction_data_steward": {
+    "etat": "REALISEE",
+    "preuve": "reports/S4_steward_index.json",
+    "synthese": "reports/S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json",
+    "dossiers": {
+      "paires": 432,
+      "signatures": 391,
+      "survie": 2153,
+      "absences": 41149,
+      "statuts": 1552,
+      "adresses": 7997
+    },
+    "reponses_metier": "EN_ATTENTE",
+    "decision_owner": "EN_ATTENTE",
+    "limite": "Recommandations calculées et pièces à obtenir ; aucune confirmation humaine, envoi ou correction appliquée.",
+    "index_sha256": "7d773e86c0a84f624b1abdd18ea889ffde49e2c12ba8b44fe190531b0bcf74c3",
+    "synthese_sha256": "6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9",
+    "partitions": 35,
+    "tests": 25,
+    "regles_contacts": [
+      {
+        "regle": "RQ-003",
+        "couche": "GOLD",
+        "applicables": 5212,
+        "echecs": 5212
+      },
+      {
+        "regle": "RQ-004",
+        "couche": "SILVER",
+        "applicables": 715,
+        "echecs": 715
+      },
+      {
+        "regle": "RQ-008",
+        "couche": "SILVER",
+        "applicables": 1054,
+        "echecs": 1054
+      },
+      {
+        "regle": "RQ-008",
+        "couche": "GOLD",
+        "applicables": 0,
+        "echecs": 0
+      }
+    ],
+    "fichiers_actifs": [
+      "S4_steward_paires_31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191.json",
+      "S4_steward_signatures_68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d.json",
+      "S4_steward_survie_ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94.json",
+      "S4_steward_absences_e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3.json",
+      "S4_steward_absences_0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf.json",
+      "S4_steward_absences_02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8.json",
+      "S4_steward_absences_7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00.json",
+      "S4_steward_absences_5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d.json",
+      "S4_steward_absences_e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c.json",
+      "S4_steward_absences_91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97.json",
+      "S4_steward_absences_a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d.json",
+      "S4_steward_absences_13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c.json",
+      "S4_steward_absences_23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc.json",
+      "S4_steward_absences_6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce.json",
+      "S4_steward_absences_e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761.json",
+      "S4_steward_absences_880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a.json",
+      "S4_steward_absences_29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6.json",
+      "S4_steward_absences_17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1.json",
+      "S4_steward_statuts_60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa.json",
+      "S4_steward_adresses_2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32.json",
+      "S4_steward_adresses_a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd.json",
+      "S4_steward_adresses_3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01.json",
+      "S4_steward_faits_92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63.json",
+      "S4_steward_faits_e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904.json",
+      "S4_steward_faits_1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c.json",
+      "S4_steward_faits_96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a.json",
+      "S4_steward_faits_99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b.json",
+      "S4_steward_faits_5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e.json",
+      "S4_steward_faits_0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7.json",
+      "S4_steward_faits_7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721.json",
+      "S4_steward_faits_e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740.json",
+      "S4_steward_faits_836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3.json",
+      "S4_steward_faits_93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21.json",
+      "S4_steward_faits_dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118.json",
+      "S4_steward_faits_fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126.json",
+      "S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json",
+      "S4_steward_index.json"
+    ]
+  }
 }
