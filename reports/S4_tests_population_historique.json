@@ -1,0 +1,9 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "tests": {
+    "population_absente_bloquante": true,
+    "non_applicable_justifie": true,
+    "historique_externe_preserve_selection": true
+  }
+}

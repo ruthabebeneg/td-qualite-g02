@@ -1,0 +1,36 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "tests": {
+    "verrou_seconde_connexion_refusee": true,
+    "pays_contradictoire": true,
+    "commune_contradictoire": true,
+    "nom_manquant_score_sur": true,
+    "metriques_sans_positifs": true,
+    "doublon_paire_refuse": true,
+    "paires_invalides_colonnes": true,
+    "paires_invalides_effectif": true,
+    "paires_invalides_domaine": true,
+    "contrats_majorite_retenus": true,
+    "contrats_majorite_rejetes_motif": true,
+    "ban_egalite_exact": true,
+    "ban_egalite_fuzzy": true
+  },
+  "rejets_majorite": [
+    {
+      "contrat_id": "VEILLE",
+      "rule_id": "RQ-002",
+      "motif": "Majorité/nature inconnue ou minorité au début du contrat"
+    },
+    {
+      "contrat_id": "BISSEXTILE_AVANT",
+      "rule_id": "RQ-002",
+      "motif": "Majorité/nature inconnue ou minorité au début du contrat"
+    },
+    {
+      "contrat_id": "INCONNU",
+      "rule_id": "RQ-002",
+      "motif": "Majorité/nature inconnue ou minorité au début du contrat"
+    }
+  ]
+}

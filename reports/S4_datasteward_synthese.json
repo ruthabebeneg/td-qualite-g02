@@ -1,0 +1,20 @@
+{
+  "lot_declare_notebook": "L-2026-10-01",
+  "preuve_declaration_lot": "notebooks/S4_gold.ipynb, cellule 1 (indice zéro)",
+  "couche": "GOLD",
+  "regle": "RQ-019",
+  "portee": "Recomptage du rapport versionné ; ni rejeu DB ni validation humaine.",
+  "source": "reports/S4_US25_revue_survie.json",
+  "source_sha256": "88499b9d9a39770d9cf43b665a51a0172cfa9930e59c64f5b14d548e7098d3d8",
+  "conflits_attribut": 2657,
+  "cli_concernes": 2231,
+  "par_attribut": {
+    "bloc_adresse": 161,
+    "date_naissance": 188,
+    "email_normalise": 1461,
+    "telephone_normalise": 847
+  },
+  "champs_arbitrage_detectes": [],
+  "convention_arbitrage": "Détection des seuls noms decision/validateur, sans déduire une approbation de leur présence.",
+  "limite": "Le rapport ne contient pas de batch_id ; le lot est seulement celui déclaré par le producteur. Son empreinte ne vérifie pas ce rattachement."
+}
