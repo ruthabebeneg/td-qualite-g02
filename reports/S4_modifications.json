@@ -1,0 +1,261 @@
+{
+  "batch_id": "L-2026-10-01",
+  "modifications_par_attribut": [
+    {
+      "origine": "crm",
+      "attribut": "identite_normalisee",
+      "testees": 99556,
+      "modifiees": 1,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.identite_normalisee AS CHAR) <=> CAST(CASE WHEN TRIM(b.raison_sociale)<>'' THEN b.raison_sociale ELSE b.nom END AS CHAR))),0) modifiees,COALESCE(SUM(CASE WHEN TRIM(b.raison_sociale)<>'' THEN b.raison_sociale ELSE b.nom END IS NULL),0) source_null,COALESCE(SUM(CASE WHEN TRIM(b.raison_sociale)<>'' THEN b.raison_sociale ELSE b.nom END=''),0) source_vide,COALESCE(SUM(CASE WHEN TRIM(b.raison_sociale)<>'' THEN b.raison_sociale ELSE b.nom END<>'' AND TRIM(CASE WHEN TRIM(b.raison_sociale)<>'' THEN b.raison_sociale ELSE b.nom END)=''),0) source_blanc,COALESCE(SUM(s.identite_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "prenom_normalise",
+      "testees": 99556,
+      "modifiees": 0,
+      "source_null": 4254,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 4254,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.prenom_normalise AS CHAR) <=> CAST(b.prenom AS CHAR))),0) modifiees,COALESCE(SUM(b.prenom IS NULL),0) source_null,COALESCE(SUM(b.prenom=''),0) source_vide,COALESCE(SUM(b.prenom<>'' AND TRIM(b.prenom)=''),0) source_blanc,COALESCE(SUM(s.prenom_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "date_naissance",
+      "testees": 99556,
+      "modifiees": 0,
+      "source_null": 4254,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 4254,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.date_naissance AS CHAR) <=> CAST(b.date_naissance AS CHAR))),0) modifiees,COALESCE(SUM(b.date_naissance IS NULL),0) source_null,COALESCE(SUM(b.date_naissance=''),0) source_vide,COALESCE(SUM(b.date_naissance<>'' AND TRIM(b.date_naissance)=''),0) source_blanc,COALESCE(SUM(s.date_naissance IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "adresse_normalisee",
+      "testees": 99556,
+      "modifiees": 1793,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.adresse_normalisee AS CHAR) <=> CAST(b.adresse AS CHAR))),0) modifiees,COALESCE(SUM(b.adresse IS NULL),0) source_null,COALESCE(SUM(b.adresse=''),0) source_vide,COALESCE(SUM(b.adresse<>'' AND TRIM(b.adresse)=''),0) source_blanc,COALESCE(SUM(s.adresse_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "cp",
+      "testees": 99556,
+      "modifiees": 1493,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.cp AS CHAR) <=> CAST(b.cp AS CHAR))),0) modifiees,COALESCE(SUM(b.cp IS NULL),0) source_null,COALESCE(SUM(b.cp=''),0) source_vide,COALESCE(SUM(b.cp<>'' AND TRIM(b.cp)=''),0) source_blanc,COALESCE(SUM(s.cp IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "ville_normalisee",
+      "testees": 99556,
+      "modifiees": 0,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.ville_normalisee AS CHAR) <=> CAST(b.ville AS CHAR))),0) modifiees,COALESCE(SUM(b.ville IS NULL),0) source_null,COALESCE(SUM(b.ville=''),0) source_vide,COALESCE(SUM(b.ville<>'' AND TRIM(b.ville)=''),0) source_blanc,COALESCE(SUM(s.ville_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "pays_iso",
+      "testees": 99556,
+      "modifiees": 2220,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.pays_iso AS CHAR) <=> CAST(b.pays AS CHAR))),0) modifiees,COALESCE(SUM(b.pays IS NULL),0) source_null,COALESCE(SUM(b.pays=''),0) source_vide,COALESCE(SUM(b.pays<>'' AND TRIM(b.pays)=''),0) source_blanc,COALESCE(SUM(s.pays_iso IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "telephone_normalise",
+      "testees": 99556,
+      "modifiees": 25170,
+      "source_null": 5968,
+      "source_vide": 1994,
+      "source_blanc": 1989,
+      "silver_null": 9951,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.telephone_normalise AS CHAR) <=> CAST(b.telephone AS CHAR))),0) modifiees,COALESCE(SUM(b.telephone IS NULL),0) source_null,COALESCE(SUM(b.telephone=''),0) source_vide,COALESCE(SUM(b.telephone<>'' AND TRIM(b.telephone)=''),0) source_blanc,COALESCE(SUM(s.telephone_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "email_normalise",
+      "testees": 99556,
+      "modifiees": 0,
+      "source_null": 19276,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 19276,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.email_normalise AS CHAR) <=> CAST(b.email AS CHAR))),0) modifiees,COALESCE(SUM(b.email IS NULL),0) source_null,COALESCE(SUM(b.email=''),0) source_vide,COALESCE(SUM(b.email<>'' AND TRIM(b.email)=''),0) source_blanc,COALESCE(SUM(s.email_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "crm",
+      "attribut": "type_personne",
+      "testees": 99556,
+      "modifiees": 544,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.type_personne AS CHAR) <=> CAST(b.type_personne AS CHAR))),0) modifiees,COALESCE(SUM(b.type_personne IS NULL),0) source_null,COALESCE(SUM(b.type_personne=''),0) source_vide,COALESCE(SUM(b.type_personne<>'' AND TRIM(b.type_personne)=''),0) source_blanc,COALESCE(SUM(s.type_personne IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='crm' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "identite_normalisee",
+      "testees": 40000,
+      "modifiees": 159,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.identite_normalisee AS CHAR) <=> CAST(b.column1 AS CHAR))),0) modifiees,COALESCE(SUM(b.column1 IS NULL),0) source_null,COALESCE(SUM(b.column1=''),0) source_vide,COALESCE(SUM(b.column1<>'' AND TRIM(b.column1)=''),0) source_blanc,COALESCE(SUM(s.identite_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "prenom_normalise",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 645,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 645,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.prenom_normalise AS CHAR) <=> CAST(b.column2 AS CHAR))),0) modifiees,COALESCE(SUM(b.column2 IS NULL),0) source_null,COALESCE(SUM(b.column2=''),0) source_vide,COALESCE(SUM(b.column2<>'' AND TRIM(b.column2)=''),0) source_blanc,COALESCE(SUM(s.prenom_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "date_naissance",
+      "testees": 40000,
+      "modifiees": 39355,
+      "source_null": 645,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 645,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.date_naissance AS CHAR) <=> CAST(b.column3 AS CHAR))),0) modifiees,COALESCE(SUM(b.column3 IS NULL),0) source_null,COALESCE(SUM(b.column3=''),0) source_vide,COALESCE(SUM(b.column3<>'' AND TRIM(b.column3)=''),0) source_blanc,COALESCE(SUM(s.date_naissance IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "adresse_normalisee",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.adresse_normalisee AS CHAR) <=> CAST(b.column4 AS CHAR))),0) modifiees,COALESCE(SUM(b.column4 IS NULL),0) source_null,COALESCE(SUM(b.column4=''),0) source_vide,COALESCE(SUM(b.column4<>'' AND TRIM(b.column4)=''),0) source_blanc,COALESCE(SUM(s.adresse_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "cp",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.cp AS CHAR) <=> CAST(b.column5 AS CHAR))),0) modifiees,COALESCE(SUM(b.column5 IS NULL),0) source_null,COALESCE(SUM(b.column5=''),0) source_vide,COALESCE(SUM(b.column5<>'' AND TRIM(b.column5)=''),0) source_blanc,COALESCE(SUM(s.cp IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "ville_normalisee",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.ville_normalisee AS CHAR) <=> CAST(b.column6 AS CHAR))),0) modifiees,COALESCE(SUM(b.column6 IS NULL),0) source_null,COALESCE(SUM(b.column6=''),0) source_vide,COALESCE(SUM(b.column6<>'' AND TRIM(b.column6)=''),0) source_blanc,COALESCE(SUM(s.ville_normalisee IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "pays_iso",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 0,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 0,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.pays_iso AS CHAR) <=> CAST(b.column7 AS CHAR))),0) modifiees,COALESCE(SUM(b.column7 IS NULL),0) source_null,COALESCE(SUM(b.column7=''),0) source_vide,COALESCE(SUM(b.column7<>'' AND TRIM(b.column7)=''),0) source_blanc,COALESCE(SUM(s.pays_iso IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "telephone_normalise",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 6324,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 6324,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.telephone_normalise AS CHAR) <=> CAST(b.column8 AS CHAR))),0) modifiees,COALESCE(SUM(b.column8 IS NULL),0) source_null,COALESCE(SUM(b.column8=''),0) source_vide,COALESCE(SUM(b.column8<>'' AND TRIM(b.column8)=''),0) source_blanc,COALESCE(SUM(s.telephone_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    },
+    {
+      "origine": "cif",
+      "attribut": "email_normalise",
+      "testees": 40000,
+      "modifiees": 0,
+      "source_null": 18872,
+      "source_vide": 0,
+      "source_blanc": 0,
+      "silver_null": 18872,
+      "population": "Lignes retenues silver ; pas les rejets",
+      "sql": "SELECT COUNT(*) testees,COALESCE(SUM(NOT (CAST(s.email_normalise AS CHAR) <=> CAST(b.column9 AS CHAR))),0) modifiees,COALESCE(SUM(b.column9 IS NULL),0) source_null,COALESCE(SUM(b.column9=''),0) source_vide,COALESCE(SUM(b.column9<>'' AND TRIM(b.column9)=''),0) source_blanc,COALESCE(SUM(s.email_normalise IS NULL),0) silver_null FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id AND b._batch_id=s._batch_id WHERE s.source_systeme='cif' AND s._batch_id=:lot"
+    }
+  ],
+  "nature": [
+    {
+      "source_systeme": "cif",
+      "nature_personne": "PM",
+      "n": 645
+    },
+    {
+      "source_systeme": "cif",
+      "nature_personne": "PP",
+      "n": 39355
+    },
+    {
+      "source_systeme": "crm",
+      "nature_personne": "PM",
+      "n": 4254
+    },
+    {
+      "source_systeme": "crm",
+      "nature_personne": "PP",
+      "n": 95302
+    }
+  ],
+  "contacts_gold": {
+    "n": 121073,
+    "telephone_invalide": 0,
+    "email_invalide": 0
+  },
+  "limite": "Les NULL/vide/blanc restent distincts dans bronze ; comparaisons de chaînes binaires du schéma nopad ; NULL standardisé explicitement dans silver. Dates CIF changent de représentation, pas de date métier."
+}

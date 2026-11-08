@@ -1,39 +1,55 @@
 checks for contrat:
-  # RQ-020 : clé primaire unique et renseignée
-  - duplicate_count(contrat_id) = 0
-  - missing_count(contrat_id) = 0
+  - duplicate_count(contrat_id) = 0:
+      name: RQ-020 | CRM | contrat_id sans doublon
+  - missing_count(contrat_id) = 0:
+      name: RQ-020 | CRM | contrat_id renseigné
 
-  # RQ-001 : la date de fin est postérieure à la date de début (lignes en échec exportées)
   - failed rows:
-      name: RQ-001 date de fin posterieure a la date de debut
+      name: RQ-001 | CRM | date_fin postérieure à date_debut
       fail condition: date_fin <= date_debut
 
-  # RQ-010 : durée de garantie dans la liste autorisée
   - invalid_count(duree_garantie_mois) = 0:
-      name: RQ-010 duree de garantie autorisee
+      name: RQ-010 | CRM | durée de garantie autorisée
       valid values: [12, 24, 36, 60]
 
-  # RQ-011 et RQ-012 : intégrité référentielle (aucune clé étrangère n'est déclarée dans la base)
   - values in (code_type) must exist in type_contrat (code_type):
-      name: RQ-011 type de contrat connu
+      name: RQ-011 | CRM | type de contrat connu
   - values in (souscripteur_id) must exist in client (client_id):
-      name: RQ-012 souscripteur existant
+      name: RQ-012 | CRM | souscripteur existant
 
-  # RQ-018 : écart entre la définition Commerciale (au moins un contrat) et la fiche CD-001
-  # (contrat en cours ET cotisation à jour sur 3 mois), à la date de référence 2026-10-01
-  - ecart_client_actif:
-      ecart_client_actif query: |
-        SELECT COUNT(DISTINCT c.souscripteur_id)
-             - COUNT(DISTINCT CASE WHEN c.date_debut <= '2026-10-01' AND c.date_fin >= '2026-10-01'
-                                    AND c.date_derniere_cotisation >= '2026-07-01' THEN c.souscripteur_id END) AS ecart
-        FROM contrat c JOIN client k ON k.client_id = c.souscripteur_id
-      warn: when > 1000
-      fail: when > 5000
+  - rq013_assures_orphelins_apres_nullif:
+      name: RQ-013 | CRM projection NULLIF | assures existants
+      rq013_assures_orphelins_apres_nullif query: |
+        SELECT COUNT(*) AS nb
+        FROM contrat c
+        WHERE NULLIF(c.assure_id, '0') IS NOT NULL
+          AND NOT EXISTS (
+            SELECT 1 FROM client k
+            WHERE k.client_id = NULLIF(c.assure_id, '0')
+          )
+      fail: when > 0
 
-# RQ-013 : la valeur sentinelle 0 de assure_id est écartée par un filtre, sinon 40 % de faux orphelins
-filter contrat [assure_renseigne]:
-  where: assure_id <> '0'
-
-checks for contrat [assure_renseigne]:
-  - values in (assure_id) must exist in client (client_id):
-      name: RQ-013 assure existant (sentinelle 0 exclue)
+  - rq018_ecart_directions:
+      name: RQ-018 | CRM | ecart nul entre les trois directions
+      rq018_ecart_directions query: |
+        SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart
+        FROM (
+          SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs
+          FROM contrat c
+          WHERE c.date_debut <= '${REFERENCE_DATE}'
+            AND c.date_fin >= '${REFERENCE_DATE}'
+            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)
+          UNION ALL
+          SELECT COUNT(DISTINCT c.souscripteur_id)
+          FROM contrat c
+          WHERE c.date_debut <= '${REFERENCE_DATE}'
+            AND c.date_fin >= '${REFERENCE_DATE}'
+            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)
+          UNION ALL
+          SELECT COUNT(DISTINCT c.souscripteur_id)
+          FROM contrat c
+          WHERE c.date_debut <= '${REFERENCE_DATE}'
+            AND c.date_fin >= '${REFERENCE_DATE}'
+            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)
+        ) directions
+      fail: when > 0

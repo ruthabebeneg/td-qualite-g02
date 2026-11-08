@@ -1,22 +1,30 @@
 checks for sinistre:
   - duplicate_count(sinistre_id) = 0:
-      name: RQ-020 identifiant de sinistre unique
+      name: RQ-020 | CRM | sinistre_id sans doublon
+  - missing_count(sinistre_id) = 0:
+      name: RQ-020 | CRM | sinistre_id renseigné
 
-  # RQ-014, volet format : code postal à 5 chiffres, adresse renseignée
   - invalid_count(cp_sinistre) = 0:
-      name: RQ-014 code postal de sinistre sur 5 chiffres
+      name: RQ-014 | CRM | code postal de sinistre sur 5 chiffres
       valid regex: '^[0-9]{5}$'
-  - missing_count(adresse_sinistre) = 0
+  - missing_count(adresse_sinistre) = 0:
+      name: RQ-014 | CRM | adresse de sinistre renseignée
 
-  # RQ-017 : le sinistre survient pendant la période de garantie du contrat
   - failed rows:
-      name: RQ-017 sinistre hors periode de garantie
+      name: RQ-017 | CRM | sinistre dans la période de garantie
       fail query: |
-        SELECT s.sinistre_id FROM sinistre s JOIN contrat c ON c.contrat_id = s.contrat_id
-        WHERE s.date_survenance < c.date_debut OR s.date_survenance > c.date_fin
+        SELECT s.sinistre_id
+        FROM sinistre s
+        LEFT JOIN contrat c ON c.contrat_id = s.contrat_id
+        WHERE c.contrat_id IS NULL
+           OR s.date_survenance IS NULL
+           OR c.date_debut IS NULL
+           OR c.date_fin IS NULL
+           OR s.date_survenance < c.date_debut
+           OR s.date_survenance > c.date_fin
 
-  # RQ-014, volet BAN : seuils d'alerte sur le taux d'adresses non reconnues, comme le tableau de suivi de Yanis
   - taux_erreur_adresse:
+      name: RQ-014 | CRM | taux d'adresses non reconnues par la BAN
       taux_erreur_adresse query: |
         SELECT 100.0 * SUM(b.id_ban IS NULL) / COUNT(*) AS taux_erreur
         FROM sinistre s
