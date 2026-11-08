@@ -1,0 +1,18 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "nature": "Tests synthétiques de décision, aucune approbation humaine",
+  "tests": {
+    "portes_conformes_owner_config_identique": true,
+    "absence_refusee": true,
+    "refus_owner": true,
+    "configuration_changee": true,
+    "bloquante_finale_refusee": true,
+    "manque_applicable_refuse": true,
+    "propositions_partielles_refusees": true,
+    "lot_different_refuse": true,
+    "date_invalide_refusee": true,
+    "referentiel_modifie_refuse": true,
+    "catalogue_modifie_refuse": true
+  }
+}

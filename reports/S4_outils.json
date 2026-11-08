@@ -1,0 +1,281 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "great_expectations_version": "0.18.19",
+  "ge": [
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-007",
+      "testees": 99556,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-020",
+      "testees": 99556,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-005",
+      "testees": 98024,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-004",
+      "testees": 88212,
+      "echecs": 879,
+      "success_ge": false,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-008",
+      "testees": 80280,
+      "echecs": 1205,
+      "success_ge": false,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_crm",
+      "rule_id": "RQ-003",
+      "testees": 50293,
+      "echecs": 6010,
+      "success_ge": false,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_cif",
+      "rule_id": "RQ-007",
+      "testees": 40000,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_cif",
+      "rule_id": "RQ-020",
+      "testees": 40000,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_cif",
+      "rule_id": "RQ-005",
+      "testees": 39401,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_cif",
+      "rule_id": "RQ-004",
+      "testees": 33368,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "client_cif",
+      "rule_id": "RQ-008",
+      "testees": 21128,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-007",
+      "testees": 121073,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-020",
+      "testees": 121073,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-005",
+      "testees": 119247,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-004",
+      "testees": 106776,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-008",
+      "testees": 92576,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "client_unique",
+      "rule_id": "RQ-003",
+      "testees": 48456,
+      "echecs": 5212,
+      "success_ge": false,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "contrat",
+      "rule_id": "RQ-001",
+      "testees": 98600,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "contrat",
+      "rule_id": "RQ-010",
+      "testees": 98600,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "SILVER",
+      "table_cible": "contrat",
+      "rule_id": "RQ-020",
+      "testees": 98600,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "contrat",
+      "rule_id": "RQ-001",
+      "testees": 96159,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "contrat",
+      "rule_id": "RQ-010",
+      "testees": 96159,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "contrat",
+      "rule_id": "RQ-020",
+      "testees": 96159,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "sinistre",
+      "rule_id": "RQ-014",
+      "testees": 89156,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    },
+    {
+      "couche": "GOLD",
+      "table_cible": "sinistre",
+      "rule_id": "RQ-020",
+      "testees": 89156,
+      "echecs": 0,
+      "success_ge": true,
+      "identique_mesure_couverture": true
+    }
+  ],
+  "soda": [
+    {
+      "cas": "pass",
+      "valeur": "0",
+      "code_natif": 0,
+      "code_attendu": 0,
+      "porte_metier_bloquee": false,
+      "sql": "SELECT COUNT(*) FROM (SELECT cli_id FROM gold.client_unique WHERE _batch_id=:lot GROUP BY cli_id HAVING COUNT(*)>1) d",
+      "checks_yaml": "checks for client_unique:\n  - rq020_doublons:\n      name: rq020_doublons_pass\n      rq020_doublons query: SELECT COUNT(*) FROM (SELECT cli_id FROM gold.client_unique WHERE _batch_id='L-2026-10-01' GROUP BY cli_id HAVING COUNT(*)>1) d\n      fail: when > 0\n",
+      "checks": [
+        {
+          "nom": "rq020_doublons_pass",
+          "outcome": "pass"
+        }
+      ]
+    },
+    {
+      "cas": "warn",
+      "valeur": "89.24385",
+      "code_natif": 1,
+      "code_attendu": 1,
+      "porte_metier_bloquee": false,
+      "sql": "SELECT 100.0*SUM(telephone IS NOT NULL AND TRIM(telephone)<>'')/NULLIF(COUNT(*),0) FROM gold.client_unique WHERE _batch_id=:lot AND statut_client IN ('ACTIF','INACTIF','A_REVOIR')",
+      "checks_yaml": "checks for client_unique:\n  - rq003_taux:\n      name: rq003_taux_warn\n      rq003_taux query: SELECT 100.0*SUM(telephone IS NOT NULL AND TRIM(telephone)<>'')/NULLIF(COUNT(*),0) FROM gold.client_unique WHERE _batch_id='L-2026-10-01' AND statut_client IN ('ACTIF','INACTIF','A_REVOIR')\n      warn: when < 98\n",
+      "checks": [
+        {
+          "nom": "rq003_taux_warn",
+          "outcome": "warn"
+        }
+      ]
+    },
+    {
+      "cas": "fail",
+      "valeur": "189",
+      "code_natif": 2,
+      "code_attendu": 2,
+      "porte_metier_bloquee": true,
+      "sql": "SELECT COUNT(*) FROM (SELECT s.identite_normalisee,s.prenom_normalise,s.date_naissance FROM silver.client s JOIN gold.xref_identifiants x ON x.silver_row_id=s.silver_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id WHERE s._batch_id=:lot AND s.nature_personne='PP' AND s.identite_normalisee IS NOT NULL AND s.prenom_normalise IS NOT NULL AND s.date_naissance IS NOT NULL GROUP BY 1,2,3 HAVING COUNT(DISTINCT x.cli_id)>1) d",
+      "checks_yaml": "checks for client_unique:\n  - rq019_signatures:\n      name: rq019_signatures_fail\n      rq019_signatures query: SELECT COUNT(*) FROM (SELECT s.identite_normalisee,s.prenom_normalise,s.date_naissance FROM silver.client s JOIN gold.xref_identifiants x ON x.silver_row_id=s.silver_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id WHERE s._batch_id='L-2026-10-01' AND s.nature_personne='PP' AND s.identite_normalisee IS NOT NULL AND s.prenom_normalise IS NOT NULL AND s.date_naissance IS NOT NULL GROUP BY 1,2,3 HAVING COUNT(DISTINCT x.cli_id)>1) d\n      fail: when > 0\n",
+      "checks": [
+        {
+          "nom": "rq019_signatures_fail",
+          "outcome": "fail"
+        }
+      ]
+    }
+  ],
+  "mode": "Lecture seule des couches ; exports agrégés et suites sans données brutes",
+  "comparaison_ge_ok": true
+}

@@ -23,13 +23,14 @@ Mettez à jour ce tableau à chaque fin de séance (et dès qu'une story change 
 | S3 | US-18 | Statuts de personne | À faire | … | |
 | S3 | US-19 | Période de garantie | À faire | … | |
 | S3 | US-14 | Définition unique du client actif | À faire | … | |
-| S4 | US-21 | Silver : standardiser | À faire | … | |
-| S4 | US-22 | Quarantaine | À faire | … | |
-| S4 | US-23 | Porte S : re-mesurer sur silver | À faire | … | |
-| S4 | US-24 | Dédoublonnage | À faire | … | |
-| S4 | US-25 | Golden record | À faire | … | |
-| S4 | US-27 | Gold et client actif unique | À faire | … | |
-| S4 | US-28 | Traçabilité de trois données | À faire | … | |
+| S4 | US-21 | Silver : standardiser | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | Spark réel, normalisation et nature PP/PM explicites ; proposition non acceptée. |
+| S4 | US-22 | Quarantaine | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | Conservation par origine et deux rejeux prouvés ; validation Owner en attente. |
+| S4 | US-23 | Porte S : re-mesurer sur silver | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | Couverture CRM/CIF/gold et limites explicites ; aucune conformité exhaustive revendiquée. |
+| S4 | US-24 | Dédoublonnage | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | 121073 identités ; précision 1.0, rappel 0.95 sur 200 paires ; revue obligatoire ambiguïtés. |
+| S4 | US-25 | Golden record | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | 43734 entrées de revue ; contacts invalides exclus, survie proposée EN_ATTENTE. |
+| S4 | US-26 | Adresses de sinistre et BAN | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | 3958 corrections, 7997 résidus (7.997 %) ; cible 2 % non atteinte. |
+| S4 | US-27 | Gold et client actif unique | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | 36165 actifs ; A_REVOIR et défauts RQ016 visibles ; gold NON ACCEPTE. |
+| S4 | US-28 | Traçabilité de trois données | En cours | notebooks/S4_g02.ipynb ; reports/S4_correctifs_synthese.json ; reports/S4_couverture.json | Trois traces et lineage externe par origine/lot ; cardinalité xref sans anomalie, pas preuve exhaustive des personnes. |
 | S5 | US-29 | Historique des mesures | À faire | … | |
 | S5 | US-30 | Courbes d'évolution | À faire | … | |
 | S5 | US-31 | Certificat de qualité | À faire | … | |

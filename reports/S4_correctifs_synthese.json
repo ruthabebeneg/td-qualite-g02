@@ -1,0 +1,300 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration": {
+    "lot": "L-2026-10-01",
+    "date_ref": "2026-10-01",
+    "cotisation_min": "2026-07-01",
+    "pays": {
+      "FRANCE": "FR",
+      "F": "FR",
+      "FRNACE": "FR",
+      "UK": "GB"
+    },
+    "types": {
+      "souscripteur": "souscripteur",
+      "assure": "assure",
+      "prospect": "prospect",
+      "prosp.": "prospect"
+    },
+    "formes": [
+      [
+        "\\bS\\.?\\s?A\\.?\\s?R\\.?\\s?L\\b\\.?",
+        "SARL"
+      ],
+      [
+        "\\bE\\.?\\s?U\\.?\\s?R\\.?\\s?L\\b\\.?",
+        "EURL"
+      ],
+      [
+        "\\bS\\.?\\s?A\\.?\\s?S\\b\\.?",
+        "SAS"
+      ],
+      [
+        "\\bS\\.\\s?A\\b\\.?",
+        "SA"
+      ],
+      [
+        "\\bSTE\\b\\.?",
+        "SOCIETE"
+      ]
+    ],
+    "voies": {
+      "R": "RUE",
+      "AV": "AVENUE",
+      "BD": "BOULEVARD",
+      "IMP": "IMPASSE",
+      "CH": "CHEMIN",
+      "PL": "PLACE",
+      "ALL": "ALLEE"
+    },
+    "ban": 90,
+    "auto": 90,
+    "revue": 75,
+    "poids": {
+      "nom": 0.4,
+      "prenom": 0.3,
+      "date": 0.3
+    },
+    "priorite": [
+      "crm",
+      "cif"
+    ],
+    "nature": "raison sociale juridique sans prénom/naissance => PM ; prénom ou naissance => PP ; contradiction => INCONNUE",
+    "fusion": "complete-link ; naissance identique obligatoire PP ; nature identique connue ; refus conflit connu pays ou commune sur chaque paire",
+    "survie": "valide uniquement contacts ; fréquence puis complétude nom ; égalité priorité provisoire et revue",
+    "statut": "historique souscripteur sans contrat certifié => A_REVOIR, échec RQ016",
+    "rq019": "signature nature+identité+prénom+naissance (PP), nature+identité+CP+adresse (PM)",
+    "mode": "instantané unique, autres lots refusés",
+    "referentiels_sha256": {
+      "ref_ban": "a85ebad2a5e1ef2d928bf21d1624b9073d3fee0059ca816cac5e05d8a509ea98",
+      "ref_postal": "8f4ceedec5ebc92a7536421ef64c3cfe87d8686580ee1e9300476938e2d73186",
+      "ref_pays": "db7b53b2bb69e32bb3ad0d12c7f8f6c0e5f7a67b6a26909749c0194bc9ec76d9"
+    },
+    "catalogue_sha256": "1a60c98555674512817f8bbe9bfd7a0aa120c04339790244c9e1b5adee395145",
+    "decisions_requises": [
+      "P-S4-06",
+      "P-S4-07",
+      "P-S4-08",
+      "P-S4-09",
+      "P-S4-10",
+      "P-S4-11",
+      "P-S4-12"
+    ]
+  },
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "spark_version": "3.5.0",
+  "accepte": false,
+  "conservation": [
+    {
+      "table": "client (crm)",
+      "bronze": 100000,
+      "silver": 99556,
+      "rejetées": 444,
+      "écart": 0
+    },
+    {
+      "table": "client (cif)",
+      "bronze": 40000,
+      "silver": 40000,
+      "rejetées": 0,
+      "écart": 0
+    },
+    {
+      "table": "contrat (crm)",
+      "bronze": 100000,
+      "silver": 98600,
+      "rejetées": 1400,
+      "écart": 0
+    },
+    {
+      "table": "sinistre (crm)",
+      "bronze": 100000,
+      "silver": 92003,
+      "rejetées": 7997,
+      "écart": 0
+    }
+  ],
+  "rejets": [
+    {
+      "porte": "S",
+      "entite": "client",
+      "source_systeme": "crm",
+      "rule_id": "RQ-007",
+      "motif": "pays inconnu du référentiel après correspondance",
+      "n": 430
+    },
+    {
+      "porte": "S",
+      "entite": "client",
+      "source_systeme": "crm",
+      "rule_id": "RQ-009",
+      "motif": "type de personne hors domaine et sans contrat",
+      "n": 14
+    },
+    {
+      "porte": "S",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-001",
+      "motif": "date de fin absente ou <= date de début",
+      "n": 800
+    },
+    {
+      "porte": "S",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-010",
+      "motif": "durée de garantie hors {12, 24, 36, 60}",
+      "n": 600
+    },
+    {
+      "porte": "S",
+      "entite": "sinistre",
+      "source_systeme": "crm",
+      "rule_id": "RQ-014",
+      "motif": "adresse de sinistre non rapprochée de la BAN",
+      "n": 7997
+    },
+    {
+      "porte": "G",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-002",
+      "motif": "souscripteur mineur ou majorité/nature inconnue au début du contrat",
+      "n": 295
+    },
+    {
+      "porte": "G",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-011",
+      "motif": "type de contrat inconnu",
+      "n": 199
+    },
+    {
+      "porte": "G",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-012",
+      "motif": "souscripteur absent du gold",
+      "n": 1394
+    },
+    {
+      "porte": "G",
+      "entite": "contrat",
+      "source_systeme": "crm",
+      "rule_id": "RQ-013",
+      "motif": "assuré absent du gold",
+      "n": 561
+    },
+    {
+      "porte": "G",
+      "entite": "sinistre",
+      "source_systeme": "crm",
+      "rule_id": "RQ-017",
+      "motif": "sinistre hors garantie ou contrat non certifié",
+      "n": 2847
+    }
+  ],
+  "ban": {
+    "n": 100000,
+    "exact": 88045,
+    "corrige": 3958,
+    "residus": 7997,
+    "taux_residuel": 7.997,
+    "ambiguities": 0,
+    "causes": {
+      "CP_COMMUNE_NUMERO_VOIE_SCORE_OU_AMBIGUITE_A_EXAMINER": 6015,
+      "NUMERO_ABSENT": 1982
+    },
+    "canaux": [
+      {
+        "canal_saisie": "appel_telephonique",
+        "size": 10000,
+        "sum": 577
+      },
+      {
+        "canal_saisie": "import_expert",
+        "size": 20000,
+        "sum": 921
+      },
+      {
+        "canal_saisie": "portail_assure",
+        "size": 40000,
+        "sum": 1024
+      },
+      {
+        "canal_saisie": "ressaisie_manuelle",
+        "size": 30000,
+        "sum": 5475
+      }
+    ]
+  },
+  "evaluation": {
+    "paires": 200,
+    "vp": 95,
+    "fp": 0,
+    "fn": 5,
+    "precision": 1.0,
+    "rappel": 0.95,
+    "absents": 0,
+    "fichier_sha256": "4345596b5d14d8ceab23be3c9a8db8b6f5ed263a57b178637a6c14b941e0c5a9"
+  },
+  "fiches": 139556,
+  "identites": 121073,
+  "groupes_multiples": 17902,
+  "paires": 34798,
+  "zones": {
+    "auto": 19065,
+    "rejet": 15301,
+    "revue": 432
+  },
+  "revues": 43734,
+  "statuts": {
+    "PROSPECT": 45022,
+    "ACTIF": 36165,
+    "ASSURE": 27595,
+    "INACTIF": 10739,
+    "A_REVOIR": 1552
+  },
+  "actifs": {
+    "bronze": 38049,
+    "silver": 37908,
+    "gold_sources": 36965,
+    "gold_cli": 36165
+  },
+  "empreintes": {
+    "silver.client": {
+      "n": 139556,
+      "sha256": "630a0ff9f59d63d5bd5a4dd98e2cf541c758b103e659efdfb49f2eafbb4f704c"
+    },
+    "silver.contrat": {
+      "n": 98600,
+      "sha256": "224cd3e8edb493f7b9b5cacdecabb6cad094995eaf38fae62800ed26c434d5ed"
+    },
+    "silver.sinistre": {
+      "n": 92003,
+      "sha256": "98176847fa4e823793152bd7aef8170cc7464908a1d6bf9294d7352b7019918c"
+    },
+    "gold.client_unique": {
+      "n": 121073,
+      "sha256": "73c2083d5cb7ae7b880932873d21a018bbc1dbf47de221bbe9c16589fb33bcd6"
+    },
+    "gold.xref_identifiants": {
+      "n": 139556,
+      "sha256": "43c4cf97feb08dade629ae2bcdeb35f67632ccc5e8da176e4751f5fab82ff327"
+    },
+    "gold.contrat_certifie": {
+      "n": 96159,
+      "sha256": "95490ff9674f9d97c23297d10e0a486381cdd1ebbe4885c7ffdeaeba4b85e98d"
+    },
+    "gold.sinistre_certifie": {
+      "n": 89156,
+      "sha256": "1b63127aa6441272142d82a1d099737d359714c05e113abe2bd92c8bfdc59a32"
+    },
+    "dq.rejets": {
+      "n": 15137,
+      "sha256": "c4db563d8afc77ce130ab10924d3adb19c493041796d9977292e22efb829ac43"
+    }
+  }
+}

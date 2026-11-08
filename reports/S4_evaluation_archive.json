@@ -1,0 +1,63 @@
+{
+  "nature": "Résultat historique enregistré sur main avant rejeu Docker ; pas une nouvelle mesure",
+  "revision": "c9b0e4841da1d6cecdce2580ac9ba6e54a6ead59",
+  "notebook": "notebooks/S4_gold.ipynb",
+  "cellule": 7,
+  "sorties": [
+    {
+      "name": "stdout",
+      "output_type": "stream",
+      "text": [
+        "paires étiquetées : 200 (dont 100 positives) | fiches introuvables en silver : 0\n",
+        "vrais positifs 100 | faux positifs 0 | faux négatifs 0\n",
+        "PRÉCISION = 1.000 | RAPPEL = 1.000\n"
+      ]
+    },
+    {
+      "data": {
+        "text/html": [
+          "<div>\n",
+          "<style scoped>\n",
+          "    .dataframe tbody tr th:only-of-type {\n",
+          "        vertical-align: middle;\n",
+          "    }\n",
+          "\n",
+          "    .dataframe tbody tr th {\n",
+          "        vertical-align: top;\n",
+          "    }\n",
+          "\n",
+          "    .dataframe thead th {\n",
+          "        text-align: right;\n",
+          "    }\n",
+          "</style>\n",
+          "<table border=\"1\" class=\"dataframe\">\n",
+          "  <thead>\n",
+          "    <tr style=\"text-align: right;\">\n",
+          "      <th></th>\n",
+          "      <th>gauche_systeme</th>\n",
+          "      <th>gauche_id</th>\n",
+          "      <th>droite_systeme</th>\n",
+          "      <th>droite_id</th>\n",
+          "      <th>meme_personne</th>\n",
+          "      <th>g</th>\n",
+          "      <th>d</th>\n",
+          "      <th>predit</th>\n",
+          "      <th>vrai</th>\n",
+          "    </tr>\n",
+          "  </thead>\n",
+          "  <tbody>\n",
+          "  </tbody>\n",
+          "</table>\n",
+          "</div>"
+        ],
+        "text/plain": [
+          "Empty DataFrame\n",
+          "Columns: [gauche_systeme, gauche_id, droite_systeme, droite_id, meme_personne, g, d, predit, vrai]\n",
+          "Index: []"
+        ]
+      },
+      "metadata": {},
+      "output_type": "display_data"
+    }
+  ]
+}

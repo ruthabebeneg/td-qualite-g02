@@ -1,0 +1,42 @@
+{
+  "expectation_suite_name": "s4_corrige_gold_sinistre",
+  "ge_cloud_id": null,
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-014",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-014",
+        "batch_id": "L-2026-10-01",
+        "couche": "GOLD",
+        "table_cible": "sinistre",
+        "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-020",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-020",
+        "batch_id": "L-2026-10-01",
+        "couche": "GOLD",
+        "table_cible": "sinistre",
+        "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61"
+      }
+    }
+  ],
+  "data_asset_type": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}
