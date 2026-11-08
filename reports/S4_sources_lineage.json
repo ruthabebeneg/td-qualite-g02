@@ -1,0 +1,30 @@
+{
+  "batch_id": "L-2026-10-01",
+  "mode": "Lecture seule ; clés gold→sources, en complément des liens gold→silver→bronze mesurés par lot",
+  "mesures": [
+    {
+      "origine": "crm_client",
+      "n": 99556,
+      "liens_manquants": 0,
+      "sql": "SELECT COUNT(*) n,COALESCE(SUM(c.client_id IS NULL),0) liens_manquants FROM gold.xref_identifiants x LEFT JOIN crm.client c ON c.client_id=x.source_id WHERE x.source_systeme='crm'"
+    },
+    {
+      "origine": "cif_clients",
+      "n": 40000,
+      "liens_manquants": 0,
+      "sql": "SELECT COUNT(*) n,COALESCE(SUM(c.column0 IS NULL),0) liens_manquants FROM gold.xref_identifiants x LEFT JOIN cif.clients c ON c.column0=x.source_id WHERE x.source_systeme='cif'"
+    },
+    {
+      "origine": "crm_contrat",
+      "n": 96159,
+      "liens_manquants": 0,
+      "sql": "SELECT COUNT(*) n,COALESCE(SUM(c.contrat_id IS NULL),0) liens_manquants FROM gold.contrat_certifie g LEFT JOIN crm.contrat c ON c.contrat_id=g.contrat_id WHERE g._batch_id='L-2026-10-01'"
+    },
+    {
+      "origine": "crm_sinistre",
+      "n": 89156,
+      "liens_manquants": 0,
+      "sql": "SELECT COUNT(*) n,COALESCE(SUM(c.sinistre_id IS NULL),0) liens_manquants FROM gold.sinistre_certifie g LEFT JOIN crm.sinistre c ON c.sinistre_id=g.sinistre_id WHERE g._batch_id='L-2026-10-01'"
+    }
+  ]
+}

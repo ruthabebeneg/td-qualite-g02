@@ -1,0 +1,87 @@
+{
+  "trace_1": [
+    {
+      "cli_id": "CLI-033864",
+      "valeur_gold": "SOCIETE MEUNIER SARL",
+      "source_systeme": "crm",
+      "source_id": "A-4471",
+      "silver_row_id": 871628,
+      "valeur_silver": "SOCIETE MEUNIER SARL",
+      "bronze_row_id": 634450,
+      "valeur_bronze": "Société Meunier SARL",
+      "lot": "L-2026-10-01",
+      "source": "crm.client.client_id = A-4471",
+      "valeur_source": "Société Meunier SARL"
+    },
+    {
+      "cli_id": "CLI-033864",
+      "valeur_gold": "SOCIETE MEUNIER SARL",
+      "source_systeme": "crm",
+      "source_id": "H-9012",
+      "silver_row_id": 910810,
+      "valeur_silver": "MEUNIER SARL",
+      "bronze_row_id": 673793,
+      "valeur_bronze": "MEUNIER SARL",
+      "lot": "L-2026-10-01",
+      "source": "crm.client.client_id = H-9012",
+      "valeur_source": "MEUNIER SARL"
+    },
+    {
+      "cli_id": "CLI-033864",
+      "valeur_gold": "SOCIETE MEUNIER SARL",
+      "source_systeme": "crm",
+      "source_id": "S-2208",
+      "silver_row_id": 925027,
+      "valeur_silver": "SOCIETE MEUNIER SARL",
+      "bronze_row_id": 688069,
+      "valeur_bronze": "Sté Meunier S.A.R.L.",
+      "lot": "L-2026-10-01",
+      "source": "crm.client.client_id = S-2208",
+      "valeur_source": "Sté Meunier S.A.R.L."
+    },
+    {
+      "cli_id": "CLI-033864",
+      "valeur_gold": "SOCIETE MEUNIER SARL",
+      "source_systeme": "cif",
+      "source_id": "K471226",
+      "silver_row_id": 953512,
+      "valeur_silver": "SOCIETE MEUNIER SARL",
+      "bronze_row_id": 256620,
+      "valeur_bronze": "SOCIETE MEUNIER S.A.R.L.",
+      "lot": "L-2026-10-01",
+      "source": "cif.clients.column0 = K471226",
+      "valeur_source": "SOCIETE MEUNIER S.A.R.L."
+    }
+  ],
+  "trace_2": [
+    {
+      "cli_id": "CLI-000069",
+      "cp_gold": "01500",
+      "source_id": "A-10062",
+      "silver_row_id": 837405,
+      "cp_silver": "01500",
+      "bronze_row_id": 600070,
+      "cp_bronze": "1500",
+      "pays_bronze": "FR",
+      "lot": "L-2026-10-01",
+      "source": "crm.client",
+      "cp_source": "1500"
+    }
+  ],
+  "trace_3": [
+    {
+      "sinistre_id": "SIN0000008",
+      "adresse_gold": "25 avenue des Platanes",
+      "id_ban": "BAN012063",
+      "silver_row_id": 552026,
+      "adresse_silver": "25 avenue des Platanes",
+      "rapprochement_ban": "CORRIGE",
+      "bronze_row_id": 600008,
+      "adresse_bronze": "25 avenue des Platanees",
+      "lot": "L-2026-10-01",
+      "source": "crm.sinistre",
+      "adresse_source": "25 avenue des Platanees",
+      "contrat_id": "CT0000130"
+    }
+  ]
+}

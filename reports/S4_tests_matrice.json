@@ -1,0 +1,20 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "tests": {
+    "nature_pp_pm": true,
+    "anniversaire_18_ans": true,
+    "29_fevrier": true,
+    "majorite": true,
+    "transitivite_refusee": true,
+    "naissance_contradictoire": true,
+    "contact_sans_candidat": true,
+    "survie_vide": true,
+    "ban_ex_aequo": true,
+    "validation_absente": true,
+    "validation_refusee": true,
+    "configuration_modifiee": true,
+    "autre_lot_refuse": true,
+    "groupes_vides": true
+  }
+}
