@@ -1,0 +1,114 @@
+{
+  "expectation_suite_name": "silver_client_porte_s",
+  "ge_cloud_id": null,
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-007",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-007",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-009",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-009",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-020",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-020",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-003",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-003",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-004",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-004",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-005",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-005",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-006",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-006",
+        "couche": "SILVER"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "RQ-008",
+        "value_set": [
+          true
+        ]
+      },
+      "meta": {
+        "rule_id": "RQ-008",
+        "couche": "SILVER"
+      }
+    }
+  ],
+  "data_asset_type": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "executions": 2,
+  "identique": true,
+  "bronze_inchange": true,
+  "bronze_sha256": {
+    "crm_client": "a8c6604f8949eab097440f18c3bbcb62838f7cb0a02dba3c24e18ef726caedb2",
+    "cif_clients": "188cd83bed0a9604b3fe230c03bf7a13cd3661441a9eb29355a6d33c3ced5c0e",
+    "crm_contrat": "c185f5c958d6fe67d76393840bbbef8fffc04fad28dc85ff59d4df8eb961600d",
+    "crm_sinistre": "fe16bfeb007e28deb9f4ef21b0066469c1f7602f6cf7cee5cdb3fbeb5f58122a",
+    "crm_type_contrat": "79679631c61c316d9ffc5365d41cee7ceb2d5a6b0b4aac90734ddcab3e4e326e",
+    "cif_compte": "bc0da4ae0dc0d2592efbb4229b435fbf1a717cf58b097a32be585c7704b487e0",
+    "cif_pays": "fc78d8dff03e51c1e61923daaf519a43f67fac67aa039a02761360a93131763d"
+  },
+  "premiere": {
+    "silver.client": {
+      "n": 139556,
+      "sha256": "630a0ff9f59d63d5bd5a4dd98e2cf541c758b103e659efdfb49f2eafbb4f704c"
+    },
+    "silver.contrat": {
+      "n": 98600,
+      "sha256": "224cd3e8edb493f7b9b5cacdecabb6cad094995eaf38fae62800ed26c434d5ed"
+    },
+    "silver.sinistre": {
+      "n": 92003,
+      "sha256": "98176847fa4e823793152bd7aef8170cc7464908a1d6bf9294d7352b7019918c"
+    },
+    "gold.client_unique": {
+      "n": 121073,
+      "sha256": "73c2083d5cb7ae7b880932873d21a018bbc1dbf47de221bbe9c16589fb33bcd6"
+    },
+    "gold.xref_identifiants": {
+      "n": 139556,
+      "sha256": "43c4cf97feb08dade629ae2bcdeb35f67632ccc5e8da176e4751f5fab82ff327"
+    },
+    "gold.contrat_certifie": {
+      "n": 96159,
+      "sha256": "95490ff9674f9d97c23297d10e0a486381cdd1ebbe4885c7ffdeaeba4b85e98d"
+    },
+    "gold.sinistre_certifie": {
+      "n": 89156,
+      "sha256": "1b63127aa6441272142d82a1d099737d359714c05e113abe2bd92c8bfdc59a32"
+    },
+    "dq.rejets": {
+      "n": 15137,
+      "sha256": "c4db563d8afc77ce130ab10924d3adb19c493041796d9977292e22efb829ac43"
+    }
+  },
+  "seconde": {
+    "silver.client": {
+      "n": 139556,
+      "sha256": "630a0ff9f59d63d5bd5a4dd98e2cf541c758b103e659efdfb49f2eafbb4f704c"
+    },
+    "silver.contrat": {
+      "n": 98600,
+      "sha256": "224cd3e8edb493f7b9b5cacdecabb6cad094995eaf38fae62800ed26c434d5ed"
+    },
+    "silver.sinistre": {
+      "n": 92003,
+      "sha256": "98176847fa4e823793152bd7aef8170cc7464908a1d6bf9294d7352b7019918c"
+    },
+    "gold.client_unique": {
+      "n": 121073,
+      "sha256": "73c2083d5cb7ae7b880932873d21a018bbc1dbf47de221bbe9c16589fb33bcd6"
+    },
+    "gold.xref_identifiants": {
+      "n": 139556,
+      "sha256": "43c4cf97feb08dade629ae2bcdeb35f67632ccc5e8da176e4751f5fab82ff327"
+    },
+    "gold.contrat_certifie": {
+      "n": 96159,
+      "sha256": "95490ff9674f9d97c23297d10e0a486381cdd1ebbe4885c7ffdeaeba4b85e98d"
+    },
+    "gold.sinistre_certifie": {
+      "n": 89156,
+      "sha256": "1b63127aa6441272142d82a1d099737d359714c05e113abe2bd92c8bfdc59a32"
+    },
+    "dq.rejets": {
+      "n": 15137,
+      "sha256": "c4db563d8afc77ce130ab10924d3adb19c493041796d9977292e22efb829ac43"
+    }
+  }
+}

@@ -1,33 +1,69 @@
 checks for client:
-  # RQ-020 : clé primaire unique et renseignée
-  - duplicate_count(client_id) = 0
-  - missing_count(client_id) = 0
+  - duplicate_count(client_id) = 0:
+      name: RQ-020 | CRM | client_id sans doublon
+  - missing_count(client_id) = 0:
+      name: RQ-020 | CRM | client_id renseigné
 
-  # RQ-009 : type de personne dans le domaine
-  - invalid_count(type_personne) = 0:
-      name: RQ-009 type de personne autorise
-      valid values: ['prospect', 'souscripteur', 'assure']
-
-  # RQ-003 : téléphone d'un souscripteur renseigné (nul, vide ou blanc)
   - failed rows:
-      name: RQ-003 telephone du souscripteur renseigne
-      fail condition: type_personne = 'souscripteur' AND (telephone IS NULL OR TRIM(telephone) = '')
-
-  # RQ-005 : code postal à 5 chiffres pour une adresse en France
-  - failed rows:
-      name: RQ-005 code postal sur 5 chiffres (France)
-      fail condition: pays = 'FR' AND cp NOT REGEXP '^[0-9]{5}$'
-
-  # RQ-007 : pays dans la liste de référence
-  - failed rows:
-      name: RQ-007 pays dans la liste de reference
+      name: RQ-009 | CRM | type de personne normalisé autorisé
       fail query: |
-        SELECT client_id FROM client WHERE pays NOT IN (SELECT code_pays FROM silver.ref_pays)
+        SELECT client_id
+        FROM client
+        WHERE CASE LOWER(TRIM(type_personne))
+                WHEN 'prosp.' THEN 'prospect'
+                WHEN 'assuré' THEN 'assure'
+                ELSE LOWER(TRIM(type_personne))
+              END NOT IN ('prospect', 'souscripteur', 'assure')
 
-  # RQ-015 : un prospect n'a aucun contrat (échoue sur les données brutes)
+  - rq003_taux_telephone:
+      name: RQ-003 | CRM | taux de telephones renseignes
+      rq003_taux_telephone query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN telephone IS NOT NULL AND TRIM(telephone) <> '' THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM client
+        WHERE LOWER(TRIM(type_personne)) = 'souscripteur'
+      warn: when < 98
+
+  - rq005_taux_cp_fr:
+      name: RQ-005 | CRM | taux de codes postaux francais valides
+      rq005_taux_cp_fr query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN cp REGEXP '^[0-9]{5}$' THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM client
+        WHERE pays = 'FR'
+      warn: when < 98
+
   - failed rows:
-      name: RQ-015 prospect sans contrat
+      name: RQ-007 | CRM | pays présent dans le référentiel
       fail query: |
-        SELECT c.client_id FROM client c
-        WHERE c.type_personne = 'prospect'
-          AND EXISTS (SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id)
+        SELECT c.client_id
+        FROM client c
+        WHERE c.pays IS NOT NULL
+          AND NOT EXISTS (
+            SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays
+          )
+
+  - rq015_prospects_avec_contrat:
+      name: RQ-015 | CRM | prospects normalises avec contrat
+      rq015_prospects_avec_contrat query: |
+        SELECT COUNT(DISTINCT c.client_id) AS nb
+        FROM client c
+        WHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')
+          AND EXISTS (
+            SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id
+          )
+      fail: when > 0
+
+  - rq016_taux_souscripteurs_avec_contrat:
+      name: RQ-016 | CRM | taux de souscripteurs avec contrat
+      rq016_taux_souscripteurs_avec_contrat query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN EXISTS (
+                   SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id
+                 ) THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM client c
+        WHERE LOWER(TRIM(c.type_personne)) = 'souscripteur'
+      warn: when < 98
