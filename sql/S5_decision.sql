@@ -7,9 +7,11 @@ WITH attendus AS (
  )) j
 ), historique AS (
  SELECT h.*, ROW_NUMBER() OVER(PARTITION BY couche,rule_id,
-  CASE WHEN LEFT(table_cible,3) IN ('S4_','S5_') THEN SUBSTRING(table_cible,4) ELSE table_cible END
+  CASE WHEN LEFT(table_cible,6)='S4R19_' THEN SUBSTRING(table_cible,7)
+   WHEN LEFT(table_cible,3) IN ('S4_','S5_') THEN SUBSTRING(table_cible,4) ELSE table_cible END
   ORDER BY id DESC) rn,
-  CASE WHEN LEFT(table_cible,3) IN ('S4_','S5_') THEN SUBSTRING(table_cible,4) ELSE table_cible END table_logique
+  CASE WHEN LEFT(table_cible,6)='S4R19_' THEN SUBSTRING(table_cible,7)
+   WHEN LEFT(table_cible,3) IN ('S4_','S5_') THEN SUBSTRING(table_cible,4) ELSE table_cible END table_logique
  FROM {dq_history} h WHERE batch_id=:batch
 ), couverture AS (
  SELECT a.*,h.id,h.nb_testees,h.nb_echecs,

@@ -1,0 +1,3642 @@
+{
+  "execution": {
+    "attestation": {
+      "synthetique": false,
+      "batch_id": "L-2026-10-01",
+      "schema_gold": "gold",
+      "schema_dq": "dq",
+      "gold_sha256": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+      "history_sha256": "33695db70d97c72dfd3f02a2e92742b5c73e82a608b554db58fbaca1b16a4f89",
+      "configuration": {
+        "batch_id": "L-2026-10-01",
+        "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+        "etat": "CANDIDAT_RQ019_NON_ACCEPTE",
+        "accepte": 0,
+        "modifie_le": "2026-11-12 12:58:47"
+      },
+      "catalogue_sha256": "456238a5247a9dfd72ba8c31acdf1f2bcd73ab04715c0d302ff099ca6122daac",
+      "politique_sha256": "38ddcb6c624167472e49699f01c8a7918fa59b71e95eadf8500ff830b7cf1c15",
+      "contenu_controles_sha256": "c5a6d27ba9cd43d86e9d4d4692350eda608f62250aba11df73499040e5004f16",
+      "scopes_sha256": "6e7a7d0d68745d9f7ebf979fd817e0d79dabf22b4cfb586d662f1eaae7cf382a",
+      "mesures_executees": [
+        {
+          "scope": {
+            "rule_id": "RQ-001",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-002",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 89999,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-009",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-010",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-011",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-012",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-013",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 57231,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-014",
+            "couche": "SILVER",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-015",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 44836,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-017",
+            "couche": "GOLD",
+            "table_logique": "sinistre_garantie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-017",
+            "couche": "GOLD",
+            "table_logique": "sinistre_relation",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-018",
+            "couche": "GOLD",
+            "table_logique": "v_client_actif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 3,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-018",
+            "couche": "GOLD",
+            "table_logique": "statut_client_actif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "identites_PP",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 117763,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "identites_PM",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 4057,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "signature_nom_cp_naissance_tel",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 104395,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "signature_nom_email",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92298,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_client",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_type_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_clients",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_compte",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_pays",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_client",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_type_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 12,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_clients",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_compte",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 45000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_pays",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 250,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "contrat_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "sinistre_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "client (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "client (cif)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "contrat (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "sinistre (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "xref_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99309,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "xref_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 39851,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "contrat_certifie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "sinistre_certifie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "silver_xref_gold",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 139556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-009",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-001",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-010",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-014",
+            "couche": "GOLD",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        }
+      ],
+      "execute_le": "2026-11-12T13:22:34.434467+00:00"
+    },
+    "mesures": [
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "crm_client",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 100000,
+          "somme_crc32": 214701936373892,
+          "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
+        },
+        "bronze": {
+          "lignes": 100000,
+          "somme_crc32": 214701936373892,
+          "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "crm_client",
+        "nb_testees": 100000,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "crm_contrat",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 100000,
+          "somme_crc32": 214920543380008,
+          "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
+        },
+        "bronze": {
+          "lignes": 100000,
+          "somme_crc32": 214920543380008,
+          "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "crm_contrat",
+        "nb_testees": 100000,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "crm_sinistre",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 100000,
+          "somme_crc32": 214256364507763,
+          "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
+        },
+        "bronze": {
+          "lignes": 100000,
+          "somme_crc32": 214256364507763,
+          "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "crm_sinistre",
+        "nb_testees": 100000,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "crm_type_contrat",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 12,
+          "somme_crc32": 25049111003,
+          "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
+        },
+        "bronze": {
+          "lignes": 12,
+          "somme_crc32": 25049111003,
+          "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "crm_type_contrat",
+        "nb_testees": 12,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "cif_clients",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 40000,
+          "somme_crc32": 85743772090414,
+          "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
+        },
+        "bronze": {
+          "lignes": 40000,
+          "somme_crc32": 85743772090414,
+          "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "cif_clients",
+        "nb_testees": 40000,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "cif_compte",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 45000,
+          "somme_crc32": 96942383526087,
+          "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
+        },
+        "bronze": {
+          "lignes": 45000,
+          "somme_crc32": 96942383526087,
+          "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "cif_compte",
+        "nb_testees": 45000,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-021",
+        "table_logique": "cif_pays",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+        "taux": 100.0,
+        "source": {
+          "lignes": 250,
+          "somme_crc32": 548069437591,
+          "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
+        },
+        "bronze": {
+          "lignes": 250,
+          "somme_crc32": 548069437591,
+          "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
+        },
+        "contenu_exact_identique": true
+      },
+      {
+        "couche": "BRONZE",
+        "rule_id": "RQ-022",
+        "table_logique": "cif_pays",
+        "nb_testees": 250,
+        "nb_echecs": 0,
+        "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+        "taux": 100.0
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-003",
+        "table_logique": "client_crm",
+        "nb_testees": 50293,
+        "nb_echecs": 6010,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 88.05002684270177,
+        "exclusions": 49263,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-004",
+        "table_logique": "client_crm",
+        "nb_testees": 88212,
+        "nb_echecs": 879,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 99.00353693375051,
+        "exclusions": 11344,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-005",
+        "table_logique": "client_crm",
+        "nb_testees": 98024,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 1532,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-006",
+        "table_logique": "client_crm",
+        "nb_testees": 98024,
+        "nb_echecs": 698,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 99.28792948665632,
+        "exclusions": 1532,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-007",
+        "table_logique": "client_crm",
+        "nb_testees": 99556,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 0,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-008",
+        "table_logique": "client_crm",
+        "nb_testees": 80280,
+        "nb_echecs": 1205,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 98.49900348779272,
+        "exclusions": 19276,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-009",
+        "table_logique": "client_crm",
+        "nb_testees": 99556,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 0,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-020",
+        "table_logique": "client_crm",
+        "nb_testees": 99556,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `source_id` k,COUNT(*) OVER(PARTITION BY `source_id`) multiplicite\n       FROM `silver`.`client` WHERE _batch_id=:b  AND source_systeme='crm') d"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-004",
+        "table_logique": "client_cif",
+        "nb_testees": 33368,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 6632,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-005",
+        "table_logique": "client_cif",
+        "nb_testees": 39401,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 599,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-006",
+        "table_logique": "client_cif",
+        "nb_testees": 39401,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 599,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-007",
+        "table_logique": "client_cif",
+        "nb_testees": 40000,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 0,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-008",
+        "table_logique": "client_cif",
+        "nb_testees": 21128,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 18872,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-020",
+        "table_logique": "client_cif",
+        "nb_testees": 40000,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `source_id` k,COUNT(*) OVER(PARTITION BY `source_id`) multiplicite\n       FROM `silver`.`client` WHERE _batch_id=:b  AND source_systeme='cif') d"
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-003",
+        "table_logique": "client_unique",
+        "nb_testees": 48322,
+        "nb_echecs": 5190,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 89.25955051529324,
+        "exclusions": 72351,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-004",
+        "table_logique": "client_unique",
+        "nb_testees": 106438,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 14235,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-005",
+        "table_logique": "client_unique",
+        "nb_testees": 118853,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 1820,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-006",
+        "table_logique": "client_unique",
+        "nb_testees": 118853,
+        "nb_echecs": 553,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 99.53471935920844,
+        "exclusions": 1820,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-007",
+        "table_logique": "client_unique",
+        "nb_testees": 120673,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 0,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-008",
+        "table_logique": "client_unique",
+        "nb_testees": 92298,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 28375,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-009",
+        "table_logique": "client_unique",
+        "nb_testees": 120673,
+        "nb_echecs": 0,
+        "population": "Souscripteurs uniquement pour RQ003 ; France pour RQ004/005/006 ; contacts renseignés pour RQ004/008 ; pays/domaine sur toutes les lignes.",
+        "taux": 100.0,
+        "exclusions": 0,
+        "non_applicabilite": null
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-020",
+        "table_logique": "client_unique",
+        "nb_testees": 120673,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `cli_id` k,COUNT(*) OVER(PARTITION BY `cli_id`) multiplicite\n       FROM `gold`.`client_unique` WHERE _batch_id=:b ) d"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-001",
+        "table_logique": "contrat",
+        "nb_testees": 98600,
+        "nb_echecs": 0,
+        "population": "Tous contrats silver du lot ; valeurs NULL en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(date_fin IS NULL OR date_debut IS NULL OR date_fin<=date_debut),0) ko FROM silver.contrat WHERE _batch_id=:b"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-010",
+        "table_logique": "contrat",
+        "nb_testees": 98600,
+        "nb_echecs": 0,
+        "population": "Tous contrats silver du lot ; valeurs NULL en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(duree_garantie_mois IS NULL OR duree_garantie_mois NOT IN (12,24,36,60)),0) ko FROM silver.contrat WHERE _batch_id=:b"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-020",
+        "table_logique": "contrat",
+        "nb_testees": 98600,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `contrat_id` k,COUNT(*) OVER(PARTITION BY `contrat_id`) multiplicite\n       FROM `silver`.`contrat` WHERE _batch_id=:b ) d"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-020",
+        "table_logique": "sinistre",
+        "nb_testees": 92003,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `sinistre_id` k,COUNT(*) OVER(PARTITION BY `sinistre_id`) multiplicite\n       FROM `silver`.`sinistre` WHERE _batch_id=:b ) d"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-023",
+        "table_logique": "client_crm",
+        "nb_testees": 99556,
+        "nb_echecs": 0,
+        "population": "Toutes lignes silver, origine/lot/clé/bronze_row_id qualifiés ; LEFT JOIN.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(b.bronze_row_id IS NULL),0) ko\n          FROM silver.client s LEFT JOIN bronze.crm_client b ON b.bronze_row_id=s.bronze_row_id\n          AND b._batch_id=s._batch_id AND b.client_id=s.source_id WHERE s._batch_id=:b  AND s.source_systeme='crm'"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-024",
+        "table_logique": "client (crm)",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table/origine : silver + rejets S distincts = bronze ; ensembles disjoints, références de rejets valides.",
+        "taux": 100.0,
+        "bronze": 100000,
+        "silver": 99556,
+        "rejets_distincts": 444,
+        "chevauchement": 0,
+        "rejets_sans_bronze": 0
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-023",
+        "table_logique": "client_cif",
+        "nb_testees": 40000,
+        "nb_echecs": 0,
+        "population": "Toutes lignes silver, origine/lot/clé/bronze_row_id qualifiés ; LEFT JOIN.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(b.bronze_row_id IS NULL),0) ko\n          FROM silver.client s LEFT JOIN bronze.cif_clients b ON b.bronze_row_id=s.bronze_row_id\n          AND b._batch_id=s._batch_id AND b.column0=s.source_id WHERE s._batch_id=:b  AND s.source_systeme='cif'"
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-024",
+        "table_logique": "client (cif)",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table/origine : silver + rejets S distincts = bronze ; ensembles disjoints, références de rejets valides.",
+        "taux": 100.0,
+        "bronze": 40000,
+        "silver": 40000,
+        "rejets_distincts": 0,
+        "chevauchement": 0,
+        "rejets_sans_bronze": 0
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-023",
+        "table_logique": "contrat_crm",
+        "nb_testees": 98600,
+        "nb_echecs": 0,
+        "population": "Toutes lignes silver, origine/lot/clé/bronze_row_id qualifiés ; LEFT JOIN.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(b.bronze_row_id IS NULL),0) ko\n          FROM silver.contrat s LEFT JOIN bronze.crm_contrat b ON b.bronze_row_id=s.bronze_row_id\n          AND b._batch_id=s._batch_id AND b.contrat_id=s.contrat_id WHERE s._batch_id=:b "
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-024",
+        "table_logique": "contrat (crm)",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table/origine : silver + rejets S distincts = bronze ; ensembles disjoints, références de rejets valides.",
+        "taux": 100.0,
+        "bronze": 100000,
+        "silver": 98600,
+        "rejets_distincts": 1400,
+        "chevauchement": 0,
+        "rejets_sans_bronze": 0
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-023",
+        "table_logique": "sinistre_crm",
+        "nb_testees": 92003,
+        "nb_echecs": 0,
+        "population": "Toutes lignes silver, origine/lot/clé/bronze_row_id qualifiés ; LEFT JOIN.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(b.bronze_row_id IS NULL),0) ko\n          FROM silver.sinistre s LEFT JOIN bronze.crm_sinistre b ON b.bronze_row_id=s.bronze_row_id\n          AND b._batch_id=s._batch_id AND b.sinistre_id=s.sinistre_id WHERE s._batch_id=:b "
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-024",
+        "table_logique": "sinistre (crm)",
+        "nb_testees": 1,
+        "nb_echecs": 0,
+        "population": "Un contrôle global par table/origine : silver + rejets S distincts = bronze ; ensembles disjoints, références de rejets valides.",
+        "taux": 100.0,
+        "bronze": 100000,
+        "silver": 92003,
+        "rejets_distincts": 7997,
+        "chevauchement": 0,
+        "rejets_sans_bronze": 0
+      },
+      {
+        "couche": "SILVER",
+        "rule_id": "RQ-014",
+        "table_logique": "sinistre",
+        "nb_testees": 92003,
+        "nb_echecs": 0,
+        "population": "Tous sinistres retenus : id BAN existant, CP/commune/adresse concordants au référentiel, normalisation accents/casse/espaces ; NULL en échec.",
+        "taux": 100.0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-014",
+        "table_logique": "sinistre",
+        "nb_testees": 88824,
+        "nb_echecs": 0,
+        "population": "Tous sinistres retenus : id BAN existant, CP/commune/adresse concordants au référentiel, normalisation accents/casse/espaces ; NULL en échec.",
+        "taux": 100.0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-020",
+        "table_logique": "sinistre",
+        "nb_testees": 88824,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `sinistre_id` k,COUNT(*) OVER(PARTITION BY `sinistre_id`) multiplicite\n       FROM `gold`.`sinistre_certifie` WHERE _batch_id=:b ) d"
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-019",
+        "table_logique": "identites_PP",
+        "nb_testees": 117763,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "lignes_exclues": 386
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-019",
+        "table_logique": "identites_PM",
+        "nb_testees": 4057,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "lignes_exclues": 10
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-019",
+        "table_logique": "signature_nom_cp_naissance_tel",
+        "nb_testees": 104395,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "lignes_exclues": 16278
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-019",
+        "table_logique": "signature_nom_email",
+        "nb_testees": 92298,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "lignes_exclues": 28375
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-002",
+        "table_logique": "contrat",
+        "nb_testees": 89999,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(g.cli_id IS NULL OR g.nature_personne IS NULL\n       OR g.nature_personne<>'PP' OR g.date_naissance IS NULL OR c.date_debut IS NULL\n       OR TIMESTAMPDIFF(YEAR,g.date_naissance,c.date_debut)<18),0) ko\n       FROM gold.contrat_certifie c LEFT JOIN gold.client_unique g\n       ON g.cli_id=c.cli_souscripteur AND g._batch_id=c._batch_id\n       WHERE c._batch_id=:b AND (g.nature_personne IS NULL OR g.nature_personne<>'PM')",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-011",
+        "table_logique": "contrat",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(t.code_type IS NULL),0) ko FROM gold.contrat_certifie c\n       LEFT JOIN bronze.crm_type_contrat t ON t.code_type=c.code_type AND t._batch_id=c._batch_id WHERE c._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-012",
+        "table_logique": "contrat",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(g.cli_id IS NULL),0) ko FROM gold.contrat_certifie c\n       LEFT JOIN gold.client_unique g ON g.cli_id=c.cli_souscripteur AND g._batch_id=c._batch_id WHERE c._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-013",
+        "table_logique": "contrat",
+        "nb_testees": 57231,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(g.cli_id IS NULL),0) ko FROM gold.contrat_certifie c\n       LEFT JOIN gold.client_unique g ON g.cli_id=c.cli_assure AND g._batch_id=c._batch_id WHERE c._batch_id=:b AND c.cli_assure IS NOT NULL",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-017",
+        "table_logique": "sinistre_relation",
+        "nb_testees": 88824,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(c.contrat_id IS NULL),0) ko FROM gold.sinistre_certifie s\n       LEFT JOIN gold.contrat_certifie c ON c.contrat_id=s.contrat_id AND c._batch_id=s._batch_id WHERE s._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-017",
+        "table_logique": "sinistre_garantie",
+        "nb_testees": 88824,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(NOT EXISTS(SELECT 1 FROM gold.contrat_certifie d\n        WHERE d._batch_id=s._batch_id AND d.cli_souscripteur=c.cli_souscripteur AND d.code_type=c.code_type\n        AND s.date_survenance BETWEEN d.date_debut AND d.date_fin)),0) ko FROM gold.sinistre_certifie s\n        LEFT JOIN gold.contrat_certifie c ON c.contrat_id=s.contrat_id AND c._batch_id=s._batch_id WHERE s._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-015",
+        "table_logique": "client_unique",
+        "nb_testees": 44836,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(EXISTS(SELECT 1 FROM gold.contrat_certifie c\n        WHERE c.cli_souscripteur=g.cli_id AND c._batch_id=g._batch_id)),0) ko FROM gold.client_unique g WHERE g._batch_id=:b AND g.statut_client='PROSPECT' ",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-016",
+        "table_logique": "client_unique",
+        "nb_testees": 48322,
+        "nb_echecs": 1569,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 96.75303174537478,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(NOT EXISTS(SELECT 1 FROM gold.contrat_certifie c\n        WHERE c.cli_souscripteur=g.cli_id AND c._batch_id=g._batch_id)),0) ko FROM gold.client_unique g WHERE g._batch_id=:b AND g.statut_client IN ('ACTIF','INACTIF','A_REVOIR')",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-018",
+        "table_logique": "statut_client_actif",
+        "nb_testees": 120673,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM((g.statut_client='ACTIF') <> EXISTS(SELECT 1 FROM gold.v_client_actif a\n        WHERE a.cli_id=g.cli_id AND a._batch_id=g._batch_id)),0) ko FROM gold.client_unique g WHERE g._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-001",
+        "table_logique": "contrat",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(date_fin IS NULL OR date_debut IS NULL OR date_fin<=date_debut),0) ko FROM gold.contrat_certifie WHERE _batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-010",
+        "table_logique": "contrat",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(duree_garantie_mois IS NULL OR duree_garantie_mois NOT IN (12,24,36,60)),0) ko FROM gold.contrat_certifie WHERE _batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "silver_xref_gold",
+        "nb_testees": 139556,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,\n          COALESCE(SUM((x.cli_id IS NULL OR g.cli_id IS NULL) AND q.silver_row_id IS NULL),0) ko,\n          COALESCE(SUM(q.silver_row_id IS NOT NULL),0) exclusions_rq019\n          FROM `silver`.`client` s\n          LEFT JOIN `gold`.`xref_identifiants` x ON x.silver_row_id=s.silver_row_id\n            AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id\n          LEFT JOIN (\n            SELECT DISTINCT ref.source_systeme,ref.source_id,ref.bronze_row_id,ref.silver_row_id,b._batch_id\n            FROM `dq`.`rq019_reference_xref_identifiants` ref\n            JOIN `dq`.`rq019_reference_client_unique` b ON b.cli_id=ref.cli_id\n            JOIN `dq`.`rq019_etat` e ON e.batch_id=b._batch_id AND e.etat='APPLIQUE'\n            JOIN `dq`.`s4_manifeste` m ON m.batch_id=e.batch_id\n              AND m.configuration_sha256=e.configuration_sha256\n            JOIN `dq`.`rejets` r ON r.batch_id=b._batch_id AND r.entite='client'\n              AND r.source_systeme=ref.source_systeme AND r.bronze_row_id=ref.bronze_row_id\n              AND r.rule_id='RQ-019' AND r.porte='G' AND r.motif='RQ019_V1_IDENTITE_INCERTAINE'\n            WHERE JSON_CONTAINS(JSON_EXTRACT(e.plan_json,'$.excluded_cli'),JSON_QUOTE(ref.cli_id))=1\n          ) q ON q.silver_row_id=s.silver_row_id AND q.bronze_row_id=s.bronze_row_id\n             AND q.source_systeme=s.source_systeme AND q.source_id=s.source_id AND q._batch_id=s._batch_id\n          WHERE s._batch_id=:b",
+        "exclusions_rq019_justifiees": 396
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "xref_crm",
+        "nb_testees": 99309,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL OR g.cli_id IS NULL),0) ko\n          FROM `gold`.`xref_identifiants` x\n          LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n            AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme\n            AND s.source_id=x.source_id AND s._batch_id=:b\n          LEFT JOIN `bronze`.`crm_client` b ON b.bronze_row_id=x.bronze_row_id\n            AND b.`client_id`=x.source_id AND b._batch_id=:b\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=:b\n          WHERE x.source_systeme='crm' ",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "xref_cif",
+        "nb_testees": 39851,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL OR g.cli_id IS NULL),0) ko\n          FROM `gold`.`xref_identifiants` x\n          LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n            AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme\n            AND s.source_id=x.source_id AND s._batch_id=:b\n          LEFT JOIN `bronze`.`cif_clients` b ON b.bronze_row_id=x.bronze_row_id\n            AND b.`column0`=x.source_id AND b._batch_id=:b\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=:b\n          WHERE x.source_systeme='cif' ",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "contrat_certifie",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL),0) ko\n          FROM `gold`.`contrat_certifie` g LEFT JOIN `silver`.`contrat` s\n          ON s.silver_row_id=g.silver_row_id AND s.bronze_row_id=g.bronze_row_id AND s._batch_id=g._batch_id\n          LEFT JOIN `bronze`.`crm_contrat` b ON b.bronze_row_id=g.bronze_row_id\n          AND b._batch_id=g._batch_id AND b.`contrat_id`=g.`contrat_id` WHERE g._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "sinistre_certifie",
+        "nb_testees": 88824,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL),0) ko\n          FROM `gold`.`sinistre_certifie` g LEFT JOIN `silver`.`sinistre` s\n          ON s.silver_row_id=g.silver_row_id AND s.bronze_row_id=g.bronze_row_id AND s._batch_id=g._batch_id\n          LEFT JOIN `bronze`.`crm_sinistre` b ON b.bronze_row_id=g.bronze_row_id\n          AND b._batch_id=g._batch_id AND b.`sinistre_id`=g.`sinistre_id` WHERE g._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-023",
+        "table_logique": "client_unique",
+        "nb_testees": 120673,
+        "nb_echecs": 0,
+        "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(NOT EXISTS(\n        SELECT 1 FROM `gold`.`xref_identifiants` x\n        LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n          AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme AND s.source_id=x.source_id\n        WHERE x.cli_id=g.cli_id AND s._batch_id=g._batch_id)),0) ko\n        FROM `gold`.`client_unique` g WHERE g._batch_id=:b",
+        "exclusions_rq019_justifiees": 0
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-020",
+        "table_logique": "contrat",
+        "nb_testees": 95822,
+        "nb_echecs": 0,
+        "population": "Toutes les lignes du lot/périmètre ; clé métier NULL/vide ou dupliquée en échec.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(*) n,COALESCE(SUM(k IS NULL OR TRIM(CAST(k AS CHAR))='' OR multiplicite>1),0) ko\n      FROM (SELECT `contrat_id` k,COUNT(*) OVER(PARTITION BY `contrat_id`) multiplicite\n       FROM `gold`.`contrat_certifie` WHERE _batch_id=:b ) d"
+      },
+      {
+        "couche": "GOLD",
+        "rule_id": "RQ-018",
+        "table_logique": "v_client_actif",
+        "nb_testees": 3,
+        "nb_echecs": 0,
+        "population": "Trois comptages SQL de la définition CD-001, comparés à Python indépendant et aux identités de la vue ; cotisation NULL non à jour.",
+        "taux": 100.0,
+        "requete": "SELECT COUNT(DISTINCT cli_souscripteur) FROM gold.contrat_certifie\n      WHERE _batch_id=:b AND date_debut<=:reference AND date_fin>=:reference\n        AND date_derniere_cotisation>=:minimum",
+        "date_reference": "2026-10-01",
+        "cotisation_min": "2026-07-01",
+        "comptages_directions": {
+          "Commerciale": 36041,
+          "Sinistres": 36041,
+          "Risques": 36041
+        },
+        "actifs_python": 36041,
+        "actifs_vue": 36041,
+        "ecart_identites_vue_python": 0
+      }
+    ],
+    "conservation": [
+      {
+        "entite": "client",
+        "origine": "crm",
+        "bronze": 100000,
+        "silver": 99556,
+        "retenues_gold_sources": 99309,
+        "rejets_S_distincts": 444,
+        "rejets_G_distincts": 247,
+        "ecart_bronze_silver": 0,
+        "ecart_silver_gold": 0
+      },
+      {
+        "entite": "client",
+        "origine": "cif",
+        "bronze": 40000,
+        "silver": 40000,
+        "retenues_gold_sources": 39851,
+        "rejets_S_distincts": 0,
+        "rejets_G_distincts": 149,
+        "ecart_bronze_silver": 0,
+        "ecart_silver_gold": 0
+      },
+      {
+        "entite": "contrat",
+        "origine": "crm",
+        "bronze": 100000,
+        "silver": 98600,
+        "retenues_gold_sources": 95822,
+        "rejets_S_distincts": 1400,
+        "rejets_G_distincts": 2778,
+        "ecart_bronze_silver": 0,
+        "ecart_silver_gold": 0
+      },
+      {
+        "entite": "sinistre",
+        "origine": "crm",
+        "bronze": 100000,
+        "silver": 92003,
+        "retenues_gold_sources": 88824,
+        "rejets_S_distincts": 7997,
+        "rejets_G_distincts": 3179,
+        "ecart_bronze_silver": 0,
+        "ecart_silver_gold": 0
+      }
+    ],
+    "nombre_controles": 74,
+    "perimetres_bloquants_attestes": 59,
+    "historique_anterieur_preserve": true,
+    "publication": false
+  },
+  "tests_controles": {
+    "synthetique": true,
+    "nombre_tests": 11,
+    "tous_passes": true,
+    "ecritures_base": false,
+    "tests": [
+      {
+        "cas": "population_vide_sans_100_pourcent",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "effectifs_impossibles_refuses",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "rq018_bornes_dates_et_cotisation_null",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "rq018_direction_divergente_detectee",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "rq018_meme_compte_identites_differentes_detecte",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "rq018_statut_incorrect_non_ecrase_par_vue_conforme",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "ban_reference_et_adresse_concordantes",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "ban_identifiant_seul_insuffisant_cp",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "ban_identifiant_seul_insuffisant_commune",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "ban_identifiant_seul_insuffisant_adresse",
+        "etat": "PASSE"
+      },
+      {
+        "cas": "ban_reference_absente_refusee",
+        "etat": "PASSE"
+      }
+    ]
+  },
+  "tests_transaction_controles": {
+    "synthetique": true,
+    "nombre_tests": 3,
+    "tous_passes": true,
+    "schemas_nettoyes": true,
+    "tests": [
+      {
+        "cas": "historisation_liaison_commit",
+        "etat": "PASSE",
+        "mesures_commitees": 3,
+        "attestation_valide": true
+      },
+      {
+        "cas": "liaison_invalide_rollback_mesures",
+        "etat": "PASSE",
+        "insertions_avant_panne": 3,
+        "historique_integralement_retabli": true
+      },
+      {
+        "cas": "conservation_invalide_avant_insert",
+        "etat": "PASSE",
+        "ecarts_et_chevauchements_refuses": 4,
+        "aucune_mesure_partielle": true
+      }
+    ]
+  },
+  "tests_publication": {
+    "synthetique": true,
+    "lot": "TEST-S5-SYNTHETIQUE",
+    "schemas_execution": [
+      "s5_test_engineer_dec2fa599c25_target",
+      "s5_test_engineer_dec2fa599c25_gold",
+      "s5_test_engineer_dec2fa599c25_dq",
+      "s5_test_engineer_dec2fa599c25_silver",
+      "s5_test_engineer_dec2fa599c25_bronze"
+    ],
+    "limite": "Tests du mécanisme sur fixtures isolées ; aucun GO ni signature du lot réel.",
+    "nombre_tests": 38,
+    "tous_passes": true,
+    "schemas_nettoyes": true,
+    "tests": [
+      {
+        "cas": "sans_certificat",
+        "etat": "PASSE",
+        "message": "CERTIFICAT_ABSENT",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "certificat_no_go",
+        "etat": "PASSE",
+        "message": "CERTIFICAT_NO_GO",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "gold_modifie",
+        "etat": "PASSE",
+        "message": "EMPREINTE_GOLD_DIFFERENTE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "go_gold_intact",
+        "etat": "PASSE",
+        "message": "CHARGEE",
+        "chargement": true,
+        "reconciliation": [
+          {
+            "table_gold": "client_unique",
+            "table_cible": "client",
+            "gold": {
+              "lignes": 1,
+              "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+              "colonnes": [
+                "cli_id",
+                "nom_reference",
+                "date_naissance",
+                "cp",
+                "ville",
+                "pays_iso",
+                "telephone",
+                "email",
+                "nb_identifiants_source",
+                "statut_client",
+                "_batch_id",
+                "nature_personne",
+                "motif_revue"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+              "colonnes": [
+                "cli_id",
+                "nom_reference",
+                "date_naissance",
+                "cp",
+                "ville",
+                "pays_iso",
+                "telephone",
+                "email",
+                "nb_identifiants_source",
+                "statut_client",
+                "_batch_id",
+                "nature_personne",
+                "motif_revue"
+              ]
+            },
+            "ecart": 0
+          },
+          {
+            "table_gold": "contrat_certifie",
+            "table_cible": "contrat",
+            "gold": {
+              "lignes": 1,
+              "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+              "colonnes": [
+                "contrat_id",
+                "cli_souscripteur",
+                "cli_assure",
+                "code_type",
+                "date_debut",
+                "date_fin",
+                "duree_garantie_mois",
+                "prime_annuelle",
+                "date_derniere_cotisation",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+              "colonnes": [
+                "contrat_id",
+                "cli_souscripteur",
+                "cli_assure",
+                "code_type",
+                "date_debut",
+                "date_fin",
+                "duree_garantie_mois",
+                "prime_annuelle",
+                "date_derniere_cotisation",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "ecart": 0
+          },
+          {
+            "table_gold": "sinistre_certifie",
+            "table_cible": "sinistre",
+            "gold": {
+              "lignes": 1,
+              "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+              "colonnes": [
+                "sinistre_id",
+                "contrat_id",
+                "date_survenance",
+                "date_declaration",
+                "type_sinistre",
+                "montant_estime",
+                "adresse_sinistre",
+                "cp_sinistre",
+                "ville_sinistre",
+                "id_ban",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+              "colonnes": [
+                "sinistre_id",
+                "contrat_id",
+                "date_survenance",
+                "date_declaration",
+                "type_sinistre",
+                "montant_estime",
+                "adresse_sinistre",
+                "cp_sinistre",
+                "ville_sinistre",
+                "id_ban",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "ecart": 0
+          }
+        ],
+        "journal_publications": 1,
+        "mesures_rq025_crm": 3
+      },
+      {
+        "cas": "rollback_apres_contrat",
+        "etat": "PASSE",
+        "message": "PANNE_SIMULEE_APRES_CONTRAT",
+        "cible_preexistante_inchangee": true,
+        "rollback_integral": true
+      },
+      {
+        "cas": "relance_idempotente",
+        "etat": "PASSE",
+        "journal_publications": 2,
+        "mesures_rq025_crm": 6,
+        "sans_doublon": true,
+        "empreintes_identiques": true
+      },
+      {
+        "cas": "catalogue_modifie",
+        "etat": "PASSE",
+        "message": "MESURES_OU_CATALOGUE_MODIFIES",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "historique_modifie",
+        "etat": "PASSE",
+        "message": "MESURES_OU_CATALOGUE_MODIFIES",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "configuration_modifiee",
+        "etat": "PASSE",
+        "message": "VALIDATION_OWNER_PERIMEE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "mesure_bloquante_absente",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "absence_bloquante_detectee": true
+      },
+      {
+        "cas": "population_vide",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "population_vide_non_conforme": true
+      },
+      {
+        "cas": "lot_degrade_no_go",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "lot_degrade": true,
+        "degradation": "date_fin = date_debut du contrat synthetique",
+        "nb_testees": 1,
+        "nb_echecs": 1,
+        "seul_blocage": "RQ-001"
+      },
+      {
+        "cas": "mesure_invalide",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "mesure_invalide_detectee": true
+      },
+      {
+        "cas": "table_gold_vide",
+        "etat": "PASSE",
+        "decision": "NO_GO"
+      },
+      {
+        "cas": "types_canoniques",
+        "etat": "PASSE",
+        "null_vide_blanc_et_cp_distincts": true,
+        "decimal_exact": true
+      },
+      {
+        "cas": "ecriture_concurrente_snapshot",
+        "etat": "PASSE",
+        "snapshot_certifie_publie": true,
+        "ecrivain_independant_execute": true,
+        "reconciliation": [
+          {
+            "table_gold": "client_unique",
+            "table_cible": "client",
+            "gold": {
+              "lignes": 1,
+              "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+              "colonnes": [
+                "cli_id",
+                "nom_reference",
+                "date_naissance",
+                "cp",
+                "ville",
+                "pays_iso",
+                "telephone",
+                "email",
+                "nb_identifiants_source",
+                "statut_client",
+                "_batch_id",
+                "nature_personne",
+                "motif_revue"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+              "colonnes": [
+                "cli_id",
+                "nom_reference",
+                "date_naissance",
+                "cp",
+                "ville",
+                "pays_iso",
+                "telephone",
+                "email",
+                "nb_identifiants_source",
+                "statut_client",
+                "_batch_id",
+                "nature_personne",
+                "motif_revue"
+              ]
+            },
+            "ecart": 0
+          },
+          {
+            "table_gold": "contrat_certifie",
+            "table_cible": "contrat",
+            "gold": {
+              "lignes": 1,
+              "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+              "colonnes": [
+                "contrat_id",
+                "cli_souscripteur",
+                "cli_assure",
+                "code_type",
+                "date_debut",
+                "date_fin",
+                "duree_garantie_mois",
+                "prime_annuelle",
+                "date_derniere_cotisation",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+              "colonnes": [
+                "contrat_id",
+                "cli_souscripteur",
+                "cli_assure",
+                "code_type",
+                "date_debut",
+                "date_fin",
+                "duree_garantie_mois",
+                "prime_annuelle",
+                "date_derniere_cotisation",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "ecart": 0
+          },
+          {
+            "table_gold": "sinistre_certifie",
+            "table_cible": "sinistre",
+            "gold": {
+              "lignes": 1,
+              "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+              "colonnes": [
+                "sinistre_id",
+                "contrat_id",
+                "date_survenance",
+                "date_declaration",
+                "type_sinistre",
+                "montant_estime",
+                "adresse_sinistre",
+                "cp_sinistre",
+                "ville_sinistre",
+                "id_ban",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "cible": {
+              "lignes": 1,
+              "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+              "colonnes": [
+                "sinistre_id",
+                "contrat_id",
+                "date_survenance",
+                "date_declaration",
+                "type_sinistre",
+                "montant_estime",
+                "adresse_sinistre",
+                "cp_sinistre",
+                "ville_sinistre",
+                "id_ban",
+                "silver_row_id",
+                "bronze_row_id",
+                "_batch_id"
+              ]
+            },
+            "ecart": 0
+          }
+        ]
+      },
+      {
+        "cas": "verrou_concurrent",
+        "etat": "PASSE",
+        "message": "CONSTRUCTION_CONCURRENTE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "schemas_mixtes",
+        "etat": "PASSE",
+        "schemas_mixtes_refuses": true
+      },
+      {
+        "cas": "certificat_immuable",
+        "etat": "PASSE",
+        "certificat_immuable": true
+      },
+      {
+        "cas": "myisam_cible",
+        "etat": "PASSE",
+        "certification_refusee_avant_ecriture": true,
+        "message": "MOTEUR_NON_TRANSACTIONNEL:s5_test_engineer_dec2fa599c25_target.client:MyISAM",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "myisam_source",
+        "etat": "PASSE",
+        "certification_refusee_avant_ecriture": true,
+        "message": "MOTEUR_NON_TRANSACTIONNEL:s5_test_engineer_dec2fa599c25_gold.client_unique:MyISAM",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "politique_sql_modifiee",
+        "etat": "PASSE",
+        "octets_sql_modifies_a_la_lecture": true,
+        "message": "POLITIQUE_CERTIFICATION_MODIFIEE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "scopes_modifies",
+        "etat": "PASSE",
+        "message": "POLITIQUE_CERTIFICATION_MODIFIEE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "rq023_gold_absente",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "perimetres_gold_manquants": 6
+      },
+      {
+        "cas": "regression_gold_aval",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "regression_gold_non_ignoree": true
+      },
+      {
+        "cas": "attestation_perimee",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "attestation_perimee_detectee": true
+      },
+      {
+        "cas": "attestation_absente",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "mesures_conformes_sans_preuve_de_provenance_refusees": true
+      },
+      {
+        "cas": "cible_autre_lot",
+        "etat": "PASSE",
+        "message": "CIBLE_AUTRE_LOT_NON_CERTIFIE",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "orphelin_souscripteur",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "orphelins_mesures": {
+          "souscripteur": 1,
+          "assure": 0,
+          "contrat_sinistre": 0
+        }
+      },
+      {
+        "cas": "orphelin_assure",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "orphelins_mesures": {
+          "souscripteur": 0,
+          "assure": 1,
+          "contrat_sinistre": 0
+        }
+      },
+      {
+        "cas": "orphelin_sinistre",
+        "etat": "PASSE",
+        "decision": "NO_GO",
+        "orphelins_mesures": {
+          "souscripteur": 0,
+          "assure": 0,
+          "contrat_sinistre": 1
+        }
+      },
+      {
+        "cas": "trigger_altere_copie_rollback",
+        "etat": "PASSE",
+        "rollback_cible_et_journal": true,
+        "message": "RQ025_ECART_CONTENU",
+        "cible_inchangee": true,
+        "chargement": false
+      },
+      {
+        "cas": "lineage_absences",
+        "etat": "PASSE",
+        "silver_sans_xref": [
+          1,
+          1
+        ],
+        "xref_sans_gold": [
+          1,
+          1
+        ],
+        "xref_sans_silver_ou_bronze": [
+          1,
+          1
+        ]
+      },
+      {
+        "cas": "pages_bornees",
+        "etat": "PASSE",
+        "tailles_pages": [
+          1,
+          1
+        ],
+        "lignes_totales": 2
+      },
+      {
+        "cas": "panne_journal_rollback",
+        "etat": "PASSE",
+        "rollback_trois_tables_et_trois_rq025": true,
+        "journal_inchange": true
+      },
+      {
+        "cas": "historique_prefixe_rq019",
+        "etat": "PASSE",
+        "prefixe_rq019_normalise_python_sql": true
+      },
+      {
+        "cas": "lineage_quarantaine_rq019",
+        "etat": "PASSE",
+        "absence_non_justifiee_refusee": true,
+        "quarantaine_courante_tracable": true,
+        "doublons_motifs_non_comptes": true,
+        "configuration_perimee_refusee": true,
+        "rejet_hors_plan_refuse": true
+      },
+      {
+        "cas": "date_owner_invalide",
+        "etat": "PASSE",
+        "date_decision_invalide_refusee": true
+      }
+    ]
+  },
+  "certificat_precedent": {
+    "certificat_id": "S5-7b4735b857e6078550f624701f3",
+    "preuve_sha256": "7b4735b857e6078550f624701f382a00f64f8ffc3765d5016f20ece88e7d75d2",
+    "batch_id": "L-2026-10-01",
+    "decision": "NO_GO",
+    "decision_sql": {
+      "nb_attendues": 58,
+      "nb_testees": "58",
+      "nb_conformes": "58",
+      "decision": "NO_GO"
+    },
+    "synthetique": false,
+    "motifs": [
+      "VALIDATION_OWNER_ABSENTE_OU_NON_LIEE_AUX_EMPREINTES"
+    ],
+    "gold": {
+      "batch_id": "L-2026-10-01",
+      "tables": {
+        "client_unique": {
+          "lignes": 120673,
+          "sha256": "b1e83124dafb52a5da8906b5954d46d8b082ddd87d69e030baf2a439d2ca750a",
+          "colonnes": [
+            "cli_id",
+            "nom_reference",
+            "date_naissance",
+            "cp",
+            "ville",
+            "pays_iso",
+            "telephone",
+            "email",
+            "nb_identifiants_source",
+            "statut_client",
+            "_batch_id",
+            "nature_personne",
+            "motif_revue"
+          ]
+        },
+        "contrat_certifie": {
+          "lignes": 95822,
+          "sha256": "7d784b055187f3ec20eb3d94785f9deeece8d715f79a5d19e9aafc62b3001c12",
+          "colonnes": [
+            "contrat_id",
+            "cli_souscripteur",
+            "cli_assure",
+            "code_type",
+            "date_debut",
+            "date_fin",
+            "duree_garantie_mois",
+            "prime_annuelle",
+            "date_derniere_cotisation",
+            "silver_row_id",
+            "bronze_row_id",
+            "_batch_id"
+          ]
+        },
+        "sinistre_certifie": {
+          "lignes": 88824,
+          "sha256": "fde4c59ef4686ae5ebd82e040f0985fcb97888a74cf3688c395d3a4bca813675",
+          "colonnes": [
+            "sinistre_id",
+            "contrat_id",
+            "date_survenance",
+            "date_declaration",
+            "type_sinistre",
+            "montant_estime",
+            "adresse_sinistre",
+            "cp_sinistre",
+            "ville_sinistre",
+            "id_ban",
+            "silver_row_id",
+            "bronze_row_id",
+            "_batch_id"
+          ]
+        }
+      },
+      "sha256": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667"
+    },
+    "history_sha256": "8475fd2d058501cb91b3adf717399000826f3c3bde531e4d43af203bdf5f9f30",
+    "catalogue_sha256": "456238a5247a9dfd72ba8c31acdf1f2bcd73ab04715c0d302ff099ca6122daac",
+    "manifeste": {
+      "batch_id": "L-2026-10-01",
+      "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+      "etat": "CANDIDAT_RQ019_NON_ACCEPTE",
+      "accepte": 0,
+      "modifie_le": "2026-11-12 12:58:47"
+    },
+    "politique_sha256": "d68948f2a58f52590971e35700e545592c8ebcd70aa9d2ac15d6222894507cca",
+    "attestation_controles": {
+      "synthetique": false,
+      "batch_id": "L-2026-10-01",
+      "schema_gold": "gold",
+      "schema_dq": "dq",
+      "gold_sha256": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+      "history_sha256": "8475fd2d058501cb91b3adf717399000826f3c3bde531e4d43af203bdf5f9f30",
+      "configuration": {
+        "batch_id": "L-2026-10-01",
+        "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+        "etat": "CANDIDAT_RQ019_NON_ACCEPTE",
+        "accepte": 0,
+        "modifie_le": "2026-11-12 12:58:47"
+      },
+      "catalogue_sha256": "456238a5247a9dfd72ba8c31acdf1f2bcd73ab04715c0d302ff099ca6122daac",
+      "politique_sha256": "d68948f2a58f52590971e35700e545592c8ebcd70aa9d2ac15d6222894507cca",
+      "contenu_controles_sha256": "8c23df50bde3fff5388544d97999dd8996550afeab990985fe07063e3c1ef213",
+      "scopes_sha256": "577d1096f41c942a17f9388f93605a556fb8c14a80899d9e2df678eb657f3e32",
+      "mesures_executees": [
+        {
+          "scope": {
+            "rule_id": "RQ-001",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-002",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 89999,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-009",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-010",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-011",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-012",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-013",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 57231,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-014",
+            "couche": "SILVER",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-015",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 44836,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-017",
+            "couche": "GOLD",
+            "table_logique": "sinistre_garantie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-017",
+            "couche": "GOLD",
+            "table_logique": "sinistre_relation",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-018",
+            "couche": "GOLD",
+            "table_logique": "v_client_actif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 3,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "identites_PP",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 117763,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "identites_PM",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 4057,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "signature_nom_cp_naissance_tel",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 104395,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-019",
+            "couche": "GOLD",
+            "table_logique": "signature_nom_email",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92298,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "SILVER",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_client",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "crm_type_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_clients",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_compte",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-021",
+            "couche": "BRONZE",
+            "table_logique": "cif_pays",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_client",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 100000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "crm_type_contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 12,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_clients",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_compte",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 45000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-022",
+            "couche": "BRONZE",
+            "table_logique": "cif_pays",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 250,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "client_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "client_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 40000,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "contrat_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 98600,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "SILVER",
+            "table_logique": "sinistre_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 92003,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "client (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "client (cif)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "contrat (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-024",
+            "couche": "SILVER",
+            "table_logique": "sinistre (crm)",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 1,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "xref_crm",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 99309,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "xref_cif",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 39851,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "contrat_certifie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "sinistre_certifie",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-023",
+            "couche": "GOLD",
+            "table_logique": "silver_xref_gold",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 139556,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-007",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-009",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "client_unique",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 120673,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-001",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-010",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "contrat",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 95822,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-014",
+            "couche": "GOLD",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        },
+        {
+          "scope": {
+            "rule_id": "RQ-020",
+            "couche": "GOLD",
+            "table_logique": "sinistre",
+            "seuil_min": "100.00"
+          },
+          "nb_testees": 88824,
+          "nb_echecs": 0
+        }
+      ],
+      "execute_le": "2026-11-12T13:09:00.361919+00:00"
+    },
+    "provenance_mesures": "CONTROLES_EXECUTES_LIES",
+    "integrite_gold": {
+      "souscripteur": 0,
+      "assure": 0,
+      "contrat_sinistre": 0
+    },
+    "couverture": [
+      {
+        "rule_id": "RQ-001",
+        "couche": "SILVER",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 425,
+        "nb_testees": 98600,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-002",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 444,
+        "nb_testees": 89999,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-007",
+        "couche": "SILVER",
+        "table_logique": "client_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 407,
+        "nb_testees": 99556,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-007",
+        "couche": "SILVER",
+        "table_logique": "client_cif",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 414,
+        "nb_testees": 40000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-009",
+        "couche": "SILVER",
+        "table_logique": "client_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 409,
+        "nb_testees": 99556,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-010",
+        "couche": "SILVER",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 426,
+        "nb_testees": 98600,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-011",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 445,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-012",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 446,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-013",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 447,
+        "nb_testees": 57231,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-014",
+        "couche": "SILVER",
+        "table_logique": "sinistre",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 437,
+        "nb_testees": 92003,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-015",
+        "couche": "GOLD",
+        "table_logique": "client_unique",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 450,
+        "nb_testees": 44836,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-017",
+        "couche": "GOLD",
+        "table_logique": "sinistre_garantie",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 449,
+        "nb_testees": 88824,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-017",
+        "couche": "GOLD",
+        "table_logique": "sinistre_relation",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 448,
+        "nb_testees": 88824,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-018",
+        "couche": "GOLD",
+        "table_logique": "v_client_actif",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 452,
+        "nb_testees": 3,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-019",
+        "couche": "GOLD",
+        "table_logique": "identites_PP",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 440,
+        "nb_testees": 117763,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-019",
+        "couche": "GOLD",
+        "table_logique": "identites_PM",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 441,
+        "nb_testees": 4057,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-019",
+        "couche": "GOLD",
+        "table_logique": "signature_nom_cp_naissance_tel",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 442,
+        "nb_testees": 104395,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-019",
+        "couche": "GOLD",
+        "table_logique": "signature_nom_email",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 443,
+        "nb_testees": 92298,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "SILVER",
+        "table_logique": "client_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 410,
+        "nb_testees": 99556,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "SILVER",
+        "table_logique": "client_cif",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 416,
+        "nb_testees": 40000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "SILVER",
+        "table_logique": "contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 427,
+        "nb_testees": 98600,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "SILVER",
+        "table_logique": "sinistre",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 428,
+        "nb_testees": 92003,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "crm_client",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 389,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "crm_contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 391,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "crm_sinistre",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 393,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "crm_type_contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 395,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "cif_clients",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 397,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "cif_compte",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 399,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-021",
+        "couche": "BRONZE",
+        "table_logique": "cif_pays",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 401,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "crm_client",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 390,
+        "nb_testees": 100000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "crm_contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 392,
+        "nb_testees": 100000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "crm_sinistre",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 394,
+        "nb_testees": 100000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "crm_type_contrat",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 396,
+        "nb_testees": 12,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "cif_clients",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 398,
+        "nb_testees": 40000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "cif_compte",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 400,
+        "nb_testees": 45000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-022",
+        "couche": "BRONZE",
+        "table_logique": "cif_pays",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 402,
+        "nb_testees": 250,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "SILVER",
+        "table_logique": "client_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 429,
+        "nb_testees": 99556,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "SILVER",
+        "table_logique": "client_cif",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 431,
+        "nb_testees": 40000,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "SILVER",
+        "table_logique": "contrat_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 433,
+        "nb_testees": 98600,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "SILVER",
+        "table_logique": "sinistre_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 435,
+        "nb_testees": 92003,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-024",
+        "couche": "SILVER",
+        "table_logique": "client (crm)",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 430,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-024",
+        "couche": "SILVER",
+        "table_logique": "client (cif)",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 432,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-024",
+        "couche": "SILVER",
+        "table_logique": "contrat (crm)",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 434,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-024",
+        "couche": "SILVER",
+        "table_logique": "sinistre (crm)",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 436,
+        "nb_testees": 1,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "xref_crm",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 456,
+        "nb_testees": 99309,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "xref_cif",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 457,
+        "nb_testees": 39851,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "contrat_certifie",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 458,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "sinistre_certifie",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 459,
+        "nb_testees": 88824,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "client_unique",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 460,
+        "nb_testees": 120673,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-023",
+        "couche": "GOLD",
+        "table_logique": "silver_xref_gold",
+        "seuil_min": "100.00",
+        "etat": "CONFORME",
+        "conforme": true,
+        "mesure_id": 455,
+        "nb_testees": 139556,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-007",
+        "couche": "GOLD",
+        "table_logique": "client_unique",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 421,
+        "nb_testees": 120673,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-009",
+        "couche": "GOLD",
+        "table_logique": "client_unique",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 423,
+        "nb_testees": 120673,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "GOLD",
+        "table_logique": "client_unique",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 424,
+        "nb_testees": 120673,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-001",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 453,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-010",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 454,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "GOLD",
+        "table_logique": "contrat",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 461,
+        "nb_testees": 95822,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-014",
+        "couche": "GOLD",
+        "table_logique": "sinistre",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 438,
+        "nb_testees": 88824,
+        "nb_echecs": 0
+      },
+      {
+        "rule_id": "RQ-020",
+        "couche": "GOLD",
+        "table_logique": "sinistre",
+        "conforme": true,
+        "etat": "CONFORME",
+        "mesure_id": 439,
+        "nb_testees": 88824,
+        "nb_echecs": 0
+      }
+    ],
+    "avertissements": [
+      {
+        "id": 230,
+        "batch_id": "L-2026-10-01",
+        "couche": "BRONZE",
+        "rule_id": "RQ-003",
+        "table_cible": "S4_client_crm",
+        "nb_testees": 49978,
+        "nb_echecs": 5995,
+        "taux_conformite": "88.005",
+        "mesure_le": "2026-11-08 13:14:59",
+        "dimension": "Complétude",
+        "porte": "S",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_crm"
+      },
+      {
+        "id": 231,
+        "batch_id": "L-2026-10-01",
+        "couche": "BRONZE",
+        "rule_id": "RQ-004",
+        "table_cible": "S4_client_crm",
+        "nb_testees": 92146,
+        "nb_echecs": 25982,
+        "taux_conformite": "71.803",
+        "mesure_le": "2026-11-08 13:14:59",
+        "dimension": "Validité format",
+        "porte": "S",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_crm"
+      },
+      {
+        "id": 233,
+        "batch_id": "L-2026-10-01",
+        "couche": "BRONZE",
+        "rule_id": "RQ-006",
+        "table_cible": "S4_client_crm",
+        "nb_testees": 98037,
+        "nb_echecs": 2191,
+        "taux_conformite": "97.765",
+        "mesure_le": "2026-11-08 13:14:59",
+        "dimension": "Exactitude",
+        "porte": "S",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_crm"
+      },
+      {
+        "id": 403,
+        "batch_id": "L-2026-10-01",
+        "couche": "SILVER",
+        "rule_id": "RQ-003",
+        "table_cible": "S5_client_crm",
+        "nb_testees": 50293,
+        "nb_echecs": 6010,
+        "taux_conformite": "88.050",
+        "mesure_le": "2026-11-12 13:08:04",
+        "dimension": "Complétude",
+        "porte": "S",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_crm"
+      },
+      {
+        "id": 417,
+        "batch_id": "L-2026-10-01",
+        "couche": "GOLD",
+        "rule_id": "RQ-003",
+        "table_cible": "S5_client_unique",
+        "nb_testees": 48322,
+        "nb_echecs": 5190,
+        "taux_conformite": "89.260",
+        "mesure_le": "2026-11-12 13:08:04",
+        "dimension": "Complétude",
+        "porte": "S",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_unique"
+      },
+      {
+        "id": 451,
+        "batch_id": "L-2026-10-01",
+        "couche": "GOLD",
+        "rule_id": "RQ-016",
+        "table_cible": "S5_client_unique",
+        "nb_testees": 48322,
+        "nb_echecs": 1569,
+        "taux_conformite": "96.753",
+        "mesure_le": "2026-11-12 13:08:04",
+        "dimension": "Cohérence de statut",
+        "porte": "G",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_unique"
+      },
+      {
+        "id": 314,
+        "batch_id": "L-2026-10-01",
+        "couche": "SILVER",
+        "rule_id": "RQ-016",
+        "table_cible": "S4_client_crm",
+        "nb_testees": 50293,
+        "nb_echecs": 1184,
+        "taux_conformite": "97.646",
+        "mesure_le": "2026-11-08 13:14:59",
+        "dimension": "Cohérence de statut",
+        "porte": "G",
+        "severite": "AVERTISSEMENT",
+        "seuil_min": "98.00",
+        "table_logique": "client_crm"
+      }
+    ],
+    "owner": null,
+    "schema_gold": "gold",
+    "schema_dq": "dq",
+    "mapping": [
+      [
+        "client_unique",
+        "client"
+      ],
+      [
+        "contrat_certifie",
+        "contrat"
+      ],
+      [
+        "sinistre_certifie",
+        "sinistre"
+      ]
+    ]
+  },
+  "certificat_courant": "S5-67c28617baa91f803bcb10448ef",
+  "demande_validation_owner": {
+    "decision": "EN_ATTENTE",
+    "batch_id": "L-2026-10-01",
+    "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+    "empreinte_gold": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+    "historique_sha256": "33695db70d97c72dfd3f02a2e92742b5c73e82a608b554db58fbaca1b16a4f89",
+    "decideur": null,
+    "date_decision": null,
+    "signature": null,
+    "justification": null,
+    "a_confirmer": "Critères, populations et exclusions du nouveau périmètre ; acceptation S4 puis approbation S5 liée aux empreintes. Aucune validation inventée."
+  },
+  "transmission": {
+    "Steward": "S5_export_steward.json",
+    "Owner": "S5_certificat.json",
+    "Redacteur": "S5_tests.json + S5_refus_nominal.json"
+  },
+  "limites": [
+    "Validation des critères et du nouveau périmètre par les rôles métier non inventée.",
+    "Aucun GO ni publication nominale sans approbation Owner valide."
+  ]
+}

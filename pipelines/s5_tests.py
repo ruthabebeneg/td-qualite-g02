@@ -424,6 +424,67 @@ def run_tests(engine):
         assert no_silver==(1,1)
         return {'silver_sans_xref':no_xref,'xref_sans_gold':no_gold,'xref_sans_silver_ou_bronze':no_silver}
 
+    def justified_rq019_quarantine():
+        silver=prefix+'_silver'
+        with engine.begin() as c:
+            c.execute(text(f'DROP DATABASE IF EXISTS {s5.ident(silver)}'))
+            c.execute(text(f'CREATE DATABASE {s5.ident(silver)}'))
+            c.execute(text(f'CREATE TABLE {s5.table(silver,"client")} LIKE silver.client'))
+            c.execute(text(f'CREATE TABLE {s5.table(_layout().gold,"xref_identifiants")} LIKE gold.xref_identifiants'))
+            c.execute(text(f'CREATE TABLE {s5.table(_layout().dq,"rq019_reference_xref_identifiants")} LIKE gold.xref_identifiants'))
+            c.execute(text(f'CREATE TABLE {s5.table(_layout().dq,"rq019_reference_client_unique")} LIKE gold.client_unique'))
+            c.execute(text(f'CREATE TABLE {s5.table(_layout().dq,"rejets")} LIKE dq.rejets'))
+            c.execute(text(f'''CREATE TABLE {s5.table(_layout().dq,"rq019_etat")} (
+                batch_id VARCHAR(20),etat VARCHAR(30),configuration_sha256 CHAR(64),plan_json LONGTEXT)'''))
+            c.execute(text(f"INSERT INTO {s5.table(silver,'client')} (silver_row_id,bronze_row_id,source_systeme,source_id,_batch_id) VALUES(1,1,'crm','TEST',:b)"),{'b':BATCH})
+            c.execute(text(f"INSERT INTO {s5.table(_layout().dq,'rq019_reference_client_unique')} SELECT * FROM {s5.table(_layout().gold,'client_unique')}"))
+            c.execute(text(f"INSERT INTO {s5.table(_layout().dq,'rq019_reference_xref_identifiants')} VALUES('CLI-TEST01','crm','TEST',1,1)"))
+            c.execute(text(f"INSERT INTO {s5.table(_layout().dq,'rq019_etat')} VALUES(:b,'APPLIQUE',:h,:p)"),
+                {'b':BATCH,'h':'1'*64,'p':'{"excluded_cli":["CLI-TEST01"]}'})
+        query=s5_mesures.lineage_queries(_layout().gold,silver,prefix+'_bronze',quarantine_dq=_layout().dq)['silver_xref_gold']
+        def result():
+            with engine.connect() as c:
+                return tuple(map(int,c.execute(text(query),{'b':BATCH}).one()))
+        assert result()==(1,1,0), 'Un plan seul ne justifie pas une ligne manquante'
+        with engine.begin() as c:
+            for _ in range(2):
+                c.execute(text(f'''INSERT INTO {s5.table(_layout().dq,'rejets')}
+                    (batch_id,entite,source_systeme,bronze_row_id,rule_id,porte,motif)
+                    VALUES(:b,'client','crm',1,'RQ-019','G','RQ019_V1_IDENTITE_INCERTAINE')'''),{'b':BATCH})
+        assert result()==(1,0,1), 'Deux motifs ne doivent pas doubler la population'
+        cert = _go(engine)
+        with engine.begin() as c:
+            c.execute(text(f"DELETE FROM {s5.table(_layout().dq,'rejets')} ORDER BY id LIMIT 1"))
+        _refuse(engine, cert['certificat_id'], 'ATTESTATION_CONTROLES_PERIMEE')
+        with engine.begin() as c:
+            c.execute(text(f"UPDATE {s5.table(_layout().dq,'s4_manifeste')} SET configuration_sha256=:h"),{'h':'2'*64})
+        assert result()==(1,1,0), 'Une quarantaine périmée doit échouer'
+        with engine.begin() as c:
+            c.execute(text(f"UPDATE {s5.table(_layout().dq,'s4_manifeste')} SET configuration_sha256=:h"),{'h':'1'*64})
+            c.execute(text(f"UPDATE {s5.table(_layout().dq,'rq019_etat')} SET plan_json='{{\"excluded_cli\":[]}}'"))
+        assert result()==(1,1,0), 'Un rejet sans exclusion dans le plan ne suffit pas'
+        return {'absence_non_justifiee_refusee':True,'quarantaine_courante_tracable':True,
+                'doublons_motifs_non_comptes':True,'configuration_perimee_refusee':True,
+                'rejet_hors_plan_refuse':True}
+
+    def invalid_owner_date():
+        owner = _owner(engine)
+        owner['date_decision'] = 'date non valide'
+        cert = s5.certify(engine, BATCH, owner, _layout(),
+                          measurement_attestation=s5.measure_fixture(engine,BATCH,_layout()))
+        assert cert['decision'] == 'NO_GO'
+        assert cert['owner'] is None
+        assert 'VALIDATION_OWNER_ABSENTE_OU_NON_LIEE_AUX_EMPREINTES' in cert['motifs']
+        return {'date_decision_invalide_refusee': True}
+
+    def rq019_history_prefix():
+        with engine.begin() as c:
+            c.execute(text(f"UPDATE {s5.table(_layout().dq,'dq_history')} SET table_cible='S4R19_contrat'"))
+        cert = _go(engine)
+        assert cert['decision_sql']['decision'] == 'GO'
+        assert cert['couverture'][0]['table_logique'] == 'contrat'
+        return {'prefixe_rq019_normalise_python_sql': True}
+
     def bounded_pages():
         with engine.begin() as c:
             c.execute(text(f"INSERT INTO {s5.table(_layout().gold,'client_unique')} (cli_id,nom_reference,nb_identifiants_source,statut_client,_batch_id) VALUES('CLI-TEST02','AUTRE TEST',1,'ACTIF',:b)"),{'b':BATCH})
@@ -452,7 +513,7 @@ def run_tests(engine):
                  ('orphelin_assure',lambda:orphan('cli_assure','contrat_certifie')),
                  ('orphelin_sinistre',lambda:orphan('contrat_id','sinistre_certifie')),
                  ('trigger_altere_copie_rollback',trigger_changes_copy),('lineage_absences',missing_links),
-                 ('pages_bornees',bounded_pages),('panne_journal_rollback',failed_publication_journal)]
+                 ('pages_bornees',bounded_pages),('panne_journal_rollback',failed_publication_journal),('historique_prefixe_rq019',rq019_history_prefix),('lineage_quarantaine_rq019',justified_rq019_quarantine),('date_owner_invalide',invalid_owner_date)]
     try:
         for name, fn in scenarios:
             run(name, fn)
