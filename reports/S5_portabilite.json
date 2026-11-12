@@ -1,13 +1,13 @@
 {
   "tests": [
     {
-      "repertoire": "/tmp/s5_engineer_run",
-      "racine_resolue": "/tmp/s5_engineer_run",
+      "repertoire": "/home/jovyan/work",
+      "racine_resolue": "/home/jovyan/work",
       "conforme": true
     },
     {
-      "repertoire": "/tmp/s5_engineer_run/notebooks",
-      "racine_resolue": "/tmp/s5_engineer_run",
+      "repertoire": "/home/jovyan/work/notebooks",
+      "racine_resolue": "/home/jovyan/work",
       "conforme": true
     }
   ],

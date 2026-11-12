@@ -174,7 +174,7 @@ def _history(cx, batch, layout):
     latest = {}
     for r in all_rows:
         # Le préfixe S4_ est un espace de noms du notebook, pas une autre table.
-        r["table_logique"] = r["table_cible"].removeprefix("S4_").removeprefix("S5_")
+        r["table_logique"] = r["table_cible"].removeprefix("S4R19_").removeprefix("S4_").removeprefix("S5_")
         latest[(r["couche"], r["rule_id"], r["table_logique"])] = r
     invalid = []
     for r in all_rows:
@@ -204,7 +204,7 @@ def required_scopes(catalogue, *, synthetic=False):
         "RQ-012": ["contrat"], "RQ-013": ["contrat"],
         "RQ-014": ["sinistre"], "RQ-015": ["client_unique"],
         "RQ-017": ["sinistre_garantie", "sinistre_relation"],
-        "RQ-018": ["v_client_actif"],
+        "RQ-018": ["v_client_actif", "statut_client_actif"],
         "RQ-019": ["identites_PP", "identites_PM",
                    "signature_nom_cp_naissance_tel", "signature_nom_email"],
         "RQ-020": ["client_crm", "client_cif", "contrat", "sinistre"],
@@ -280,7 +280,8 @@ def assert_transactional(cx, layout):
 
 def policy_fingerprint(catalogue, layout):
     root=Path(__file__).resolve().parents[1]
-    files=("sql/S5_decision.sql","pipelines/s5_engineering.py","pipelines/s5_mesures.py")
+    files=("sql/S5_decision.sql","pipelines/s5_engineering.py","pipelines/s5_mesures.py",
+           "pipelines/s5_controles.py","pipelines/s4_rq019.py")
     return digest({"fichiers":{name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in files},
                    "scopes":required_scopes(catalogue,synthetic=layout.synthetic),
                    "mapping":[list(m) for m in MAPPING]})
@@ -292,7 +293,10 @@ def control_content(cx, layout):
     tables=rows(cx,"SELECT table_schema,table_name FROM information_schema.tables WHERE table_type='BASE TABLE' ORDER BY table_schema,table_name")
     return digest({item["table_schema"]+"."+item["table_name"]:
                    fingerprint_table(cx,item["table_schema"],item["table_name"])
-                   for item in tables if item["table_schema"] in schemas})
+                   for item in tables if item["table_schema"] in schemas or
+                   (item["table_schema"] == layout.dq and
+                    (item["table_name"] in ("rejets","rq019_etat") or
+                     item["table_name"].startswith("rq019_reference_")))})
 
 
 def measure_fixture(engine, batch, layout):
@@ -325,9 +329,9 @@ def measure_fixture(engine, batch, layout):
 def attestation_valid(cx, attestation, batch, layout, gold, history, catalogue, manifest):
     """Contrat d'intégration pour les preuves d'un exécuteur complet de contrôles.
 
-    Le chantier n'émet que la fixture technique ; il n'émet aucune attestation
-    nominale à partir de simples historiques relus. Un futur exécuteur nominal
-    doit fournir toutes les mesures et les empreintes du contenu réellement contrôlé.
+    L’exécuteur s5_controles fournit les mesures nominales réellement recalculées
+    et les empreintes du contenu contrôlé. Une lecture des seuls taux historiques
+    ne constitue jamais une attestation valide.
     """
     if not isinstance(attestation,dict) or not attestation.get("contenu_controles_sha256"):
         return False
@@ -371,6 +375,10 @@ def _manifest(cx, batch, layout):
 def owner_valid(owner, batch, manifest, gold_sha, history_sha):
     """Approbation liée au contenu et à l'historique ; aucune signature inventée."""
     if not isinstance(owner, dict):
+        return False
+    try:
+        date.fromisoformat(owner.get("date_decision", ""))
+    except (TypeError, ValueError):
         return False
     return bool(manifest and manifest.get("accepte") == 1 and
                 owner.get("decision") == "ACCEPTE" and

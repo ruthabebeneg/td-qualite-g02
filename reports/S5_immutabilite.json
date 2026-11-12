@@ -57,20 +57,20 @@
       "sha256": "67bb6acbf927081b94716517ac8baa8559d36e0db8da2435db202712b271d86d"
     },
     "gold.client_unique": {
-      "lignes": 121073,
-      "sha256": "50b69ca47d8fe5310d990bff22ad691274f79a4368315d87447ac55f65a994ce"
+      "lignes": 120673,
+      "sha256": "6d1a8d6d1f341398000210d6cbf392bdb85bbd8e377028e100dc1237d42a114e"
     },
     "gold.contrat_certifie": {
-      "lignes": 96159,
-      "sha256": "9e7de242f4a53470178bd75144743331fa65cbfb7eba4812787bfc56cb471eab"
+      "lignes": 95822,
+      "sha256": "15084bdd885dafe988cbd12d3bb663710050dcfb8ac2034e6d1b21bea95c5be1"
     },
     "gold.sinistre_certifie": {
-      "lignes": 89156,
-      "sha256": "9dd824917f569cfd7dfb21fe1e7aa30aa9abc757e5ade96c3c84df00ab39ef49"
+      "lignes": 88824,
+      "sha256": "61a1f661b90b3b0b44d1e35b6fdc954afafb7a7bb2989f9088e855673d9a475b"
     },
     "gold.xref_identifiants": {
-      "lignes": 139556,
-      "sha256": "56d401e891b4a8491960fc1f310e7208add36118315e24fddf56fda1409a978d"
+      "lignes": 139160,
+      "sha256": "bdea0f5f785a9f71df1567a7a43bdd513712c9cbc6aac01bd7c958cb2e08a3a6"
     },
     "silver.client": {
       "lignes": 139556,
@@ -155,20 +155,20 @@
       "sha256": "67bb6acbf927081b94716517ac8baa8559d36e0db8da2435db202712b271d86d"
     },
     "gold.client_unique": {
-      "lignes": 121073,
-      "sha256": "50b69ca47d8fe5310d990bff22ad691274f79a4368315d87447ac55f65a994ce"
+      "lignes": 120673,
+      "sha256": "6d1a8d6d1f341398000210d6cbf392bdb85bbd8e377028e100dc1237d42a114e"
     },
     "gold.contrat_certifie": {
-      "lignes": 96159,
-      "sha256": "9e7de242f4a53470178bd75144743331fa65cbfb7eba4812787bfc56cb471eab"
+      "lignes": 95822,
+      "sha256": "15084bdd885dafe988cbd12d3bb663710050dcfb8ac2034e6d1b21bea95c5be1"
     },
     "gold.sinistre_certifie": {
-      "lignes": 89156,
-      "sha256": "9dd824917f569cfd7dfb21fe1e7aa30aa9abc757e5ade96c3c84df00ab39ef49"
+      "lignes": 88824,
+      "sha256": "61a1f661b90b3b0b44d1e35b6fdc954afafb7a7bb2989f9088e855673d9a475b"
     },
     "gold.xref_identifiants": {
-      "lignes": 139556,
-      "sha256": "56d401e891b4a8491960fc1f310e7208add36118315e24fddf56fda1409a978d"
+      "lignes": 139160,
+      "sha256": "bdea0f5f785a9f71df1567a7a43bdd513712c9cbc6aac01bd7c958cb2e08a3a6"
     },
     "silver.client": {
       "lignes": 139556,

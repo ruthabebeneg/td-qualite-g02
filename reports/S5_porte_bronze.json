@@ -1,219 +1,209 @@
 {
   "batch_id": "L-2026-10-01",
-  "mesure_le": "2026-11-12T11:55:16.391796+00:00",
-  "details": [
-    {
-      "table_bronze": "crm_client",
-      "source": "crm.client",
-      "source_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214701936373892,
-        "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
-      },
-      "bronze_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214701936373892,
-        "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 100000,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "crm_contrat",
-      "source": "crm.contrat",
-      "source_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214920543380008,
-        "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
-      },
-      "bronze_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214920543380008,
-        "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 100000,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "crm_sinistre",
-      "source": "crm.sinistre",
-      "source_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214256364507763,
-        "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
-      },
-      "bronze_preuve": {
-        "lignes": 100000,
-        "somme_crc32": 214256364507763,
-        "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 100000,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "crm_type_contrat",
-      "source": "crm.type_contrat",
-      "source_preuve": {
-        "lignes": 12,
-        "somme_crc32": 25049111003,
-        "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
-      },
-      "bronze_preuve": {
-        "lignes": 12,
-        "somme_crc32": 25049111003,
-        "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 12,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "cif_clients",
-      "source": "cif.clients",
-      "source_preuve": {
-        "lignes": 40000,
-        "somme_crc32": 85743772090414,
-        "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
-      },
-      "bronze_preuve": {
-        "lignes": 40000,
-        "somme_crc32": 85743772090414,
-        "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 40000,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "cif_compte",
-      "source": "cif.compte",
-      "source_preuve": {
-        "lignes": 45000,
-        "somme_crc32": 96942383526087,
-        "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
-      },
-      "bronze_preuve": {
-        "lignes": 45000,
-        "somme_crc32": 96942383526087,
-        "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 45000,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    },
-    {
-      "table_bronze": "cif_pays",
-      "source": "cif.pays",
-      "source_preuve": {
-        "lignes": 250,
-        "somme_crc32": 548069437591,
-        "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
-      },
-      "bronze_preuve": {
-        "lignes": 250,
-        "somme_crc32": 548069437591,
-        "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
-      },
-      "contenu_exact_identique": true,
-      "metadonnees_testees": 250,
-      "metadonnees_echecs": 0,
-      "methode": "CAST CHAR UTF8 exact, multiensemble JSON, SHA256 et somme CRC32 ; hash ligne S1 revalidé"
-    }
-  ],
   "mesures": [
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "crm_client",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 100000,
+        "somme_crc32": 214701936373892,
+        "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
+      },
+      "bronze": {
+        "lignes": 100000,
+        "somme_crc32": 214701936373892,
+        "sha256": "e9b49de45147c03094fce2ce25f07a21d4bf5a2cfa08424a8dc05758702aba9f"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "crm_client",
       "nb_testees": 100000,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "crm_contrat",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 100000,
+        "somme_crc32": 214920543380008,
+        "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
+      },
+      "bronze": {
+        "lignes": 100000,
+        "somme_crc32": 214920543380008,
+        "sha256": "4aa3d6ea1684bd73e428eda427f392da71154c79cd8a674e5225c8177ec6a92c"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "crm_contrat",
       "nb_testees": 100000,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "crm_sinistre",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 100000,
+        "somme_crc32": 214256364507763,
+        "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
+      },
+      "bronze": {
+        "lignes": 100000,
+        "somme_crc32": 214256364507763,
+        "sha256": "20c28ec5b2930473022fbaf620f4e231502fea36049a9d701e0b5c015d6a9b73"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "crm_sinistre",
       "nb_testees": 100000,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "crm_type_contrat",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 12,
+        "somme_crc32": 25049111003,
+        "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
+      },
+      "bronze": {
+        "lignes": 12,
+        "somme_crc32": 25049111003,
+        "sha256": "8b3ded94d4686fe65cc9d0a72527247272234f687e32fce9647c989d9d9ff83d"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "crm_type_contrat",
       "nb_testees": 12,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "cif_clients",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 40000,
+        "somme_crc32": 85743772090414,
+        "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
+      },
+      "bronze": {
+        "lignes": 40000,
+        "somme_crc32": 85743772090414,
+        "sha256": "846ce93845d91bb1000e29faaa507cf59992cbad93db148417ad1827b4411890"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "cif_clients",
       "nb_testees": 40000,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "cif_compte",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 45000,
+        "somme_crc32": 96942383526087,
+        "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
+      },
+      "bronze": {
+        "lignes": 45000,
+        "somme_crc32": 96942383526087,
+        "sha256": "a4367d053addd21048ced2cebac3684932facef42ee36a674d773b520a72877c"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "cif_compte",
       "nb_testees": 45000,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-021",
       "table_logique": "cif_pays",
       "nb_testees": 1,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Un contrôle global par table : effectif, somme CRC32, SHA256 et multiensemble exact après CAST CHAR.",
+      "taux": 100.0,
+      "source": {
+        "lignes": 250,
+        "somme_crc32": 548069437591,
+        "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
+      },
+      "bronze": {
+        "lignes": 250,
+        "somme_crc32": 548069437591,
+        "sha256": "bc499447f3406b56bc373aed7e127263c7d27c5d293607328633dc7b8fb3c35b"
+      },
+      "contenu_exact_identique": true
     },
     {
+      "couche": "BRONZE",
       "rule_id": "RQ-022",
       "table_logique": "cif_pays",
       "nb_testees": 250,
-      "nb_echecs": 0
+      "nb_echecs": 0,
+      "population": "Chaque ligne du lot : lot/source/horodatage/hash présents ; hash métier revalidé comme S1.",
+      "taux": 100.0
     }
   ],
-  "historiques_anterieurs_preserves": true
+  "methode": "Exécuteur complet, même snapshot ; aucune réécriture des sources."
 }

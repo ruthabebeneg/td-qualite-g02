@@ -1,62 +1,68 @@
 [
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "silver_xref_gold",
     "nb_testees": 139556,
     "nb_echecs": 0,
-    "requete": "SELECT COUNT(*) n,COALESCE(SUM(x.cli_id IS NULL OR g.cli_id IS NULL),0) ko\n        FROM `silver`.`client` s\n        LEFT JOIN `gold`.`xref_identifiants` x ON x.silver_row_id=s.silver_row_id\n          AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id\n        LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id\n        WHERE s._batch_id=:b",
-    "mesure_le": "2026-11-12T11:55:18.603779+00:00"
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
+    "requete": "SELECT COUNT(*) n,\n          COALESCE(SUM((x.cli_id IS NULL OR g.cli_id IS NULL) AND q.silver_row_id IS NULL),0) ko,\n          COALESCE(SUM(q.silver_row_id IS NOT NULL),0) exclusions_rq019\n          FROM `silver`.`client` s\n          LEFT JOIN `gold`.`xref_identifiants` x ON x.silver_row_id=s.silver_row_id\n            AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id\n          LEFT JOIN (\n            SELECT DISTINCT ref.source_systeme,ref.source_id,ref.bronze_row_id,ref.silver_row_id,b._batch_id\n            FROM `dq`.`rq019_reference_xref_identifiants` ref\n            JOIN `dq`.`rq019_reference_client_unique` b ON b.cli_id=ref.cli_id\n            JOIN `dq`.`rq019_etat` e ON e.batch_id=b._batch_id AND e.etat='APPLIQUE'\n            JOIN `dq`.`s4_manifeste` m ON m.batch_id=e.batch_id\n              AND m.configuration_sha256=e.configuration_sha256\n            JOIN `dq`.`rejets` r ON r.batch_id=b._batch_id AND r.entite='client'\n              AND r.source_systeme=ref.source_systeme AND r.bronze_row_id=ref.bronze_row_id\n              AND r.rule_id='RQ-019' AND r.porte='G' AND r.motif='RQ019_V1_IDENTITE_INCERTAINE'\n            WHERE JSON_CONTAINS(JSON_EXTRACT(e.plan_json,'$.excluded_cli'),JSON_QUOTE(ref.cli_id))=1\n          ) q ON q.silver_row_id=s.silver_row_id AND q.bronze_row_id=s.bronze_row_id\n             AND q.source_systeme=s.source_systeme AND q.source_id=s.source_id AND q._batch_id=s._batch_id\n          WHERE s._batch_id=:b",
+    "exclusions_rq019_justifiees": 396
   },
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "xref_crm",
-    "nb_testees": 99556,
+    "nb_testees": 99309,
     "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
     "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL OR g.cli_id IS NULL),0) ko\n          FROM `gold`.`xref_identifiants` x\n          LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n            AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme\n            AND s.source_id=x.source_id AND s._batch_id=:b\n          LEFT JOIN `bronze`.`crm_client` b ON b.bronze_row_id=x.bronze_row_id\n            AND b.`client_id`=x.source_id AND b._batch_id=:b\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=:b\n          WHERE x.source_systeme='crm' ",
-    "mesure_le": "2026-11-12T11:55:18.970734+00:00"
+    "exclusions_rq019_justifiees": 0
   },
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "xref_cif",
-    "nb_testees": 40000,
+    "nb_testees": 39851,
     "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
     "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL OR g.cli_id IS NULL),0) ko\n          FROM `gold`.`xref_identifiants` x\n          LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n            AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme\n            AND s.source_id=x.source_id AND s._batch_id=:b\n          LEFT JOIN `bronze`.`cif_clients` b ON b.bronze_row_id=x.bronze_row_id\n            AND b.`column0`=x.source_id AND b._batch_id=:b\n          LEFT JOIN `gold`.`client_unique` g ON g.cli_id=x.cli_id AND g._batch_id=:b\n          WHERE x.source_systeme='cif' ",
-    "mesure_le": "2026-11-12T11:55:19.139756+00:00"
+    "exclusions_rq019_justifiees": 0
   },
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "contrat_certifie",
-    "nb_testees": 96159,
+    "nb_testees": 95822,
     "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
     "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL),0) ko\n          FROM `gold`.`contrat_certifie` g LEFT JOIN `silver`.`contrat` s\n          ON s.silver_row_id=g.silver_row_id AND s.bronze_row_id=g.bronze_row_id AND s._batch_id=g._batch_id\n          LEFT JOIN `bronze`.`crm_contrat` b ON b.bronze_row_id=g.bronze_row_id\n          AND b._batch_id=g._batch_id AND b.`contrat_id`=g.`contrat_id` WHERE g._batch_id=:b",
-    "mesure_le": "2026-11-12T11:55:19.669510+00:00"
+    "exclusions_rq019_justifiees": 0
   },
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "sinistre_certifie",
-    "nb_testees": 89156,
+    "nb_testees": 88824,
     "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
     "requete": "SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL),0) ko\n          FROM `gold`.`sinistre_certifie` g LEFT JOIN `silver`.`sinistre` s\n          ON s.silver_row_id=g.silver_row_id AND s.bronze_row_id=g.bronze_row_id AND s._batch_id=g._batch_id\n          LEFT JOIN `bronze`.`crm_sinistre` b ON b.bronze_row_id=g.bronze_row_id\n          AND b._batch_id=g._batch_id AND b.`sinistre_id`=g.`sinistre_id` WHERE g._batch_id=:b",
-    "mesure_le": "2026-11-12T11:55:20.165797+00:00"
+    "exclusions_rq019_justifiees": 0
   },
   {
-    "batch_id": "L-2026-10-01",
     "couche": "GOLD",
     "rule_id": "RQ-023",
     "table_logique": "client_unique",
-    "nb_testees": 121073,
+    "nb_testees": 120673,
     "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
     "requete": "SELECT COUNT(*) n,COALESCE(SUM(NOT EXISTS(\n        SELECT 1 FROM `gold`.`xref_identifiants` x\n        LEFT JOIN `silver`.`client` s ON s.silver_row_id=x.silver_row_id\n          AND s.bronze_row_id=x.bronze_row_id AND s.source_systeme=x.source_systeme AND s.source_id=x.source_id\n        WHERE x.cli_id=g.cli_id AND s._batch_id=g._batch_id)),0) ko\n        FROM `gold`.`client_unique` g WHERE g._batch_id=:b",
-    "mesure_le": "2026-11-12T11:55:20.926293+00:00"
+    "exclusions_rq019_justifiees": 0
   }
 ]

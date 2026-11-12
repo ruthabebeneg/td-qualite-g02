@@ -138,7 +138,7 @@ def measure_gold_residuals(engine, batch):
     return results
 
 
-def lineage_queries(gold='gold', silver='silver', bronze='bronze'):
+def lineage_queries(gold='gold', silver='silver', bronze='bronze', *, quarantine_dq=None):
     """Populations complètes avec LEFT JOIN : aucun absent ne disparaît."""
     queries={}
     queries['silver_xref_gold']=f'''SELECT COUNT(*) n,COALESCE(SUM(x.cli_id IS NULL OR g.cli_id IS NULL),0) ko
@@ -147,6 +147,31 @@ def lineage_queries(gold='gold', silver='silver', bronze='bronze'):
           AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id
         LEFT JOIN {s5.table(gold,'client_unique')} g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id
         WHERE s._batch_id=:b'''
+    if quarantine_dq is not None:
+        # Un absent n'est justifié que par le plan APPLIQUE de la configuration
+        # courante, la référence source complète et son rejet RQ019 précis.
+        dq = quarantine_dq
+        queries['silver_xref_gold'] = f'''SELECT COUNT(*) n,
+          COALESCE(SUM((x.cli_id IS NULL OR g.cli_id IS NULL) AND q.silver_row_id IS NULL),0) ko,
+          COALESCE(SUM(q.silver_row_id IS NOT NULL),0) exclusions_rq019
+          FROM {s5.table(silver,'client')} s
+          LEFT JOIN {s5.table(gold,'xref_identifiants')} x ON x.silver_row_id=s.silver_row_id
+            AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme AND x.source_id=s.source_id
+          LEFT JOIN {s5.table(gold,'client_unique')} g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id
+          LEFT JOIN (
+            SELECT DISTINCT ref.source_systeme,ref.source_id,ref.bronze_row_id,ref.silver_row_id,b._batch_id
+            FROM {s5.table(dq,'rq019_reference_xref_identifiants')} ref
+            JOIN {s5.table(dq,'rq019_reference_client_unique')} b ON b.cli_id=ref.cli_id
+            JOIN {s5.table(dq,'rq019_etat')} e ON e.batch_id=b._batch_id AND e.etat='APPLIQUE'
+            JOIN {s5.table(dq,'s4_manifeste')} m ON m.batch_id=e.batch_id
+              AND m.configuration_sha256=e.configuration_sha256
+            JOIN {s5.table(dq,'rejets')} r ON r.batch_id=b._batch_id AND r.entite='client'
+              AND r.source_systeme=ref.source_systeme AND r.bronze_row_id=ref.bronze_row_id
+              AND r.rule_id='RQ-019' AND r.porte='G' AND r.motif='RQ019_V1_IDENTITE_INCERTAINE'
+            WHERE JSON_CONTAINS(JSON_EXTRACT(e.plan_json,'$.excluded_cli'),JSON_QUOTE(ref.cli_id))=1
+          ) q ON q.silver_row_id=s.silver_row_id AND q.bronze_row_id=s.bronze_row_id
+             AND q.source_systeme=s.source_systeme AND q.source_id=s.source_id AND q._batch_id=s._batch_id
+          WHERE s._batch_id=:b'''
     for origin,tb,idcol in [('crm','crm_client','client_id'),('cif','cif_clients','column0')]:
         queries['xref_'+origin]=f'''SELECT COUNT(*) n,COALESCE(SUM(s.silver_row_id IS NULL OR b.bronze_row_id IS NULL OR g.cli_id IS NULL),0) ko
           FROM {s5.table(gold,'xref_identifiants')} x
@@ -177,10 +202,18 @@ def measure_lineage(engine,batch):
     results=[]
     with s5.coherent_connection(engine) as cx:
         s5.assert_transactional(cx,s5.Layout())
-        for scope,query in lineage_queries().items():
-            n,ko=map(int,cx.execute(text(query),{'b':batch}).one())
+        required = {'rq019_etat','rq019_reference_xref_identifiants','rq019_reference_client_unique'}
+        present = set(cx.execute(text("SELECT table_name FROM information_schema.tables WHERE table_schema='dq'")).scalars())
+        if present & required and not required <= present:
+            raise ValueError('État de résolution RQ019 incomplet : lineage refusé')
+        quarantine_dq = 'dq' if required <= present else None
+        for scope,query in lineage_queries(quarantine_dq=quarantine_dq).items():
+            measured = cx.execute(text(query),{'b':batch}).mappings().one()
+            n,ko = int(measured['n']),int(measured['ko'])
             cx.execute(text('''INSERT INTO dq.dq_history(batch_id,couche,rule_id,table_cible,nb_testees,nb_echecs)
                 VALUES(:b,'GOLD','RQ-023',:t,:n,:e)'''),{'b':batch,'t':'S5_'+scope,'n':n,'e':ko})
             results.append({'batch_id':batch,'couche':'GOLD','rule_id':'RQ-023','table_logique':scope,
-                'nb_testees':n,'nb_echecs':ko,'requete':query,'mesure_le':datetime.now(timezone.utc).isoformat()})
+                'nb_testees':n,'nb_echecs':ko,'requete':query,'mesure_le':datetime.now(timezone.utc).isoformat(),
+                'exclusions_rq019_justifiees':int(measured.get('exclusions_rq019',0)),
+                'population':'Toutes les lignes silver : lien gold ou quarantaine RQ019 vérifiée ; les exclus ne sont pas des identités réparées.' if scope=='silver_xref_gold' and quarantine_dq else 'Liens des lignes retenues, LEFT JOIN par origine et lot'})
     return results
