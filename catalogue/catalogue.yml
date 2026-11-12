@@ -1,0 +1,69 @@
+# Catalogue maison AssurConnect (option A) — tenu par le Data Steward, validé par le Data Owner.
+# Une entrée par table gold. Les noms des personnes sont à compléter avec les rôles de la séance.
+lot_de_reference: L-2026-10-01
+roles:
+  data_owner: "Ruth"
+  data_steward: "Firdaouss (Data Steward S5)"
+  ingenieur_qualite: "Iliana"
+
+tables:
+  gold.client_unique:
+    couche: GOLD
+    description: "Une ligne par personne consolidée CRM + CIF (golden record), identifiée par un CLI."
+    grain: "1 ligne = 1 personne (physique ou morale)"
+    cle: cli_id
+    proprietaire: data_owner
+    steward: data_steward
+    sensibilite: "Données personnelles (RGPD) : nom, date de naissance, téléphone, courriel"
+    definitions:
+      client_actif: "CD-001 : contrat certifié en cours à la date de référence du lot ET dernière cotisation dans les 3 mois (D-05, D-06), publié par gold.v_client_actif"
+      statut_client: "Calculé depuis les contrats certifiés (D-04) : ACTIF, INACTIF, ASSURE, PROSPECT ; A_REVOIR = ancien souscripteur sans contrat certifié (D-17)"
+      regle_de_survie: "Valeur valide, puis la plus fréquente, puis la plus complète (nom) ; contact sans candidat valide -> NULL et revue (D-15)"
+    regles: [RQ-003, RQ-004, RQ-005, RQ-006, RQ-007, RQ-008, RQ-009, RQ-015, RQ-016, RQ-018, RQ-019, RQ-020, RQ-023, RQ-025]
+    decisions: [D-02, D-03, D-04, D-05, D-06, D-11, D-13, D-14, D-15, D-17, D-19, S4-GO-RQ019-20261112]
+    lineage:
+      - "crm.client -> bronze.crm_client (RQ-021, RQ-022) -> silver.client (RQ-023, RQ-024 ; ref_pays, ref_postal) -> gold.xref_identifiants -> gold.client_unique"
+      - "cif.clients -> bronze.cif_clients -> silver.client -> gold.xref_identifiants -> gold.client_unique"
+      - "statut_client <- gold.contrat_certifie <- silver.contrat <- bronze.crm_contrat <- crm.contrat"
+
+  gold.xref_identifiants:
+    couche: GOLD
+    description: "Table de correspondance : chaque identifiant source (CRM ou CIF) -> son CLI, avec ses lignes silver et bronze."
+    grain: "1 ligne = 1 identifiant source"
+    cle: [source_systeme, source_id]
+    proprietaire: data_owner
+    steward: data_steward
+    regles: [RQ-019, RQ-023]
+    lineage: ["silver.client -> gold.xref_identifiants"]
+
+  gold.contrat_certifie:
+    couche: GOLD
+    description: "Contrats ayant franchi les règles bloquantes de la porte G."
+    grain: "1 ligne = 1 contrat"
+    cle: contrat_id
+    proprietaire: data_owner
+    steward: data_steward
+    regles: [RQ-001, RQ-002, RQ-010, RQ-011, RQ-012, RQ-013, RQ-020, RQ-023, RQ-025]
+    decisions: [D-02, D-09, D-10]
+    lineage: ["crm.contrat -> bronze.crm_contrat -> silver.contrat -> gold.contrat_certifie"]
+
+  gold.sinistre_certifie:
+    couche: GOLD
+    description: "Sinistres rattachés à un contrat certifié et survenus pendant la garantie (renouvellement compris)."
+    grain: "1 ligne = 1 sinistre"
+    cle: sinistre_id
+    proprietaire: data_owner
+    steward: data_steward
+    regles: [RQ-014, RQ-017, RQ-020, RQ-023, RQ-025]
+    decisions: [D-12, D-16]
+    lineage: ["crm.sinistre -> bronze.crm_sinistre -> silver.sinistre (+ silver.ref_ban) -> gold.sinistre_certifie"]
+
+  gold.v_client_actif:
+    couche: GOLD
+    description: "Vue unique du client actif (CD-001), lue à l'identique par les directions Commerciale, Sinistres et Risques."
+    grain: "1 ligne = 1 CLI actif pour un lot"
+    proprietaire: data_owner
+    steward: data_steward
+    regles: [RQ-018]
+    decisions: [D-05, D-06]
+    lineage: ["gold.contrat_certifie -> gold.v_client_actif"]
