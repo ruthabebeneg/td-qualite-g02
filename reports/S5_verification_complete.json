@@ -3659,5 +3659,14 @@
   "limites": [
     "Validation des critères et du nouveau périmètre par les rôles métier non inventée.",
     "Aucun GO ni publication nominale sans approbation Owner valide."
-  ]
+  ],
+  "finalisation_publication": {
+    "date": "2026-11-12T15:57:29.423948+00:00",
+    "certificat_id": "S5-d7c760617b538e9240c8541a4f7",
+    "decision": "GO",
+    "approbation_owner": "reports/S5_VALIDATION_DATA_OWNER.json",
+    "publication_id": "d2813a2f27c741dcadc379c43c892c90",
+    "preuve": "reports/S5_preuves_finales.json",
+    "portee": "Résout la demande Owner antérieure conservée comme historique ; publication réelle et RQ-025 après commit exécutées."
+  }
 }
