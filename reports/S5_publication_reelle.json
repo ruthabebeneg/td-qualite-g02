@@ -1,0 +1,196 @@
+{
+  "batch_id": "L-2026-10-01",
+  "certificat_id": "S5-d7c760617b538e9240c8541a4f7",
+  "synthetique": false,
+  "publication": "CHARGEE",
+  "reconciliation": [
+    {
+      "table_gold": "client_unique",
+      "table_cible": "client",
+      "gold": {
+        "lignes": 120673,
+        "sha256": "b1e83124dafb52a5da8906b5954d46d8b082ddd87d69e030baf2a439d2ca750a",
+        "colonnes": [
+          "cli_id",
+          "nom_reference",
+          "date_naissance",
+          "cp",
+          "ville",
+          "pays_iso",
+          "telephone",
+          "email",
+          "nb_identifiants_source",
+          "statut_client",
+          "_batch_id",
+          "nature_personne",
+          "motif_revue"
+        ]
+      },
+      "cible": {
+        "lignes": 120673,
+        "sha256": "b1e83124dafb52a5da8906b5954d46d8b082ddd87d69e030baf2a439d2ca750a",
+        "colonnes": [
+          "cli_id",
+          "nom_reference",
+          "date_naissance",
+          "cp",
+          "ville",
+          "pays_iso",
+          "telephone",
+          "email",
+          "nb_identifiants_source",
+          "statut_client",
+          "_batch_id",
+          "nature_personne",
+          "motif_revue"
+        ]
+      },
+      "ecart": 0
+    },
+    {
+      "table_gold": "contrat_certifie",
+      "table_cible": "contrat",
+      "gold": {
+        "lignes": 95822,
+        "sha256": "7d784b055187f3ec20eb3d94785f9deeece8d715f79a5d19e9aafc62b3001c12",
+        "colonnes": [
+          "contrat_id",
+          "cli_souscripteur",
+          "cli_assure",
+          "code_type",
+          "date_debut",
+          "date_fin",
+          "duree_garantie_mois",
+          "prime_annuelle",
+          "date_derniere_cotisation",
+          "silver_row_id",
+          "bronze_row_id",
+          "_batch_id"
+        ]
+      },
+      "cible": {
+        "lignes": 95822,
+        "sha256": "7d784b055187f3ec20eb3d94785f9deeece8d715f79a5d19e9aafc62b3001c12",
+        "colonnes": [
+          "contrat_id",
+          "cli_souscripteur",
+          "cli_assure",
+          "code_type",
+          "date_debut",
+          "date_fin",
+          "duree_garantie_mois",
+          "prime_annuelle",
+          "date_derniere_cotisation",
+          "silver_row_id",
+          "bronze_row_id",
+          "_batch_id"
+        ]
+      },
+      "ecart": 0
+    },
+    {
+      "table_gold": "sinistre_certifie",
+      "table_cible": "sinistre",
+      "gold": {
+        "lignes": 88824,
+        "sha256": "fde4c59ef4686ae5ebd82e040f0985fcb97888a74cf3688c395d3a4bca813675",
+        "colonnes": [
+          "sinistre_id",
+          "contrat_id",
+          "date_survenance",
+          "date_declaration",
+          "type_sinistre",
+          "montant_estime",
+          "adresse_sinistre",
+          "cp_sinistre",
+          "ville_sinistre",
+          "id_ban",
+          "silver_row_id",
+          "bronze_row_id",
+          "_batch_id"
+        ]
+      },
+      "cible": {
+        "lignes": 88824,
+        "sha256": "fde4c59ef4686ae5ebd82e040f0985fcb97888a74cf3688c395d3a4bca813675",
+        "colonnes": [
+          "sinistre_id",
+          "contrat_id",
+          "date_survenance",
+          "date_declaration",
+          "type_sinistre",
+          "montant_estime",
+          "adresse_sinistre",
+          "cp_sinistre",
+          "ville_sinistre",
+          "id_ban",
+          "silver_row_id",
+          "bronze_row_id",
+          "_batch_id"
+        ]
+      },
+      "ecart": 0
+    }
+  ],
+  "cible_avant": {
+    "client": {
+      "lignes": 0,
+      "sha256": "4ffd015429983a44d810666297d98f514bc123c207d52f26c8030318462fdd97",
+      "colonnes": [
+        "cli_id",
+        "nom_reference",
+        "date_naissance",
+        "cp",
+        "ville",
+        "pays_iso",
+        "telephone",
+        "email",
+        "nb_identifiants_source",
+        "statut_client",
+        "_batch_id",
+        "nature_personne",
+        "motif_revue"
+      ]
+    },
+    "contrat": {
+      "lignes": 0,
+      "sha256": "43d449a4abe9dcc289747e2367fe4bb476e1ceee0f54ed267de3fb087d0bfea1",
+      "colonnes": [
+        "contrat_id",
+        "cli_souscripteur",
+        "cli_assure",
+        "code_type",
+        "date_debut",
+        "date_fin",
+        "duree_garantie_mois",
+        "prime_annuelle",
+        "date_derniere_cotisation",
+        "silver_row_id",
+        "bronze_row_id",
+        "_batch_id"
+      ]
+    },
+    "sinistre": {
+      "lignes": 0,
+      "sha256": "cb3360dbe20840220224b899728dac3dfe2420342cf4c3abb76e8563320523d0",
+      "colonnes": [
+        "sinistre_id",
+        "contrat_id",
+        "date_survenance",
+        "date_declaration",
+        "type_sinistre",
+        "montant_estime",
+        "adresse_sinistre",
+        "cp_sinistre",
+        "ville_sinistre",
+        "id_ban",
+        "silver_row_id",
+        "bronze_row_id",
+        "_batch_id"
+      ]
+    }
+  },
+  "tout_ou_rien": true,
+  "empreinte_gold": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+  "publication_id": "d2813a2f27c741dcadc379c43c892c90"
+}

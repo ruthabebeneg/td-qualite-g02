@@ -1,18 +1,16 @@
 {
-  "certificat_id": "S5-6c5d288b3531e69e19fad3b30da",
-  "preuve_sha256": "6c5d288b3531e69e19fad3b30da774c729a21298d31fab581bade45d267ea09e",
+  "certificat_id": "S5-d7c760617b538e9240c8541a4f7",
+  "preuve_sha256": "d7c760617b538e9240c8541a4f72f169c53fa7b140dfa3074fba03d57d5be2d1",
   "batch_id": "L-2026-10-01",
-  "decision": "NO_GO",
+  "decision": "GO",
   "decision_sql": {
     "nb_attendues": 59,
     "nb_testees": "59",
     "nb_conformes": "59",
-    "decision": "NO_GO"
+    "decision": "GO"
   },
   "synthetique": false,
-  "motifs": [
-    "VALIDATION_OWNER_ABSENTE_OU_NON_LIEE_AUX_EMPREINTES"
-  ],
+  "motifs": [],
   "gold": {
     "batch_id": "L-2026-10-01",
     "tables": {
@@ -1460,7 +1458,28 @@
       "table_logique": "client_crm"
     }
   ],
-  "owner": null,
+  "owner": {
+    "batch_id": "L-2026-10-01",
+    "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+    "empreinte_gold": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+    "historique_sha256": "e1ea0884d3bad0948c3c5e8e0e672cd51a5e538f80eb35d3273361f6867c5361",
+    "decision": "ACCEPTE",
+    "role_decideur": "Data Owner",
+    "decideur": "Ruth",
+    "date_decision": "2026-11-12",
+    "signature": "Ruth",
+    "justification": "J'approuve le certificat du lot L-2026-10-01. RQ-019 est à 0 échec sur les quatre populations et il n'y a plus d'autre motif de NO_GO . Même si les 23 consolidations sont faites sur des critères techniques sans preuve humaine, les 377 CLI en quarantaine ne sont pas déclarés réparés, et RQ-016 reste sous son seuil de 98 % (avertissement) mais il ne s'agit pas de rêgles blocantes",
+    "decisions_journal": [
+      "D-21",
+      "D-22",
+      "D-23",
+      "D-24",
+      "D-25",
+      "D-26",
+      "D-27"
+    ],
+    "portee": "Approbation du certificat S5. La publication dans crm_cible a besoin d'un certificat réémis à GO avec cette validation."
+  },
   "schema_gold": "gold",
   "schema_dq": "dq",
   "mapping": [
