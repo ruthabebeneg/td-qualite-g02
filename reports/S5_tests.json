@@ -1,0 +1,552 @@
+{
+  "synthetique": true,
+  "lot": "TEST-S5-SYNTHETIQUE",
+  "schemas_execution": [
+    "s5_test_engineer_dec2fa599c25_target",
+    "s5_test_engineer_dec2fa599c25_gold",
+    "s5_test_engineer_dec2fa599c25_dq",
+    "s5_test_engineer_dec2fa599c25_silver",
+    "s5_test_engineer_dec2fa599c25_bronze"
+  ],
+  "limite": "Tests du mécanisme sur fixtures isolées ; aucun GO ni signature du lot réel.",
+  "nombre_tests": 38,
+  "tous_passes": true,
+  "schemas_nettoyes": true,
+  "tests": [
+    {
+      "cas": "sans_certificat",
+      "etat": "PASSE",
+      "message": "CERTIFICAT_ABSENT",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "certificat_no_go",
+      "etat": "PASSE",
+      "message": "CERTIFICAT_NO_GO",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "gold_modifie",
+      "etat": "PASSE",
+      "message": "EMPREINTE_GOLD_DIFFERENTE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "go_gold_intact",
+      "etat": "PASSE",
+      "message": "CHARGEE",
+      "chargement": true,
+      "reconciliation": [
+        {
+          "table_gold": "client_unique",
+          "table_cible": "client",
+          "gold": {
+            "lignes": 1,
+            "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+            "colonnes": [
+              "cli_id",
+              "nom_reference",
+              "date_naissance",
+              "cp",
+              "ville",
+              "pays_iso",
+              "telephone",
+              "email",
+              "nb_identifiants_source",
+              "statut_client",
+              "_batch_id",
+              "nature_personne",
+              "motif_revue"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+            "colonnes": [
+              "cli_id",
+              "nom_reference",
+              "date_naissance",
+              "cp",
+              "ville",
+              "pays_iso",
+              "telephone",
+              "email",
+              "nb_identifiants_source",
+              "statut_client",
+              "_batch_id",
+              "nature_personne",
+              "motif_revue"
+            ]
+          },
+          "ecart": 0
+        },
+        {
+          "table_gold": "contrat_certifie",
+          "table_cible": "contrat",
+          "gold": {
+            "lignes": 1,
+            "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+            "colonnes": [
+              "contrat_id",
+              "cli_souscripteur",
+              "cli_assure",
+              "code_type",
+              "date_debut",
+              "date_fin",
+              "duree_garantie_mois",
+              "prime_annuelle",
+              "date_derniere_cotisation",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+            "colonnes": [
+              "contrat_id",
+              "cli_souscripteur",
+              "cli_assure",
+              "code_type",
+              "date_debut",
+              "date_fin",
+              "duree_garantie_mois",
+              "prime_annuelle",
+              "date_derniere_cotisation",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "ecart": 0
+        },
+        {
+          "table_gold": "sinistre_certifie",
+          "table_cible": "sinistre",
+          "gold": {
+            "lignes": 1,
+            "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+            "colonnes": [
+              "sinistre_id",
+              "contrat_id",
+              "date_survenance",
+              "date_declaration",
+              "type_sinistre",
+              "montant_estime",
+              "adresse_sinistre",
+              "cp_sinistre",
+              "ville_sinistre",
+              "id_ban",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+            "colonnes": [
+              "sinistre_id",
+              "contrat_id",
+              "date_survenance",
+              "date_declaration",
+              "type_sinistre",
+              "montant_estime",
+              "adresse_sinistre",
+              "cp_sinistre",
+              "ville_sinistre",
+              "id_ban",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "ecart": 0
+        }
+      ],
+      "journal_publications": 1,
+      "mesures_rq025_crm": 3
+    },
+    {
+      "cas": "rollback_apres_contrat",
+      "etat": "PASSE",
+      "message": "PANNE_SIMULEE_APRES_CONTRAT",
+      "cible_preexistante_inchangee": true,
+      "rollback_integral": true
+    },
+    {
+      "cas": "relance_idempotente",
+      "etat": "PASSE",
+      "journal_publications": 2,
+      "mesures_rq025_crm": 6,
+      "sans_doublon": true,
+      "empreintes_identiques": true
+    },
+    {
+      "cas": "catalogue_modifie",
+      "etat": "PASSE",
+      "message": "MESURES_OU_CATALOGUE_MODIFIES",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "historique_modifie",
+      "etat": "PASSE",
+      "message": "MESURES_OU_CATALOGUE_MODIFIES",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "configuration_modifiee",
+      "etat": "PASSE",
+      "message": "VALIDATION_OWNER_PERIMEE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "mesure_bloquante_absente",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "absence_bloquante_detectee": true
+    },
+    {
+      "cas": "population_vide",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "population_vide_non_conforme": true
+    },
+    {
+      "cas": "lot_degrade_no_go",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "lot_degrade": true,
+      "degradation": "date_fin = date_debut du contrat synthetique",
+      "nb_testees": 1,
+      "nb_echecs": 1,
+      "seul_blocage": "RQ-001"
+    },
+    {
+      "cas": "mesure_invalide",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "mesure_invalide_detectee": true
+    },
+    {
+      "cas": "table_gold_vide",
+      "etat": "PASSE",
+      "decision": "NO_GO"
+    },
+    {
+      "cas": "types_canoniques",
+      "etat": "PASSE",
+      "null_vide_blanc_et_cp_distincts": true,
+      "decimal_exact": true
+    },
+    {
+      "cas": "ecriture_concurrente_snapshot",
+      "etat": "PASSE",
+      "snapshot_certifie_publie": true,
+      "ecrivain_independant_execute": true,
+      "reconciliation": [
+        {
+          "table_gold": "client_unique",
+          "table_cible": "client",
+          "gold": {
+            "lignes": 1,
+            "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+            "colonnes": [
+              "cli_id",
+              "nom_reference",
+              "date_naissance",
+              "cp",
+              "ville",
+              "pays_iso",
+              "telephone",
+              "email",
+              "nb_identifiants_source",
+              "statut_client",
+              "_batch_id",
+              "nature_personne",
+              "motif_revue"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "5b259f72758944021866ba501962182d74512e5cb8055354c9886c0ac6bc3098",
+            "colonnes": [
+              "cli_id",
+              "nom_reference",
+              "date_naissance",
+              "cp",
+              "ville",
+              "pays_iso",
+              "telephone",
+              "email",
+              "nb_identifiants_source",
+              "statut_client",
+              "_batch_id",
+              "nature_personne",
+              "motif_revue"
+            ]
+          },
+          "ecart": 0
+        },
+        {
+          "table_gold": "contrat_certifie",
+          "table_cible": "contrat",
+          "gold": {
+            "lignes": 1,
+            "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+            "colonnes": [
+              "contrat_id",
+              "cli_souscripteur",
+              "cli_assure",
+              "code_type",
+              "date_debut",
+              "date_fin",
+              "duree_garantie_mois",
+              "prime_annuelle",
+              "date_derniere_cotisation",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "f0390b36fb508a280e91a6abfefffaef59e746da5e4feb823358eb41c3a487a4",
+            "colonnes": [
+              "contrat_id",
+              "cli_souscripteur",
+              "cli_assure",
+              "code_type",
+              "date_debut",
+              "date_fin",
+              "duree_garantie_mois",
+              "prime_annuelle",
+              "date_derniere_cotisation",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "ecart": 0
+        },
+        {
+          "table_gold": "sinistre_certifie",
+          "table_cible": "sinistre",
+          "gold": {
+            "lignes": 1,
+            "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+            "colonnes": [
+              "sinistre_id",
+              "contrat_id",
+              "date_survenance",
+              "date_declaration",
+              "type_sinistre",
+              "montant_estime",
+              "adresse_sinistre",
+              "cp_sinistre",
+              "ville_sinistre",
+              "id_ban",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "cible": {
+            "lignes": 1,
+            "sha256": "48a19602e3d410bd6a15870131bb74c7f8602a83c590937c994dda9f0f58f903",
+            "colonnes": [
+              "sinistre_id",
+              "contrat_id",
+              "date_survenance",
+              "date_declaration",
+              "type_sinistre",
+              "montant_estime",
+              "adresse_sinistre",
+              "cp_sinistre",
+              "ville_sinistre",
+              "id_ban",
+              "silver_row_id",
+              "bronze_row_id",
+              "_batch_id"
+            ]
+          },
+          "ecart": 0
+        }
+      ]
+    },
+    {
+      "cas": "verrou_concurrent",
+      "etat": "PASSE",
+      "message": "CONSTRUCTION_CONCURRENTE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "schemas_mixtes",
+      "etat": "PASSE",
+      "schemas_mixtes_refuses": true
+    },
+    {
+      "cas": "certificat_immuable",
+      "etat": "PASSE",
+      "certificat_immuable": true
+    },
+    {
+      "cas": "myisam_cible",
+      "etat": "PASSE",
+      "certification_refusee_avant_ecriture": true,
+      "message": "MOTEUR_NON_TRANSACTIONNEL:s5_test_engineer_dec2fa599c25_target.client:MyISAM",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "myisam_source",
+      "etat": "PASSE",
+      "certification_refusee_avant_ecriture": true,
+      "message": "MOTEUR_NON_TRANSACTIONNEL:s5_test_engineer_dec2fa599c25_gold.client_unique:MyISAM",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "politique_sql_modifiee",
+      "etat": "PASSE",
+      "octets_sql_modifies_a_la_lecture": true,
+      "message": "POLITIQUE_CERTIFICATION_MODIFIEE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "scopes_modifies",
+      "etat": "PASSE",
+      "message": "POLITIQUE_CERTIFICATION_MODIFIEE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "rq023_gold_absente",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "perimetres_gold_manquants": 6
+    },
+    {
+      "cas": "regression_gold_aval",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "regression_gold_non_ignoree": true
+    },
+    {
+      "cas": "attestation_perimee",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "attestation_perimee_detectee": true
+    },
+    {
+      "cas": "attestation_absente",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "mesures_conformes_sans_preuve_de_provenance_refusees": true
+    },
+    {
+      "cas": "cible_autre_lot",
+      "etat": "PASSE",
+      "message": "CIBLE_AUTRE_LOT_NON_CERTIFIE",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "orphelin_souscripteur",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "orphelins_mesures": {
+        "souscripteur": 1,
+        "assure": 0,
+        "contrat_sinistre": 0
+      }
+    },
+    {
+      "cas": "orphelin_assure",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "orphelins_mesures": {
+        "souscripteur": 0,
+        "assure": 1,
+        "contrat_sinistre": 0
+      }
+    },
+    {
+      "cas": "orphelin_sinistre",
+      "etat": "PASSE",
+      "decision": "NO_GO",
+      "orphelins_mesures": {
+        "souscripteur": 0,
+        "assure": 0,
+        "contrat_sinistre": 1
+      }
+    },
+    {
+      "cas": "trigger_altere_copie_rollback",
+      "etat": "PASSE",
+      "rollback_cible_et_journal": true,
+      "message": "RQ025_ECART_CONTENU",
+      "cible_inchangee": true,
+      "chargement": false
+    },
+    {
+      "cas": "lineage_absences",
+      "etat": "PASSE",
+      "silver_sans_xref": [
+        1,
+        1
+      ],
+      "xref_sans_gold": [
+        1,
+        1
+      ],
+      "xref_sans_silver_ou_bronze": [
+        1,
+        1
+      ]
+    },
+    {
+      "cas": "pages_bornees",
+      "etat": "PASSE",
+      "tailles_pages": [
+        1,
+        1
+      ],
+      "lignes_totales": 2
+    },
+    {
+      "cas": "panne_journal_rollback",
+      "etat": "PASSE",
+      "rollback_trois_tables_et_trois_rq025": true,
+      "journal_inchange": true
+    },
+    {
+      "cas": "historique_prefixe_rq019",
+      "etat": "PASSE",
+      "prefixe_rq019_normalise_python_sql": true
+    },
+    {
+      "cas": "lineage_quarantaine_rq019",
+      "etat": "PASSE",
+      "absence_non_justifiee_refusee": true,
+      "quarantaine_courante_tracable": true,
+      "doublons_motifs_non_comptes": true,
+      "configuration_perimee_refusee": true,
+      "rejet_hors_plan_refuse": true
+    },
+    {
+      "cas": "date_owner_invalide",
+      "etat": "PASSE",
+      "date_decision_invalide_refusee": true
+    }
+  ]
+}

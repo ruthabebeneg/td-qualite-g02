@@ -46,6 +46,7 @@ services:
       - ./reports:/home/jovyan/work/reports
       - ./livrables:/home/jovyan/work/livrables
       - ./pipelines:/home/jovyan/work/pipelines
+      - ./sql:/home/jovyan/work/sql:ro
       - ./catalogue:/home/jovyan/work/catalogue   # séance 5
     networks:
       - dq_network

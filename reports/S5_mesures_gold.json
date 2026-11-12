@@ -1,0 +1,53 @@
+[
+  {
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "identites_PP",
+    "nb_testees": 117763,
+    "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
+    "lignes_exclues": 386
+  },
+  {
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "identites_PM",
+    "nb_testees": 4057,
+    "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
+    "lignes_exclues": 10
+  },
+  {
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "signature_nom_cp_naissance_tel",
+    "nb_testees": 104395,
+    "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
+    "lignes_exclues": 16278
+  },
+  {
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "signature_nom_email",
+    "nb_testees": 92298,
+    "nb_echecs": 0,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 100.0,
+    "lignes_exclues": 28375
+  },
+  {
+    "couche": "GOLD",
+    "rule_id": "RQ-016",
+    "table_logique": "client_unique",
+    "nb_testees": 48322,
+    "nb_echecs": 1569,
+    "population": "Contrôle gold recalculé ; définition et SQL conservés.",
+    "taux": 96.75303174537478,
+    "requete": "SELECT COUNT(*) n,COALESCE(SUM(NOT EXISTS(SELECT 1 FROM gold.contrat_certifie c\n        WHERE c.cli_souscripteur=g.cli_id AND c._batch_id=g._batch_id)),0) ko FROM gold.client_unique g WHERE g._batch_id=:b AND g.statut_client IN ('ACTIF','INACTIF','A_REVOIR')",
+    "exclusions_rq019_justifiees": 0
+  }
+]

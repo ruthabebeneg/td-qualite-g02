@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "repertoire": "/home/jovyan/work",
+      "racine_resolue": "/home/jovyan/work",
+      "conforme": true
+    },
+    {
+      "repertoire": "/home/jovyan/work/notebooks",
+      "racine_resolue": "/home/jovyan/work",
+      "conforme": true
+    }
+  ],
+  "notebook_execute_depuis": "notebooks/",
+  "rapports_a_la_racine": true
+}
