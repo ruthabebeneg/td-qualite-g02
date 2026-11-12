@@ -30,10 +30,10 @@ Mettez à jour ce tableau à chaque fin de séance (et dès qu'une story change 
 | S4 | US-25 | Golden record | À faire | … | |
 | S4 | US-27 | Gold et client actif unique | À faire | … | |
 | S4 | US-28 | Traçabilité de trois données | À faire | … | |
-| S5 | US-29 | Historique des mesures | Fait | reports/S5_export_steward.json ; reports/S5_verification_complete.json | 74 contrôles B/S/G et historique exporté ; courbes au Steward. |
+| S5 | US-29 | Historique des mesures | À faire | … | |
 | S5 | US-30 | Courbes d'évolution | À faire | … | |
-| S5 | US-31 | Certificat de qualité | Fait | reports/S5_certificat_final.json ; reports/S5_VALIDATION_DATA_OWNER.json | GO réel, 59/59 périmètres bloquants conformes ; épreuve dégradée sur fixtures. |
-| S5 | US-32 | Publication vers le CRM | Fait | reports/S5_publication_reelle.json ; reports/S5_preuves_finales.json ; notebooks/S5_g02.ipynb | Lot réel chargé ; RQ-025 après commit, trois tables, écarts nuls. |
+| S5 | US-31 | Certificat de qualité | À faire | … | |
+| S5 | US-32 | Publication vers le CRM | À faire | … | |
 | S5 | US-34 | Catalogue, propriétaires, lineage | À faire | … | |
 | S5 | US-35 | Dossier go/no-go | À faire | … | |
 
