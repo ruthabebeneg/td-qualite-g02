@@ -5,7 +5,7 @@
     "batch_id": "L-2026-10-01",
     "mesures": [
       {
-        "id": 462,
+        "id": 536,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -13,7 +13,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -21,7 +21,7 @@
         "table_logique": "crm_client"
       },
       {
-        "id": 463,
+        "id": 537,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -29,7 +29,7 @@
         "nb_testees": 100000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -37,7 +37,7 @@
         "table_logique": "crm_client"
       },
       {
-        "id": 464,
+        "id": 538,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -45,7 +45,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -53,7 +53,7 @@
         "table_logique": "crm_contrat"
       },
       {
-        "id": 465,
+        "id": 539,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -61,7 +61,7 @@
         "nb_testees": 100000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -69,7 +69,7 @@
         "table_logique": "crm_contrat"
       },
       {
-        "id": 466,
+        "id": 540,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -77,7 +77,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -85,7 +85,7 @@
         "table_logique": "crm_sinistre"
       },
       {
-        "id": 467,
+        "id": 541,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -93,7 +93,7 @@
         "nb_testees": 100000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -101,7 +101,7 @@
         "table_logique": "crm_sinistre"
       },
       {
-        "id": 468,
+        "id": 542,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -109,7 +109,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -117,7 +117,7 @@
         "table_logique": "crm_type_contrat"
       },
       {
-        "id": 469,
+        "id": 543,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -125,7 +125,7 @@
         "nb_testees": 12,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -133,7 +133,7 @@
         "table_logique": "crm_type_contrat"
       },
       {
-        "id": 470,
+        "id": 544,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -141,7 +141,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -149,7 +149,7 @@
         "table_logique": "cif_clients"
       },
       {
-        "id": 471,
+        "id": 545,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -157,7 +157,7 @@
         "nb_testees": 40000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -165,7 +165,7 @@
         "table_logique": "cif_clients"
       },
       {
-        "id": 472,
+        "id": 546,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -173,7 +173,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -181,7 +181,7 @@
         "table_logique": "cif_compte"
       },
       {
-        "id": 473,
+        "id": 547,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -189,7 +189,7 @@
         "nb_testees": 45000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -197,7 +197,7 @@
         "table_logique": "cif_compte"
       },
       {
-        "id": 474,
+        "id": 548,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-021",
@@ -205,7 +205,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude, intégrité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -213,7 +213,7 @@
         "table_logique": "cif_pays"
       },
       {
-        "id": 475,
+        "id": 549,
         "batch_id": "L-2026-10-01",
         "couche": "BRONZE",
         "rule_id": "RQ-022",
@@ -221,7 +221,7 @@
         "nb_testees": 250,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "B",
         "severite": "BLOQUANTE",
@@ -453,7 +453,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 480,
+        "id": 554,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-007",
@@ -461,7 +461,7 @@
         "nb_testees": 99556,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -469,7 +469,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 482,
+        "id": 556,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-009",
@@ -477,7 +477,7 @@
         "nb_testees": 99556,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité domaine",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -485,7 +485,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 483,
+        "id": 557,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-020",
@@ -493,7 +493,7 @@
         "nb_testees": 99556,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -501,7 +501,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 476,
+        "id": 550,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-003",
@@ -509,7 +509,7 @@
         "nb_testees": 50293,
         "nb_echecs": 6010,
         "taux_conformite": "88.050",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -517,7 +517,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 477,
+        "id": 551,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-004",
@@ -525,7 +525,7 @@
         "nb_testees": 88212,
         "nb_echecs": 879,
         "taux_conformite": "99.004",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -533,7 +533,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 478,
+        "id": 552,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-005",
@@ -541,7 +541,7 @@
         "nb_testees": 98024,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -549,7 +549,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 479,
+        "id": 553,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-006",
@@ -557,7 +557,7 @@
         "nb_testees": 98024,
         "nb_echecs": 698,
         "taux_conformite": "99.288",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Exactitude",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -565,7 +565,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 481,
+        "id": 555,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-008",
@@ -573,7 +573,7 @@
         "nb_testees": 80280,
         "nb_echecs": 1205,
         "taux_conformite": "98.499",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -581,7 +581,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 487,
+        "id": 561,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-007",
@@ -589,7 +589,7 @@
         "nb_testees": 40000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -597,7 +597,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 489,
+        "id": 563,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-020",
@@ -605,7 +605,7 @@
         "nb_testees": 40000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -613,7 +613,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 484,
+        "id": 558,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-004",
@@ -621,7 +621,7 @@
         "nb_testees": 33368,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -629,7 +629,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 485,
+        "id": 559,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-005",
@@ -637,7 +637,7 @@
         "nb_testees": 39401,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -645,7 +645,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 486,
+        "id": 560,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-006",
@@ -653,7 +653,7 @@
         "nb_testees": 39401,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Exactitude",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -661,7 +661,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 488,
+        "id": 562,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-008",
@@ -669,7 +669,7 @@
         "nb_testees": 21128,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -677,7 +677,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 494,
+        "id": 568,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-007",
@@ -685,7 +685,7 @@
         "nb_testees": 120673,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -693,7 +693,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 496,
+        "id": 570,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-009",
@@ -701,7 +701,7 @@
         "nb_testees": 120673,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité domaine",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -709,7 +709,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 497,
+        "id": 571,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-020",
@@ -717,7 +717,7 @@
         "nb_testees": 120673,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -725,7 +725,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 490,
+        "id": 564,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-003",
@@ -733,7 +733,7 @@
         "nb_testees": 48322,
         "nb_echecs": 5190,
         "taux_conformite": "89.260",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -741,7 +741,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 491,
+        "id": 565,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-004",
@@ -749,7 +749,7 @@
         "nb_testees": 106438,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -757,7 +757,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 492,
+        "id": 566,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-005",
@@ -765,7 +765,7 @@
         "nb_testees": 118853,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -773,7 +773,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 493,
+        "id": 567,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-006",
@@ -781,7 +781,7 @@
         "nb_testees": 118853,
         "nb_echecs": 553,
         "taux_conformite": "99.535",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Exactitude",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -789,7 +789,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 495,
+        "id": 569,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-008",
@@ -797,7 +797,7 @@
         "nb_testees": 92298,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité format",
         "porte": "S",
         "severite": "AVERTISSEMENT",
@@ -901,7 +901,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 498,
+        "id": 572,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-001",
@@ -909,7 +909,7 @@
         "nb_testees": 98600,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -917,7 +917,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 499,
+        "id": 573,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-010",
@@ -925,7 +925,7 @@
         "nb_testees": 98600,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité domaine",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -933,7 +933,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 500,
+        "id": 574,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-020",
@@ -941,7 +941,7 @@
         "nb_testees": 98600,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -949,7 +949,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 510,
+        "id": 584,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-014",
@@ -957,7 +957,7 @@
         "nb_testees": 92003,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Précision, cohérence",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -965,7 +965,7 @@
         "table_logique": "sinistre"
       },
       {
-        "id": 501,
+        "id": 575,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-020",
@@ -973,7 +973,7 @@
         "nb_testees": 92003,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -997,7 +997,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 526,
+        "id": 600,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-001",
@@ -1005,7 +1005,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1013,7 +1013,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 527,
+        "id": 601,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-010",
@@ -1021,7 +1021,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité domaine",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1029,7 +1029,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 534,
+        "id": 608,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-020",
@@ -1037,7 +1037,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1045,7 +1045,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 511,
+        "id": 585,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-014",
@@ -1053,7 +1053,7 @@
         "nb_testees": 88824,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Précision, cohérence",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1061,7 +1061,7 @@
         "table_logique": "sinistre"
       },
       {
-        "id": 512,
+        "id": 586,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-020",
@@ -1069,7 +1069,7 @@
         "nb_testees": 88824,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1077,7 +1077,7 @@
         "table_logique": "sinistre"
       },
       {
-        "id": 517,
+        "id": 591,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-002",
@@ -1085,7 +1085,7 @@
         "nb_testees": 89999,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Validité métier",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1093,7 +1093,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 519,
+        "id": 593,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-012",
@@ -1101,7 +1101,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1109,7 +1109,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 520,
+        "id": 594,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-013",
@@ -1117,7 +1117,7 @@
         "nb_testees": 57231,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1125,7 +1125,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 518,
+        "id": 592,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-011",
@@ -1133,7 +1133,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Intégrité référentielle",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1141,7 +1141,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 521,
+        "id": 595,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-017",
@@ -1149,7 +1149,7 @@
         "nb_testees": 88824,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence inter-tables",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1253,7 +1253,7 @@
         "table_logique": "contrat"
       },
       {
-        "id": 523,
+        "id": 597,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-015",
@@ -1261,7 +1261,7 @@
         "nb_testees": 44836,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence de statut",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1269,7 +1269,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 524,
+        "id": 598,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-016",
@@ -1277,7 +1277,7 @@
         "nb_testees": 48322,
         "nb_echecs": 1569,
         "taux_conformite": "96.753",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence de statut",
         "porte": "G",
         "severite": "AVERTISSEMENT",
@@ -1285,7 +1285,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 513,
+        "id": 587,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-019",
@@ -1293,7 +1293,7 @@
         "nb_testees": 117763,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1301,7 +1301,7 @@
         "table_logique": "identites_PP"
       },
       {
-        "id": 514,
+        "id": 588,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-019",
@@ -1309,7 +1309,7 @@
         "nb_testees": 4057,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1317,7 +1317,7 @@
         "table_logique": "identites_PM"
       },
       {
-        "id": 515,
+        "id": 589,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-019",
@@ -1325,7 +1325,7 @@
         "nb_testees": 104395,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1333,7 +1333,7 @@
         "table_logique": "signature_nom_cp_naissance_tel"
       },
       {
-        "id": 516,
+        "id": 590,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-019",
@@ -1341,7 +1341,7 @@
         "nb_testees": 92298,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Unicité",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1349,7 +1349,7 @@
         "table_logique": "signature_nom_email"
       },
       {
-        "id": 529,
+        "id": 603,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1357,7 +1357,7 @@
         "nb_testees": 99309,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1365,7 +1365,7 @@
         "table_logique": "xref_crm"
       },
       {
-        "id": 530,
+        "id": 604,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1373,7 +1373,7 @@
         "nb_testees": 39851,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1381,7 +1381,7 @@
         "table_logique": "xref_cif"
       },
       {
-        "id": 531,
+        "id": 605,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1389,7 +1389,7 @@
         "nb_testees": 95822,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1397,7 +1397,7 @@
         "table_logique": "contrat_certifie"
       },
       {
-        "id": 532,
+        "id": 606,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1405,7 +1405,7 @@
         "nb_testees": 88824,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1413,7 +1413,7 @@
         "table_logique": "sinistre_certifie"
       },
       {
-        "id": 533,
+        "id": 607,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1421,7 +1421,7 @@
         "nb_testees": 120673,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1429,7 +1429,7 @@
         "table_logique": "client_unique"
       },
       {
-        "id": 503,
+        "id": 577,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-024",
@@ -1437,7 +1437,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1445,7 +1445,7 @@
         "table_logique": "client (crm)"
       },
       {
-        "id": 505,
+        "id": 579,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-024",
@@ -1453,7 +1453,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1461,7 +1461,7 @@
         "table_logique": "client (cif)"
       },
       {
-        "id": 507,
+        "id": 581,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-024",
@@ -1469,7 +1469,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1477,7 +1477,7 @@
         "table_logique": "contrat (crm)"
       },
       {
-        "id": 509,
+        "id": 583,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-024",
@@ -1485,7 +1485,7 @@
         "nb_testees": 1,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Complétude",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1493,7 +1493,7 @@
         "table_logique": "sinistre (crm)"
       },
       {
-        "id": 535,
+        "id": 609,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-018",
@@ -1501,7 +1501,7 @@
         "nb_testees": 3,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence de définition",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1541,7 +1541,7 @@
         "table_logique": "sinistre_garantie"
       },
       {
-        "id": 522,
+        "id": 596,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-017",
@@ -1549,7 +1549,7 @@
         "nb_testees": 88824,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence inter-tables",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1653,7 +1653,7 @@
         "table_logique": "definition_actif"
       },
       {
-        "id": 502,
+        "id": 576,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-023",
@@ -1661,7 +1661,7 @@
         "nb_testees": 99556,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1669,7 +1669,7 @@
         "table_logique": "client_crm"
       },
       {
-        "id": 504,
+        "id": 578,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-023",
@@ -1677,7 +1677,7 @@
         "nb_testees": 40000,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1685,7 +1685,7 @@
         "table_logique": "client_cif"
       },
       {
-        "id": 506,
+        "id": 580,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-023",
@@ -1693,7 +1693,7 @@
         "nb_testees": 98600,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1701,7 +1701,7 @@
         "table_logique": "contrat_crm"
       },
       {
-        "id": 508,
+        "id": 582,
         "batch_id": "L-2026-10-01",
         "couche": "SILVER",
         "rule_id": "RQ-023",
@@ -1709,7 +1709,7 @@
         "nb_testees": 92003,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1781,7 +1781,7 @@
         "table_logique": "identites_PM"
       },
       {
-        "id": 528,
+        "id": 602,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-023",
@@ -1789,7 +1789,7 @@
         "nb_testees": 139556,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Traçabilité",
         "porte": "S",
         "severite": "BLOQUANTE",
@@ -1797,7 +1797,7 @@
         "table_logique": "silver_xref_gold"
       },
       {
-        "id": 525,
+        "id": 599,
         "batch_id": "L-2026-10-01",
         "couche": "GOLD",
         "rule_id": "RQ-018",
@@ -1805,7 +1805,7 @@
         "nb_testees": 120673,
         "nb_echecs": 0,
         "taux_conformite": "100.000",
-        "mesure_le": "2026-11-12 13:21:17",
+        "mesure_le": "2026-11-12 13:55:42",
         "dimension": "Cohérence de définition",
         "porte": "G",
         "severite": "BLOQUANTE",
@@ -1813,11 +1813,11 @@
         "table_logique": "statut_client_actif"
       }
     ],
-    "lignes_historiques": 323,
+    "lignes_historiques": 397,
     "mesures_courantes": 113,
-    "doublons_historiques": 210,
+    "doublons_historiques": 284,
     "mesures_invalides": [],
-    "sha256": "33695db70d97c72dfd3f02a2e92742b5c73e82a608b554db58fbaca1b16a4f89",
+    "sha256": "e1ea0884d3bad0948c3c5e8e0e672cd51a5e538f80eb35d3273361f6867c5361",
     "perimetre_sha256": "Mesures B/S/G ; CRM RQ-025 exclu pour préserver le rejeu"
   },
   "matrice": [
@@ -1857,7 +1857,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 498,
+          "id": 572,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-001",
@@ -1865,7 +1865,7 @@
           "nb_testees": 98600,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -1884,7 +1884,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 526,
+          "id": 600,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-001",
@@ -1892,7 +1892,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -1965,7 +1965,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 517,
+          "id": 591,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-002",
@@ -1973,7 +1973,7 @@
           "nb_testees": 89999,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité métier",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -2019,7 +2019,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 476,
+          "id": 550,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-003",
@@ -2027,7 +2027,7 @@
           "nb_testees": 50293,
           "nb_echecs": 6010,
           "taux_conformite": "88.050",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2046,7 +2046,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 490,
+          "id": 564,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-003",
@@ -2054,7 +2054,7 @@
           "nb_testees": 48322,
           "nb_echecs": 5190,
           "taux_conformite": "89.260",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2116,7 +2116,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 477,
+          "id": 551,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-004",
@@ -2124,7 +2124,7 @@
           "nb_testees": 88212,
           "nb_echecs": 879,
           "taux_conformite": "99.004",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2132,7 +2132,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 484,
+          "id": 558,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-004",
@@ -2140,7 +2140,7 @@
           "nb_testees": 33368,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2159,7 +2159,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 491,
+          "id": 565,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-004",
@@ -2167,7 +2167,7 @@
           "nb_testees": 106438,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2229,7 +2229,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 478,
+          "id": 552,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-005",
@@ -2237,7 +2237,7 @@
           "nb_testees": 98024,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2245,7 +2245,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 485,
+          "id": 559,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-005",
@@ -2253,7 +2253,7 @@
           "nb_testees": 39401,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2272,7 +2272,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 492,
+          "id": 566,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-005",
@@ -2280,7 +2280,7 @@
           "nb_testees": 118853,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2342,7 +2342,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 479,
+          "id": 553,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-006",
@@ -2350,7 +2350,7 @@
           "nb_testees": 98024,
           "nb_echecs": 698,
           "taux_conformite": "99.288",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Exactitude",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2358,7 +2358,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 486,
+          "id": 560,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-006",
@@ -2366,7 +2366,7 @@
           "nb_testees": 39401,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Exactitude",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2385,7 +2385,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 493,
+          "id": 567,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-006",
@@ -2393,7 +2393,7 @@
           "nb_testees": 118853,
           "nb_echecs": 553,
           "taux_conformite": "99.535",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Exactitude",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2455,7 +2455,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 480,
+          "id": 554,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-007",
@@ -2463,7 +2463,7 @@
           "nb_testees": 99556,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2471,7 +2471,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 487,
+          "id": 561,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-007",
@@ -2479,7 +2479,7 @@
           "nb_testees": 40000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2498,7 +2498,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 494,
+          "id": 568,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-007",
@@ -2506,7 +2506,7 @@
           "nb_testees": 120673,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2568,7 +2568,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 481,
+          "id": 555,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-008",
@@ -2576,7 +2576,7 @@
           "nb_testees": 80280,
           "nb_echecs": 1205,
           "taux_conformite": "98.499",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2584,7 +2584,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 488,
+          "id": 562,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-008",
@@ -2592,7 +2592,7 @@
           "nb_testees": 21128,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2611,7 +2611,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 495,
+          "id": 569,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-008",
@@ -2619,7 +2619,7 @@
           "nb_testees": 92298,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité format",
           "porte": "S",
           "severite": "AVERTISSEMENT",
@@ -2665,7 +2665,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 482,
+          "id": 556,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-009",
@@ -2673,7 +2673,7 @@
           "nb_testees": 99556,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité domaine",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2692,7 +2692,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 496,
+          "id": 570,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-009",
@@ -2700,7 +2700,7 @@
           "nb_testees": 120673,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité domaine",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2746,7 +2746,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 499,
+          "id": 573,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-010",
@@ -2754,7 +2754,7 @@
           "nb_testees": 98600,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité domaine",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2773,7 +2773,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 527,
+          "id": 601,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-010",
@@ -2781,7 +2781,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Validité domaine",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -2854,7 +2854,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 518,
+          "id": 592,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-011",
@@ -2862,7 +2862,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -2935,7 +2935,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 519,
+          "id": 593,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-012",
@@ -2943,7 +2943,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3016,7 +3016,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 520,
+          "id": 594,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-013",
@@ -3024,7 +3024,7 @@
           "nb_testees": 57231,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Intégrité référentielle",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3070,7 +3070,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 510,
+          "id": 584,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-014",
@@ -3078,7 +3078,7 @@
           "nb_testees": 92003,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Précision, cohérence",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3097,7 +3097,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 511,
+          "id": 585,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-014",
@@ -3105,7 +3105,7 @@
           "nb_testees": 88824,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Précision, cohérence",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3178,7 +3178,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 523,
+          "id": 597,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-015",
@@ -3186,7 +3186,7 @@
           "nb_testees": 44836,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence de statut",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3259,7 +3259,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 524,
+          "id": 598,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-016",
@@ -3267,7 +3267,7 @@
           "nb_testees": 48322,
           "nb_echecs": 1569,
           "taux_conformite": "96.753",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence de statut",
           "porte": "G",
           "severite": "AVERTISSEMENT",
@@ -3340,7 +3340,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 521,
+          "id": 595,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-017",
@@ -3348,7 +3348,7 @@
           "nb_testees": 88824,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence inter-tables",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3356,7 +3356,7 @@
           "table_logique": "sinistre_relation"
         },
         {
-          "id": 522,
+          "id": 596,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-017",
@@ -3364,7 +3364,7 @@
           "nb_testees": 88824,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence inter-tables",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3437,7 +3437,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 535,
+          "id": 609,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-018",
@@ -3445,7 +3445,7 @@
           "nb_testees": 3,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence de définition",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3453,7 +3453,7 @@
           "table_logique": "v_client_actif"
         },
         {
-          "id": 525,
+          "id": 599,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-018",
@@ -3461,7 +3461,7 @@
           "nb_testees": 120673,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Cohérence de définition",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3566,7 +3566,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 513,
+          "id": 587,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-019",
@@ -3574,7 +3574,7 @@
           "nb_testees": 117763,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3582,7 +3582,7 @@
           "table_logique": "identites_PP"
         },
         {
-          "id": 514,
+          "id": 588,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-019",
@@ -3590,7 +3590,7 @@
           "nb_testees": 4057,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3598,7 +3598,7 @@
           "table_logique": "identites_PM"
         },
         {
-          "id": 515,
+          "id": 589,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-019",
@@ -3606,7 +3606,7 @@
           "nb_testees": 104395,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3614,7 +3614,7 @@
           "table_logique": "signature_nom_cp_naissance_tel"
         },
         {
-          "id": 516,
+          "id": 590,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-019",
@@ -3622,7 +3622,7 @@
           "nb_testees": 92298,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "G",
           "severite": "BLOQUANTE",
@@ -3716,7 +3716,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 483,
+          "id": 557,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-020",
@@ -3724,7 +3724,7 @@
           "nb_testees": 99556,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3732,7 +3732,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 489,
+          "id": 563,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-020",
@@ -3740,7 +3740,7 @@
           "nb_testees": 40000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3748,7 +3748,7 @@
           "table_logique": "client_cif"
         },
         {
-          "id": 500,
+          "id": 574,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-020",
@@ -3756,7 +3756,7 @@
           "nb_testees": 98600,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3764,7 +3764,7 @@
           "table_logique": "contrat"
         },
         {
-          "id": 501,
+          "id": 575,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-020",
@@ -3772,7 +3772,7 @@
           "nb_testees": 92003,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3791,7 +3791,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 497,
+          "id": 571,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-020",
@@ -3799,7 +3799,7 @@
           "nb_testees": 120673,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3807,7 +3807,7 @@
           "table_logique": "client_unique"
         },
         {
-          "id": 534,
+          "id": 608,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-020",
@@ -3815,7 +3815,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3823,7 +3823,7 @@
           "table_logique": "contrat"
         },
         {
-          "id": 512,
+          "id": 586,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-020",
@@ -3831,7 +3831,7 @@
           "nb_testees": 88824,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Unicité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -3850,7 +3850,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 462,
+          "id": 536,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3858,7 +3858,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3866,7 +3866,7 @@
           "table_logique": "crm_client"
         },
         {
-          "id": 464,
+          "id": 538,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3874,7 +3874,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3882,7 +3882,7 @@
           "table_logique": "crm_contrat"
         },
         {
-          "id": 466,
+          "id": 540,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3890,7 +3890,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3898,7 +3898,7 @@
           "table_logique": "crm_sinistre"
         },
         {
-          "id": 468,
+          "id": 542,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3906,7 +3906,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3914,7 +3914,7 @@
           "table_logique": "crm_type_contrat"
         },
         {
-          "id": 470,
+          "id": 544,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3922,7 +3922,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3930,7 +3930,7 @@
           "table_logique": "cif_clients"
         },
         {
-          "id": 472,
+          "id": 546,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3938,7 +3938,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3946,7 +3946,7 @@
           "table_logique": "cif_compte"
         },
         {
-          "id": 474,
+          "id": 548,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-021",
@@ -3954,7 +3954,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude, intégrité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -3993,7 +3993,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 463,
+          "id": 537,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4001,7 +4001,7 @@
           "nb_testees": 100000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4009,7 +4009,7 @@
           "table_logique": "crm_client"
         },
         {
-          "id": 465,
+          "id": 539,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4017,7 +4017,7 @@
           "nb_testees": 100000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4025,7 +4025,7 @@
           "table_logique": "crm_contrat"
         },
         {
-          "id": 467,
+          "id": 541,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4033,7 +4033,7 @@
           "nb_testees": 100000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4041,7 +4041,7 @@
           "table_logique": "crm_sinistre"
         },
         {
-          "id": 469,
+          "id": 543,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4049,7 +4049,7 @@
           "nb_testees": 12,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4057,7 +4057,7 @@
           "table_logique": "crm_type_contrat"
         },
         {
-          "id": 471,
+          "id": 545,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4065,7 +4065,7 @@
           "nb_testees": 40000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4073,7 +4073,7 @@
           "table_logique": "cif_clients"
         },
         {
-          "id": 473,
+          "id": 547,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4081,7 +4081,7 @@
           "nb_testees": 45000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4089,7 +4089,7 @@
           "table_logique": "cif_compte"
         },
         {
-          "id": 475,
+          "id": 549,
           "batch_id": "L-2026-10-01",
           "couche": "BRONZE",
           "rule_id": "RQ-022",
@@ -4097,7 +4097,7 @@
           "nb_testees": 250,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "B",
           "severite": "BLOQUANTE",
@@ -4146,7 +4146,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 502,
+          "id": 576,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-023",
@@ -4154,7 +4154,7 @@
           "nb_testees": 99556,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4162,7 +4162,7 @@
           "table_logique": "client_crm"
         },
         {
-          "id": 504,
+          "id": 578,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-023",
@@ -4170,7 +4170,7 @@
           "nb_testees": 40000,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4178,7 +4178,7 @@
           "table_logique": "client_cif"
         },
         {
-          "id": 506,
+          "id": 580,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-023",
@@ -4186,7 +4186,7 @@
           "nb_testees": 98600,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4194,7 +4194,7 @@
           "table_logique": "contrat_crm"
         },
         {
-          "id": 508,
+          "id": 582,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-023",
@@ -4202,7 +4202,7 @@
           "nb_testees": 92003,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4221,7 +4221,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 529,
+          "id": 603,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4229,7 +4229,7 @@
           "nb_testees": 99309,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4237,7 +4237,7 @@
           "table_logique": "xref_crm"
         },
         {
-          "id": 530,
+          "id": 604,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4245,7 +4245,7 @@
           "nb_testees": 39851,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4253,7 +4253,7 @@
           "table_logique": "xref_cif"
         },
         {
-          "id": 531,
+          "id": 605,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4261,7 +4261,7 @@
           "nb_testees": 95822,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4269,7 +4269,7 @@
           "table_logique": "contrat_certifie"
         },
         {
-          "id": 532,
+          "id": 606,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4277,7 +4277,7 @@
           "nb_testees": 88824,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4285,7 +4285,7 @@
           "table_logique": "sinistre_certifie"
         },
         {
-          "id": 533,
+          "id": 607,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4293,7 +4293,7 @@
           "nb_testees": 120673,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4301,7 +4301,7 @@
           "table_logique": "client_unique"
         },
         {
-          "id": 528,
+          "id": 602,
           "batch_id": "L-2026-10-01",
           "couche": "GOLD",
           "rule_id": "RQ-023",
@@ -4309,7 +4309,7 @@
           "nb_testees": 139556,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Traçabilité",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4338,7 +4338,7 @@
       "raison": null,
       "mesures": [
         {
-          "id": 503,
+          "id": 577,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-024",
@@ -4346,7 +4346,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4354,7 +4354,7 @@
           "table_logique": "client (crm)"
         },
         {
-          "id": 505,
+          "id": 579,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-024",
@@ -4362,7 +4362,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4370,7 +4370,7 @@
           "table_logique": "client (cif)"
         },
         {
-          "id": 507,
+          "id": 581,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-024",
@@ -4378,7 +4378,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "BLOQUANTE",
@@ -4386,7 +4386,7 @@
           "table_logique": "contrat (crm)"
         },
         {
-          "id": 509,
+          "id": 583,
           "batch_id": "L-2026-10-01",
           "couche": "SILVER",
           "rule_id": "RQ-024",
@@ -4394,7 +4394,7 @@
           "nb_testees": 1,
           "nb_echecs": 0,
           "taux_conformite": "100.000",
-          "mesure_le": "2026-11-12 13:21:17",
+          "mesure_le": "2026-11-12 13:55:42",
           "dimension": "Complétude",
           "porte": "S",
           "severite": "BLOQUANTE",

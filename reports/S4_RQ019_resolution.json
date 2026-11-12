@@ -10752,5 +10752,25 @@
     "refus_precedent": "Conservé pour l’ancienne configuration uniquement ; remplacé par cette acceptation pour la configuration corrigée.",
     "certificat_s5": "Distinct et inchangé ; décision de publication conditionnée par ses propres contrôles et sa validation.",
     "empreinte_decision_sha256": "79d4226e5a8847dd7469c8b19e9dbb9ea670c9091c27372a764d6521275d3cc7"
+  },
+  "integration_acceptation_s4": {
+    "reference": "S4-GO-RQ019-20261112",
+    "execution_le": "2026-11-12T13:53:31.995228+00:00",
+    "avant": {
+      "batch_id": "L-2026-10-01",
+      "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+      "etat": "CANDIDAT_RQ019_NON_ACCEPTE",
+      "accepte": 0,
+      "modifie_le": "2026-11-12 12:58:47"
+    },
+    "apres": {
+      "batch_id": "L-2026-10-01",
+      "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+      "etat": "ACCEPTE_OWNER_S4",
+      "accepte": 1,
+      "modifie_le": "2026-11-12 13:53:22"
+    },
+    "gold_inchange": true,
+    "approbation_s5": false
   }
 }
