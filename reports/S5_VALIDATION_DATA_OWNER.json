@@ -1,0 +1,14 @@
+{
+  "batch_id": "L-2026-10-01",
+  "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+  "empreinte_gold": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+  "historique_sha256": "e1ea0884d3bad0948c3c5e8e0e672cd51a5e538f80eb35d3273361f6867c5361",
+  "decision": "ACCEPTE",
+  "role_decideur": "Data Owner",
+  "decideur": "Ruth",
+  "date_decision": "2026-11-12",
+  "signature": "Ruth",
+  "justification": "J'approuve le certificat du lot L-2026-10-01. RQ-019 est à 0 échec sur les quatre populations et il n'y a plus d'autre motif de NO_GO . Même si les 23 consolidations sont faites sur des critères techniques sans preuve humaine, les 377 CLI en quarantaine ne sont pas déclarés réparés, et RQ-016 reste sous son seuil de 98 % (avertissement) mais il ne s'agit pas de rêgles blocantes",
+  "decisions_journal": ["D-21", "D-22", "D-23", "D-24", "D-25"],
+  "portee": "Approbation du certificat S5. La publication dans crm_cible a besoin d'un certificat réémis à GO avec cette validation."
+}
