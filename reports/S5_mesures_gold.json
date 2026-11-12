@@ -1,0 +1,52 @@
+[
+  {
+    "batch_id": "L-2026-10-01",
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "identites_PP",
+    "nb_testees": 117963,
+    "nb_echecs": 189,
+    "requete": "SELECT COUNT(*) n, COALESCE(SUM(clis>1),0) ko FROM (\n            SELECT COUNT(DISTINCT g.cli_id) clis FROM silver.client s\n            LEFT JOIN gold.xref_identifiants x ON x.silver_row_id=s.silver_row_id\n              AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme\n              AND x.source_id=s.source_id\n            LEFT JOIN gold.client_unique g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id\n            WHERE s._batch_id=:b AND s.nature_personne='PP' AND s.`identite_normalisee` IS NOT NULL AND s.`prenom_normalise` IS NOT NULL AND s.`date_naissance` IS NOT NULL\n            GROUP BY s.`identite_normalisee`,s.`prenom_normalise`,s.`date_naissance` HAVING COUNT(DISTINCT g.cli_id)>0) signatures",
+    "mesure_le": "2026-11-12T11:55:17.475719+00:00"
+  },
+  {
+    "batch_id": "L-2026-10-01",
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "identites_PM",
+    "nb_testees": 4062,
+    "nb_echecs": 5,
+    "requete": "SELECT COUNT(*) n, COALESCE(SUM(clis>1),0) ko FROM (\n            SELECT COUNT(DISTINCT g.cli_id) clis FROM silver.client s\n            LEFT JOIN gold.xref_identifiants x ON x.silver_row_id=s.silver_row_id\n              AND x.bronze_row_id=s.bronze_row_id AND x.source_systeme=s.source_systeme\n              AND x.source_id=s.source_id\n            LEFT JOIN gold.client_unique g ON g.cli_id=x.cli_id AND g._batch_id=s._batch_id\n            WHERE s._batch_id=:b AND s.nature_personne='PM' AND s.`identite_normalisee` IS NOT NULL AND s.`cp` IS NOT NULL AND s.`adresse_normalisee` IS NOT NULL\n            GROUP BY s.`identite_normalisee`,s.`cp`,s.`adresse_normalisee` HAVING COUNT(DISTINCT g.cli_id)>0) signatures",
+    "mesure_le": "2026-11-12T11:55:17.531291+00:00"
+  },
+  {
+    "batch_id": "L-2026-10-01",
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "signature_nom_cp_naissance_tel",
+    "nb_testees": 104615,
+    "nb_echecs": 114,
+    "requete": "SELECT COUNT(*) n,COALESCE(SUM(clis>1),0) ko FROM (\n            SELECT COUNT(DISTINCT cli_id) clis FROM gold.client_unique\n            WHERE _batch_id=:b AND `nom_reference` IS NOT NULL AND `cp` IS NOT NULL AND `date_naissance` IS NOT NULL AND `telephone` IS NOT NULL GROUP BY `nom_reference`,`cp`,`date_naissance`,`telephone`) signatures",
+    "mesure_le": "2026-11-12T11:55:17.753881+00:00"
+  },
+  {
+    "batch_id": "L-2026-10-01",
+    "couche": "GOLD",
+    "rule_id": "RQ-019",
+    "table_logique": "signature_nom_email",
+    "nb_testees": 92493,
+    "nb_echecs": 83,
+    "requete": "SELECT COUNT(*) n,COALESCE(SUM(clis>1),0) ko FROM (\n            SELECT COUNT(DISTINCT cli_id) clis FROM gold.client_unique\n            WHERE _batch_id=:b AND `nom_reference` IS NOT NULL AND `email` IS NOT NULL GROUP BY `nom_reference`,`email`) signatures",
+    "mesure_le": "2026-11-12T11:55:17.927790+00:00"
+  },
+  {
+    "batch_id": "L-2026-10-01",
+    "couche": "GOLD",
+    "rule_id": "RQ-016",
+    "table_logique": "client_unique",
+    "nb_testees": 48456,
+    "nb_echecs": 1552,
+    "requete": "SELECT COUNT(*) n,\n        COALESCE(SUM(NOT EXISTS(SELECT 1 FROM gold.contrat_certifie c\n          WHERE c.cli_souscripteur=g.cli_id AND c._batch_id=g._batch_id)),0) ko\n        FROM gold.client_unique g WHERE g._batch_id=:b\n          AND g.statut_client IN ('ACTIF','INACTIF','A_REVOIR')",
+    "mesure_le": "2026-11-12T11:55:18.255184+00:00"
+  }
+]

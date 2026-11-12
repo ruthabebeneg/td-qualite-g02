@@ -1,0 +1,98 @@
+{
+  "bronze.cif_clients": {
+    "lignes": 40000,
+    "sha256": "f5e8ae9d13032afbe7d8cb4fdbdef6caada278e9a696857d1a8175cdb9836f13"
+  },
+  "bronze.cif_compte": {
+    "lignes": 45000,
+    "sha256": "df203db2650137448d590030a87d8962de96f6feb1b59908d87e51488d0c4a2b"
+  },
+  "bronze.cif_pays": {
+    "lignes": 250,
+    "sha256": "9a2843995fd87643c6dd6da820de990f7212fc72426ff7cfbd63ecb7c5861053"
+  },
+  "bronze.crm_client": {
+    "lignes": 100000,
+    "sha256": "0b2947cf29748b34746f4e2542193bbd2643711c91dfd73884ff83bce4e3aaec"
+  },
+  "bronze.crm_contrat": {
+    "lignes": 100000,
+    "sha256": "fa28a79f5af3fbaddd78f0b078ec0622f62965d793a5854c2ef3fc769cb8325f"
+  },
+  "bronze.crm_sinistre": {
+    "lignes": 100000,
+    "sha256": "8a29074a29dede4b804d53fd7e2aaf2113804df71d6ff0b83704fd164d37ef05"
+  },
+  "bronze.crm_type_contrat": {
+    "lignes": 12,
+    "sha256": "341bc369c7dd0c47be7f2a7c772204cece77933f7e412d0753cb2258d5b16ceb"
+  },
+  "cif.clients": {
+    "lignes": 40000,
+    "sha256": "1a08e2e2d00291f688f233e151f64db332d0c82e19967e68c7f957baaf625923"
+  },
+  "cif.compte": {
+    "lignes": 45000,
+    "sha256": "9797a5403cf943eaa921c30ebb60d5781f9ea1dafd7587fccb5299e0d2a066f5"
+  },
+  "cif.pays": {
+    "lignes": 250,
+    "sha256": "15aaf8ad9cb5906625ac8d5fd8f0677bdc9502355c121c963017c45204eb2f24"
+  },
+  "crm.client": {
+    "lignes": 100000,
+    "sha256": "ab7e9569d48c88b906313d2bf9f707c7c071fe46d8efe78465bb12f4402d4050"
+  },
+  "crm.contrat": {
+    "lignes": 100000,
+    "sha256": "a68a4a0b6a102a682d406f169e5151c9f4dadf483adf49b64485b2ee9c35ee3e"
+  },
+  "crm.sinistre": {
+    "lignes": 100000,
+    "sha256": "7edd0c3c47ac9fd8e2f830baf837be0f95f7425b114fcd9a749cf4df70fbd33f"
+  },
+  "crm.type_contrat": {
+    "lignes": 12,
+    "sha256": "67bb6acbf927081b94716517ac8baa8559d36e0db8da2435db202712b271d86d"
+  },
+  "gold.client_unique": {
+    "lignes": 121073,
+    "sha256": "50b69ca47d8fe5310d990bff22ad691274f79a4368315d87447ac55f65a994ce"
+  },
+  "gold.contrat_certifie": {
+    "lignes": 96159,
+    "sha256": "9e7de242f4a53470178bd75144743331fa65cbfb7eba4812787bfc56cb471eab"
+  },
+  "gold.sinistre_certifie": {
+    "lignes": 89156,
+    "sha256": "9dd824917f569cfd7dfb21fe1e7aa30aa9abc757e5ade96c3c84df00ab39ef49"
+  },
+  "gold.xref_identifiants": {
+    "lignes": 139556,
+    "sha256": "56d401e891b4a8491960fc1f310e7208add36118315e24fddf56fda1409a978d"
+  },
+  "silver.client": {
+    "lignes": 139556,
+    "sha256": "fd0deb8f77b2b512023927266dd1985141f354391f15e4e8df8fb11f45a38997"
+  },
+  "silver.contrat": {
+    "lignes": 98600,
+    "sha256": "2ec42b8d176ec62da0c62e75a1538715ba6f6c2cbbb7029fee27adfb03069138"
+  },
+  "silver.ref_ban": {
+    "lignes": 22856,
+    "sha256": "47245d7f3d9bb226673b0e59b5886e79c20e969823480562e10c0ecd0b072db2"
+  },
+  "silver.ref_pays": {
+    "lignes": 250,
+    "sha256": "15aaf8ad9cb5906625ac8d5fd8f0677bdc9502355c121c963017c45204eb2f24"
+  },
+  "silver.ref_postal": {
+    "lignes": 178,
+    "sha256": "fa75cca95e24bf36fc47f1989ab1ed8dbad72f58e3038f530afcd5f35d2064b3"
+  },
+  "silver.sinistre": {
+    "lignes": 92003,
+    "sha256": "fd0da790909adff11a7f1127e85a0b4f6f8e2c6fb1b951cf68def9c5a454180d"
+  }
+}

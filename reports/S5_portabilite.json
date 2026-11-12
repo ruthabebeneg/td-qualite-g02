@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "repertoire": "/tmp/s5_engineer_run",
+      "racine_resolue": "/tmp/s5_engineer_run",
+      "conforme": true
+    },
+    {
+      "repertoire": "/tmp/s5_engineer_run/notebooks",
+      "racine_resolue": "/tmp/s5_engineer_run",
+      "conforme": true
+    }
+  ],
+  "notebook_execute_depuis": "notebooks/",
+  "rapports_a_la_racine": true
+}
