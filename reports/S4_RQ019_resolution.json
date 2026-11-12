@@ -10676,5 +10676,81 @@
     "La quarantaine réduit le périmètre candidat ; aucun taux de conformité source déduit.",
     "Refus Owner historique conservé ; aucune attestation exhaustive ni publication nominale.",
     "Les autres règles client de format/complétude ne sont pas toutes remesurées par ce traitement ; aucun GO exhaustif."
-  ]
+  ],
+  "validation_s4_transmise": {
+    "etat": "VALIDATION_S4_NOMINATIVE_RELAYEE_PAR_UTILISATEUR",
+    "message_source": "si c'ezst pour s4 fais ce trvail le data owner valide",
+    "date_reception": "2026-11-12",
+    "date_decision_owner": "2026-11-12",
+    "decideur": "Ruth",
+    "signature": null,
+    "batch_id": "L-2026-10-01",
+    "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+    "objet": "Validation S4 de la correction RQ-019 appliquée : 23 consolidations protégées et quarantaine de 377 CLI, 396 sources clients, 337 contrats et 332 sinistres supplémentaires.",
+    "portee": "S4 uniquement ; ne constitue pas une approbation du certificat S5 ou une autorisation de publication CRM.",
+    "suite": "Validation S4 renseignée selon les informations transmises par l’utilisateur ; refus antérieur historique uniquement. Approbation S5 distincte à obtenir avant publication.",
+    "decision": "ACCEPTE",
+    "role_decideur": "Data Owner",
+    "mode_formalisation": "Accord, identité et date transmis par l’utilisateur dans la conversation ; aucune signature ajoutée."
+  },
+  "decision_acceptation_s4": {
+    "reference": "S4-GO-RQ019-20261112",
+    "nature": "DECISION_ACCEPTATION_S4",
+    "decision": "GO",
+    "batch_id": "L-2026-10-01",
+    "configuration_sha256": "59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33",
+    "decideur": "Ruth",
+    "role_decideur": "Data Owner",
+    "date_decision": "2026-11-12",
+    "signature": null,
+    "provenance": "Validation, identité et date relayées par l’utilisateur dans la conversation.",
+    "portee": "Acceptation S4 de la configuration corrigée et du périmètre retenu après consolidation et quarantaine ; aucune autorisation de publication S5.",
+    "rq019": [
+      {
+        "rule_id": "RQ-019",
+        "table_logique": "identites_PP",
+        "nb_testees": 117763,
+        "nb_echecs": 0,
+        "lignes_exclues": 386,
+        "taux": 100.0
+      },
+      {
+        "rule_id": "RQ-019",
+        "table_logique": "identites_PM",
+        "nb_testees": 4057,
+        "nb_echecs": 0,
+        "lignes_exclues": 10,
+        "taux": 100.0
+      },
+      {
+        "rule_id": "RQ-019",
+        "table_logique": "signature_nom_cp_naissance_tel",
+        "nb_testees": 104395,
+        "nb_echecs": 0,
+        "lignes_exclues": 16278,
+        "taux": 100.0
+      },
+      {
+        "rule_id": "RQ-019",
+        "table_logique": "signature_nom_email",
+        "nb_testees": 92298,
+        "nb_echecs": 0,
+        "lignes_exclues": 28375,
+        "taux": 100.0
+      }
+    ],
+    "exclusions_supplementaires": {
+      "cli": 377,
+      "sources_clients": 396,
+      "contrats": 337,
+      "sinistres": 332
+    },
+    "avertissements": [
+      "RQ-016 : 1569 échecs sur 48322, sous le seuil de 98 % ; avertissement maintenu.",
+      "Les dossiers exclus ne sont pas déclarés réparés."
+    ],
+    "refus_precedent": "Conservé pour l’ancienne configuration uniquement ; remplacé par cette acceptation pour la configuration corrigée.",
+    "certificat_s5": "Distinct et inchangé ; décision de publication conditionnée par ses propres contrôles et sa validation.",
+    "empreinte_decision_sha256": "79d4226e5a8847dd7469c8b19e9dbb9ea670c9091c27372a764d6521275d3cc7"
+  }
 }
