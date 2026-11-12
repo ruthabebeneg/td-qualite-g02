@@ -9,6 +9,6 @@
   "date_decision": "2026-11-12",
   "signature": "Ruth",
   "justification": "J'approuve le certificat du lot L-2026-10-01. RQ-019 est à 0 échec sur les quatre populations et il n'y a plus d'autre motif de NO_GO . Même si les 23 consolidations sont faites sur des critères techniques sans preuve humaine, les 377 CLI en quarantaine ne sont pas déclarés réparés, et RQ-016 reste sous son seuil de 98 % (avertissement) mais il ne s'agit pas de rêgles blocantes",
-  "decisions_journal": ["D-21", "D-22", "D-23", "D-24", "D-25"],
+  "decisions_journal": ["D-21", "D-22", "D-23", "D-24", "D-25", "D-26"],
   "portee": "Approbation du certificat S5. La publication dans crm_cible a besoin d'un certificat réémis à GO avec cette validation."
 }
