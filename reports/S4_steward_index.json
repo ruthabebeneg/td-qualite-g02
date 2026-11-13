@@ -1,1 +1,293 @@
-{"format":"S4_steward_v1","batch_id":"L-2026-10-01","date_reference":"2026-10-01","configuration_sha256":"eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61","entrees_sha256":{"S4_correctifs_synthese.json":"c205862650954a28fb11c1607be5730e7de75bfecff16f72e2cc08aff9ae4572","S4_revue_corrigee.json":"8164f18899f79f14111f9a6a98508a36a553918f13322430425eee03b478df59","S4_revue_identites_residuelles.json":"11d6eb880fbb8b93d4a78ca7c06d2fc4b61134a1de49adc7f7190a16d1d0c095","S4_rejeu.json":"2dedef8d031cb5c4bfe1b6f391ef4483aef11fca2709a0f27d06d74079cc7dd4","S4_acceptation.json":"ff455bee99a2d168ccc2c2496488fc67df93b91977a077136f47c487f80b483e","S4_couverture.json":"b08200b5dc7eb90eb817990ef7016d0b3ddc5222ba4c5974b7d60c4189a619f6"},"label_sha256":"4345596b5d14d8ceab23be3c9a8db8b6f5ed263a57b178637a6c14b941e0c5a9","decision":"NON_ACCEPTE","decisions_humaines":"EN_ATTENTE","partitions":[{"fichier":"S4_steward_paires_31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191.json","famille":"paires","nombre":432,"octets":594703,"sha256":"31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191"},{"fichier":"S4_steward_signatures_68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d.json","famille":"signatures","nombre":391,"octets":576612,"sha256":"68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d"},{"fichier":"S4_steward_survie_ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94.json","famille":"survie","nombre":2153,"octets":3169709,"sha256":"ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94"},{"fichier":"S4_steward_absences_e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3.json","famille":"absences","nombre":2615,"octets":3900343,"sha256":"e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3"},{"fichier":"S4_steward_absences_0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf.json","famille":"absences","nombre":2625,"octets":3900307,"sha256":"0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf"},{"fichier":"S4_steward_absences_02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8.json","famille":"absences","nombre":2601,"octets":3899829,"sha256":"02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8"},{"fichier":"S4_steward_absences_7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00.json","famille":"absences","nombre":2854,"octets":3900340,"sha256":"7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00"},{"fichier":"S4_steward_absences_5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d.json","famille":"absences","nombre":2901,"octets":3899780,"sha256":"5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d"},{"fichier":"S4_steward_absences_e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c.json","famille":"absences","nombre":2845,"octets":3900009,"sha256":"e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c"},{"fichier":"S4_steward_absences_91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97.json","famille":"absences","nombre":2841,"octets":3899660,"sha256":"91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97"},{"fichier":"S4_steward_absences_a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d.json","famille":"absences","nombre":2838,"octets":3899338,"sha256":"a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d"},{"fichier":"S4_steward_absences_13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c.json","famille":"absences","nombre":2842,"octets":3899911,"sha256":"13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c"},{"fichier":"S4_steward_absences_23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc.json","famille":"absences","nombre":2847,"octets":3899303,"sha256":"23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc"},{"fichier":"S4_steward_absences_6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce.json","famille":"absences","nombre":2867,"octets":3899664,"sha256":"6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce"},{"fichier":"S4_steward_absences_e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761.json","famille":"absences","nombre":2871,"octets":3900346,"sha256":"e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761"},{"fichier":"S4_steward_absences_880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a.json","famille":"absences","nombre":2870,"octets":3899881,"sha256":"880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a"},{"fichier":"S4_steward_absences_29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6.json","famille":"absences","nombre":2871,"octets":3899608,"sha256":"29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6"},{"fichier":"S4_steward_absences_17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1.json","famille":"absences","nombre":1861,"octets":2530757,"sha256":"17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1"},{"fichier":"S4_steward_statuts_60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa.json","famille":"statuts","nombre":1552,"octets":1274054,"sha256":"60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa"},{"fichier":"S4_steward_adresses_2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32.json","famille":"adresses","nombre":3434,"octets":3899215,"sha256":"2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32"},{"fichier":"S4_steward_adresses_a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd.json","famille":"adresses","nombre":3435,"octets":3900101,"sha256":"a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd"},{"fichier":"S4_steward_adresses_3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01.json","famille":"adresses","nombre":1128,"octets":1280958,"sha256":"3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01"},{"fichier":"S4_steward_faits_92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63.json","famille":"faits","nombre":3790,"octets":3899626,"sha256":"92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63"},{"fichier":"S4_steward_faits_e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904.json","famille":"faits","nombre":3792,"octets":3899548,"sha256":"e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904"},{"fichier":"S4_steward_faits_1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c.json","famille":"faits","nombre":3790,"octets":3899623,"sha256":"1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c"},{"fichier":"S4_steward_faits_96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a.json","famille":"faits","nombre":3792,"octets":3899750,"sha256":"96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a"},{"fichier":"S4_steward_faits_99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b.json","famille":"faits","nombre":3742,"octets":3899713,"sha256":"99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b"},{"fichier":"S4_steward_faits_5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e.json","famille":"faits","nombre":3729,"octets":3900116,"sha256":"5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e"},{"fichier":"S4_steward_faits_0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7.json","famille":"faits","nombre":3725,"octets":3900010,"sha256":"0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7"},{"fichier":"S4_steward_faits_7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721.json","famille":"faits","nombre":3732,"octets":3899593,"sha256":"7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721"},{"fichier":"S4_steward_faits_e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740.json","famille":"faits","nombre":3724,"octets":3899365,"sha256":"e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740"},{"fichier":"S4_steward_faits_836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3.json","famille":"faits","nombre":3724,"octets":3899339,"sha256":"836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3"},{"fichier":"S4_steward_faits_93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21.json","famille":"faits","nombre":3729,"octets":3899322,"sha256":"93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21"},{"fichier":"S4_steward_faits_dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118.json","famille":"faits","nombre":3725,"octets":3899242,"sha256":"dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118"},{"fichier":"S4_steward_faits_fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126.json","famille":"faits","nombre":1964,"octets":2053086,"sha256":"fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126"}],"synthese":{"fichier":"S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json","sha256":"6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9","octets":7906},"fichiers_actifs":["S4_steward_paires_31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191.json","S4_steward_signatures_68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d.json","S4_steward_survie_ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94.json","S4_steward_absences_e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3.json","S4_steward_absences_0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf.json","S4_steward_absences_02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8.json","S4_steward_absences_7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00.json","S4_steward_absences_5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d.json","S4_steward_absences_e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c.json","S4_steward_absences_91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97.json","S4_steward_absences_a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d.json","S4_steward_absences_13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c.json","S4_steward_absences_23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc.json","S4_steward_absences_6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce.json","S4_steward_absences_e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761.json","S4_steward_absences_880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a.json","S4_steward_absences_29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6.json","S4_steward_absences_17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1.json","S4_steward_statuts_60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa.json","S4_steward_adresses_2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32.json","S4_steward_adresses_a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd.json","S4_steward_adresses_3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01.json","S4_steward_faits_92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63.json","S4_steward_faits_e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904.json","S4_steward_faits_1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c.json","S4_steward_faits_96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a.json","S4_steward_faits_99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b.json","S4_steward_faits_5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e.json","S4_steward_faits_0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7.json","S4_steward_faits_7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721.json","S4_steward_faits_e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740.json","S4_steward_faits_836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3.json","S4_steward_faits_93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21.json","S4_steward_faits_dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118.json","S4_steward_faits_fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126.json","S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json","S4_steward_index.json"]}
+{
+  "format": "S4_steward_v1",
+  "batch_id": "L-2026-10-01",
+  "date_reference": "2026-10-01",
+  "configuration_sha256": "eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61",
+  "entrees_sha256": {
+    "S4_correctifs_synthese.json": "c205862650954a28fb11c1607be5730e7de75bfecff16f72e2cc08aff9ae4572",
+    "S4_revue_corrigee.json": "8164f18899f79f14111f9a6a98508a36a553918f13322430425eee03b478df59",
+    "S4_revue_identites_residuelles.json": "11d6eb880fbb8b93d4a78ca7c06d2fc4b61134a1de49adc7f7190a16d1d0c095",
+    "S4_rejeu.json": "2dedef8d031cb5c4bfe1b6f391ef4483aef11fca2709a0f27d06d74079cc7dd4",
+    "S4_acceptation.json": "ff455bee99a2d168ccc2c2496488fc67df93b91977a077136f47c487f80b483e",
+    "S4_couverture.json": "b08200b5dc7eb90eb817990ef7016d0b3ddc5222ba4c5974b7d60c4189a619f6"
+  },
+  "label_sha256": "4345596b5d14d8ceab23be3c9a8db8b6f5ed263a57b178637a6c14b941e0c5a9",
+  "decision": "NON_ACCEPTE",
+  "decisions_humaines": "EN_ATTENTE",
+  "partitions": [
+    {
+      "fichier": "S4_steward_paires_31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191.json",
+      "famille": "paires",
+      "nombre": 432,
+      "octets": 594703,
+      "sha256": "31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191"
+    },
+    {
+      "fichier": "S4_steward_signatures_68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d.json",
+      "famille": "signatures",
+      "nombre": 391,
+      "octets": 576612,
+      "sha256": "68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d"
+    },
+    {
+      "fichier": "S4_steward_faits_identites_10861a0866494923409436de8abd36f8b743e174e172b996bd44356d7aace96a.json",
+      "famille": "faits",
+      "nombre": 930,
+      "octets": 1005390,
+      "sha256": "10861a0866494923409436de8abd36f8b743e174e172b996bd44356d7aace96a",
+      "perimetre": "paires et signatures uniquement"
+    }
+  ],
+  "synthese": {
+    "fichier": "S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json",
+    "sha256": "6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9",
+    "octets": 7906
+  },
+  "fichiers_actifs": [
+    "S4_steward_paires_31a38ca8262972ea0c6f9fa5c466874aa9794a20b272865d9d196af209093191.json",
+    "S4_steward_signatures_68b03acb33d173e494fbeff23a73c490c1207282e3648af10446d60ff51c3d9d.json",
+    "S4_steward_faits_identites_10861a0866494923409436de8abd36f8b743e174e172b996bd44356d7aace96a.json",
+    "S4_steward_synthese_6596fa94a8692daec818a17cbaa4e1cc2deb73d339bd9b93729bdcfe992c7bf9.json",
+    "S4_steward_index.json"
+  ],
+  "partitions_regenerables_non_livrees": [
+    {
+      "famille": "survie",
+      "fichier_origine": "S4_steward_survie_ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94.json",
+      "nombre": 2153,
+      "octets": 3169709,
+      "sha256_origine": "ff48989160def789bdead2e7f9bb3d8a849fea9fb4e32a0c67aab6425c8ace94"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3.json",
+      "nombre": 2615,
+      "octets": 3900343,
+      "sha256_origine": "e389094df81511d136a0be35e641e9d1fa3e35f09271eb813e8a0d4ab7edb0c3"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf.json",
+      "nombre": 2625,
+      "octets": 3900307,
+      "sha256_origine": "0ba05df66fe4b859676dcc67296e8a028da74410fa0ba0af110921897f4acccf"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8.json",
+      "nombre": 2601,
+      "octets": 3899829,
+      "sha256_origine": "02bc9684507d56f5d495579126db19538ccba294eaa16f1c91d548464a2433f8"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00.json",
+      "nombre": 2854,
+      "octets": 3900340,
+      "sha256_origine": "7fe4ae80e07f2b922387493e4f5cb31b8d9070629c55d5b3489263e3eba2ee00"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d.json",
+      "nombre": 2901,
+      "octets": 3899780,
+      "sha256_origine": "5bc732272cf35456390344cfc11ea8d59bf69d1d3cbeebfc0e7657e692ffcf7d"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c.json",
+      "nombre": 2845,
+      "octets": 3900009,
+      "sha256_origine": "e1ad83dcbe63d41d33c7aac4ec6f0dff68d9628911479354b4f01ccf3aa10b6c"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97.json",
+      "nombre": 2841,
+      "octets": 3899660,
+      "sha256_origine": "91cc81a724f6a0566b03cffeff234ee9667dead8ee9596e7c4aabb64baa81f97"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d.json",
+      "nombre": 2838,
+      "octets": 3899338,
+      "sha256_origine": "a2fe81e8009d851d1f054fcc233af11df61bfe706b306a556cc041324e37ae2d"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c.json",
+      "nombre": 2842,
+      "octets": 3899911,
+      "sha256_origine": "13d0403a6c722f468698c4eb3cc86ec9da4e5cd508ab64577194aed99733c02c"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc.json",
+      "nombre": 2847,
+      "octets": 3899303,
+      "sha256_origine": "23c978be953890435571bb7a4d784857803f5ed6ce9bdb4530b787f050f25bcc"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce.json",
+      "nombre": 2867,
+      "octets": 3899664,
+      "sha256_origine": "6500179ac3f12bdfaeae6b569bb97eb18be48d81f75bfebbbc922a813ee690ce"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761.json",
+      "nombre": 2871,
+      "octets": 3900346,
+      "sha256_origine": "e9b8af97a138c16404ce2cf20f3e80f045fa827b1177dac2ca2ef52fa31ce761"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a.json",
+      "nombre": 2870,
+      "octets": 3899881,
+      "sha256_origine": "880f0aaeae175f077c615ee8b98a4d96713cd2486a49ce75cc4b0a8a46c5bc9a"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6.json",
+      "nombre": 2871,
+      "octets": 3899608,
+      "sha256_origine": "29575cd90db96db0f9d009fabaa2ffa9022f71a18a95750694661819e3a272c6"
+    },
+    {
+      "famille": "absences",
+      "fichier_origine": "S4_steward_absences_17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1.json",
+      "nombre": 1861,
+      "octets": 2530757,
+      "sha256_origine": "17780ef29ae64e0d98144a5dc7da33c1fc710fbe06ed8b0ce8eab2187aff8aa1"
+    },
+    {
+      "famille": "statuts",
+      "fichier_origine": "S4_steward_statuts_60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa.json",
+      "nombre": 1552,
+      "octets": 1274054,
+      "sha256_origine": "60db9adeed7508dfba9d7ae023dd7660bf04eadb431e0c5c7688a88c913307aa"
+    },
+    {
+      "famille": "adresses",
+      "fichier_origine": "S4_steward_adresses_2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32.json",
+      "nombre": 3434,
+      "octets": 3899215,
+      "sha256_origine": "2a666d2d089af9ec8af911d976acf47d24f08461dc3d66cdc33483d74de24f32"
+    },
+    {
+      "famille": "adresses",
+      "fichier_origine": "S4_steward_adresses_a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd.json",
+      "nombre": 3435,
+      "octets": 3900101,
+      "sha256_origine": "a510eff492b03b758bf3d1bce9869b2be0b4a51726efe9f2f448c18a502ec9bd"
+    },
+    {
+      "famille": "adresses",
+      "fichier_origine": "S4_steward_adresses_3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01.json",
+      "nombre": 1128,
+      "octets": 1280958,
+      "sha256_origine": "3b7ca1eeed7ad782436c30abd2ea45ff41e68a731f208bb7a45457baf4201b01"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63.json",
+      "nombre": 3790,
+      "octets": 3899626,
+      "sha256_origine": "92c2d19503072ddb7cb0273ed0d8820306d75826e48679bc58e3d4c9dc93ab63"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904.json",
+      "nombre": 3792,
+      "octets": 3899548,
+      "sha256_origine": "e6ca6367fcbb20fe2f2dbf585001f063fc5b042c580511ab8e4a978b41787904"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c.json",
+      "nombre": 3790,
+      "octets": 3899623,
+      "sha256_origine": "1a2ffb5b7023869a910501b7d3cc2badafc645bc3b9c0eeee3008edc473a7b5c"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a.json",
+      "nombre": 3792,
+      "octets": 3899750,
+      "sha256_origine": "96201879fc6f2632b0f68906045970c4a2ab71290a348073c31c600acfe5026a"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b.json",
+      "nombre": 3742,
+      "octets": 3899713,
+      "sha256_origine": "99a415f7114210d46191cc91b1b1e1ce22310a7a8a96bb5f654029055a7d905b"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e.json",
+      "nombre": 3729,
+      "octets": 3900116,
+      "sha256_origine": "5b647f5d523e19ce786ca6313b0f86a092b4748b140979bf9893d75f7562584e"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7.json",
+      "nombre": 3725,
+      "octets": 3900010,
+      "sha256_origine": "0c600f8285be8d998ddee2d73499d0b9675498bd3f0416b81b6c3c2f87f242f7"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721.json",
+      "nombre": 3732,
+      "octets": 3899593,
+      "sha256_origine": "7ce18cda4aed6dfba53efeb70d667b63de69ea412188c8bd50b3a64e8bf49721"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740.json",
+      "nombre": 3724,
+      "octets": 3899365,
+      "sha256_origine": "e9b3542a8785ad7c70b3624eb8cf9af5321a2522b566f6cfdb84739614169740"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3.json",
+      "nombre": 3724,
+      "octets": 3899339,
+      "sha256_origine": "836fcdc2eba73aa91a358922794fd4640396031e24cb46a3583aea32b0834bb3"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21.json",
+      "nombre": 3729,
+      "octets": 3899322,
+      "sha256_origine": "93eece783b51f64dccf89101238ce4c0ed456e0d3d7f8d675a518db1161b4c21"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118.json",
+      "nombre": 3725,
+      "octets": 3899242,
+      "sha256_origine": "dcd56370a33f04bd8ff046ec62c57bb0203c47df0d33541f5a86aa814a994118"
+    },
+    {
+      "famille": "faits",
+      "fichier_origine": "S4_steward_faits_fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126.json",
+      "nombre": 1964,
+      "octets": 2053086,
+      "sha256_origine": "fe30ff0ac1d502c6b11a1bb7f167828178611693d9842d6666ec526d68155126"
+    }
+  ],
+  "edition_rendu": {
+    "mode": "SYNTHESES_ET_DOSSIERS_IDENTITES",
+    "motif": "Allègement demandé par l’utilisateur ; aucune nouvelle mesure ni décision métier.",
+    "limite": "Les dossiers détaillés absences/adresses/statuts/survie et le registre complet des faits ne sont plus livrés. Leurs nombres restent des mesures historiques dans S4_steward_synthese.json.",
+    "regeneration": "notebooks/S4_g02.ipynb, cellule Instruction autonome S4 (dernière cellule de code) ; sources et référentiels du lot requis. Ne pas relancer les cellules de construction S4.",
+    "decision_owner_actuelle": "Consulter S4_VALIDATION_DATA_OWNER.json ; les mentions EN_ATTENTE du dossier historique ne décrivent pas la décision actuelle REFUSE."
+  }
+}
