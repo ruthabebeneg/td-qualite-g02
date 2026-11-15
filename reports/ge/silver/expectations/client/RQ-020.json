@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-020",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Clé unique et non nulle : client_id",
         "table_cible": "client",
         "perimetre_source": {

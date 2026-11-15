@@ -30,9 +30,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--date-comparaison", default=date.today().isoformat())
     parser.add_argument("--notebooks", nargs="+", choices=NOTEBOOKS, default=list(NOTEBOOKS))
-    parser.add_argument("--silver", action="store_true", help="Rejouer uniquement GE sur Silver et préserver les sorties Bronze")
+    layers = parser.add_mutually_exclusive_group()
+    layers.add_argument("--gold", action="store_true", help="Rejouer uniquement GE Gold sans remplacer les sorties Bronze")
+    layers.add_argument("--silver", action="store_true", help="Rejouer uniquement GE sur Silver et préserver les sorties Bronze")
     args = parser.parse_args()
-    if args.silver:
+    if args.silver or args.gold:
         args.notebooks = ["S2_US10_regles_en_tests"]
     date.fromisoformat(args.date_comparaison)
     schema = "s5_test_audit_" + uuid4().hex[:12]
@@ -42,16 +44,16 @@ def main():
     os.environ["DQ_HISTORY_SCHEMA"] = schema
     os.environ["DQ_COMPARISON_DATE"] = args.date_comparaison
     os.environ.setdefault("DQ_WRITE_DATABASE_URL", str(engine.url.render_as_string(hide_password=False)))
-    os.environ["DQ_SCHEMA"] = "silver" if args.silver else "bronze"
-    os.environ["DQ_S2_LAYER"] = "SILVER" if args.silver else "BRONZE"
+    os.environ["DQ_SCHEMA"] = "gold" if args.gold else "silver" if args.silver else "bronze"
+    os.environ["DQ_S2_LAYER"] = "GOLD" if args.gold else "SILVER" if args.silver else "BRONZE"
     os.environ["DQ_S2_EXECUTION_REPORT"] = str(ROOT / "reports" / ("S2_execution_" + schema + ".json"))
     report = {
         "debut": datetime.now(timezone.utc).isoformat(),
         "schema_validation": schema,
         "couche": os.environ["DQ_S2_LAYER"],
         "schema_source": os.environ["DQ_SCHEMA"],
-        "tables": {"client": os.getenv("DQ_TABLE_CLIENT", "client" if args.silver else "crm_client"),
-                   "contrat": os.getenv("DQ_TABLE_CONTRAT", "contrat" if args.silver else "crm_contrat")},
+        "tables": {"client": os.getenv("DQ_TABLE_CLIENT", "client_unique" if args.gold else "client" if args.silver else "crm_client"),
+                   "contrat": os.getenv("DQ_TABLE_CONTRAT", "contrat_certifie" if args.gold else "contrat" if args.silver else "crm_contrat")},
         "rapport_mesures": os.environ["DQ_S2_EXECUTION_REPORT"],
         "date_comparaison": args.date_comparaison,
         "historique_nominal_modifie": False,
@@ -82,7 +84,7 @@ def main():
                 resources={"metadata": {"path": str(ROOT / "notebooks")}},
             ).execute()
             # Seules les exécutions réussies remplacent les sorties livrées.
-            if not args.silver:
+            if not (args.silver or args.gold):
                 nbformat.write(notebook, path)
             report["notebooks"].append({
                 "notebook": name, "resultat": "PASSE",
@@ -97,6 +99,26 @@ def main():
                 with engine.begin() as cx:
                     cx.execute(text(f"DROP DATABASE `{schema}`"))
             report["schema_nettoye"] = True
+            if args.gold and report["tous_passes"]:
+                raw_path = Path(report["rapport_mesures"])
+                measures = json.loads(raw_path.read_text(encoding="utf-8"))
+                measures.pop("history_ids", None)
+                measures.update(
+                    history_schema=schema, schema_nettoye=True,
+                    historique_nominal_modifie=False,
+                    date_comparaison=args.date_comparaison,
+                    nb_mesures=len(measures["mesures"]),
+                    provenance={"notebook": "S2_US10_regles_en_tests",
+                                "rapport_execute": raw_path.name,
+                                "debut": report["debut"],
+                                "fin": datetime.now(timezone.utc).isoformat()},
+                )
+                canonical_path = ROOT / "reports" / "S2_execution_gold.json"
+                canonical_path.write_text(
+                    json.dumps(measures, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+                report["rapport_mesures"] = str(canonical_path)
+                raw_path.unlink()
         finally:
             engine.dispose()
             for name, value in previous.items():

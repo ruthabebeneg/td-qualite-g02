@@ -11,7 +11,7 @@
 | S1 | US-06 | Profil CRM | Fait | notebooks/S1_US06_profil_crm_client.ipynb ; reports/S1_US06_profil_crm_client.html |  |
 | S1 | US-07 | Motifs et regex | Fait | notebooks/S1_US07_motifs_regex.ipynb |  |
 | S1 | US-09 | Trois définitions du client actif | Fait | notebooks/US-09_client_actif.ipynb ; reports/S1_US09_reference.json |  |
-| S2 | US-10 | Règles GE | Fait | notebooks/S2_US10_regles_en_tests.ipynb ; reports/S2_execution.json |  |
+| S2 | US-10 | Règles GE | Fait | notebooks/S2_US10_regles_en_tests.ipynb ; reports/S2_execution.json ; reports/S2_execution_gold.json ; reports/ge/gold/expectations/ |  |
 | S2 | US-11 | Lignes en échec | Fait | livrables/preuves/S2_US11_echantillon_commente.csv |  |
 | S2 | US-13 | Âge au début du contrat | Fait | notebooks/S2_g02.ipynb ; reports/S2_analyse_reference.json |  |
 | S2 | US-15 | Référence Bronze | Fait | reports/S2_execution.json ; reports/S2_analyse_reference.json | Validation S2 en schéma isolé ; historique nominal préservé |
@@ -32,7 +32,7 @@
 | S5 | US-30 | Courbes | Fait | notebooks/S5_data_steward.ipynb ; reports/S5_US30_courbe.png |  |
 | S5 | US-31 | Certificat | Fait | reports/S5_certificat_final.json |  |
 | S5 | US-32 | Publication CRM | Fait | reports/S5_preuves_finales.json |  |
-| S5 | US-34 | Catalogue et lineage | Fait | catalogue/catalogue.yml ; catalogue/gold_client_unique.md |  |
+| S5 | US-34 | Catalogue et lineage | Fait | catalogue/catalogue.yml ; catalogue/gold_client_unique.md ; catalogue/app.py ; tests/test_catalogue.py |  |
 | S5 | US-35 | Dossier de décision | Fait | livrables/DOSSIER_GO_NOGO.md ; livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf |  |
 
 Extensions : US-05, US-08 et US-20 non revendiquées complètes ; US-26 rapprochement BAN traité dans S4, sans prétendre atteindre la cible source de 2 % (7,997 % d’adresses isolées) ; US-33 orchestration non retenue.

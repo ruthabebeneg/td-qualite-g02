@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-009",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Type de personne autorisé",
-        "table_cible": "crm_client"
+        "table_cible": "crm_client",
+        "perimetre_source": {}
       }
     }
   ],

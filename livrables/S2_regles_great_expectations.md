@@ -66,3 +66,7 @@ L’écriture utilise une connexion `WRITER` distincte de `reader`. La validatio
 - [x] Trois notebooks S2 exécutés de bout en bout avec sorties.
 
 Difficultés : permissions du compte lecteur et mauvais emplacement des exports corrigés ; temps historique non mesuré. Aucun point de reprise pédagogique restauré. Les erreurs présentes dans Bronze constituent le diagnostic attendu, pas un échec d’exécution de GE. Arbitrages : D-01/D-08 du journal ; aucune nouvelle décision métier créée par les corrections techniques.
+
+### Extension Gold — finalisation du 15 novembre
+
+US10 exécute les sept RQ/huit couples sur `gold.client_unique` et `gold.contrat_certifie` : preuve compacte `reports/S2_execution_gold.json`, huit suites `reports/ge/gold/expectations/`. RQ003 porte sur ACTIF/INACTIF/A_REVOIR ; RQ009 valide les cinq statuts Gold. RQ002 exclut les PM et contrôle les PP à la date de début ; référence absente/dupliquée, nature inconnue et dates absentes échouent. Clés Gold : cli_id/contrat_id. Rejeu : `python scripts/valider_notebooks.py --gold --date-comparaison 2026-11-15`, sur copie et historique isolé nettoyé. Les sorties Bronze restent seules dans le notebook livré ; le certificat n’est ni réémis ni modifié.

@@ -1,0 +1,179 @@
+{
+  "batch_id": "L-2026-10-01",
+  "schema": "gold",
+  "history_schema": "s5_test_audit_d5d3c2f965ad",
+  "tables": {
+    "client": "client_unique",
+    "contrat": "contrat_certifie"
+  },
+  "couche": "GOLD",
+  "perimetre_source": {},
+  "mesures": [
+    {
+      "rule_id": "RQ-001",
+      "description": "Date de fin après date de début",
+      "table_cible": "contrat_certifie",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-001",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Date de fin après date de début",
+        "table_cible": "contrat_certifie",
+        "perimetre_source": {}
+      },
+      "lignes": 95822,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-002",
+      "description": "PP majeure au début ; PM exclues, références/natures/dates absentes en échec",
+      "table_cible": "contrat_certifie",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-002",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "PP majeure au début ; PM exclues, références/natures/dates absentes en échec",
+        "table_cible": "contrat_certifie",
+        "perimetre_source": {}
+      },
+      "lignes": 89999,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-003",
+      "description": "Téléphone renseigné",
+      "table_cible": "client_unique",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-003",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Téléphone renseigné",
+        "table_cible": "client_unique",
+        "perimetre_source": {}
+      },
+      "lignes": 48322,
+      "anomalies": 5190,
+      "conformite_pct": 89.26,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-005",
+      "description": "Code postal français à 5 chiffres",
+      "table_cible": "client_unique",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-005",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Code postal français à 5 chiffres",
+        "table_cible": "client_unique",
+        "perimetre_source": {}
+      },
+      "lignes": 118853,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-009",
+      "description": "Statut Gold autorisé",
+      "table_cible": "client_unique",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-009",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Statut Gold autorisé",
+        "table_cible": "client_unique",
+        "perimetre_source": {}
+      },
+      "lignes": 120673,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-010",
+      "description": "Durée de garantie autorisée",
+      "table_cible": "contrat_certifie",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-010",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Durée de garantie autorisée",
+        "table_cible": "contrat_certifie",
+        "perimetre_source": {}
+      },
+      "lignes": 95822,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : cli_id",
+      "table_cible": "client_unique",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Clé unique et non nulle : cli_id",
+        "table_cible": "client_unique",
+        "perimetre_source": {}
+      },
+      "lignes": 120673,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : contrat_id",
+      "table_cible": "contrat_certifie",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "couche": "GOLD",
+        "schema": "gold",
+        "description": "Clé unique et non nulle : contrat_id",
+        "table_cible": "contrat_certifie",
+        "perimetre_source": {}
+      },
+      "lignes": 95822,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    }
+  ],
+  "suites": [
+    "reports/ge/gold/expectations/client_unique/RQ-003.json",
+    "reports/ge/gold/expectations/client_unique/RQ-005.json",
+    "reports/ge/gold/expectations/client_unique/RQ-009.json",
+    "reports/ge/gold/expectations/client_unique/RQ-020.json",
+    "reports/ge/gold/expectations/contrat_certifie/RQ-001.json",
+    "reports/ge/gold/expectations/contrat_certifie/RQ-002.json",
+    "reports/ge/gold/expectations/contrat_certifie/RQ-010.json",
+    "reports/ge/gold/expectations/contrat_certifie/RQ-020.json"
+  ],
+  "historisation": "transaction validée",
+  "source": "exécution courante du notebook",
+  "schema_nettoye": true,
+  "historique_nominal_modifie": false,
+  "date_comparaison": "2026-11-15",
+  "nb_mesures": 8,
+  "provenance": {
+    "notebook": "S2_US10_regles_en_tests",
+    "rapport_execute": "S2_execution_s5_test_audit_d5d3c2f965ad.json",
+    "debut": "2026-11-15T16:27:57.494676+00:00",
+    "fin": "2026-11-15T16:28:11.959251+00:00"
+  }
+}

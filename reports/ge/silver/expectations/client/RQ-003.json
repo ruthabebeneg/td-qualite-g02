@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-003",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Téléphone renseigné",
         "table_cible": "client",
         "perimetre_source": {

@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-001",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Date de fin après date de début",
-        "table_cible": "crm_contrat"
+        "table_cible": "crm_contrat",
+        "perimetre_source": {}
       }
     }
   ],

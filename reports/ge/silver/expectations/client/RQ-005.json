@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-005",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Code postal français à 5 chiffres",
         "table_cible": "client",
         "perimetre_source": {

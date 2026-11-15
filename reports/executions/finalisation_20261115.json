@@ -1,0 +1,78 @@
+{
+  "baseline": "32a561114b1632d7b4418d98c653a393be928960",
+  "perimetre": "Corrections hors rotation et remise du groupe ; aucune publication distante",
+  "tests": {
+    "unitaires": 50,
+    "ci_minimale": 50,
+    "scenarios_s4_s5": 74,
+    "total_unique": 124,
+    "tous_reussis": true
+  },
+  "ge": {
+    "couches_rejouees": [
+      "BRONZE",
+      "SILVER",
+      "GOLD"
+    ],
+    "gold_controles": 8,
+    "gold_concordance_mesures_certifiees": true,
+    "rapport": "reports/S2_execution_gold.json",
+    "schema_gold_temporaire_nettoye": true
+  },
+  "catalogue": {
+    "methode": "Streamlit1.50.0 / YAML unique / AppTest réel",
+    "objets": 5,
+    "sante_8502": "ok",
+    "acces_db": false
+  },
+  "integrite": {
+    "nominal_identique": true,
+    "fichiers_certifies_identiques": true,
+    "tables": 27,
+    "lignes": 1873765,
+    "schemas_tests_residuels": []
+  },
+  "proteges_sha256": {
+    "pipelines/s5_engineering.py": "367e01a4e6161aee22590554c3940d49406722e823ec9c2871c6b07dadf889ef",
+    "pipelines/s5_mesures.py": "9d169c5e8b402e6f1d83cd4c69b297f3a3b7eca71470ce79bd3f2a4ef94f1b93",
+    "pipelines/s5_controles.py": "ec8b3aa88d756e137e828d08f61bd8870c8e411280516c81a81a7eb339885abe",
+    "pipelines/s4_rq019.py": "08cee0b4b19d65ec29fc06f03197c54c2931c03346a0f24d30b646ff2938d9ed",
+    "sql/S5_decision.sql": "405b35a99bb956354206f8055a3443574237bd15a8453203b30fb3b498fa85ad",
+    "livrables/00_equipe.md": "a83e69297f93e8eef9a63e498987fb76b16a3e9bf9a05ab426156dc8b3585f4a",
+    "reports/S5_VALIDATION_DATA_OWNER.json": "ba02be4bdde65d872768a7433956708652a9cc9e9db33080268ff863a0a44dcd",
+    "reports/S5_certificat_final.json": "adfe8400697e974607c882f316a2c0f69425526814c439476d4459a0921df4f4",
+    "livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf": "b4789676c32233d2f89bbb96cadab7de1e687c8a9424aa663ee72f01c8ae6de6"
+  },
+  "supports": [
+    {
+      "fichier": "livrables/Livrable_Groupe_TD_AssurConnect.pptx",
+      "sha256": "4e9e1404d727ace1da834a86d7fb87c8ef6f757540a2c55c5c1797fbcadac1bc",
+      "pages": 51,
+      "diapos_verifiees": [
+        15,
+        24,
+        33,
+        40,
+        41
+      ],
+      "blocs_significatifs": 53
+    },
+    {
+      "fichier": "livrables/Soutenance_AssurConnect_G02.pptx",
+      "sha256": "06b2b61593e4488b504fc1bc7eed2f1edaf1eec8093348b88dd25db82593f36e",
+      "pages": 8,
+      "diapos_verifiees": [
+        2
+      ],
+      "blocs_significatifs": 11
+    }
+  ],
+  "methode_rendu": "LibreOffice Impress,51pages groupe et8oral ;6diapos retouchées inspectées ; texte significatif intégralement retrouvé",
+  "hygiene": "3.gitkeep retirés ; logs/copies/captures conservés uniquement en/tmp ; huit suites GE Gold et un rapport Gold nécessaires",
+  "reader_select_schemas": [
+    "bronze",
+    "cif",
+    "crm"
+  ],
+  "rotation_et_remise": "conservées conformément à la demande utilisateur"
+}

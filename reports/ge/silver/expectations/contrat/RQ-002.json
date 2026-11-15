@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-002",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Souscripteur personne physique majeur au début du contrat",
         "table_cible": "contrat",
         "perimetre_source": {

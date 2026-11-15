@@ -92,3 +92,7 @@ La ligne SQL complète, comparée au SELECT réel sans écriture, est jointe dan
 Démonstration pédagogique **synthétique**, distincte des courbes et de l’historique certifiés : `python3 scripts/demo_us30.py --output reports/executions/conformite_prof_20261115/us30_demo.json --svg reports/executions/conformite_prof_20261115/us30_demo.svg`. Le même prédicat SQL RQ-001 est exécuté deux fois sur quatre contrats fictifs SQLite en mémoire : 2 échecs/4 puis 2/4 (50 % → 50 %, plateau). Deux dates de la fixture sont corrigées puis remesurées : 0/4 (100 %, progression). Ce résultat réellement exécuté ne prétend pas documenter une exécution historique du lot nominal. Aucun effet sur les mesures ou le certificat nominaux.
 
 ![US30 : démonstration synthétique plateau puis progression](../reports/executions/conformite_prof_20261115/us30_demo.svg)
+
+### Catalogue opérationnel et vérification Gold complémentaire
+
+L’option maison US34 est exécutable : `streamlit run catalogue/app.py --server.port 8502`. Le YAML reste la source unique des cinq fiches, responsables, définitions, RQ et lineage ; les sélections et les erreurs de fichier sont vérifiées par `tests/test_catalogue.py` avec AppTest réel. US10 Gold complète la généricité pédagogique : huit suites sous `reports/ge/gold/expectations/`, rapport `reports/S2_execution_gold.json`. Ce rejeu isolé n’ajoute aucune mesure à l’historique nominal certifié et ne constitue pas une nouvelle émission S5.

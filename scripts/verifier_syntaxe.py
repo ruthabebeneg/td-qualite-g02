@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 python_count = notebook_cells = 0
-for folder in ('pipelines','scripts','soda','tests'):
+for folder in ('pipelines','scripts','soda','tests','catalogue'):
     for path in (ROOT / folder).glob('*.py'):
         ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
         python_count += 1

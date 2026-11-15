@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-009",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Type de personne autorisé",
         "table_cible": "client",
         "perimetre_source": {

@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-003",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Téléphone renseigné",
-        "table_cible": "crm_client"
+        "table_cible": "crm_client",
+        "perimetre_source": {}
       }
     }
   ],

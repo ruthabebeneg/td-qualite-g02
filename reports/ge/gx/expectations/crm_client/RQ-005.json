@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-005",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Code postal français à 5 chiffres",
-        "table_cible": "crm_client"
+        "table_cible": "crm_client",
+        "perimetre_source": {}
       }
     }
   ],

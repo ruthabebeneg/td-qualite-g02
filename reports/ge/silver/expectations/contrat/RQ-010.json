@@ -13,6 +13,8 @@
       },
       "meta": {
         "rule_id": "RQ-010",
+        "couche": "SILVER",
+        "schema": "silver",
         "description": "Durée de garantie autorisée",
         "table_cible": "contrat",
         "perimetre_source": {

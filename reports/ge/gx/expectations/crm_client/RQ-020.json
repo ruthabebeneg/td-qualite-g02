@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-020",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Clé unique et non nulle : client_id",
-        "table_cible": "crm_client"
+        "table_cible": "crm_client",
+        "perimetre_source": {}
       }
     }
   ],

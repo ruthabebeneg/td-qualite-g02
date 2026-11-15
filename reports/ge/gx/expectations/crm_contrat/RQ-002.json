@@ -13,8 +13,11 @@
       },
       "meta": {
         "rule_id": "RQ-002",
+        "couche": "BRONZE",
+        "schema": "bronze",
         "description": "Souscripteur personne physique majeur au début du contrat",
-        "table_cible": "crm_contrat"
+        "table_cible": "crm_contrat",
+        "perimetre_source": {}
       }
     }
   ],

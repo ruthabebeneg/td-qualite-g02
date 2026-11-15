@@ -4,8 +4,8 @@ Ce dépôt est le vôtre pour tout le TD (5 séances). Il contient la pile Docke
 
 ## Démarrer (une fois, séance 1)
 
-1. Créez votre dépôt à partir du modèle (bouton « Use this template », dépôt **privé**), nommé `td-qualite-GROUPE` (par exemple `td-qualite-g03`).
-2. Ajoutez l'enseignant comme collaborateur en lecture (Settings, Collaborators) et chaque membre du groupe en écriture.
+1. Créez votre dépôt à partir du modèle (bouton « Use this template », dépôt **public dès sa création**), nommé `td-qualite-GROUPE` (par exemple `td-qualite-g03`).
+2. Ajoutez chaque membre du groupe en écriture ; le professeur consulte le dépôt public sans invitation.
 3. Clonez le dépôt, puis déposez le dossier `data/` fourni par l'enseignant à la racine du clone. Il est ignoré par git : ne le commitez jamais.
 4. Lancez la pile : `docker compose up -d --build`, puis `docker exec dq_jupyter python pipelines/load_sources.py`.
 5. Renseignez `livrables/00_equipe.md` avant la fin de l'ouverture de S1.
@@ -68,9 +68,9 @@ Sur un ancien volume où reader ne peut pas lire Bronze, appliquer `sql/migratio
 - S4 : ne pas reconstruire le lot nominal déjà certifié pour une simple vérification. Les rapports conservent la construction et le rejeu historiques. Le nettoyage sur exception est testé séparément.
 - S5 : `notebooks/S5_g02.ipynb` reconnaît le contenu déjà publié et le vérifie sans rechargement ; nouvelles traces sous `reports/executions/`. Le Steward vérifie les empreintes, et non seulement les volumes.
 
-Vérifications : `python3 scripts/controle_livrable.py`, `python3 scripts/verifier_syntaxe.py`, `python -m unittest discover -s tests -v` et `pipelines/s5_controles_tests.run_tests()`. Les tests unitaires nécessitent pandas, SQLAlchemy, RapidFuzz et PyYAML. Les tests d’intégration S4/S5 nécessitent MariaDB et créent uniquement leurs propres schémas `s5_test_*`. Les résultats d’exécution se trouvent dans `reports/AUDIT_validation.json`.
+Vérifications : `python3 scripts/controle_livrable.py`, `python3 scripts/verifier_syntaxe.py`, `python -m unittest discover -s tests -v` et `pipelines/s5_controles_tests.run_tests()`. Les dépendances des tests sont épinglées dans le job CI : pandas, SQLAlchemy, PyYAML, nbformat, nbclient, Streamlit (tests de l’interface), Great Expectations et NumPy (rejeu réel des règles). Les tests d’intégration S4/S5 nécessitent MariaDB et créent uniquement leurs propres schémas `s5_test_*`. Les résultats d’exécution se trouvent dans `reports/AUDIT_validation.json`.
 
-Les indications initiales de dépôt privé concernent le démarrage ; le rappel enseignant final demande un dépôt public et un tag `rendu-final`. Les corrections sont enregistrées dans la branche locale `main` et le tag local `rendu-final`. Le groupe a choisi de pousser lui-même ces références ; aucun push n’a été réalisé ici (authentification GitHub absente du terminal). Vérification des références : `git ls-remote origin refs/heads/main refs/tags/rendu-final refs/tags/rendu-final^{}`. Les jalons historiques absents ne sont pas recréés. La transmission de l’URL au professeur reste à la charge du groupe.
+Les prérequis demandent un dépôt public dès sa création et un tag final `rendu-final`. Les corrections sont enregistrées dans la branche locale `main` et le tag local `rendu-final`. Le groupe a choisi de pousser lui-même ces références ; aucun push n’a été réalisé ici (authentification GitHub absente du terminal). Vérification des références : `git ls-remote origin refs/heads/main refs/tags/rendu-final refs/tags/rendu-final^{}`. Les jalons historiques absents ne sont pas recréés. La transmission de l’URL au professeur reste à la charge du groupe.
 
 Validation reproductible dans le conteneur :
 
@@ -85,3 +85,34 @@ Ce script est à lancer depuis une copie du dépôt accessible au conteneur (inc
 Les contrôles Soda Bronze `soda/checks/bronze_*_checks.yml` filtrent toutes les relations par lot ; les fichiers sans préfixe restent le diagnostic CRM. Commandes reproductibles et populations RQ-005 : [rapport de correction](livrables/CONFORMITE_PROFESSEUR.md). US14 autonome : `queries/S3_US14_client_actif.sql` (lot et date explicites). S3 rejoué sur copie : vingt lignes métier au total. Ligne SQL réelle du certificat : `livrables/preuves/S5_certificat_ligne_sql.json` ; démonstration US30 synthétique exécutée séparément du lot certifié.
 
 La rotation S4/S5 reste incomplète et nécessite la validation du professeur. Répétition orale non attestée ; jalons historiques manquants non recréés. Références locales prêtes à pousser par le groupe : `main` et `rendu-final` ; aucune transmission au professeur revendiquée.
+
+### Architecture et points d’entrée
+
+`initdb/` initialise les schémas et le catalogue de règles. `pipelines/` contient les adaptateurs et les moteurs de contrôle, de résolution RQ-019 et de publication. `sql/` porte la décision du certificat et les migrations de droits ; `queries/` la requête autonome US14 ; `soda/` les checks et leur exécuteur. `scripts/` regroupe les validations isolées et contrôles du dépôt. `reports/` conserve les mesures et preuves, `livrables/` les décisions et rendus, `catalogue/` les métadonnées et leur interface.
+
+Points d’entrée : `pipelines/load_sources.py` prépare les sources ; `notebooks/S1_g02.ipynb` ingère Bronze ; `notebooks/S2_US10_regles_en_tests.ipynb` porte GE ; `notebooks/S3_g02.ipynb` le diagnostic d’intégrité ; `notebooks/S4_g02.ipynb` construit les tables Silver/Gold opérationnelles ; `notebooks/S5_g02.ipynb` appelle le moteur de certification/publication. `S4_silver.ipynb` et `S4_gold.ipynb` conservent les étapes historiques. Une vérification du lot certifié utilise les relectures S5 et les fixtures isolées, sans reconstruire ses couches.
+
+```mermaid
+flowchart LR
+    A[Sources CIF et CRM] --> B[Bronze : copie fidèle]
+    B --> S[Silver standardisée]
+    B -->|Rejets S| R[dq.rejets]
+    S -->|Exclusions G| R
+    S --> G[Gold consolidé]
+    G --> Q[Mesures B/S/G et certificat GO]
+    Q --> C[Publication atomique crm_cible]
+    Y[catalogue.yml] --> U[Catalogue Streamlit]
+```
+
+US10 est le point d’entrée GE Bronze/Silver/Gold : huit couples règle/table, sept RQ, historique temporaire et connexions de lecture/écriture distinctes. Depuis une copie du dépôt :
+
+```bash
+python scripts/valider_notebooks.py --notebooks S2_US10_regles_en_tests --date-comparaison 2026-11-15
+python scripts/valider_notebooks.py --silver --date-comparaison 2026-11-15
+python scripts/valider_notebooks.py --gold --date-comparaison 2026-11-15
+streamlit run catalogue/app.py --server.address 0.0.0.0 --server.port 8502
+```
+
+Bronze utilise `reader` ; Silver/Gold utilisent la connexion autorisée `root` de l’environnement pédagogique, sans écriture métier. `DQ_DATABASE_URL` configure exclusivement la lecture ; `DQ_WRITE_DATABASE_URL` l’historisation. Gold utilise `client_unique`/`contrat_certifie`, les statuts S5 et l’âge à la souscription : PM exclues, références/natures/dates absentes en échec. La commande `--gold` régénère `reports/S2_execution_gold.json` après réussite et nettoyage du schéma temporaire. Les suites et rapports restent séparés par couche ; Silver/Gold ne remplacent pas les sorties Bronze du notebook.
+
+Le catalogue Streamlit lit directement les cinq fiches de `catalogue/catalogue.yml`, résout Owner/Steward et expose définitions, RQ et lineage sans accès DB. Aucun export JSON ni service Docker supplémentaire n’est requis ; utiliser le montage et le port 8502 existants. Tests UI : `python -m unittest discover -s tests -p test_catalogue.py -v`.
