@@ -57,7 +57,7 @@ La règle des vingt minutes : au-delà, appelez l'enseignant. Pour repartir d'un
 
 ## Rendu consolidé et corrections du 15 novembre 2026
 
-Le livrable de groupe rempli est `livrables/Livrable_Groupe_TD_AssurConnect.pptx` ; les Markdown de séance fournissent également les chiffres, populations et liens de preuve à jour. Le dossier de décision court est `livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf`. Le registre `livrables/AUDIT_CORRECTIONS.md` distingue corrections, preuves historiques, nouvelles validations et opérations de remise non exécutées. Le support de soutenance synchronisé est `livrables/Soutenance_AssurConnect_G02.pptx` ; corrections et limites : `livrables/AUDIT_SUPPORTS.md`.
+Le livrable de groupe rempli est `livrables/Livrable_Groupe_TD_AssurConnect.pptx` ; les Markdown de séance fournissent également les chiffres, populations et liens de preuve à jour. Le dossier de décision court est `livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf`. Le support de soutenance synchronisé est `livrables/Soutenance_AssurConnect_G02.pptx`.
 
 Sur un ancien volume où reader ne peut pas lire Bronze, appliquer `sql/migrations/20261115_reader_bronze.sql` avec un compte administrateur. Ce script accorde uniquement SELECT et ne change aucune donnée. Les lectures source/Bronze utilisent reader ; l’historisation utilise une connexion d’écriture distincte.
 
@@ -82,7 +82,7 @@ Ce script est à lancer depuis une copie du dépôt accessible au conteneur (inc
 
 ### Compléments de conformité professeur — 15/11/2026
 
-Les contrôles Soda Bronze `soda/checks/bronze_*_checks.yml` filtrent toutes les relations par lot ; les fichiers sans préfixe restent le diagnostic CRM. Commandes reproductibles et populations RQ-005 : [rapport de correction](livrables/CONFORMITE_PROFESSEUR.md). US14 autonome : `queries/S3_US14_client_actif.sql` (lot et date explicites). S3 rejoué sur copie : vingt lignes métier au total. Ligne SQL réelle du certificat : `livrables/preuves/S5_certificat_ligne_sql.json` ; démonstration US30 synthétique exécutée séparément du lot certifié.
+Les contrôles Soda Bronze `soda/checks/bronze_*_checks.yml` filtrent toutes les relations par lot ; les fichiers sans préfixe restent le diagnostic CRM. Résultats et populations RQ-005 : [livrable S3](livrables/S3_integrite_soda.md). US14 autonome : `queries/S3_US14_client_actif.sql` (lot et date explicites). S3 rejoué sur copie : vingt lignes métier au total. Ligne SQL réelle du certificat : `livrables/preuves/S5_certificat_ligne_sql.json` ; démonstration US30 synthétique exécutée séparément du lot certifié.
 
 La rotation S4/S5 reste incomplète et nécessite la validation du professeur. Répétition orale non attestée ; jalons historiques manquants non recréés. Références locales prêtes à pousser par le groupe : `main` et `rendu-final` ; aucune transmission au professeur revendiquée.
 

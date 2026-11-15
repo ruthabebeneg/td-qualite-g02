@@ -48,4 +48,4 @@ Annexes : `00_equipe.md`, `JOURNAL_DECISIONS.md`, `../AVANCEMENT.md`, `S1_bronze
 
 Support oral synchronisé : `Soutenance_AssurConnect_G02.pptx`. Répartition et durées proposées à confirmer par le groupe.
 
-Limites pédagogiques et de remise : rotation S4/S5 incomplète, exception à valider par le professeur ; répétition orale non attestée ; jalons historiques manquants non recréés. Références locales prêtes : `main` et `rendu-final` ; publication à effectuer par le groupe, aucun push réalisé ici. Voir `CONFORMITE_PROFESSEUR.md`.
+Limites pédagogiques et de remise : rotation S4/S5 incomplète, exception à valider par le professeur ; répétition orale non attestée ; jalons historiques manquants non recréés. Références locales prêtes : `main` et `rendu-final` ; publication à effectuer par le groupe, aucun push réalisé ici. Voir `00_equipe.md` pour les rôles et la préparation orale.
