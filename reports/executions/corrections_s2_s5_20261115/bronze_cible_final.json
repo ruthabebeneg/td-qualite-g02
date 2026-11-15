@@ -1,0 +1,22 @@
+{
+  "debut": "2026-11-15T13:35:10.447346+00:00",
+  "schema_validation": "s5_test_audit_9c8ac0ebfb7e",
+  "date_comparaison": "2026-11-15",
+  "historique_nominal_modifie": false,
+  "notebooks": [
+    {
+      "notebook": "S2_US10_regles_en_tests",
+      "resultat": "PASSE",
+      "cellules_executees": 17
+    },
+    {
+      "notebook": "S2_g02",
+      "resultat": "PASSE",
+      "cellules_executees": 22
+    }
+  ],
+  "tous_passes": true,
+  "schema_nettoye": true,
+  "fin": "2026-11-15T13:35:22.137359+00:00",
+  "rapport_mesures_conserve": "bronze_mesures.json"
+}

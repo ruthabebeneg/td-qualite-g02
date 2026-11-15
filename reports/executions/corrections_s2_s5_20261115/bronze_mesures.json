@@ -1,0 +1,153 @@
+{
+  "batch_id": "L-2026-10-01",
+  "schema": "bronze",
+  "history_schema": "s5_test_audit_4f192cd64129",
+  "tables": {
+    "client": "crm_client",
+    "contrat": "crm_contrat"
+  },
+  "history_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "mesures": [
+    {
+      "rule_id": "RQ-001",
+      "description": "Date de fin après date de début",
+      "table_cible": "crm_contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-001",
+        "description": "Date de fin après date de début",
+        "table_cible": "crm_contrat"
+      },
+      "lignes": 100000,
+      "anomalies": 800,
+      "conformite_pct": 99.2,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-002",
+      "description": "Souscripteur personne physique majeur au début du contrat",
+      "table_cible": "crm_contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-002",
+        "description": "Souscripteur personne physique majeur au début du contrat",
+        "table_cible": "crm_contrat"
+      },
+      "lignes": 91875,
+      "anomalies": 301,
+      "conformite_pct": 99.67,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-003",
+      "description": "Téléphone renseigné",
+      "table_cible": "crm_client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-003",
+        "description": "Téléphone renseigné",
+        "table_cible": "crm_client"
+      },
+      "lignes": 49978,
+      "anomalies": 5995,
+      "conformite_pct": 88.0,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-005",
+      "description": "Code postal français à 5 chiffres",
+      "table_cible": "crm_client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-005",
+        "description": "Code postal français à 5 chiffres",
+        "table_cible": "crm_client"
+      },
+      "lignes": 97037,
+      "anomalies": 1478,
+      "conformite_pct": 98.48,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-009",
+      "description": "Type de personne autorisé",
+      "table_cible": "crm_client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-009",
+        "description": "Type de personne autorisé",
+        "table_cible": "crm_client"
+      },
+      "lignes": 100000,
+      "anomalies": 200,
+      "conformite_pct": 99.8,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-010",
+      "description": "Durée de garantie autorisée",
+      "table_cible": "crm_contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-010",
+        "description": "Durée de garantie autorisée",
+        "table_cible": "crm_contrat"
+      },
+      "lignes": 100000,
+      "anomalies": 600,
+      "conformite_pct": 99.4,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : client_id",
+      "table_cible": "crm_client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "description": "Clé unique et non nulle : client_id",
+        "table_cible": "crm_client"
+      },
+      "lignes": 100000,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : contrat_id",
+      "table_cible": "crm_contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "description": "Clé unique et non nulle : contrat_id",
+        "table_cible": "crm_contrat"
+      },
+      "lignes": 100000,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    }
+  ],
+  "suites": [
+    "reports/ge/gx/expectations/crm_client/RQ-003.json",
+    "reports/ge/gx/expectations/crm_client/RQ-005.json",
+    "reports/ge/gx/expectations/crm_client/RQ-009.json",
+    "reports/ge/gx/expectations/crm_client/RQ-020.json",
+    "reports/ge/gx/expectations/crm_contrat/RQ-001.json",
+    "reports/ge/gx/expectations/crm_contrat/RQ-002.json",
+    "reports/ge/gx/expectations/crm_contrat/RQ-010.json",
+    "reports/ge/gx/expectations/crm_contrat/RQ-020.json"
+  ],
+  "historisation": "transaction validée",
+  "source": "exécution courante du notebook"
+}

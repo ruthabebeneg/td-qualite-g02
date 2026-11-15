@@ -1,0 +1,28 @@
+{
+  "expectation_suite_name": "client_RQ-003",
+  "ge_cloud_id": null,
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "conforme",
+        "value_set": [
+          true
+        ],
+        "mostly": 0.98
+      },
+      "meta": {
+        "rule_id": "RQ-003",
+        "description": "Téléphone renseigné",
+        "table_cible": "client",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      }
+    }
+  ],
+  "data_asset_type": "Dataset",
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

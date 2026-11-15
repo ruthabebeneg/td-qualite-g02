@@ -1,0 +1,24 @@
+{
+  "debut": "2026-11-15T13:39:35.422814+00:00",
+  "schema_validation": "s5_test_audit_fac6b629b301",
+  "couche": "SILVER",
+  "schema_source": "silver",
+  "tables": {
+    "client": "client",
+    "contrat": "contrat"
+  },
+  "rapport_mesures": "/tmp/assurconnect-audit-run/reports/S2_execution_s5_test_audit_fac6b629b301.json",
+  "date_comparaison": "2026-11-15",
+  "historique_nominal_modifie": false,
+  "notebooks": [
+    {
+      "notebook": "S2_US10_regles_en_tests",
+      "resultat": "PASSE",
+      "cellules_executees": 17
+    }
+  ],
+  "tous_passes": true,
+  "schema_nettoye": true,
+  "fin": "2026-11-15T13:39:43.600998+00:00",
+  "rapport_mesures_conserve": "silver_mesures.json"
+}

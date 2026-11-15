@@ -1,0 +1,181 @@
+{
+  "batch_id": "L-2026-10-01",
+  "schema": "silver",
+  "history_schema": "s5_test_audit_fac6b629b301",
+  "tables": {
+    "client": "client",
+    "contrat": "contrat"
+  },
+  "couche": "SILVER",
+  "perimetre_source": {
+    "source_systeme": "crm"
+  },
+  "history_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "mesures": [
+    {
+      "rule_id": "RQ-001",
+      "description": "Date de fin après date de début",
+      "table_cible": "contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-001",
+        "description": "Date de fin après date de début",
+        "table_cible": "contrat",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 98600,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-002",
+      "description": "Souscripteur personne physique majeur au début du contrat",
+      "table_cible": "contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-002",
+        "description": "Souscripteur personne physique majeur au début du contrat",
+        "table_cible": "contrat",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 91288,
+      "anomalies": 295,
+      "conformite_pct": 99.68,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-003",
+      "description": "Téléphone renseigné",
+      "table_cible": "client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-003",
+        "description": "Téléphone renseigné",
+        "table_cible": "client",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 50293,
+      "anomalies": 6010,
+      "conformite_pct": 88.05,
+      "seuil_respecte": false
+    },
+    {
+      "rule_id": "RQ-005",
+      "description": "Code postal français à 5 chiffres",
+      "table_cible": "client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-005",
+        "description": "Code postal français à 5 chiffres",
+        "table_cible": "client",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 98024,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-009",
+      "description": "Type de personne autorisé",
+      "table_cible": "client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-009",
+        "description": "Type de personne autorisé",
+        "table_cible": "client",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 99556,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-010",
+      "description": "Durée de garantie autorisée",
+      "table_cible": "contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-010",
+        "description": "Durée de garantie autorisée",
+        "table_cible": "contrat",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 98600,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : client_id",
+      "table_cible": "client",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "description": "Clé unique et non nulle : client_id",
+        "table_cible": "client",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 99556,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    },
+    {
+      "rule_id": "RQ-020",
+      "description": "Clé unique et non nulle : contrat_id",
+      "table_cible": "contrat",
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "expectation_meta": {
+        "rule_id": "RQ-020",
+        "description": "Clé unique et non nulle : contrat_id",
+        "table_cible": "contrat",
+        "perimetre_source": {
+          "source_systeme": "crm"
+        }
+      },
+      "lignes": 98600,
+      "anomalies": 0,
+      "conformite_pct": 100.0,
+      "seuil_respecte": true
+    }
+  ],
+  "suites": [
+    "reports/ge/silver/expectations/client/RQ-003.json",
+    "reports/ge/silver/expectations/client/RQ-005.json",
+    "reports/ge/silver/expectations/client/RQ-009.json",
+    "reports/ge/silver/expectations/client/RQ-020.json",
+    "reports/ge/silver/expectations/contrat/RQ-001.json",
+    "reports/ge/silver/expectations/contrat/RQ-002.json",
+    "reports/ge/silver/expectations/contrat/RQ-010.json",
+    "reports/ge/silver/expectations/contrat/RQ-020.json"
+  ],
+  "historisation": "transaction validée",
+  "source": "exécution courante du notebook"
+}

@@ -89,3 +89,54 @@ def published_state(engine, batch, certificate, layout=s5.Layout()):
         return {'batch_id': batch, 'certificat_id': cid, 'publication': 'DEJA_PUBLIEE_VERIFIEE',
                 'publication_id': journal[-1]['publication_id'], 'reconciliation': reconciliation,
                 'ecritures': 0, 'journal_entrees': len(journal)}
+
+
+def historical_steward_policy(export, certificate):
+    """Vérifie toutes les lignes B/S/G, ordonnées par id avant dédoublonnage.
+
+    Un export des seules dernières mesures ne constitue pas la preuve complète.
+    Aucune ligne non empreintée ne peut être consommée par le notebook.
+    """
+    def refuse(reason):
+        raise ValueError('REPLI_STEWARD_REFUSE : ' + reason)
+
+    if not isinstance(export, dict) or not isinstance(certificate, dict):
+        refuse('objet historique ou certificat malformé')
+    catalogue = export.get('catalogue')
+    fields = {'rule_id', 'libelle', 'dimension', 'porte', 'severite', 'seuil_min'}
+    if (not isinstance(catalogue, list) or not catalogue
+            or any(not isinstance(r, dict) or not fields.issubset(r) for r in catalogue)):
+        refuse('catalogue historique complet absent ou malformé')
+    for rule in catalogue:
+        if any(not isinstance(rule[key], str) or not rule[key] for key in fields - {'seuil_min'}):
+            refuse('valeurs du catalogue malformées')
+        try:
+            threshold = float(rule['seuil_min'])
+        except (TypeError, ValueError):
+            refuse('seuil du catalogue malformé')
+        if not 0 <= threshold <= 100:
+            refuse('seuil du catalogue hors domaine')
+    if (export.get('batch_id') != certificate.get('batch_id')
+            or s5.digest(catalogue) != certificate.get('catalogue_sha256')):
+        refuse('catalogue historique non lié au certificat')
+    history = export.get('historique')
+    if not isinstance(history, dict) or not isinstance(history.get('mesures'), list) or not history['mesures']:
+        refuse('historique absent ou malformé')
+    measured = history['mesures']
+    required = {'id', 'couche', 'rule_id', 'table_cible', 'nb_testees', 'nb_echecs'}
+    for row in measured:
+        if not isinstance(row, dict) or not required.issubset(row):
+            refuse('mesure historique malformée')
+        if row['couche'] not in ('BRONZE', 'SILVER', 'GOLD'):
+            refuse('mesure hors périmètre B/S/G')
+        if (not isinstance(row['id'], int) or isinstance(row['id'], bool)
+                or any(not isinstance(row[k], int) or isinstance(row[k], bool) for k in ('nb_testees', 'nb_echecs'))
+                or not 0 <= row['nb_echecs'] <= row['nb_testees']
+                or not isinstance(row['table_cible'], str) or not isinstance(row['rule_id'], str)):
+            refuse('valeurs de mesure malformées')
+    if any(a['id'] >= b['id'] for a, b in zip(measured, measured[1:])):
+        refuse('mesures historiques non ordonnées par id')
+    if (history.get('sha256') != certificate.get('history_sha256')
+            or s5.digest(measured) != certificate.get('history_sha256')):
+        refuse('mesures historiques incomplètes ou altérées')
+    return catalogue

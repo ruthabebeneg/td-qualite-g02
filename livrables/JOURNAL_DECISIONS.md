@@ -163,6 +163,6 @@ RQ-019 est corrigée, j'ai donc relu le dossier du lot `L-2026-10-01`. Mon refus
 
 Les entrées S2–S5 ci-dessus restent l’historique des propositions et arbitrages à leurs dates respectives. Les mentions de sorties absentes ou de validation en attente décrivent ces états antérieurs ; les références actuelles sont les rapports du dépôt. Les chemins devenus absents ont été remplacés par les preuves conservées correspondantes.
 
-La nouvelle validation S2 confirme 301 échecs RQ-002 / 91 875, 200 RQ-009 et 1 478 RQ-005 / 97 037 pays exactement FR ; le 1 493 / 98 037 de D-08 concerne la normalisation des pays utilisée en S3/S4, pas une contradiction sur une population identique. L’historisation de validation est isolée et nettoyée afin de ne pas périmer le certificat final.
+La nouvelle validation S2 confirme 301 échecs RQ-002 / 91 875, 200 RQ-009 et 1 478 RQ-005 / 97 037 pays FR/fr/France après trim et passage en majuscules ; le 1 493 / 98 037 de D-08 concerne la normalisation complémentaire de F/Frnace utilisée en S3/S4, pas une contradiction sur une population identique. L’historisation de validation est isolée et nettoyée afin de ne pas périmer le certificat final.
 
 L’échéance du 20/12/2026 pour la revue des 23 consolidations et 377 CLI est reprise du dossier PDF existant du 15/11 ; son report dans les autres supports est une synchronisation, pas une nouvelle signature humaine. La priorité CRM reste provisoire et la confirmation individuelle relève du métier. Les réserves ne sont pas effacées par les corrections techniques.
