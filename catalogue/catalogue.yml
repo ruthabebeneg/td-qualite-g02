@@ -1,5 +1,5 @@
 # Catalogue maison AssurConnect (option A) — tenu par le Data Steward, validé par le Data Owner.
-# Une entrée par table gold. Les noms des personnes sont à compléter avec les rôles de la séance.
+# Une entrée par objet Gold ; rôles S5 documentés dans livrables/00_equipe.md.
 lot_de_reference: L-2026-10-01
 roles:
   data_owner: "Ruth"

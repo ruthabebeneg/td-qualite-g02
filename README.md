@@ -53,3 +53,29 @@ Ne copiez pas les valeurs d'un autre groupe ni celles d'un tutoriel : l'enseigna
 ## Si vous êtes bloqués
 
 La règle des vingt minutes : au-delà, appelez l'enseignant. Pour repartir d'un état propre de la base, l'enseignant peut utiliser un point de reprise ; vos fichiers (notebooks, checks, livrables) ne sont jamais touchés. Notez la reprise utilisée dans la section « Difficultés » du livrable de la séance.
+
+
+## Rendu consolidé et corrections du 15 novembre 2026
+
+Le livrable de groupe rempli est `livrables/Livrable_Groupe_TD_AssurConnect.pptx` ; les Markdown de séance fournissent également les chiffres, populations et liens de preuve à jour. Le dossier de décision court est `livrables/Dossier_GO_NO_GO_AssurConnect_G02.pdf`. Le registre `livrables/AUDIT_CORRECTIONS.md` distingue corrections, preuves historiques, nouvelles validations et opérations de remise non exécutées. Le PPTX de soutenance a été conservé à la demande du groupe et n’est pas synchronisé par cet audit.
+
+Sur un ancien volume où reader ne peut pas lire Bronze, appliquer `sql/migrations/20261115_reader_bronze.sql` avec un compte administrateur. Ce script accorde uniquement SELECT et ne change aucune donnée. Les lectures source/Bronze utilisent reader ; l’historisation utilise une connexion d’écriture distincte.
+
+### Rejouer sans altérer le lot déjà certifié
+
+- S1 US-09 : `notebooks/US-09_client_actif.ipynb`, lot `DQ_BATCH`, date `DQ_REFERENCE_DATE`, lecture seule.
+- S2 : exécuter US-10, US-11 puis S2_g02 ; sorties GE sous `reports/ge/gx/expectations/`, CSV sous `livrables/preuves/`. `DQ_COMPARISON_DATE` fixe la date de comparaison pour reproduire une exécution. Utiliser `DQ_HISTORY_SCHEMA` pour valider en schéma isolé ; modifier l’historique nominal après certification périme son empreinte.
+- S4 : ne pas reconstruire le lot nominal déjà certifié pour une simple vérification. Les rapports conservent la construction et le rejeu historiques. Le nettoyage sur exception est testé séparément.
+- S5 : `notebooks/S5_g02.ipynb` reconnaît le contenu déjà publié et le vérifie sans rechargement ; nouvelles traces sous `reports/executions/`. Le Steward vérifie les empreintes, et non seulement les volumes.
+
+Vérifications : `python3 scripts/controle_livrable.py`, `python3 scripts/verifier_syntaxe.py`, `python -m unittest discover -s tests -v` et `pipelines/s5_controles_tests.run_tests()`. Les tests unitaires nécessitent pandas, SQLAlchemy, RapidFuzz et PyYAML. Les tests d’intégration S4/S5 nécessitent MariaDB et créent uniquement leurs propres schémas `s5_test_*`. Les résultats d’exécution se trouvent dans `reports/AUDIT_validation.json`.
+
+Les indications initiales de dépôt privé concernent le démarrage ; le rappel enseignant final demande un dépôt public et un tag `rendu-final`. La visibilité distante et les tags non présents localement ne sont pas déclarés vérifiés ou poussés. Les corrections sont enregistrées dans un commit local, identifié par le tag local `rendu-final`. La publication distante reste à effectuer après relecture.
+
+Validation reproductible dans le conteneur :
+
+```bash
+python scripts/valider_notebooks.py --date-comparaison 2026-11-15
+```
+
+Ce script est à lancer depuis une copie du dépôt accessible au conteneur (incluant `scripts/`, `notebooks/`, `pipelines/` et les preuves). Il prépare automatiquement l’historique S2 isolé, exécute les six notebooks dans l’ordre, conserve les sorties réussies et nettoie son schéma même en cas d’échec. Une annotation humaine existante dans l’échantillon US-11 provoque un refus de remplacement ; le script ne l’efface pas. Les suites GE valident la colonne calculée `conforme` ; leurs prédicats métier et paramètres restent dans US-10.

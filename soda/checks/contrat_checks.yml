@@ -6,7 +6,10 @@ checks for contrat:
 
   - failed rows:
       name: RQ-001 | CRM | date_fin postérieure à date_debut
-      fail condition: date_fin <= date_debut
+      fail condition: date_debut IS NULL OR date_fin IS NULL OR date_fin <= date_debut
+
+  - missing_count(duree_garantie_mois) = 0:
+      name: RQ-010 | CRM | durée de garantie renseignée
 
   - invalid_count(duree_garantie_mois) = 0:
       name: RQ-010 | CRM | durée de garantie autorisée

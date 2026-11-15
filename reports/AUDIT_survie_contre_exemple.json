@@ -1,0 +1,33 @@
+{
+  "synthetique": true,
+  "nature": "contre-exemple pédagogique exécuté de la fonction réelle survivant",
+  "source": "notebooks/S4_g02.ipynb::survivant",
+  "fonction_sha256": "65a47c33889382253b655768a17c8c26e998a0dead565227f97e9028ae4b5d68",
+  "fixture": [
+    {
+      "groupe": "FIXTURE-1",
+      "source_systeme": "crm",
+      "source_id": "FICTION-A",
+      "telephone": "0123456789"
+    },
+    {
+      "groupe": "FIXTURE-1",
+      "source_systeme": "cif",
+      "source_id": "FICTION-B",
+      "telephone": "0123456789"
+    },
+    {
+      "groupe": "FIXTURE-1",
+      "source_systeme": "crm",
+      "source_id": "FICTION-C",
+      "telephone": "0198765432"
+    }
+  ],
+  "verite_fixture": {
+    "telephone_courant": "0198765432"
+  },
+  "valeur_retenue": "0123456789",
+  "erreur_fixture_demontree": true,
+  "explication": "Deux fiches anciennes identiques remportent la fréquence contre une fiche courante ; validité de format et fréquence ne prouvent pas la fraîcheur.",
+  "limites": "Données entièrement fictives ; aucune erreur de survie métier réelle confirmée, aucune confirmation humaine inventée."
+}

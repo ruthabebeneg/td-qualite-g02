@@ -1,3 +1,5 @@
+> **État historique du 08/11/2026.** Le refus ci-dessous concerne la configuration `eed9d...`. Il est conservé comme preuve de gouvernance. La résolution RQ-019 et l’approbation finale du 12/11 concernent une nouvelle configuration : voir `reports/S4_RQ019_resolution.json`, `reports/S5_VALIDATION_DATA_OWNER.json` et `S5_certificat_publication.md`. Les anciennes phrases « pour l’instant » ne décrivent pas l’état final.
+
 # S4 — Mon travail de Data Owner
 
 J'ai examiné le lot `L-2026-10-01` et la configuration `eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61`. Mes décisions figurent dans le [manifeste Data Owner](../reports/S4_VALIDATION_DATA_OWNER.json) et le [journal des décisions](JOURNAL_DECISIONS.md).

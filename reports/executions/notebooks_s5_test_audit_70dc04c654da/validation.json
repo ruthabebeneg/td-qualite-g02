@@ -1,0 +1,41 @@
+{
+  "debut": "2026-11-15T12:46:31.995923+00:00",
+  "schema_validation": "s5_test_audit_70dc04c654da",
+  "date_comparaison": "2026-11-15",
+  "historique_nominal_modifie": false,
+  "notebooks": [
+    {
+      "notebook": "US-09_client_actif",
+      "resultat": "PASSE",
+      "cellules_executees": 14
+    },
+    {
+      "notebook": "S2_US10_regles_en_tests",
+      "resultat": "PASSE",
+      "cellules_executees": 17
+    },
+    {
+      "notebook": "S2_US11_lignes_en_echec",
+      "resultat": "PASSE",
+      "cellules_executees": 5
+    },
+    {
+      "notebook": "S2_g02",
+      "resultat": "PASSE",
+      "cellules_executees": 22
+    },
+    {
+      "notebook": "S5_data_steward",
+      "resultat": "PASSE",
+      "cellules_executees": 10
+    },
+    {
+      "notebook": "S5_g02",
+      "resultat": "PASSE",
+      "cellules_executees": 8
+    }
+  ],
+  "tous_passes": true,
+  "schema_nettoye": true,
+  "fin": "2026-11-15T12:48:05.858961+00:00"
+}

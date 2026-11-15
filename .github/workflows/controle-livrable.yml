@@ -1,6 +1,6 @@
 name: Controle du depot
 
-# Rapport d'avancement a chaque push ; echec uniquement si un fichier interdit est suivi (data/, CSV, sauvegardes, .env).
+# Contrôle documentaire et régressions déterministes ; ne remplace pas une exécution MariaDB.
 on:
   push:
   pull_request:
@@ -15,3 +15,9 @@ jobs:
           python-version: "3.11"
       - name: Avancement des livrables et fichiers interdits
         run: python3 scripts/controle_livrable.py
+      - name: Dépendances des contrôles déterministes
+        run: pip install SQLAlchemy==2.0.35 pandas==2.3.3 PyYAML==6.0.2
+      - name: Analyse syntaxique Python et notebooks
+        run: python3 scripts/verifier_syntaxe.py
+      - name: Régressions de l’audit final et contre-exemple de survie
+        run: python3 -m unittest discover -s tests -v

@@ -1,0 +1,140 @@
+{
+  "tous_passes": true,
+  "donnees_modifiees": false,
+  "tests": [
+    {
+      "cas": "diagnostic_crm",
+      "code_soda": 2,
+      "erreurs_execution": false,
+      "echecs_qualite": true,
+      "checks": [
+        {
+          "nom": "RQ-009 | CRM | type de personne normalisé autorisé",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-003 | CRM | taux de telephones renseignes",
+          "resultat": "warn"
+        },
+        {
+          "nom": "RQ-005 | CRM | taux de codes postaux francais valides",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-007 | CRM | pays présent dans le référentiel",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-015 | CRM | prospects normalises avec contrat",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-016 | CRM | taux de souscripteurs avec contrat",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | CRM | client_id sans doublon",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | CRM | client_id renseigné",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-001 | CRM | date_fin postérieure à date_debut",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-011 | CRM | type de contrat connu",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-012 | CRM | souscripteur existant",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-013 | CRM projection NULLIF | assures existants",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-018 | CRM | ecart nul entre les trois directions",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | CRM | contrat_id sans doublon",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | CRM | contrat_id renseigné",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-010 | CRM | durée de garantie renseignée",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-010 | CRM | durée de garantie autorisée",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-017 | CRM | sinistre dans la période de garantie",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-014 | CRM | taux d'adresses non reconnues par la BAN",
+          "resultat": "fail"
+        },
+        {
+          "nom": "RQ-020 | CRM | sinistre_id sans doublon",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | CRM | sinistre_id renseigné",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-014 | CRM | code postal de sinistre renseigné",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-014 | CRM | code postal de sinistre sur 5 chiffres",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-014 | CRM | adresse de sinistre renseignée",
+          "resultat": "pass"
+        }
+      ]
+    },
+    {
+      "cas": "identites_gold",
+      "code_soda": 0,
+      "erreurs_execution": false,
+      "echecs_qualite": false,
+      "checks": [
+        {
+          "nom": "RQ-019 | Gold | signatures métier réparties entre plusieurs CLI",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | Gold | CLI sans doublon",
+          "resultat": "pass"
+        },
+        {
+          "nom": "RQ-020 | Gold | CLI renseigné",
+          "resultat": "pass"
+        }
+      ]
+    },
+    {
+      "cas": "avertissement_seul_wrapper",
+      "code_retour": 0,
+      "attendu": 0
+    },
+    {
+      "cas": "gold_conforme_wrapper",
+      "code_retour": 0,
+      "attendu": 0
+    }
+  ]
+}

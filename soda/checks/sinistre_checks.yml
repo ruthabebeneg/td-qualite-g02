@@ -1,8 +1,13 @@
+# Diagnostic source CRM : les échecs RQ-014 ne sont pas une décision sur la porte G.
+# Porte G : rapprochement BAN des sinistres publiables, voir S4/S5 et le certificat.
 checks for sinistre:
   - duplicate_count(sinistre_id) = 0:
       name: RQ-020 | CRM | sinistre_id sans doublon
   - missing_count(sinistre_id) = 0:
       name: RQ-020 | CRM | sinistre_id renseigné
+
+  - missing_count(cp_sinistre) = 0:
+      name: RQ-014 | CRM | code postal de sinistre renseigné
 
   - invalid_count(cp_sinistre) = 0:
       name: RQ-014 | CRM | code postal de sinistre sur 5 chiffres
@@ -32,5 +37,4 @@ checks for sinistre:
                ON CONCAT(b.numero, ' ', b.voie) = s.adresse_sinistre
               AND b.code_postal = s.cp_sinistre
               AND b.commune = s.ville_sinistre
-      warn: when > 3
-      fail: when > 10
+      fail: when > 0

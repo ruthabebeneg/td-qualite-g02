@@ -1,0 +1,79 @@
+{
+  "batch_id": "L-2026-10-01",
+  "history_schema": "s5_test_audit_70dc04c654da",
+  "date_comparaison": "2026-11-15",
+  "us13": [
+    {
+      "Indicateur": "Contrats analysés",
+      "Nombre": 100000
+    },
+    {
+      "Indicateur": "Souscripteurs identifiés",
+      "Nombre": 91875
+    },
+    {
+      "Indicateur": "Souscripteurs évaluables",
+      "Nombre": 91875
+    },
+    {
+      "Indicateur": "Souscripteurs non évaluables",
+      "Nombre": 0
+    },
+    {
+      "Indicateur": "Échecs RQ-002 : moins de 18 ans au début",
+      "Nombre": 301
+    },
+    {
+      "Indicateur": "Date de comparaison : 2026-11-15",
+      "Nombre": "2026-11-15"
+    },
+    {
+      "Indicateur": "Moins de 18 ans à la date de comparaison",
+      "Nombre": 143
+    },
+    {
+      "Indicateur": "Changements de classification",
+      "Nombre": 158
+    }
+  ],
+  "cas_divergent": [
+    {
+      "contrat_id": "CT0000387",
+      "date_naissance": "1996-09-28",
+      "date_debut": "2014-09-01",
+      "age_debut": 17,
+      "age_comparaison": 30
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension": "Complétude",
+      "taux_moyen": 88.005,
+      "regle_la_plus_faible": "RQ-003",
+      "table_concernee": "crm_client",
+      "taux_regle_la_plus_faible": 88.005
+    },
+    {
+      "dimension": "Cohérence",
+      "taux_moyen": 99.2,
+      "regle_la_plus_faible": "RQ-001",
+      "table_concernee": "crm_contrat",
+      "taux_regle_la_plus_faible": 99.2
+    },
+    {
+      "dimension": "Validité",
+      "taux_moyen": 99.337,
+      "regle_la_plus_faible": "RQ-005",
+      "table_concernee": "crm_client",
+      "taux_regle_la_plus_faible": 98.477
+    },
+    {
+      "dimension": "Unicité",
+      "taux_moyen": 100.0,
+      "regle_la_plus_faible": "RQ-020",
+      "table_concernee": "crm_client",
+      "taux_regle_la_plus_faible": 100.0
+    }
+  ],
+  "source": "exécution courante ; historique de validation isolé si schéma préfixé s5_test_"
+}

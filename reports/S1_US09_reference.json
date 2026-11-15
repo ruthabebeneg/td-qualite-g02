@@ -1,0 +1,9 @@
+{
+  "batch_id": "L-2026-10-01",
+  "date_reference": "2026-10-01",
+  "cotisation_min": "2026-07-01",
+  "commerciale": 50508,
+  "sinistres": 44116,
+  "risques": 38049,
+  "source": "exécution du notebook corrigé sur Bronze, lecture seule"
+}

@@ -1,106 +1,98 @@
-# S1 · Stack Docker, profilage, construction de bronze
+# S1 — Bronze et profilage
 
-Groupe : [À COMPLÉTER]  ·  Date : [À COMPLÉTER]  ·  Rédacteur : [À COMPLÉTER]  ·  Étiquette : `seance-1`
+Groupe G02 · lot `L-2026-10-01` · rôles : `00_equipe.md` · consolidation documentaire du 15/11/2026.
 
-Rappel : un constat = un chiffre mesuré (règle, couche) + la preuve qui le reproduit + ce que cela change. Voir `README.md`.
+## 1. Inventaire (US-01)
 
-## 1. Inventaire des sources (US-01)
-
-| Source | Table | Lignes | Clé primaire | Observation chiffrée |
+| Source | Table | Lignes | Clé primaire | Observation |
 |---|---|---|---|---|
-| crm | client | … | … | … |
-| crm | contrat | … | … | … |
-| crm | sinistre | … | … | … |
-| crm | type_contrat | … | … | … |
-| cif | clients | … | … | … |
-| cif | compte | … | … | … |
-| cif | pays | … | … | … |
+| crm | client | 100 000 | client_id | 0 clé nulle ; 0 doublon |
+| crm | contrat | 100 000 | contrat_id | 0 clé nulle ; 0 doublon |
+| crm | sinistre | 100 000 | sinistre_id | 0 clé nulle ; 0 doublon |
+| crm | type_contrat | 12 | code_type | 0 clé nulle ; 0 doublon |
+| cif | clients | 40 000 | column0 | 0 clé nulle ; 0 doublon |
+| cif | compte | 45 000 | column0 | 0 clé nulle ; 0 doublon |
+| cif | pays | 250 | code_pays | 0 clé nulle ; 0 doublon |
 
-Preuve (notebook, requête) : [À COMPLÉTER]
+Preuve historique exécutée : `notebooks/S1_g02.ipynb`, `reports/S1_ingenieur_qualite.json`. Total : **385 262 lignes**, sept tables ; aucune des sept clés n’est absente. Ingénieur qualité : Iliana.
 
-## 2. Bronze et porte B (US-02, US-03)
+## 2. Bronze et porte B (US-02/03)
 
-Méthode d'ingestion en trois lignes (lecture, conversion, métadonnées, relance du lot) : [À COMPLÉTER]
+Lecture SQL sous `reader`, avec `coerce_float=False` pour préserver les décimaux. Conversion explicite et ajout de `_batch_id`, `_source_system`, `_ingested_at`, `_row_hash`. La relance du même lot conserve les valeurs et volumes sans doublon ; les identifiants techniques et horodatages peuvent être renouvelés, ce qui interdit une relance amont sur un lot déjà certifié sans reconstruire ses dépendances.
 
-Réconciliation RQ-021 (comptage) et RQ-022 (somme de contrôle), pour le lot mesuré :
-
-| Table bronze | Lignes source | Lignes bronze | Écart de comptage | Écart de somme de contrôle |
+| Table Bronze | Source | Bronze | Écart comptage | Écart somme |
 |---|---|---|---|---|
-| crm_client | … | … | … | … |
-| crm_contrat | … | … | … | … |
-| crm_sinistre | … | … | … | … |
-| crm_type_contrat | … | … | … | … |
-| cif_clients | … | … | … | … |
-| cif_compte | … | … | … | … |
-| cif_pays | … | … | … | … |
+| crm_client | 100 000 | 100 000 | 0 | 0 |
+| crm_contrat | 100 000 | 100 000 | 0 | 0 |
+| crm_sinistre | 100 000 | 100 000 | 0 | 0 |
+| crm_type_contrat | 12 | 12 | 0 | 0 |
+| cif_clients | 40 000 | 40 000 | 0 | 0 |
+| cif_compte | 45 000 | 45 000 | 0 | 0 |
+| cif_pays | 250 | 250 | 0 | 0 |
 
-Épreuves de la porte (à documenter, avec la preuve de chacune) :
+**RQ-021 couvre comptages et sommes de contrôle ; RQ-022 couvre les quatre métadonnées.** Les sept vérifications RQ-022 ont zéro échec ; 14 mesures S1 sont historisées.
 
-| Épreuve | Résultat obtenu | Preuve |
+| Épreuve | Résultat | Preuve |
 |---|---|---|
-| Relance du même lot : doublons créés | … | … |
-| Écart introduit volontairement sur une copie : la porte échoue-t-elle ? | … | … |
-| Un problème de conversion rencontré (décimales, NULL, accents) et sa correction | … | … |
+| Même lot relancé | 0 doublon ajouté, contenus et volumes identiques | `reports/S1_ingenieur_qualite.json`, relance |
+| Contenu altéré sur copie | Comptage inchangé, écart somme −3 465 902 982, porte refusée ; copie supprimée | même rapport, epreuve_copie |
+| Décimale 184.10 | Lecture flottante 184.1 ; lecture Decimal 184.10 préservée | même rapport, conversion |
 
-## 3. Profil de crm.client (US-06, US-07)
+## 3. Profil et motifs (US-06/07)
 
-Au moins cinq constats chiffrés.
+| Constat Bronze CRM | Mesure | Conséquence |
+|---|---|---|
+| Courriels nuls | 19 365 / 100 000 | Ne pas promettre un canal de contact disponible |
+| Téléphones nuls | 5 999 / 100 000 | Distinguer nuls des 4 000 vides/blancs |
+| Personnes morales | 4 277 ; nom/prénom/naissance absents | Manquants attendus, pas automatiquement erreurs |
+| Identité nom+prénom+naissance répétée | 2 156 occurrences signalées | Candidats de rapprochement, pas preuve de même personne |
+| Client créé avant naissance | 3 476 | Anomalie de dates à instruire, non révélée par une simple complétude |
 
-| N° | Colonne | Indicateur (nulls, vides, distincts, motif…) | Valeur mesurée | Ce que cela change pour la qualité |
-|---|---|---|---|---|
-| 1 | … | … | … | … |
-| 2 | … | … | … | … |
-| 3 | … | … | … | … |
-| 4 | … | … | … | … |
-| 5 | … | … | … | … |
+Preuves : `notebooks/S1_US06_profil_crm_client.ipynb` et `reports/S1_US06_profil_crm_client.html`. Le rapport HTML fournit les constats de complétude ; les rapprochements et comparaisons métier sont confirmés par les requêtes du notebook.
 
-Motifs (conformes / non conformes) :
-
-| Attribut | Motif testé | Lignes conformes | Lignes non conformes | Exemple de valeur non conforme |
-|---|---|---|---|---|
-| Code postal | … | … | … | … |
-| Téléphone | … | … | … | … |
-| Pays | … | … | … | … |
-
-Preuve (notebook, requête) : [À COMPLÉTER]
-
-## 4. Dictionnaire du CIF (US-04)
-
-| Colonne d'origine | Nom proposé | Type | Justification chiffrée (comment l'avez-vous déduit ?) |
+| Motif | Conformes | Non conformes | Périmètre |
 |---|---|---|---|
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
-| … | … | … | … |
+| CP selon pays | 98 480 | 1 520 | 100 000 lignes ; pas de regex française appliquée aux CP étrangers |
+| Téléphone strict | 66 470 | 33 530 | 100 000 lignes, manquants compris |
+| Téléphone tolérant | 87 741 | 12 259 | 100 000 lignes, diagnostic de formats |
+| Pays regex + ISO | 96 950 | 3 050 | 100 000 lignes |
 
-## 5. Trois définitions du « client actif » (US-09)
+US-07 : `notebooks/S1_US07_motifs_regex.ipynb`. **A01 : 1 493 CP français à quatre chiffres**, restaurables par zéro initial (`1500` → `01500`). Les codes postaux étrangers légitimes sont distingués des anomalies françaises. Les motifs sont exprimés avec `9` chiffre et `A` lettre.
 
-| Direction | Définition utilisée | Nombre de clients | Écart avec la définition de la fiche CD-001 |
+## 4. Dictionnaire CIF (US-04)
+
+| Colonne | Nom proposé | Type cible | Justification mesurée |
 |---|---|---|---|
-| Commerciale | … | … | … |
-| Sinistres | … | … | … |
-| Risques | … | … | … |
+| column0 | identifiant_cif | VARCHAR(7) | 40 000 distincts, 0 nul |
+| column1 | nom_raison_sociale | VARCHAR(80) | 731 distincts, 0 nul ; formes juridiques observées |
+| column2 | prenom | VARCHAR(80) | 180 distincts ; 645 nuls associés aux naissances nulles |
+| column3 | date_naissance | DATE | JJ/MM/AAAA ; 23 795 jours > 12 ; 0 date invalide |
+| column4 | adresse | VARCHAR(120) | 9 811 distinctes, longueurs 11–31 |
+| column5 | code_postal | VARCHAR(10) | 188 distincts ; longueurs 4–8, conserver en texte |
+| column6 | commune | VARCHAR(80) | 172 distinctes |
+| column7 | pays_iso | CHAR(2) | 9 valeurs à deux lettres |
+| column8 | telephone | VARCHAR(20) | 33 676 distincts ; 6 324 nuls ; 10 caractères sur les renseignés |
+| column9 | courriel | VARCHAR(120) | 21 128 distincts ; 18 872 nuls ; 0 format invalide observé |
 
-Conséquence pour la gouvernance, en trois phrases : [À COMPLÉTER]
+Preuve : `notebooks/S1_US04_dictionnaire_cif.ipynb`. Les types cibles sont proposés ; Bronze conserve les valeurs brutes. Data Steward : Firdaouss.
 
-## 6. Critères de fin (cochez, avec la preuve si elle n'est pas dans une section ci-dessus)
+## 5. Trois définitions du client actif (US-09)
 
-- [ ] Les sept tables bronze existent et chaque ligne porte ses quatre métadonnées.
-- [ ] La porte B ne montre aucun écart de comptage ni de somme de contrôle.
-- [ ] Relancer l'ingestion du même lot ne crée aucun doublon.
-- [ ] Un écart introduit volontairement fait échouer la porte.
-- [ ] RQ-021 est écrite dans `dq.dq_history` (couche BRONZE).
+Date commune : **01/10/2026**, cotisation depuis le **01/07/2026**, lot filtré dans les lectures.
 
-## 7. Difficultés, écarts avec l'attendu, reprise
+| Direction | Définition | Clients | Écart à CD-001 |
+|---|---|---|---|
+| Commerciale | Souscripteurs présents dans les contrats | 50 508 | 12 459 |
+| Sinistres | Contrat en cours à la référence | 44 116 | 6 067 |
+| Risques | Contrat en cours et cotisation sur trois mois calendaires | 38 049 | 0 |
 
-Difficultés rencontrées et temps perdu : [À COMPLÉTER]
+Preuve réexécutée : `notebooks/US-09_client_actif.ipynb`, `reports/S1_US09_reference.json`. Les anciens 50 508 / 15 183 / 14 960 relevaient du 31/12/2024 et ne sont plus les chiffres du lot. Trois définitions produisent trois populations ; l’arbitrage D-05/D-06 fixe la définition commune. Cette gouvernance est nécessaire avant de comparer les directions.
 
-Point de reprise utilisé (oui / non, lequel) : [À COMPLÉTER]
+## 6. Fin et limites
 
-Ce que nous ferions autrement : [À COMPLÉTER]
+- [x] Sept tables Bronze et quatre métadonnées, porte B sans écart : preuve S1 historique.
+- [x] Relance et écart volontaire démontrés sur copie : rapport S1.
+- [x] RQ-021/RQ-022 historisées : rapport S1 et historique nominal.
+- [x] US-09 réexécutée sur le lot correct : rapport du 15/11.
+
+Difficulté documentée : conversion décimale, corrigée par lecture exacte. Temps perdu : non mesuré à l’époque, aucune durée inventée. Aucune restauration pédagogique de données déclarée ; reprise du serveur Docker pour la validation du 15/11. Les extensions US-05/08 ne sont pas revendiquées complètes.

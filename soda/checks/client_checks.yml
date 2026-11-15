@@ -9,7 +9,7 @@ checks for client:
       fail query: |
         SELECT client_id
         FROM client
-        WHERE CASE LOWER(TRIM(type_personne))
+        WHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))
                 WHEN 'prosp.' THEN 'prospect'
                 WHEN 'assuré' THEN 'assure'
                 ELSE LOWER(TRIM(type_personne))
@@ -40,8 +40,8 @@ checks for client:
       fail query: |
         SELECT c.client_id
         FROM client c
-        WHERE c.pays IS NOT NULL
-          AND NOT EXISTS (
+        WHERE c.pays IS NULL
+           OR NOT EXISTS (
             SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays
           )
 
