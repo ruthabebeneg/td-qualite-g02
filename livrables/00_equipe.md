@@ -23,3 +23,9 @@ La rotation S1–S4 provient du livrable de groupe. Les rôles S5 sont corrobor�
 | Ruth | Déclaration conservée du PPTX : rédaction S1, suivi qualité S2, contrôles S3, règles de fusion/survie et décision de publication S4/S5. | US-10/12/24/25/27/35 |
 
 Ce tableau décrit les contributions déjà attribuées dans les supports ; il ne crée aucune nouvelle déclaration personnelle signée. Les corrections transversales du 15/11/2026 ont été réalisées avec l’assistance de Codex à la demande du groupe et ne sont pas attribuées rétroactivement à un membre. L’historique Git conserve les auteurs d’origine.
+
+## Proposition de répartition orale à confirmer
+
+Ruth présente les diapositives 1 et 8 ; Firdaouss les 2 et 3 ; Iliana les 4, 5 et 6 ; Maria Camila la 7, avec la synthèse des réserves en appui à Ruth et Firdaouss. Les rôles S5 ci-dessus restent la référence.
+
+Cibles par diapositive 1 à 8 : 1 / 2 / 3 / 1 / 1 / 2 / 1 / 1 minutes, soit 12 minutes, démonstration comprise (≤ 2 minutes en diapositive 6). Cette proposition reste à confirmer et à chronométrer en répétition.

@@ -57,7 +57,7 @@ La règle des vingt minutes : au-delà, appelez l'enseignant. Pour repartir d'un
 
 ## Rendu consolidé et corrections du 15 novembre 2026
 
-Le livrable de groupe rempli est `livrables/Livrable_Groupe_TD_AssurConnect.pptx` ; les Markdown de séance fournissent également les chiffres, populations et liens de preuve à jour. Le dossier de décision court est `livrables/Dossier_GO_NO_GO_AssurConnect_G02.pdf`. Le registre `livrables/AUDIT_CORRECTIONS.md` distingue corrections, preuves historiques, nouvelles validations et opérations de remise non exécutées. Le PPTX de soutenance a été conservé à la demande du groupe et n’est pas synchronisé par cet audit.
+Le livrable de groupe rempli est `livrables/Livrable_Groupe_TD_AssurConnect.pptx` ; les Markdown de séance fournissent également les chiffres, populations et liens de preuve à jour. Le dossier de décision court est `livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf`. Le registre `livrables/AUDIT_CORRECTIONS.md` distingue corrections, preuves historiques, nouvelles validations et opérations de remise non exécutées. Le support de soutenance synchronisé est `livrables/Soutenance_AssurConnect_G02.pptx` ; corrections et limites : `livrables/AUDIT_SUPPORTS.md`.
 
 Sur un ancien volume où reader ne peut pas lire Bronze, appliquer `sql/migrations/20261115_reader_bronze.sql` avec un compte administrateur. Ce script accorde uniquement SELECT et ne change aucune donnée. Les lectures source/Bronze utilisent reader ; l’historisation utilise une connexion d’écriture distincte.
 

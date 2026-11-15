@@ -44,4 +44,6 @@ Seuils : bloquantes 100 % et avertissements 98 % (D-07/D-08/D-22), rapprochement
 
 Signature enregistrée : **Ruth, Data Owner, 12/11/2026**, dans le fichier d’approbation existant. La correction documentaire ne constitue pas une nouvelle signature ni une décision de la Directrice Générale.
 
-Annexes : `00_equipe.md`, `JOURNAL_DECISIONS.md`, `../AVANCEMENT.md`, `S1_bronze_profilage.md`, `S2_regles_great_expectations.md`, `S3_integrite_soda.md`, `S4_silver_gold.md`, `S5_certificat_publication.md`. Version PDF courte : `Dossier_GO_NO_GO_AssurConnect_G02.pdf`.
+Annexes : `00_equipe.md`, `JOURNAL_DECISIONS.md`, `../AVANCEMENT.md`, `S1_bronze_profilage.md`, `S2_regles_great_expectations.md`, `S3_integrite_soda.md`, `S4_silver_gold.md`, `S5_certificat_publication.md`. Version PDF courte : `Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf`.
+
+Support oral synchronisé : `Soutenance_AssurConnect_G02.pptx`. Répartition et durées proposées à confirmer par le groupe.

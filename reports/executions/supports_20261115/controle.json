@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-15",
+  "portee": "Contrôle documentaire des trois supports ; aucune nouvelle validation humaine.",
+  "fichiers": {
+    "livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf": {
+      "sha256_avant": "640d1fd97ed7f9a41524224fbca4ba19cb96e39790c82e4c853ed873ae56f13a",
+      "sha256_apres": "b4789676c32233d2f89bbb96cadab7de1e687c8a9424aa663ee72f01c8ae6de6",
+      "pages_avant": 4,
+      "pages_apres": 4,
+      "page4_signature_texte_identique": true,
+      "dimensions_identiques": true
+    },
+    "livrables/Soutenance_AssurConnect_G02.pptx": {
+      "sha256_avant": "53cc0b3576504452741005ed0804ca21eb6f0a2a3dde501be91e409bcc08eb1b",
+      "sha256_apres": "874c899d9af2d9daa72676792ed50d99974ab3b1e3303d82e1ffe5ad80f79077",
+      "zip_valide": true,
+      "metadonnees_identiques": true,
+      "diapos_avant": 8,
+      "diapos_apres": 8,
+      "formes_hors_page": [],
+      "proportions_identiques": true,
+      "rendu_powerpoint_pages": 8,
+      "textes_visibles_retrouves_dans_rendu": 70
+    },
+    "livrables/Livrable_Groupe_TD_AssurConnect.pptx": {
+      "sha256_avant": "c3e845f728bd632e2210b07705c2f98a88baf7731839858f8b06ae5ba68fe8d1",
+      "sha256_apres": "9132793c911b2b7236d68b9034c87d0e8a15247dbffc1439d68ad4e4ba5e0914",
+      "zip_valide": true,
+      "metadonnees_identiques": true,
+      "diapos_avant": 51,
+      "diapos_apres": 51,
+      "formes_hors_page": [],
+      "proportions_identiques": true,
+      "rendu_powerpoint_pages": 51,
+      "textes_visibles_retrouves_dans_rendu": 468
+    }
+  },
+  "powerpoint": {
+    "commande": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File 'C:\\Users\\Public\\corrections-supports-20261115\\export_avant_apres.ps1'",
+    "copies_lecture_seule": true,
+    "ouvertures_avant_apres_reussies": 4,
+    "exports_reussis": 2,
+    "erreur_identique_4_copies": "Historique : ExportAsFixedFormat a échoué ; résolu par Export et SaveAs.",
+    "quit_appele": false,
+    "conclusion": "59 diapositives rendues ; planches inspectées, détails modifiés examinés et texte visible confronté au rendu PDF.",
+    "diapositives_rendues": 59,
+    "methode_finale": "Presentation.Export(PNG,1600,900) et Presentation.SaveAs(PDF,32), copies en lecture seule"
+  },
+  "code_et_preuves_historiques_inchanges": 131,
+  "rendus": [
+    "reports/executions/supports_20261115/rendus/Livrable_Groupe_TD_AssurConnect-planche-1.png",
+    "reports/executions/supports_20261115/rendus/Livrable_Groupe_TD_AssurConnect-planche-13.png",
+    "reports/executions/supports_20261115/rendus/Livrable_Groupe_TD_AssurConnect-planche-25.png",
+    "reports/executions/supports_20261115/rendus/Livrable_Groupe_TD_AssurConnect-planche-37.png",
+    "reports/executions/supports_20261115/rendus/Livrable_Groupe_TD_AssurConnect-planche-49.png",
+    "reports/executions/supports_20261115/rendus/Soutenance_AssurConnect_G02-planche-1.png"
+  ],
+  "minutage_propose_minutes": [
+    1,
+    2,
+    3,
+    1,
+    1,
+    2,
+    1,
+    1
+  ]
+}

@@ -33,8 +33,10 @@
 | S5 | US-31 | Certificat | Fait | reports/S5_certificat_final.json |  |
 | S5 | US-32 | Publication CRM | Fait | reports/S5_preuves_finales.json |  |
 | S5 | US-34 | Catalogue et lineage | Fait | catalogue/catalogue.yml ; catalogue/gold_client_unique.md |  |
-| S5 | US-35 | Dossier de décision | Fait | livrables/DOSSIER_GO_NOGO.md ; livrables/Dossier_GO_NO_GO_AssurConnect_G02.pdf |  |
+| S5 | US-35 | Dossier de décision | Fait | livrables/DOSSIER_GO_NOGO.md ; livrables/Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf |  |
 
 Extensions : US-05, US-08 et US-20 non revendiquées complètes ; US-26 rapprochement BAN traité dans S4, sans prétendre atteindre la cible source de 2 % (7,997 % d’adresses isolées) ; US-33 orchestration non retenue.
 
-Remise Git : le tag historique `seance-3` est attesté et le tag local `rendu-final` désigne le commit de corrections du 15/11. Les autres tags de séance ne sont pas annoncés comme posés/poussés ; aucune référence historique arbitraire n’a été créée. Le tag final reste à pousser. La publication externe et la visibilité du dépôt restent à vérifier lors de la remise.
+Remise Git : le tag historique `seance-3` est attesté et le tag local `rendu-final` est rattaché au commit corrigé validé. Les autres tags de séance ne sont pas annoncés comme posés/poussés ; aucune référence historique arbitraire n’a été créée. La publication distante n’est pas effectuée. La publication externe et la visibilité du dépôt restent à vérifier lors de la remise.
+
+Support oral synchronisé : `livrables/Soutenance_AssurConnect_G02.pptx`. Répartition et durées proposées à confirmer par le groupe.
