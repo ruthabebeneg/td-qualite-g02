@@ -65,5 +65,11 @@
   },
   "total_tests_unitaires_et_base": 113,
   "rendu_supports": "supports.json",
-  "notebook_s3": "Rejoué sur copie après les corrections finales des checks ; sorties et empreintes dans notebook_s3.json"
+  "notebook_s3": "Rejoué sur copie après les corrections finales des checks ; sorties et empreintes dans notebook_s3.json",
+  "remise_git": {
+    "corrections_et_consolidations": "enregistrées localement",
+    "tag": "rendu-final local",
+    "push_effectue": false,
+    "motif": "Authentification GitHub absente ; le groupe a choisi de pousser lui-même main et le tag."
+  }
 }
