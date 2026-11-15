@@ -46,7 +46,7 @@
   "supports": [
     {
       "fichier": "livrables/Livrable_Groupe_TD_AssurConnect.pptx",
-      "sha256": "4e9e1404d727ace1da834a86d7fb87c8ef6f757540a2c55c5c1797fbcadac1bc",
+      "sha256": "71e1812eef531b1461df1515f75207290fdab2a6776692fe3c869d3789dddc57",
       "pages": 51,
       "diapos_verifiees": [
         15,
@@ -55,7 +55,20 @@
         40,
         41
       ],
-      "blocs_significatifs": 53
+      "blocs_significatifs": 53,
+      "relecture_finale": {
+        "diapos": [
+          4,
+          9,
+          18,
+          23,
+          37
+        ],
+        "contribution_iliana": "Phrase fondée sur les contributions documentées ; police et taille conservées",
+        "pages_pdf": 51,
+        "textes_absents_du_rendu": [],
+        "autres_entrees_pptx_identiques": true
+      }
     },
     {
       "fichier": "livrables/Soutenance_AssurConnect_G02.pptx",
