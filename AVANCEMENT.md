@@ -37,6 +37,10 @@
 
 Extensions : US-05, US-08 et US-20 non revendiquées complètes ; US-26 rapprochement BAN traité dans S4, sans prétendre atteindre la cible source de 2 % (7,997 % d’adresses isolées) ; US-33 orchestration non retenue.
 
-Remise Git : le tag historique `seance-3` est attesté et le tag local `rendu-final` est rattaché au commit corrigé validé. Les autres tags de séance ne sont pas annoncés comme posés/poussés ; aucune référence historique arbitraire n’a été créée. La publication distante n’est pas effectuée. La publication externe et la visibilité du dépôt restent à vérifier lors de la remise.
+État historique avant le complément de conformité ci-dessous — Remise Git : le tag historique `seance-3` est attesté et le tag local `rendu-final` est rattaché au commit corrigé validé. Les autres tags de séance ne sont pas annoncés comme posés/poussés ; aucune référence historique arbitraire n’a été créée. La publication distante n’est pas effectuée. La publication externe et la visibilité du dépôt restent à vérifier lors de la remise.
 
 Support oral synchronisé : `livrables/Soutenance_AssurConnect_G02.pptx`. Répartition et durées proposées à confirmer par le groupe.
+
+## Compléments du 15/11/2026 — conformité professeur
+
+Corrections A02/A03/A04/A06/A07/A08 et démonstration pédagogique US30 : voir `livrables/CONFORMITE_PROFESSEUR.md` et `reports/executions/conformite_prof_20261115/`. US12 : vrai scan Bronze 16 PASS / 1 WARN / 10 FAIL sur 27, zéro erreur technique (3 contrôles de présence de lot ajoutés), distinct du diagnostic CRM courant 13/1/10 sur 24. A01 : références de remise `main` et `rendu-final` sur le dépôt public ; jalons historiques manquants non recréés. A05 : exception de rotation S4/S5 explicitée, validation professeur requise. Répétition orale non attestée. Ces compléments ne constituent ni une nouvelle signature ni une suppression des réserves métier.

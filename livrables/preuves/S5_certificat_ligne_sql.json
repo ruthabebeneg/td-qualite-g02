@@ -1,0 +1,11 @@
+{
+  "certificat_id": "S5-d7c760617b538e9240c8541a4f7",
+  "batch_id": "L-2026-10-01",
+  "emis_le": "2026-11-12 15:55:13",
+  "nb_bloquantes_testees": 59,
+  "nb_bloquantes_ok": 59,
+  "empreinte_gold": "a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667",
+  "decision": "GO",
+  "signataire": "Ruth",
+  "commentaire": ""
+}

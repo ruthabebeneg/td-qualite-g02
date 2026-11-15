@@ -1,0 +1,9 @@
+{
+  "nominal_identique": true,
+  "fichiers_certifies_identiques": true,
+  "tables": 27,
+  "lignes": 1873765,
+  "schemas_tests_residuels": [],
+  "reverification_apres_derniers_correctifs": true,
+  "schemas_test_conformite_residuels": []
+}

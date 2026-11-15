@@ -1,0 +1,1971 @@
+{
+  "definitionName": "Soda Core CLI",
+  "defaultDataSource": "crm",
+  "dataTimestamp": "2026-11-15T14:45:35+00:00",
+  "scanStartTimestamp": "2026-11-15T14:45:35+00:00",
+  "scanEndTimestamp": "2026-11-15T14:45:38+00:00",
+  "hasErrors": false,
+  "hasWarnings": true,
+  "hasFailures": true,
+  "metrics": [
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-failed rows-0ad1c2f3",
+      "metricName": "failed rows",
+      "value": 1200
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-client-client_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq013_assures_orphelins_apres_nullif-c8b8e802",
+      "metricName": "rq013_assures_orphelins_apres_nullif",
+      "value": 300.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-sinistre_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq005_taux_cp_fr-96e04cdb",
+      "metricName": "rq005_taux_cp_fr",
+      "value": 98.47439
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-duree_garantie_mois-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-cp_sinistre-invalid_count-97d6e3d3",
+      "metricName": "invalid_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-contrat_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-row_count-a8e3a27f",
+      "metricName": "row_count",
+      "value": 800
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-adresse_sinistre-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-code_type-reference-83fbc469",
+      "metricName": "reference",
+      "value": 200
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-client-client_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-client-failed rows-9525b2b3",
+      "metricName": "failed rows",
+      "value": 3050
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq015_prospects_avec_contrat-89dad5fb",
+      "metricName": "rq015_prospects_avec_contrat",
+      "value": 487.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-souscripteur_id-reference-08a6b5d7",
+      "metricName": "reference",
+      "value": 1000
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-taux_erreur_adresse-eb28361d",
+      "metricName": "taux_erreur_adresse",
+      "value": 12.1
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-client-failed rows-8214addd",
+      "metricName": "failed rows",
+      "value": 60
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq003_taux_telephone-fedb028c",
+      "metricName": "rq003_taux_telephone",
+      "value": 88.00472
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-contrat_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-sinistre_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-sinistre-cp_sinistre-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq016_taux_souscripteurs_avec_contrat-a7fa9687",
+      "metricName": "rq016_taux_souscripteurs_avec_contrat",
+      "value": 98.01913
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-rq018_ecart_directions-4b0a54ba",
+      "metricName": "rq018_ecart_directions",
+      "value": 0.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-crm-contrat-duree_garantie_mois-invalid_count-92b6282c",
+      "metricName": "invalid_count",
+      "value": 600
+    }
+  ],
+  "checks": [
+    {
+      "identity": "2451637f",
+      "identities": {
+        "v1": "d12b4e9d",
+        "v2": "4aee22d9",
+        "v3": "2451637f"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-009 | CRM | type de personne normalisé autorisé",
+      "type": "generic",
+      "definition": "checks for client:\n  - failed rows:\n      name: RQ-009 | CRM | type de personne normalisé autorisé\n      fail query: |\n        SELECT client_id\n        FROM client\n        WHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))\n                WHEN 'prosp.' THEN 'prospect'\n                WHEN 'assuré' THEN 'assure'\n                ELSE LOWER(TRIM(type_personne))\n              END NOT IN ('prospect', 'souscripteur', 'assure')\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 7,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-client-failed rows-8214addd"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "client_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 60,
+              "storedRowCount": 60,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 60
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "dfb2ed19",
+      "identities": {
+        "v1": "df7b5689",
+        "v2": "d8c2a93d",
+        "v3": "dfb2ed19"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-003 | CRM | taux de telephones renseignes",
+      "type": "generic",
+      "definition": "checks for client:\n  - rq003_taux_telephone:\n      name: RQ-003 | CRM | taux de telephones renseignes\n      rq003_taux_telephone query: |\n        SELECT 100.0 * SUM(\n                 CASE WHEN telephone IS NOT NULL AND TRIM(telephone) <> '' THEN 1 ELSE 0 END\n               ) / NULLIF(COUNT(*), 0) AS taux\n        FROM client\n        WHERE LOWER(TRIM(type_personne)) = 'souscripteur'\n      warn: when < 98\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 18,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq003_taux_telephone-fedb028c"
+      ],
+      "outcome": "warn",
+      "diagnostics": {
+        "blocks": [],
+        "value": 88.00472,
+        "warn": {
+          "lessThan": 98.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "5798ac98",
+      "identities": {
+        "v1": "dc78dda9",
+        "v2": "fcc03684",
+        "v3": "5798ac98"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-005 | CRM | taux de codes postaux francais valides",
+      "type": "generic",
+      "definition": "checks for client:\n  - rq005_taux_cp_fr:\n      name: RQ-005 | CRM | taux de codes postaux francais valides\n      rq005_taux_cp_fr query: |\n        SELECT 100.0 * SUM(\n                 CASE WHEN cp REGEXP '^[0-9]{5}$' THEN 1 ELSE 0 END\n               ) / NULLIF(COUNT(*), 0) AS taux\n        FROM client\n        WHERE pays = 'FR'\n      warn: when < 98\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 28,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq005_taux_cp_fr-96e04cdb"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 98.47439,
+        "warn": {
+          "lessThan": 98.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "a301e6ea",
+      "identities": {
+        "v1": "df862e57",
+        "v2": "84ee357d",
+        "v3": "a301e6ea"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-007 | CRM | pays présent dans le référentiel",
+      "type": "generic",
+      "definition": "checks for client:\n  - failed rows:\n      name: RQ-007 | CRM | pays présent dans le référentiel\n      fail query: |\n        SELECT c.client_id\n        FROM client c\n        WHERE c.pays IS NULL\n           OR NOT EXISTS (\n            SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays\n          )\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 38,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-client-failed rows-9525b2b3"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "client_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 3050,
+              "storedRowCount": 3050,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 3050
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "14750813",
+      "identities": {
+        "v1": "f17340ee",
+        "v2": "132ded06",
+        "v3": "14750813"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-015 | CRM | prospects normalises avec contrat",
+      "type": "generic",
+      "definition": "checks for client:\n  - rq015_prospects_avec_contrat:\n      name: RQ-015 | CRM | prospects normalises avec contrat\n      rq015_prospects_avec_contrat query: |\n        SELECT COUNT(DISTINCT c.client_id) AS nb\n        FROM client c\n        WHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')\n          AND EXISTS (\n            SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id\n          )\n      fail: when > 0\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 48,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq015_prospects_avec_contrat-89dad5fb"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 487.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "1bf18690",
+      "identities": {
+        "v1": "3f836251",
+        "v2": "733a3afc",
+        "v3": "1bf18690"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-016 | CRM | taux de souscripteurs avec contrat",
+      "type": "generic",
+      "definition": "checks for client:\n  - rq016_taux_souscripteurs_avec_contrat:\n      name: RQ-016 | CRM | taux de souscripteurs avec contrat\n      rq016_taux_souscripteurs_avec_contrat query: |\n        SELECT 100.0 * SUM(\n                 CASE WHEN EXISTS (\n                   SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id\n                 ) THEN 1 ELSE 0 END\n               ) / NULLIF(COUNT(*), 0) AS taux\n        FROM client c\n        WHERE LOWER(TRIM(c.type_personne)) = 'souscripteur'\n      warn: when < 98\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 59,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq016_taux_souscripteurs_avec_contrat-a7fa9687"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 98.01913,
+        "warn": {
+          "lessThan": 98.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "87df3fd6",
+      "identities": {
+        "v1": "6510e610",
+        "v2": "b4f22b55",
+        "v3": "87df3fd6"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | client_id sans doublon",
+      "type": "generic",
+      "definition": "checks for client:\n  - duplicate_count(client_id) = 0:\n      name: RQ-020 | CRM | client_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 2,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": "client_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-client-client_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "e435ccb9",
+      "identities": {
+        "v1": "0234304f",
+        "v2": "9d9530f0",
+        "v3": "e435ccb9"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | client_id renseigné",
+      "type": "generic",
+      "definition": "checks for client:\n  - missing_count(client_id) = 0:\n      name: RQ-020 | CRM | client_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/client_checks.yml",
+        "line": 4,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "client",
+      "column": "client_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-client-client_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "70eb3488",
+      "identities": {
+        "v1": "e79168df",
+        "v2": "7197a066",
+        "v3": "70eb3488"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-001 | CRM | date_fin postérieure à date_debut",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - failed rows:\n      name: RQ-001 | CRM | date_fin postérieure à date_debut\n      fail condition: date_debut IS NULL OR date_fin IS NULL OR date_fin <= date_debut\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 7,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-row_count-a8e3a27f"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                },
+                {
+                  "name": "souscripteur_id",
+                  "type": "253"
+                },
+                {
+                  "name": "assure_id",
+                  "type": "253"
+                },
+                {
+                  "name": "code_type",
+                  "type": "253"
+                },
+                {
+                  "name": "date_debut",
+                  "type": "10"
+                },
+                {
+                  "name": "date_fin",
+                  "type": "10"
+                },
+                {
+                  "name": "duree_garantie_mois",
+                  "type": "3"
+                },
+                {
+                  "name": "prime_annuelle",
+                  "type": "246"
+                },
+                {
+                  "name": "date_derniere_cotisation",
+                  "type": "10"
+                }
+              ],
+              "totalRowCount": 800,
+              "storedRowCount": 800,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 800
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "93c17431",
+      "identities": {
+        "v1": "cf299be4",
+        "v2": "a8a8a6a4",
+        "v3": "93c17431"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-011 | CRM | type de contrat connu",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - values in (code_type) must exist in type_contrat (code_type):\n      name: RQ-011 | CRM | type de contrat connu\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 18,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "code_type",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-code_type-reference-83fbc469"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "failedRowsAnalysis",
+            "title": "Failed Rows Analysis",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                },
+                {
+                  "name": "souscripteur_id",
+                  "type": "253"
+                },
+                {
+                  "name": "assure_id",
+                  "type": "253"
+                },
+                {
+                  "name": "code_type",
+                  "type": "253"
+                },
+                {
+                  "name": "date_debut",
+                  "type": "10"
+                },
+                {
+                  "name": "date_fin",
+                  "type": "10"
+                },
+                {
+                  "name": "duree_garantie_mois",
+                  "type": "3"
+                },
+                {
+                  "name": "prime_annuelle",
+                  "type": "246"
+                },
+                {
+                  "name": "date_derniere_cotisation",
+                  "type": "10"
+                }
+              ],
+              "totalRowCount": 100,
+              "storedRowCount": 100,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            },
+            "failingRowsQueryName": "crm.reference[code_type].failing_sql",
+            "passingRowsQueryName": "crm.reference[code_type].passing_sql",
+            "totalFailingRows": 200,
+            "sampleRowCount": 100
+          }
+        ],
+        "value": 200
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "1d4e44ec",
+      "identities": {
+        "v1": "26573801",
+        "v2": "d083606a",
+        "v3": "1d4e44ec"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-012 | CRM | souscripteur existant",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - values in (souscripteur_id) must exist in client (client_id):\n      name: RQ-012 | CRM | souscripteur existant\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 20,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "souscripteur_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-souscripteur_id-reference-08a6b5d7"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "failedRowsAnalysis",
+            "title": "Failed Rows Analysis",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                },
+                {
+                  "name": "souscripteur_id",
+                  "type": "253"
+                },
+                {
+                  "name": "assure_id",
+                  "type": "253"
+                },
+                {
+                  "name": "code_type",
+                  "type": "253"
+                },
+                {
+                  "name": "date_debut",
+                  "type": "10"
+                },
+                {
+                  "name": "date_fin",
+                  "type": "10"
+                },
+                {
+                  "name": "duree_garantie_mois",
+                  "type": "3"
+                },
+                {
+                  "name": "prime_annuelle",
+                  "type": "246"
+                },
+                {
+                  "name": "date_derniere_cotisation",
+                  "type": "10"
+                }
+              ],
+              "totalRowCount": 100,
+              "storedRowCount": 100,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            },
+            "failingRowsQueryName": "crm.reference[souscripteur_id].failing_sql",
+            "passingRowsQueryName": "crm.reference[souscripteur_id].passing_sql",
+            "totalFailingRows": 1000,
+            "sampleRowCount": 100
+          }
+        ],
+        "value": 1000
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "f4d60e50",
+      "identities": {
+        "v1": "ef28c455",
+        "v2": "8bbbf7fd",
+        "v3": "f4d60e50"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-013 | CRM projection NULLIF | assures existants",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - rq013_assures_orphelins_apres_nullif:\n      name: RQ-013 | CRM projection NULLIF | assures existants\n      rq013_assures_orphelins_apres_nullif query: |\n        SELECT COUNT(*) AS nb\n        FROM contrat c\n        WHERE NULLIF(c.assure_id, '0') IS NOT NULL\n          AND NOT EXISTS (\n            SELECT 1 FROM client k\n            WHERE k.client_id = NULLIF(c.assure_id, '0')\n          )\n      fail: when > 0\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 23,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq013_assures_orphelins_apres_nullif-c8b8e802"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 300.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "2162a119",
+      "identities": {
+        "v1": "37026990",
+        "v2": "898c30fa",
+        "v3": "2162a119"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-018 | CRM | ecart nul entre les trois directions",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - rq018_ecart_directions:\n      name: RQ-018 | CRM | ecart nul entre les trois directions\n      rq018_ecart_directions query: |\n        SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart\n        FROM (\n          SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs\n          FROM contrat c\n          WHERE c.date_debut <= '${REFERENCE_DATE}'\n            AND c.date_fin >= '${REFERENCE_DATE}'\n            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)\n          UNION ALL\n          SELECT COUNT(DISTINCT c.souscripteur_id)\n          FROM contrat c\n          WHERE c.date_debut <= '${REFERENCE_DATE}'\n            AND c.date_fin >= '${REFERENCE_DATE}'\n            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)\n          UNION ALL\n          SELECT COUNT(DISTINCT c.souscripteur_id)\n          FROM contrat c\n          WHERE c.date_debut <= '${REFERENCE_DATE}'\n            AND c.date_fin >= '${REFERENCE_DATE}'\n            AND c.date_derniere_cotisation >= DATE_SUB('${REFERENCE_DATE}', INTERVAL 3 MONTH)\n        ) directions\n      fail: when > 0\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 35,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-rq018_ecart_directions-4b0a54ba"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "0ed6e87a",
+      "identities": {
+        "v1": "d739402a",
+        "v2": "e4208b9d",
+        "v3": "0ed6e87a"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | contrat_id sans doublon",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - duplicate_count(contrat_id) = 0:\n      name: RQ-020 | CRM | contrat_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 2,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "contrat_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-contrat_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "02168d1c",
+      "identities": {
+        "v1": "8a599e80",
+        "v2": "fbf7519c",
+        "v3": "02168d1c"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | contrat_id renseigné",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - missing_count(contrat_id) = 0:\n      name: RQ-020 | CRM | contrat_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 4,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "contrat_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-contrat_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "7b5e9e0d",
+      "identities": {
+        "v1": "fb92519b",
+        "v2": "a04e96fb",
+        "v3": "7b5e9e0d"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-010 | CRM | durée de garantie renseignée",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - missing_count(duree_garantie_mois) = 0:\n      name: RQ-010 | CRM | durée de garantie renseignée\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 11,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "duree_garantie_mois",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-duree_garantie_mois-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "91fed147",
+      "identities": {
+        "v1": "f5ffb6bc",
+        "v2": "05902d1d",
+        "v3": "91fed147"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-010 | CRM | durée de garantie autorisée",
+      "type": "generic",
+      "definition": "checks for contrat:\n  - invalid_count(duree_garantie_mois) = 0:\n      name: RQ-010 | CRM | durée de garantie autorisée\n      valid values: [12, 24, 36, 60]\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/contrat_checks.yml",
+        "line": 14,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "contrat",
+      "column": "duree_garantie_mois",
+      "metrics": [
+        "metric-Soda Core CLI-crm-contrat-duree_garantie_mois-invalid_count-92b6282c"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "failedRowsAnalysis",
+            "title": "Failed Rows Analysis",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                },
+                {
+                  "name": "souscripteur_id",
+                  "type": "253"
+                },
+                {
+                  "name": "assure_id",
+                  "type": "253"
+                },
+                {
+                  "name": "code_type",
+                  "type": "253"
+                },
+                {
+                  "name": "date_debut",
+                  "type": "10"
+                },
+                {
+                  "name": "date_fin",
+                  "type": "10"
+                },
+                {
+                  "name": "duree_garantie_mois",
+                  "type": "3"
+                },
+                {
+                  "name": "prime_annuelle",
+                  "type": "246"
+                },
+                {
+                  "name": "date_derniere_cotisation",
+                  "type": "10"
+                }
+              ],
+              "totalRowCount": 100,
+              "storedRowCount": 100,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            },
+            "failingRowsQueryName": "crm.duree_garantie_mois.failed_rows[invalid_count].failing_sql",
+            "passingRowsQueryName": "crm.duree_garantie_mois.failed_rows[invalid_count].passing_sql",
+            "totalFailingRows": 600,
+            "sampleRowCount": 100
+          }
+        ],
+        "value": 600,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "e6f762e6",
+      "identities": {
+        "v1": "f2dc6d65",
+        "v2": "bdeb58f9",
+        "v3": "e6f762e6"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-017 | CRM | sinistre dans la période de garantie",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - failed rows:\n      name: RQ-017 | CRM | sinistre dans la période de garantie\n      fail query: |\n        SELECT s.sinistre_id\n        FROM sinistre s\n        LEFT JOIN contrat c ON c.contrat_id = s.contrat_id\n        WHERE c.contrat_id IS NULL\n           OR s.date_survenance IS NULL\n           OR c.date_debut IS NULL\n           OR c.date_fin IS NULL\n           OR s.date_survenance < c.date_debut\n           OR s.date_survenance > c.date_fin\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 18,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-failed rows-0ad1c2f3"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "sinistre_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 1200,
+              "storedRowCount": 1200,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 1200
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "f2ef71ca",
+      "identities": {
+        "v1": "393a4d6f",
+        "v2": "f2889c47",
+        "v3": "f2ef71ca"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | CRM | taux d'adresses non reconnues par la BAN",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - taux_erreur_adresse:\n      name: RQ-014 | CRM | taux d'adresses non reconnues par la BAN\n      taux_erreur_adresse query: |\n        SELECT 100.0 * SUM(b.id_ban IS NULL) / COUNT(*) AS taux_erreur\n        FROM sinistre s\n        LEFT JOIN silver.ref_ban b\n               ON CONCAT(b.numero, ' ', b.voie) = s.adresse_sinistre\n              AND b.code_postal = s.cp_sinistre\n              AND b.commune = s.ville_sinistre\n      fail: when > 0\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 31,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-crm-taux_erreur_adresse-eb28361d"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 12.1,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "7e0c92d0",
+      "identities": {
+        "v1": "5444f3d2",
+        "v2": "5a5449bc",
+        "v3": "7e0c92d0"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | sinistre_id sans doublon",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - duplicate_count(sinistre_id) = 0:\n      name: RQ-020 | CRM | sinistre_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 4,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": "sinistre_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-sinistre_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "9de86354",
+      "identities": {
+        "v1": "a1ca448d",
+        "v2": "3770169e",
+        "v3": "9de86354"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | CRM | sinistre_id renseigné",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - missing_count(sinistre_id) = 0:\n      name: RQ-020 | CRM | sinistre_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 6,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": "sinistre_id",
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-sinistre_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "acf771f7",
+      "identities": {
+        "v1": "da677ad9",
+        "v2": "2e3bc16a",
+        "v3": "acf771f7"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | CRM | code postal de sinistre renseigné",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - missing_count(cp_sinistre) = 0:\n      name: RQ-014 | CRM | code postal de sinistre renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 9,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": "cp_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-cp_sinistre-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "2e8e267f",
+      "identities": {
+        "v1": "b4242d61",
+        "v2": "64563850",
+        "v3": "2e8e267f"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | CRM | code postal de sinistre sur 5 chiffres",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - invalid_count(cp_sinistre) = 0:\n      name: RQ-014 | CRM | code postal de sinistre sur 5 chiffres\n      valid regex: '^[0-9]{5}$'\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 12,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": "cp_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-cp_sinistre-invalid_count-97d6e3d3"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "c4daee2a",
+      "identities": {
+        "v1": "6c7c0758",
+        "v2": "6cf21ee2",
+        "v3": "c4daee2a"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | CRM | adresse de sinistre renseignée",
+      "type": "generic",
+      "definition": "checks for sinistre:\n  - missing_count(adresse_sinistre) = 0:\n      name: RQ-014 | CRM | adresse de sinistre renseignée\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/sinistre_checks.yml",
+        "line": 15,
+        "col": 5
+      },
+      "dataSource": "crm",
+      "table": "sinistre",
+      "column": "adresse_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-crm-sinistre-adresse_sinistre-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    }
+  ],
+  "queries": [
+    {
+      "name": "crm.client.aggregation[0]",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT \n  COUNT(CASE WHEN client_id IS NULL THEN 1 END) \nFROM client",
+      "exception": null,
+      "duration": "0:00:00.179652"
+    },
+    {
+      "name": "crm.client.client_id.duplicate_count",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": "client_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT COUNT(*) AS frequency\n    FROM client\n    WHERE client_id IS NOT NULL\n    GROUP BY client_id)\nSELECT COUNT(*)\nFROM frequencies\nWHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.013690"
+    },
+    {
+      "name": "crm.client.client_id.duplicate_count.failing_sql",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": "client_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT client_id\n    FROM client\n    WHERE client_id IS NOT NULL\n    GROUP BY client_id\n    HAVING COUNT(*) > 1)\nSELECT main.*\nFROM client main\nJOIN frequencies ON main.client_id = frequencies.client_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.client.client_id.duplicate_count.passing_sql",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": "client_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT client_id\n    FROM client\n    WHERE client_id IS NOT NULL\n    GROUP BY client_id\n    HAVING COUNT(*) <= 1)\nSELECT main.*\nFROM client main\nJOIN frequencies ON main.client_id = frequencies.client_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.client.client_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": "client_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT client_id, COUNT(*) AS frequency\n    FROM client\n    WHERE client_id IS NOT NULL\n    GROUP BY client_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.client.duplicate_count[client_id].failed_rows.aggregated",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": null,
+      "sql": "\nWITH frequencies AS (\n    SELECT client_id, COUNT(*) AS frequency\n    FROM client\n    WHERE client_id IS NOT NULL\n    GROUP BY client_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.014625"
+    },
+    {
+      "name": "crm.contrat.aggregation[0]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT \n  COUNT(CASE WHEN date_debut IS NULL OR date_fin IS NULL OR date_fin <= date_debut THEN 1 END),\n  COUNT(CASE WHEN contrat_id IS NULL THEN 1 END),\n  COUNT(CASE WHEN duree_garantie_mois IS NULL THEN 1 END),\n  COUNT(CASE WHEN NOT (duree_garantie_mois IS NULL) AND NOT (duree_garantie_mois IN (12,24,36,60)) THEN 1 END) \nFROM contrat",
+      "exception": null,
+      "duration": "0:00:00.065785"
+    },
+    {
+      "name": "crm.duree_garantie_mois.failed_rows[invalid_count]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "duree_garantie_mois",
+      "sql": "SELECT * FROM contrat \n WHERE NOT (duree_garantie_mois IS NULL) AND NOT (duree_garantie_mois IN (12,24,36,60)) \n LIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.008584"
+    },
+    {
+      "name": "crm.duree_garantie_mois.failed_rows[invalid_count].failing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "duree_garantie_mois",
+      "sql": "SELECT * FROM contrat \n WHERE NOT (duree_garantie_mois IS NULL) AND NOT (duree_garantie_mois IN (12,24,36,60))",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.duree_garantie_mois.failed_rows[invalid_count].passing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "duree_garantie_mois",
+      "sql": "SELECT * FROM contrat \n WHERE NOT (duree_garantie_mois IS NULL) AND duree_garantie_mois IN (12,24,36,60)",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.contrat.contrat_id.duplicate_count",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "contrat_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT COUNT(*) AS frequency\n    FROM contrat\n    WHERE contrat_id IS NOT NULL\n    GROUP BY contrat_id)\nSELECT COUNT(*)\nFROM frequencies\nWHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.011254"
+    },
+    {
+      "name": "crm.contrat.contrat_id.duplicate_count.failing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "contrat_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT contrat_id\n    FROM contrat\n    WHERE contrat_id IS NOT NULL\n    GROUP BY contrat_id\n    HAVING COUNT(*) > 1)\nSELECT main.*\nFROM contrat main\nJOIN frequencies ON main.contrat_id = frequencies.contrat_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.contrat.contrat_id.duplicate_count.passing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "contrat_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT contrat_id\n    FROM contrat\n    WHERE contrat_id IS NOT NULL\n    GROUP BY contrat_id\n    HAVING COUNT(*) <= 1)\nSELECT main.*\nFROM contrat main\nJOIN frequencies ON main.contrat_id = frequencies.contrat_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.contrat.contrat_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "contrat_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT contrat_id, COUNT(*) AS frequency\n    FROM contrat\n    WHERE contrat_id IS NOT NULL\n    GROUP BY contrat_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.contrat.duplicate_count[contrat_id].failed_rows.aggregated",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nWITH frequencies AS (\n    SELECT contrat_id, COUNT(*) AS frequency\n    FROM contrat\n    WHERE contrat_id IS NOT NULL\n    GROUP BY contrat_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.013671"
+    },
+    {
+      "name": "crm.sinistre.aggregation[0]",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT \n  COUNT(CASE WHEN sinistre_id IS NULL THEN 1 END),\n  COUNT(CASE WHEN cp_sinistre IS NULL THEN 1 END),\n  COUNT(CASE WHEN NOT (cp_sinistre IS NULL) AND NOT (cp_sinistre RLIKE '^[0-9]{5}$') THEN 1 END),\n  COUNT(CASE WHEN adresse_sinistre IS NULL THEN 1 END) \nFROM sinistre",
+      "exception": null,
+      "duration": "0:00:00.108732"
+    },
+    {
+      "name": "crm.sinistre.sinistre_id.duplicate_count",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": "sinistre_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT COUNT(*) AS frequency\n    FROM sinistre\n    WHERE sinistre_id IS NOT NULL\n    GROUP BY sinistre_id)\nSELECT COUNT(*)\nFROM frequencies\nWHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.012527"
+    },
+    {
+      "name": "crm.sinistre.sinistre_id.duplicate_count.failing_sql",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": "sinistre_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT sinistre_id\n    FROM sinistre\n    WHERE sinistre_id IS NOT NULL\n    GROUP BY sinistre_id\n    HAVING COUNT(*) > 1)\nSELECT main.*\nFROM sinistre main\nJOIN frequencies ON main.sinistre_id = frequencies.sinistre_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.sinistre.sinistre_id.duplicate_count.passing_sql",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": "sinistre_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT sinistre_id\n    FROM sinistre\n    WHERE sinistre_id IS NOT NULL\n    GROUP BY sinistre_id\n    HAVING COUNT(*) <= 1)\nSELECT main.*\nFROM sinistre main\nJOIN frequencies ON main.sinistre_id = frequencies.sinistre_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.sinistre.sinistre_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": "sinistre_id",
+      "sql": "\nWITH frequencies AS (\n    SELECT sinistre_id, COUNT(*) AS frequency\n    FROM sinistre\n    WHERE sinistre_id IS NOT NULL\n    GROUP BY sinistre_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.sinistre.duplicate_count[sinistre_id].failed_rows.aggregated",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": null,
+      "sql": "\nWITH frequencies AS (\n    SELECT sinistre_id, COUNT(*) AS frequency\n    FROM sinistre\n    WHERE sinistre_id IS NOT NULL\n    GROUP BY sinistre_id)\nSELECT *\nFROM frequencies\nWHERE frequency > 1\nORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.012383"
+    },
+    {
+      "name": "crm.failed_rows[failed rows]",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT client_id\nFROM client\nWHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))\n        WHEN 'prosp.' THEN 'prospect'\n        WHEN 'assuré' THEN 'assure'\n        ELSE LOWER(TRIM(type_personne))\n      END NOT IN ('prospect', 'souscripteur', 'assure')\n",
+      "exception": null,
+      "duration": "0:00:00.026559"
+    },
+    {
+      "name": "crm.user_defined_query[rq003_taux_telephone]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN telephone IS NOT NULL AND TRIM(telephone) <> '' THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM client\nWHERE LOWER(TRIM(type_personne)) = 'souscripteur'",
+      "exception": null,
+      "duration": "0:00:00.021623"
+    },
+    {
+      "name": "crm.user_defined_query[rq005_taux_cp_fr]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN cp REGEXP '^[0-9]{5}$' THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM client\nWHERE pays = 'FR'",
+      "exception": null,
+      "duration": "0:00:00.025694"
+    },
+    {
+      "name": "crm.failed_rows[failed rows]",
+      "dataSource": "crm",
+      "table": "client",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT c.client_id\nFROM client c\nWHERE c.pays IS NULL\n   OR NOT EXISTS (\n    SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays\n  )\n",
+      "exception": null,
+      "duration": "0:00:00.022162"
+    },
+    {
+      "name": "crm.user_defined_query[rq015_prospects_avec_contrat]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT COUNT(DISTINCT c.client_id) AS nb\nFROM client c\nWHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')\n  AND EXISTS (\n    SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id\n  )",
+      "exception": null,
+      "duration": "0:00:00.111250"
+    },
+    {
+      "name": "crm.user_defined_query[rq016_taux_souscripteurs_avec_contrat]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN EXISTS (\n           SELECT 1 FROM contrat k WHERE k.souscripteur_id = c.client_id\n         ) THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM client c\nWHERE LOWER(TRIM(c.type_personne)) = 'souscripteur'",
+      "exception": null,
+      "duration": "0:00:00.084149"
+    },
+    {
+      "name": "crm.reference[code_type]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT COUNT(*)\n    FROM contrat  SOURCE\n    LEFT JOIN type_contrat TARGET on SOURCE.code_type = TARGET.code_type\nWHERE (SOURCE.code_type IS NOT NULL AND TARGET.code_type IS  NULL)",
+      "exception": null,
+      "duration": "0:00:00.043513"
+    },
+    {
+      "name": "crm.reference[code_type].failing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN type_contrat TARGET on SOURCE.code_type = TARGET.code_type\nWHERE (SOURCE.code_type IS NOT NULL AND TARGET.code_type IS  NULL)",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.reference[code_type].passing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN type_contrat TARGET on SOURCE.code_type = TARGET.code_type\nWHERE (SOURCE.code_type IS NOT NULL AND TARGET.code_type IS NOT NULL)",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.code_type.failed_rows[reference]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "code_type",
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN type_contrat TARGET on SOURCE.code_type = TARGET.code_type\nWHERE (SOURCE.code_type IS NOT NULL AND TARGET.code_type IS  NULL)\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.029350"
+    },
+    {
+      "name": "crm.reference[souscripteur_id]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT COUNT(*)\n    FROM contrat  SOURCE\n    LEFT JOIN client TARGET on SOURCE.souscripteur_id = TARGET.client_id\nWHERE (SOURCE.souscripteur_id IS NOT NULL AND TARGET.client_id IS  NULL)",
+      "exception": null,
+      "duration": "0:00:00.061684"
+    },
+    {
+      "name": "crm.reference[souscripteur_id].failing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN client TARGET on SOURCE.souscripteur_id = TARGET.client_id\nWHERE (SOURCE.souscripteur_id IS NOT NULL AND TARGET.client_id IS  NULL)",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.reference[souscripteur_id].passing_sql",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN client TARGET on SOURCE.souscripteur_id = TARGET.client_id\nWHERE (SOURCE.souscripteur_id IS NOT NULL AND TARGET.client_id IS NOT NULL)",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "crm.souscripteur_id.failed_rows[reference]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": "souscripteur_id",
+      "sql": "\nSELECT SOURCE.*\n    FROM contrat  SOURCE\n    LEFT JOIN client TARGET on SOURCE.souscripteur_id = TARGET.client_id\nWHERE (SOURCE.souscripteur_id IS NOT NULL AND TARGET.client_id IS  NULL)\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.058674"
+    },
+    {
+      "name": "crm.user_defined_query[rq013_assures_orphelins_apres_nullif]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT COUNT(*) AS nb\nFROM contrat c\nWHERE NULLIF(c.assure_id, '0') IS NOT NULL\n  AND NOT EXISTS (\n    SELECT 1 FROM client k\n    WHERE k.client_id = NULLIF(c.assure_id, '0')\n  )",
+      "exception": null,
+      "duration": "0:00:00.103942"
+    },
+    {
+      "name": "crm.user_defined_query[rq018_ecart_directions]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart\nFROM (\n  SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs\n  FROM contrat c\n  WHERE c.date_debut <= '2026-10-01'\n    AND c.date_fin >= '2026-10-01'\n    AND c.date_derniere_cotisation >= DATE_SUB('2026-10-01', INTERVAL 3 MONTH)\n  UNION ALL\n  SELECT COUNT(DISTINCT c.souscripteur_id)\n  FROM contrat c\n  WHERE c.date_debut <= '2026-10-01'\n    AND c.date_fin >= '2026-10-01'\n    AND c.date_derniere_cotisation >= DATE_SUB('2026-10-01', INTERVAL 3 MONTH)\n  UNION ALL\n  SELECT COUNT(DISTINCT c.souscripteur_id)\n  FROM contrat c\n  WHERE c.date_debut <= '2026-10-01'\n    AND c.date_fin >= '2026-10-01'\n    AND c.date_derniere_cotisation >= DATE_SUB('2026-10-01', INTERVAL 3 MONTH)\n) directions",
+      "exception": null,
+      "duration": "0:00:00.073470"
+    },
+    {
+      "name": "crm.failed_rows[failed rows]",
+      "dataSource": "crm",
+      "table": "sinistre",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT s.sinistre_id\nFROM sinistre s\nLEFT JOIN contrat c ON c.contrat_id = s.contrat_id\nWHERE c.contrat_id IS NULL\n   OR s.date_survenance IS NULL\n   OR c.date_debut IS NULL\n   OR c.date_fin IS NULL\n   OR s.date_survenance < c.date_debut\n   OR s.date_survenance > c.date_fin\n",
+      "exception": null,
+      "duration": "0:00:00.106234"
+    },
+    {
+      "name": "crm.user_defined_query[taux_erreur_adresse]",
+      "dataSource": "crm",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(b.id_ban IS NULL) / COUNT(*) AS taux_erreur\nFROM sinistre s\nLEFT JOIN silver.ref_ban b\n       ON CONCAT(b.numero, ' ', b.voie) = s.adresse_sinistre\n      AND b.code_postal = s.cp_sinistre\n      AND b.commune = s.ville_sinistre",
+      "exception": null,
+      "duration": "0:00:02.380090"
+    },
+    {
+      "name": "crm.user_defined_failed_rows_expression_query[failed rows]",
+      "dataSource": "crm",
+      "table": "contrat",
+      "partition": null,
+      "column": null,
+      "sql": "SELECT * \nFROM contrat \nWHERE (date_debut IS NULL OR date_fin IS NULL OR date_fin <= date_debut)",
+      "exception": null,
+      "duration": "0:00:00.020140"
+    }
+  ],
+  "automatedMonitoringChecks": [],
+  "profiling": [],
+  "metadata": [],
+  "logs": [
+    {
+      "level": "info",
+      "message": "Soda Core 3.3.5",
+      "timestamp": "2026-11-15T14:45:35+00:00",
+      "index": 1
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:35+00:00",
+      "index": 2
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:35+00:00",
+      "index": 3
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:35+00:00",
+      "index": 4
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:35+00:00",
+      "index": 5
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:36+00:00",
+      "index": 6
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:36+00:00",
+      "index": 7
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 8
+    },
+    {
+      "level": "info",
+      "message": "Scan summary:",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 9
+    },
+    {
+      "level": "info",
+      "message": "13/24 checks PASSED: ",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 10
+    },
+    {
+      "level": "info",
+      "message": "    client in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 11
+    },
+    {
+      "level": "info",
+      "message": "      RQ-005 | CRM | taux de codes postaux francais valides [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 12
+    },
+    {
+      "level": "info",
+      "message": "      RQ-016 | CRM | taux de souscripteurs avec contrat [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 13
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | client_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 14
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | client_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 15
+    },
+    {
+      "level": "info",
+      "message": "    contrat in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 16
+    },
+    {
+      "level": "info",
+      "message": "      RQ-018 | CRM | ecart nul entre les trois directions [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 17
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | contrat_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 18
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | contrat_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 19
+    },
+    {
+      "level": "info",
+      "message": "      RQ-010 | CRM | durée de garantie renseignée [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 20
+    },
+    {
+      "level": "info",
+      "message": "    sinistre in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 21
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | sinistre_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 22
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | CRM | sinistre_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 23
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | CRM | code postal de sinistre renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 24
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | CRM | code postal de sinistre sur 5 chiffres [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 25
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | CRM | adresse de sinistre renseignée [PASSED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 26
+    },
+    {
+      "level": "info",
+      "message": "1/24 checks WARNED: ",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 27
+    },
+    {
+      "level": "info",
+      "message": "    client in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 28
+    },
+    {
+      "level": "info",
+      "message": "      RQ-003 | CRM | taux de telephones renseignes [WARNED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 29
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 88.00472",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 30
+    },
+    {
+      "level": "info",
+      "message": "10/24 checks FAILED: ",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 31
+    },
+    {
+      "level": "info",
+      "message": "    client in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 32
+    },
+    {
+      "level": "info",
+      "message": "      RQ-009 | CRM | type de personne normalisé autorisé [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 33
+    },
+    {
+      "level": "info",
+      "message": "        value: 60",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 34
+    },
+    {
+      "level": "info",
+      "message": "      RQ-007 | CRM | pays présent dans le référentiel [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 35
+    },
+    {
+      "level": "info",
+      "message": "        value: 3050",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 36
+    },
+    {
+      "level": "info",
+      "message": "      RQ-015 | CRM | prospects normalises avec contrat [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 37
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 487.0",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 38
+    },
+    {
+      "level": "info",
+      "message": "    contrat in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 39
+    },
+    {
+      "level": "info",
+      "message": "      RQ-001 | CRM | date_fin postérieure à date_debut [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 40
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 800",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 41
+    },
+    {
+      "level": "info",
+      "message": "        failed_rows_sample_ref: not-persisted Samples are not sent to Soda Cloud 9x(800/800)",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 42
+    },
+    {
+      "level": "info",
+      "message": "      RQ-011 | CRM | type de contrat connu [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 43
+    },
+    {
+      "level": "info",
+      "message": "        value: 200",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 44
+    },
+    {
+      "level": "info",
+      "message": "      RQ-012 | CRM | souscripteur existant [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 45
+    },
+    {
+      "level": "info",
+      "message": "        value: 1000",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 46
+    },
+    {
+      "level": "info",
+      "message": "      RQ-013 | CRM projection NULLIF | assures existants [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 47
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 300.0",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 48
+    },
+    {
+      "level": "info",
+      "message": "      RQ-010 | CRM | durée de garantie autorisée [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 49
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 600",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 50
+    },
+    {
+      "level": "info",
+      "message": "    sinistre in crm",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 51
+    },
+    {
+      "level": "info",
+      "message": "      RQ-017 | CRM | sinistre dans la période de garantie [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 52
+    },
+    {
+      "level": "info",
+      "message": "        value: 1200",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 53
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | CRM | taux d'adresses non reconnues par la BAN [FAILED]",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 54
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 12.1",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 55
+    },
+    {
+      "level": "info",
+      "message": "Oops! 10 failure. 1 warning. 0 errors. 13 pass.",
+      "timestamp": "2026-11-15T14:45:38+00:00",
+      "index": 56
+    }
+  ],
+  "sourceOwner": "soda-core"
+}

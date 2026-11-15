@@ -1,0 +1,69 @@
+{
+  "tests_unitaires": {
+    "reussis": 39,
+    "nouveaux": 9,
+    "commande": "python -m unittest discover -s tests -v",
+    "environnement_minimal_ci": "39 tests réussis également"
+  },
+  "controle_livrable": "réussi ; 30 stories sans marqueur, aucune conformité humaine déduite",
+  "syntaxe": {
+    "python": 21,
+    "cellules_notebooks": 156
+  },
+  "diff_check": "réussi",
+  "scans": {
+    "bronze": {
+      "hasErrors": false,
+      "code_retour_observe": 2,
+      "resultats": {
+        "pass": 16,
+        "warn": 1,
+        "fail": 10
+      }
+    },
+    "crm": {
+      "hasErrors": false,
+      "code_retour_observe": 2,
+      "resultats": {
+        "pass": 13,
+        "warn": 1,
+        "fail": 10
+      }
+    }
+  },
+  "certifies": {
+    "pipelines/s5_engineering.py": {
+      "sha256": "367e01a4e6161aee22590554c3940d49406722e823ec9c2871c6b07dadf889ef",
+      "identique_baseline": true
+    },
+    "pipelines/s5_mesures.py": {
+      "sha256": "9d169c5e8b402e6f1d83cd4c69b297f3a3b7eca71470ce79bd3f2a4ef94f1b93",
+      "identique_baseline": true
+    },
+    "pipelines/s5_controles.py": {
+      "sha256": "ec8b3aa88d756e137e828d08f61bd8870c8e411280516c81a81a7eb339885abe",
+      "identique_baseline": true
+    },
+    "pipelines/s4_rq019.py": {
+      "sha256": "08cee0b4b19d65ec29fc06f03197c54c2931c03346a0f24d30b646ff2938d9ed",
+      "identique_baseline": true
+    },
+    "sql/S5_decision.sql": {
+      "sha256": "405b35a99bb956354206f8055a3443574237bd15a8453203b30fb3b498fa85ad",
+      "identique_baseline": true
+    }
+  },
+  "publication": "aucune reconstruction ni publication par cet agent",
+  "limites": "Exception de rotation à valider par le professeur ; répétition et transmission au professeur non attestées ; jalons historiques manquants non recréés. Rendu courant LibreOffice, aucun nouveau rendu natif PowerPoint revendiqué.",
+  "tests_base": {
+    "controles_purs": 11,
+    "publication": 38,
+    "controles_transactionnels": 3,
+    "resolution_rq019": 22,
+    "tous_passes": true,
+    "rapport": "verification_globale/tests-integration.json"
+  },
+  "total_tests_unitaires_et_base": 113,
+  "rendu_supports": "supports.json",
+  "notebook_s3": "Rejoué sur copie après les corrections finales des checks ; sorties et empreintes dans notebook_s3.json"
+}

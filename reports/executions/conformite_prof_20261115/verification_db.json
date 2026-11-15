@@ -1,0 +1,33 @@
+{
+  "nominal_us14_clients_actifs": 38049,
+  "rq005_bronze_fr_exact": {
+    "population": 95437,
+    "echecs": 1456,
+    "conformite_pct": 98.47
+  },
+  "certificat_export_exact": true,
+  "isolation": {
+    "rq001_date_invalide_rejetee": [
+      "K_INVALIDE"
+    ],
+    "rq015_prospect_contrat_autre_lot": 0,
+    "rq016_taux_avec_contrat_autre_lot": 0,
+    "rq011_rejetes_avant_reference_meme_lot": [
+      "K"
+    ],
+    "rq011_rejetes_apres_reference_meme_lot": [],
+    "rq017_identifiants_rejetes": [
+      "S_APRES",
+      "S_AUTRE_LOT",
+      "S_AVANT",
+      "S_INVALIDE"
+    ],
+    "rq017_identifiant_meme_lot_valide": "S_VALIDE",
+    "rq012_reference_autre_lot_refusee": true,
+    "rq013_reference_autre_lot_refusee": true,
+    "us14_avant_ajout_autre_lot": 1,
+    "us14_apres_ajout_autre_lot": 1,
+    "us14_lot_absent": 0
+  },
+  "schema_synthetique_nettoye": "test_conformite_02550313b7cc"
+}

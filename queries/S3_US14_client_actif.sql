@@ -1,10 +1,15 @@
--- RQ-018 — client actif selon la decision Data Owner D-05/D-06.
--- Adapter cette date a la date du lot, puis executer le SELECT pour chaque direction.
-SET @date_reference = DATE('2026-10-01');
+-- US-14 / CD-001 ; Bronze immuable, un lot et une date explicites.
+-- Trois directions appliquent cette même définition (D-05/D-06).
+SET @batch_id = 'L-2026-10-01';
+SET @date_reference = '2026-10-01';
 
 SELECT COUNT(DISTINCT c.souscripteur_id) AS clients_actifs
-FROM crm.contrat AS c
-WHERE c.souscripteur_id IS NOT NULL
-  AND c.date_debut <= @date_reference
-  AND c.date_fin >= @date_reference
-  AND c.date_derniere_cotisation >= DATE_SUB(@date_reference, INTERVAL 3 MONTH);
+FROM bronze.crm_contrat c
+WHERE c._batch_id = @batch_id
+  AND c.souscripteur_id IS NOT NULL
+  AND STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE(@date_reference, '%Y-%m-%d')
+  AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE(@date_reference, '%Y-%m-%d')
+  AND c.date_derniere_cotisation IS NOT NULL
+  AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(
+      STR_TO_DATE(@date_reference, '%Y-%m-%d'), INTERVAL 3 MONTH
+  );

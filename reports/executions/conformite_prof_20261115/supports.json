@@ -1,0 +1,16 @@
+{
+  "fichier": "livrables/Livrable_Groupe_TD_AssurConnect.pptx",
+  "sha256_avant": "9132793c911b2b7236d68b9034c87d0e8a15247dbffc1439d68ad4e4ba5e0914",
+  "sha256_apres": "704326e812f4b69a76a0d5aea1c9228e50a8beaea10d1fc77b18f24db7fe525a",
+  "core_xml_octets_identiques": true,
+  "diapositives": 51,
+  "rendu_visuel_verifie": true,
+  "methode": "LibreOffice Impress headless, export PDF de 51 pages ; diapositives modifiées 4/21/50 inspectées",
+  "blocs_textes_modifies_retrouves": 27,
+  "limite": "PowerPoint COM refuse également le support oral inchangé (0x80048240) ; contrôle courant sous LibreOffice, aucun nouveau rendu natif PowerPoint revendiqué. Rendus PowerPoint précédents conservés comme historiques.",
+  "rendus": [
+    "reports/executions/conformite_prof_20261115/rendus/groupe-diapo-21.png",
+    "reports/executions/conformite_prof_20261115/rendus/groupe-diapo-4.png",
+    "reports/executions/conformite_prof_20261115/rendus/groupe-diapo-50.png"
+  ]
+}

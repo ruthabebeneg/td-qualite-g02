@@ -1,0 +1,23 @@
+{
+  "execution_sur_copie": true,
+  "erreurs": 0,
+  "lignes_metier_affichees": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "total": 20,
+  "cellules_concernees": [
+    8,
+    10,
+    12
+  ],
+  "execution_finale_apres_correctifs_dates": true,
+  "checks_sha256": {
+    "soda/checks/bronze_contrat_checks.yml": "0c075c685bb1648902a2aece189e54855047a0e9910d97829b83279ecb68da82",
+    "soda/checks/bronze_client_checks.yml": "08ca51a58bb21ebc265fdb34f17a434c8d355a9e2f365f7f13d4c59789450810",
+    "soda/checks/bronze_sinistre_checks.yml": "0697105e947f59fdad3c732b1130fc637b525de8baffb50cb56b920c4fb71f88"
+  },
+  "notebook_sha256": "526f2beb8aad0cd21219d7ef077241016d2b33b9281b443a56c520f242ff3724"
+}

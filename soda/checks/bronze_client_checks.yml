@@ -1,0 +1,75 @@
+# Bronze : lot obligatoire ; diagnostic distinct du CRM, données inchangées.
+filter crm_client [lot]:
+  where: _batch_id = '${BATCH_ID}'
+
+checks for crm_client [lot]:
+  - row_count > 0:
+      name: Bronze | client | lot présent
+  - duplicate_count(client_id) = 0:
+      name: RQ-020 | Bronze lot ${BATCH_ID} | client_id sans doublon
+  - missing_count(client_id) = 0:
+      name: RQ-020 | Bronze lot ${BATCH_ID} | client_id renseigné
+
+  - failed rows:
+      name: RQ-009 | Bronze lot ${BATCH_ID} | type de personne normalisé autorisé
+      fail query: |
+        SELECT client_id
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') lot_source
+        WHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))
+                WHEN 'prosp.' THEN 'prospect'
+                WHEN 'assuré' THEN 'assure'
+                ELSE LOWER(TRIM(type_personne))
+              END NOT IN ('prospect', 'souscripteur', 'assure')
+
+  - rq003_taux_telephone:
+      name: RQ-003 | Bronze lot ${BATCH_ID} | taux de telephones renseignes
+      rq003_taux_telephone query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN telephone IS NOT NULL AND TRIM(telephone) <> '' THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') lot_source
+        WHERE LOWER(TRIM(type_personne)) = 'souscripteur'
+      warn: when < 98
+
+  - rq005_taux_cp_fr:
+      name: RQ-005 | Bronze lot ${BATCH_ID} | taux de codes postaux francais valides
+      rq005_taux_cp_fr query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN cp REGEXP '^[0-9]{5}$' THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') lot_source
+        WHERE pays = 'FR'
+      warn: when < 98
+
+  - failed rows:
+      name: RQ-007 | Bronze lot ${BATCH_ID} | pays présent dans le référentiel
+      fail query: |
+        SELECT c.client_id
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') c
+        WHERE c.pays IS NULL
+           OR NOT EXISTS (
+            SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays
+          )
+
+  - rq015_prospects_avec_contrat:
+      name: RQ-015 | Bronze lot ${BATCH_ID} | prospects normalises avec contrat
+      rq015_prospects_avec_contrat query: |
+        SELECT COUNT(DISTINCT c.client_id) AS nb
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') c
+        WHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')
+          AND EXISTS (
+            SELECT 1 FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') k WHERE k.souscripteur_id = c.client_id
+          )
+      fail: when > 0
+
+  - rq016_taux_souscripteurs_avec_contrat:
+      name: RQ-016 | Bronze lot ${BATCH_ID} | taux de souscripteurs avec contrat
+      rq016_taux_souscripteurs_avec_contrat query: |
+        SELECT 100.0 * SUM(
+                 CASE WHEN EXISTS (
+                   SELECT 1 FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') k WHERE k.souscripteur_id = c.client_id
+                 ) THEN 1 ELSE 0 END
+               ) / NULLIF(COUNT(*), 0) AS taux
+        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') c
+        WHERE LOWER(TRIM(c.type_personne)) = 'souscripteur'
+      warn: when < 98

@@ -10,7 +10,7 @@ Trois raisons : **59 contrôles conformes sur 59**, couvrant 18 règles préalab
 
 ## 2. Preuves
 
-Certificat `S5-d7c760617b538e9240c8541a4f7`, GO, empreinte Gold `a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667` ; approbation Ruth, Data Owner, 12/11/2026 : `reports/S5_VALIDATION_DATA_OWNER.json`. Réconciliation après commit : `reports/S5_preuves_finales.json`. RQ-025 est contrôlée après chargement, séparément du certificat préalable.
+Certificat `S5-d7c760617b538e9240c8541a4f7`, GO, empreinte Gold `a62b0b820e96225b76b20fa7aa0f5b3d4b84841a1c7770801e4e7fcb3ddd1667` ; approbation Ruth, Data Owner, 12/11/2026 : `reports/S5_VALIDATION_DATA_OWNER.json`. Ligne SQL complète jointe : `preuves/S5_certificat_ligne_sql.json` (SELECT de contrôle réalisé le 15/11/2026 : Ruth, GO, 59/59, empreinte Gold identique ; export existant conservé octet pour octet, sans nouvelle signature). Réconciliation après commit : `reports/S5_preuves_finales.json`. RQ-025 est contrôlée après chargement, séparément du certificat préalable.
 
 Mesures par règle et couche et courbe : `S5_certificat_publication.md`, `reports/S5_US30_courbe.png`, `reports/S5_export_steward.json`. RQ-003 : 88,00 / 88,05 / 89,26 %, cible 98 % non atteinte. Les règles bloquantes requises du périmètre retenu atteignent 100 % ; cela ne signifie pas que toutes les données reçues sont correctes.
 
@@ -47,3 +47,5 @@ Signature enregistrée : **Ruth, Data Owner, 12/11/2026**, dans le fichier d’a
 Annexes : `00_equipe.md`, `JOURNAL_DECISIONS.md`, `../AVANCEMENT.md`, `S1_bronze_profilage.md`, `S2_regles_great_expectations.md`, `S3_integrite_soda.md`, `S4_silver_gold.md`, `S5_certificat_publication.md`. Version PDF courte : `Dossier_GO_NO_GO_AssurConnect_G02_corrige.pdf`.
 
 Support oral synchronisé : `Soutenance_AssurConnect_G02.pptx`. Répartition et durées proposées à confirmer par le groupe.
+
+Limites pédagogiques et de remise : rotation S4/S5 incomplète, exception à valider par le professeur ; répétition orale non attestée ; jalons historiques manquants non recréés. Références de remise : `main` et `rendu-final` sur le dépôt public. Voir `CONFORMITE_PROFESSEUR.md`.

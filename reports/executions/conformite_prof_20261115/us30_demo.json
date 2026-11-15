@@ -1,0 +1,28 @@
+{
+  "nature": "démonstration pédagogique synthétique exécutée ; pas un historique de production",
+  "source": "4 contrats fictifs en SQLite mémoire ; prédicat RQ-001",
+  "effet_sur_certificat": "aucun",
+  "mesures": [
+    {
+      "etape": "initial",
+      "regle": "RQ-001",
+      "testees": 4,
+      "echecs": 2,
+      "conformite_pct": 50.0
+    },
+    {
+      "etape": "relance_sans_changement",
+      "regle": "RQ-001",
+      "testees": 4,
+      "echecs": 2,
+      "conformite_pct": 50.0
+    },
+    {
+      "etape": "apres_correction_fixture",
+      "regle": "RQ-001",
+      "testees": 4,
+      "echecs": 0,
+      "conformite_pct": 100.0
+    }
+  ]
+}

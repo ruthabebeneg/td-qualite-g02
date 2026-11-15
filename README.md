@@ -70,7 +70,7 @@ Sur un ancien volume où reader ne peut pas lire Bronze, appliquer `sql/migratio
 
 Vérifications : `python3 scripts/controle_livrable.py`, `python3 scripts/verifier_syntaxe.py`, `python -m unittest discover -s tests -v` et `pipelines/s5_controles_tests.run_tests()`. Les tests unitaires nécessitent pandas, SQLAlchemy, RapidFuzz et PyYAML. Les tests d’intégration S4/S5 nécessitent MariaDB et créent uniquement leurs propres schémas `s5_test_*`. Les résultats d’exécution se trouvent dans `reports/AUDIT_validation.json`.
 
-Les indications initiales de dépôt privé concernent le démarrage ; le rappel enseignant final demande un dépôt public et un tag `rendu-final`. La visibilité distante et les tags non présents localement ne sont pas déclarés vérifiés ou poussés. Les corrections sont enregistrées dans un commit local, identifié par le tag local `rendu-final`. La publication distante reste à effectuer après relecture.
+Les indications initiales de dépôt privé concernent le démarrage ; le rappel enseignant final demande un dépôt public et un tag `rendu-final`. La remise finale utilise la branche `main` et le tag `rendu-final` du dépôt public. Vérification des références : `git ls-remote origin refs/heads/main refs/tags/rendu-final refs/tags/rendu-final^{}`. Les jalons historiques absents ne sont pas recréés. La transmission de l’URL au professeur reste à la charge du groupe.
 
 Validation reproductible dans le conteneur :
 
@@ -79,3 +79,9 @@ python scripts/valider_notebooks.py --date-comparaison 2026-11-15
 ```
 
 Ce script est à lancer depuis une copie du dépôt accessible au conteneur (incluant `scripts/`, `notebooks/`, `pipelines/` et les preuves). Il prépare automatiquement l’historique S2 isolé, exécute les six notebooks dans l’ordre, conserve les sorties réussies et nettoie son schéma même en cas d’échec. Une annotation humaine existante dans l’échantillon US-11 provoque un refus de remplacement ; le script ne l’efface pas. Les suites GE valident la colonne calculée `conforme` ; leurs prédicats métier et paramètres restent dans US-10.
+
+### Compléments de conformité professeur — 15/11/2026
+
+Les contrôles Soda Bronze `soda/checks/bronze_*_checks.yml` filtrent toutes les relations par lot ; les fichiers sans préfixe restent le diagnostic CRM. Commandes reproductibles et populations RQ-005 : [rapport de correction](livrables/CONFORMITE_PROFESSEUR.md). US14 autonome : `queries/S3_US14_client_actif.sql` (lot et date explicites). S3 rejoué sur copie : vingt lignes métier au total. Ligne SQL réelle du certificat : `livrables/preuves/S5_certificat_ligne_sql.json` ; démonstration US30 synthétique exécutée séparément du lot certifié.
+
+La rotation S4/S5 reste incomplète et nécessite la validation du professeur. Répétition orale non attestée ; jalons historiques manquants non recréés. Références de remise : `main` et `rendu-final` sur le dépôt public ; aucune transmission au professeur revendiquée.

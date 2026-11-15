@@ -1,0 +1,31 @@
+{
+  "batch_id": "LOT_ABSENT_CONFORMITE",
+  "reference_date": "2026-10-01",
+  "code_retour": 3,
+  "hasErrors": true,
+  "resultats": {
+    "fail": 3,
+    "pass": 20
+  },
+  "presences_lot": [
+    {
+      "name": "Bronze | client | lot présent",
+      "outcome": "fail",
+      "valeur": 0
+    },
+    {
+      "name": "Bronze | contrat | lot présent",
+      "outcome": "fail",
+      "valeur": 0
+    },
+    {
+      "name": "Bronze | sinistre | lot présent",
+      "outcome": "fail",
+      "valeur": 0
+    }
+  ],
+  "interpretation": "Lot absent refusé : trois présences en échec ; quatre métriques de populations vides non calculées, refus technique code3. Les PASS sur ensembles vides ne sont pas une conformité métier.",
+  "controles_non_evalues": 4,
+  "scanStartTimestamp": "2026-11-15T14:55:45+00:00",
+  "scanEndTimestamp": "2026-11-15T14:55:45+00:00"
+}

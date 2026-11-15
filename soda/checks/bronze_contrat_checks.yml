@@ -1,0 +1,74 @@
+# Bronze : lot obligatoire ; diagnostic distinct du CRM, données inchangées.
+filter crm_contrat [lot]:
+  where: _batch_id = '${BATCH_ID}'
+
+checks for crm_contrat [lot]:
+  - row_count > 0:
+      name: Bronze | contrat | lot présent
+  - duplicate_count(contrat_id) = 0:
+      name: RQ-020 | Bronze lot ${BATCH_ID} | contrat_id sans doublon
+  - missing_count(contrat_id) = 0:
+      name: RQ-020 | Bronze lot ${BATCH_ID} | contrat_id renseigné
+
+  - failed rows:
+      name: RQ-001 | Bronze lot ${BATCH_ID} | date_fin postérieure à date_debut
+      fail condition: STR_TO_DATE(date_debut, '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin, '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin, '%Y-%m-%d') <= STR_TO_DATE(date_debut, '%Y-%m-%d')
+
+  - missing_count(duree_garantie_mois) = 0:
+      name: RQ-010 | Bronze lot ${BATCH_ID} | durée de garantie renseignée
+
+  - invalid_count(duree_garantie_mois) = 0:
+      name: RQ-010 | Bronze lot ${BATCH_ID} | durée de garantie autorisée
+      valid values: [12, 24, 36, 60]
+
+  - failed rows:
+      fail query: |
+        SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+        WHERE c.code_type IS NOT NULL AND NOT EXISTS (
+          SELECT 1 FROM (SELECT * FROM bronze.crm_type_contrat WHERE _batch_id = '${BATCH_ID}') r WHERE r.code_type = c.code_type
+        )
+      name: RQ-011 | Bronze lot ${BATCH_ID} | type de contrat connu
+  - failed rows:
+      fail query: |
+        SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+        WHERE c.souscripteur_id IS NOT NULL AND NOT EXISTS (
+          SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') r WHERE r.client_id = c.souscripteur_id
+        )
+      name: RQ-012 | Bronze lot ${BATCH_ID} | souscripteur existant
+
+  - rq013_assures_orphelins_apres_nullif:
+      name: RQ-013 | Bronze lot ${BATCH_ID} projection NULLIF | assures existants
+      rq013_assures_orphelins_apres_nullif query: |
+        SELECT COUNT(*) AS nb
+        FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+        WHERE NULLIF(c.assure_id, '0') IS NOT NULL
+          AND NOT EXISTS (
+            SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') k
+            WHERE k.client_id = NULLIF(c.assure_id, '0')
+          )
+      fail: when > 0
+
+  - rq018_ecart_directions:
+      name: RQ-018 | Bronze lot ${BATCH_ID} | ecart nul entre les trois directions
+      rq018_ecart_directions query: |
+        SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart
+        FROM (
+          SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs
+          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)
+          UNION ALL
+          SELECT COUNT(DISTINCT c.souscripteur_id)
+          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)
+          UNION ALL
+          SELECT COUNT(DISTINCT c.souscripteur_id)
+          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c
+          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')
+            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)
+        ) directions
+      fail: when > 0

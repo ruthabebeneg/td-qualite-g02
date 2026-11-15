@@ -1,0 +1,85 @@
+{
+  "soda_version": "3.3.5",
+  "fichiers_sha256": {
+    "soda/configuration.yml": "3b973e682cac72017096ab03e3772a9ce9c75560e95339fbb81d7c12e0d17ba0",
+    "soda/checks/client_checks.yml": "599a39f3249ab3eea2380f24e87bbd0ace911746042fe84c4368c2808458d754",
+    "soda/checks/contrat_checks.yml": "4853d76722571bf26db560d032c0cf20a44f86d017129fe49f49501b8d1143e4",
+    "soda/checks/sinistre_checks.yml": "15ff2a9f41b1316797879e3c5397165c3cfd4029f960984f3651789cd8e5d403",
+    "soda/checks/bronze_client_checks.yml": "08ca51a58bb21ebc265fdb34f17a434c8d355a9e2f365f7f13d4c59789450810",
+    "soda/checks/bronze_contrat_checks.yml": "0c075c685bb1648902a2aece189e54855047a0e9910d97829b83279ecb68da82",
+    "soda/checks/bronze_sinistre_checks.yml": "0697105e947f59fdad3c732b1130fc637b525de8baffb50cb56b920c4fb71f88"
+  },
+  "scans": {
+    "bronze": {
+      "resultats": "reports/executions/conformite_prof_20261115/soda_bronze.json",
+      "sha256": "b825f71865053513a9ceecdf065828b93aea6b7b2e3176543abcc3b6763130fc",
+      "data_source": "bronze",
+      "configuration": "soda/configuration.yml",
+      "checks": [
+        "soda/checks/bronze_client_checks.yml",
+        "soda/checks/bronze_contrat_checks.yml",
+        "soda/checks/bronze_sinistre_checks.yml"
+      ],
+      "variables": {
+        "REFERENCE_DATE": "2026-10-01",
+        "BATCH_ID": "L-2026-10-01"
+      },
+      "code_retour": 2,
+      "scanStartTimestamp": "2026-11-15T14:55:39+00:00",
+      "scanEndTimestamp": "2026-11-15T14:55:44+00:00"
+    },
+    "bronze_lot_absent": {
+      "resultats": "reports/executions/conformite_prof_20261115/soda_bronze_lot_absent.json",
+      "sha256": "1418f136ce80da20d65d1cca1d0874dc5d7222234558a40fc6fea25d05df7d2e",
+      "data_source": "bronze",
+      "configuration": "soda/configuration.yml",
+      "checks": [
+        "soda/checks/bronze_client_checks.yml",
+        "soda/checks/bronze_contrat_checks.yml",
+        "soda/checks/bronze_sinistre_checks.yml"
+      ],
+      "variables": {
+        "REFERENCE_DATE": "2026-10-01",
+        "BATCH_ID": "LOT_ABSENT_CONFORMITE"
+      },
+      "code_retour": 3,
+      "scanStartTimestamp": "2026-11-15T14:55:45+00:00",
+      "scanEndTimestamp": "2026-11-15T14:55:45+00:00"
+    },
+    "crm": {
+      "resultats": "reports/executions/conformite_prof_20261115/soda_crm.json",
+      "sha256": "4bf8a68cedab23cd651e23a7062a907dc6c3c7b1d531ee7f3a6b71e4920dd548",
+      "data_source": "crm",
+      "configuration": "soda/configuration.yml",
+      "checks": [
+        "soda/checks/client_checks.yml",
+        "soda/checks/contrat_checks.yml",
+        "soda/checks/sinistre_checks.yml"
+      ],
+      "variables": {
+        "REFERENCE_DATE": "2026-10-01"
+      },
+      "code_retour": 2,
+      "scanStartTimestamp": "2026-11-15T14:45:35+00:00",
+      "scanEndTimestamp": "2026-11-15T14:45:38+00:00"
+    }
+  },
+  "referentiels": {
+    "silver.ref_pays": {
+      "lignes": 250,
+      "sha256": "15aaf8ad9cb5906625ac8d5fd8f0677bdc9502355c121c963017c45204eb2f24"
+    },
+    "silver.ref_ban": {
+      "lignes": 22856,
+      "sha256": "47245d7f3d9bb226673b0e59b5886e79c20e969823480562e10c0ecd0b072db2"
+    }
+  },
+  "instantanes": {
+    "avant": "/tmp/audit-global-prof-20261115/instantane_avant.json",
+    "apres": "/tmp/corrections-professeur-20261115/instantane_final.json",
+    "sha256_avant": "5f768d568fcb576fd1e8ceb2067d62c0b99af742c6eb5e3eaeb6b5f4e9203530",
+    "sha256_apres": "5f768d568fcb576fd1e8ceb2067d62c0b99af742c6eb5e3eaeb6b5f4e9203530",
+    "contenus_identiques": true,
+    "copie_nominale_jointe": "reports/executions/conformite_prof_20261115/verification_globale/instantane_nominal.json"
+  }
+}

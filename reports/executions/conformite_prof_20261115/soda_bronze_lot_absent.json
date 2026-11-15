@@ -1,0 +1,1683 @@
+{
+  "definitionName": "Soda Core CLI",
+  "defaultDataSource": "bronze",
+  "dataTimestamp": "2026-11-15T14:55:45+00:00",
+  "scanStartTimestamp": "2026-11-15T14:55:45+00:00",
+  "scanEndTimestamp": "2026-11-15T14:55:45+00:00",
+  "hasErrors": true,
+  "hasWarnings": false,
+  "hasFailures": true,
+  "metrics": [
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-sinistre_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-contrat_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-cp_sinistre-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq005_taux_cp_fr-128e5b2e",
+      "metricName": "rq005_taux_cp_fr",
+      "value": null
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-cp_sinistre-invalid_count-97d6e3d3",
+      "metricName": "invalid_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq013_assures_orphelins_apres_nullif-cf2a9086",
+      "metricName": "rq013_assures_orphelins_apres_nullif",
+      "value": 0.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-adresse_sinistre-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-row_count",
+      "metricName": "row_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq016_taux_souscripteurs_avec_contrat-178e7342",
+      "metricName": "rq016_taux_souscripteurs_avec_contrat",
+      "value": null
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_client-lot-client_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-row_count-59fa8553",
+      "metricName": "row_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-failed rows-2a5b1d3e",
+      "metricName": "failed rows",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_client-lot-row_count",
+      "metricName": "row_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-failed rows-2f89440e",
+      "metricName": "failed rows",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_client-lot-client_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-taux_erreur_adresse-04974c8d",
+      "metricName": "taux_erreur_adresse",
+      "value": null
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq018_ecart_directions-2e558265",
+      "metricName": "rq018_ecart_directions",
+      "value": 0.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-contrat_id-duplicate_count",
+      "metricName": "duplicate_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq003_taux_telephone-1196675c",
+      "metricName": "rq003_taux_telephone",
+      "value": null
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_client-lot-failed rows-2e19ccc0",
+      "metricName": "failed rows",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_sinistre-lot-sinistre_id-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-duree_garantie_mois-invalid_count-92b6282c",
+      "metricName": "invalid_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_client-lot-failed rows-23c46126",
+      "metricName": "failed rows",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-row_count",
+      "metricName": "row_count",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-rq015_prospects_avec_contrat-b5615ee3",
+      "metricName": "rq015_prospects_avec_contrat",
+      "value": 0.0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-failed rows-b6f1b536",
+      "metricName": "failed rows",
+      "value": 0
+    },
+    {
+      "identity": "metric-Soda Core CLI-bronze-crm_contrat-lot-duree_garantie_mois-missing_count",
+      "metricName": "missing_count",
+      "value": 0
+    }
+  ],
+  "checks": [
+    {
+      "identity": "7f654068",
+      "identities": {
+        "v1": "b62c77f8",
+        "v2": "da7657a2",
+        "v3": "7f654068"
+      },
+      "migratedIdentities": null,
+      "name": "Bronze | client | lot présent",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - row_count > 0:\n      name: Bronze | client | lot présent\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 6,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_client-lot-row_count"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "lessThanOrEqual": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "0b1ce1fe",
+      "identities": {
+        "v1": "9c82fa44",
+        "v2": "52d0592d",
+        "v3": "0b1ce1fe"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-009 | Bronze lot LOT_ABSENT_CONFORMITE | type de personne normalisé autorisé",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - failed rows:\n      name: RQ-009 | Bronze lot ${BATCH_ID} | type de personne normalisé autorisé\n      fail query: |\n        SELECT client_id\n        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') lot_source\n        WHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))\n                WHEN 'prosp.' THEN 'prospect'\n                WHEN 'assuré' THEN 'assure'\n                ELSE LOWER(TRIM(type_personne))\n              END NOT IN ('prospect', 'souscripteur', 'assure')\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 13,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_client-lot-failed rows-23c46126"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "client_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 0,
+              "storedRowCount": 0,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "2f83971c",
+      "identities": {
+        "v1": "33b77107",
+        "v2": "e8576249",
+        "v3": "2f83971c"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-007 | Bronze lot LOT_ABSENT_CONFORMITE | pays présent dans le référentiel",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - failed rows:\n      name: RQ-007 | Bronze lot ${BATCH_ID} | pays présent dans le référentiel\n      fail query: |\n        SELECT c.client_id\n        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') c\n        WHERE c.pays IS NULL\n           OR NOT EXISTS (\n            SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays\n          )\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 44,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_client-lot-failed rows-2e19ccc0"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "client_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 0,
+              "storedRowCount": 0,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "a6e731a1",
+      "identities": {
+        "v1": "16477bbd",
+        "v2": "52cdec73",
+        "v3": "a6e731a1"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-015 | Bronze lot LOT_ABSENT_CONFORMITE | prospects normalises avec contrat",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - rq015_prospects_avec_contrat:\n      name: RQ-015 | Bronze lot ${BATCH_ID} | prospects normalises avec contrat\n      rq015_prospects_avec_contrat query: |\n        SELECT COUNT(DISTINCT c.client_id) AS nb\n        FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') c\n        WHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')\n          AND EXISTS (\n            SELECT 1 FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') k WHERE k.souscripteur_id = c.client_id\n          )\n      fail: when > 0\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 54,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-rq015_prospects_avec_contrat-b5615ee3"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "f9ad8074",
+      "identities": {
+        "v1": "a97e3a1b",
+        "v2": "a79a9423",
+        "v3": "f9ad8074"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | client_id sans doublon",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - duplicate_count(client_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | client_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 8,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": "client_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_client-lot-client_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "52a9024f",
+      "identities": {
+        "v1": "0c2dd949",
+        "v2": "812e7944",
+        "v3": "52a9024f"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | client_id renseigné",
+      "type": "generic",
+      "definition": "checks for crm_client [lot]:\n  - missing_count(client_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | client_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_client_checks.yml",
+        "line": 10,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "column": "client_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_client-lot-client_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "cb98ad9c",
+      "identities": {
+        "v1": "0ed9f474",
+        "v2": "9e0d1474",
+        "v3": "cb98ad9c"
+      },
+      "migratedIdentities": null,
+      "name": "Bronze | contrat | lot présent",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - row_count > 0:\n      name: Bronze | contrat | lot présent\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 6,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-row_count"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "lessThanOrEqual": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "5f20da69",
+      "identities": {
+        "v1": "e768e0c0",
+        "v2": "1e3fff68",
+        "v3": "5f20da69"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-001 | Bronze lot LOT_ABSENT_CONFORMITE | date_fin postérieure à date_debut",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - failed rows:\n      name: RQ-001 | Bronze lot ${BATCH_ID} | date_fin postérieure à date_debut\n      fail condition: STR_TO_DATE(date_debut, '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin,\n        '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin, '%Y-%m-%d') <= STR_TO_DATE(date_debut,\n        '%Y-%m-%d')\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 13,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-row_count-59fa8553"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "d448ab0b",
+      "identities": {
+        "v1": "c554e546",
+        "v2": "d8cfbb6d",
+        "v3": "d448ab0b"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-011 | Bronze lot LOT_ABSENT_CONFORMITE | type de contrat connu",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - failed rows:\n      fail query: |\n        SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n        WHERE c.code_type IS NOT NULL AND NOT EXISTS (\n          SELECT 1 FROM (SELECT * FROM bronze.crm_type_contrat WHERE _batch_id = '${BATCH_ID}') r WHERE r.code_type = c.code_type\n        )\n      name: RQ-011 | Bronze lot ${BATCH_ID} | type de contrat connu\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 24,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-failed rows-b6f1b536"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 0,
+              "storedRowCount": 0,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "0ddcee05",
+      "identities": {
+        "v1": "fcec5fbc",
+        "v2": "06ec2df7",
+        "v3": "0ddcee05"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-012 | Bronze lot LOT_ABSENT_CONFORMITE | souscripteur existant",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - failed rows:\n      fail query: |\n        SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n        WHERE c.souscripteur_id IS NOT NULL AND NOT EXISTS (\n          SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') r WHERE r.client_id = c.souscripteur_id\n        )\n      name: RQ-012 | Bronze lot ${BATCH_ID} | souscripteur existant\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 31,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-failed rows-2f89440e"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "contrat_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 0,
+              "storedRowCount": 0,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "31ebb55d",
+      "identities": {
+        "v1": "21f56813",
+        "v2": "39fca308",
+        "v3": "31ebb55d"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-013 | Bronze lot LOT_ABSENT_CONFORMITE projection NULLIF | assures existants",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - rq013_assures_orphelins_apres_nullif:\n      name: RQ-013 | Bronze lot ${BATCH_ID} projection NULLIF | assures existants\n      rq013_assures_orphelins_apres_nullif query: |\n        SELECT COUNT(*) AS nb\n        FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n        WHERE NULLIF(c.assure_id, '0') IS NOT NULL\n          AND NOT EXISTS (\n            SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = '${BATCH_ID}') k\n            WHERE k.client_id = NULLIF(c.assure_id, '0')\n          )\n      fail: when > 0\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 39,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-rq013_assures_orphelins_apres_nullif-cf2a9086"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "b56f3da9",
+      "identities": {
+        "v1": "dbe37bb7",
+        "v2": "fbc292f7",
+        "v3": "b56f3da9"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-018 | Bronze lot LOT_ABSENT_CONFORMITE | ecart nul entre les trois directions",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - rq018_ecart_directions:\n      name: RQ-018 | Bronze lot ${BATCH_ID} | ecart nul entre les trois directions\n      rq018_ecart_directions query: |\n        SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart\n        FROM (\n          SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs\n          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)\n          UNION ALL\n          SELECT COUNT(DISTINCT c.souscripteur_id)\n          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)\n          UNION ALL\n          SELECT COUNT(DISTINCT c.souscripteur_id)\n          FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c\n          WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d')\n            AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('${REFERENCE_DATE}', '%Y-%m-%d'), INTERVAL 3 MONTH)\n        ) directions\n      fail: when > 0\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 51,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-rq018_ecart_directions-2e558265"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0.0,
+        "fail": {
+          "greaterThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "ac3eda6a",
+      "identities": {
+        "v1": "ddc13749",
+        "v2": "7d3c1f18",
+        "v3": "ac3eda6a"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | contrat_id sans doublon",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - duplicate_count(contrat_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | contrat_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 8,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": "contrat_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-contrat_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "fe7fb0e1",
+      "identities": {
+        "v1": "46cea3a0",
+        "v2": "917a1e25",
+        "v3": "fe7fb0e1"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | contrat_id renseigné",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - missing_count(contrat_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | contrat_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 10,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": "contrat_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-contrat_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "33b65a0d",
+      "identities": {
+        "v1": "b1bb3244",
+        "v2": "558392c0",
+        "v3": "33b65a0d"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-010 | Bronze lot LOT_ABSENT_CONFORMITE | durée de garantie renseignée",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - missing_count(duree_garantie_mois) = 0:\n      name: RQ-010 | Bronze lot ${BATCH_ID} | durée de garantie renseignée\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 17,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": "duree_garantie_mois",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-duree_garantie_mois-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "c7152fea",
+      "identities": {
+        "v1": "e495ab2e",
+        "v2": "caa082e2",
+        "v3": "c7152fea"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-010 | Bronze lot LOT_ABSENT_CONFORMITE | durée de garantie autorisée",
+      "type": "generic",
+      "definition": "checks for crm_contrat [lot]:\n  - invalid_count(duree_garantie_mois) = 0:\n      name: RQ-010 | Bronze lot ${BATCH_ID} | durée de garantie autorisée\n      valid values: [12, 24, 36, 60]\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_contrat_checks.yml",
+        "line": 20,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "column": "duree_garantie_mois",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_contrat-lot-duree_garantie_mois-invalid_count-92b6282c"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "877a5cbb",
+      "identities": {
+        "v1": "e914a7a7",
+        "v2": "0133406d",
+        "v3": "877a5cbb"
+      },
+      "migratedIdentities": null,
+      "name": "Bronze | sinistre | lot présent",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - row_count > 0:\n      name: Bronze | sinistre | lot présent\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 8,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-row_count"
+      ],
+      "outcome": "fail",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "lessThanOrEqual": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "c2c1ba84",
+      "identities": {
+        "v1": "cd5c8419",
+        "v2": "f9ec5748",
+        "v3": "c2c1ba84"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-017 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre dans la période de garantie",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - failed rows:\n      name: RQ-017 | Bronze lot ${BATCH_ID} | sinistre dans la période de garantie\n      fail query: |\n        SELECT s.sinistre_id\n        FROM (SELECT * FROM bronze.crm_sinistre WHERE _batch_id = '${BATCH_ID}') s\n        LEFT JOIN (SELECT * FROM bronze.crm_contrat WHERE _batch_id = '${BATCH_ID}') c ON c.contrat_id = s.contrat_id\n        WHERE c.contrat_id IS NULL\n           OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') IS NULL\n           OR STR_TO_DATE(c.date_debut, '%Y-%m-%d') IS NULL\n           OR STR_TO_DATE(c.date_fin, '%Y-%m-%d') IS NULL\n           OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') < STR_TO_DATE(c.date_debut, '%Y-%m-%d')\n           OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') > STR_TO_DATE(c.date_fin, '%Y-%m-%d')\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 24,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": null,
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-failed rows-2a5b1d3e"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [
+          {
+            "type": "file",
+            "title": "Failed Rows",
+            "file": {
+              "columns": [
+                {
+                  "name": "sinistre_id",
+                  "type": "253"
+                }
+              ],
+              "totalRowCount": 0,
+              "storedRowCount": 0,
+              "reference": {
+                "type": "noFile",
+                "message": "Samples are not sent to Soda Cloud",
+                "link": {
+                  "href": null,
+                  "text": null
+                },
+                "fileId": ""
+              }
+            }
+          }
+        ],
+        "value": 0
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "18637af6",
+      "identities": {
+        "v1": "2901ab97",
+        "v2": "8d141126",
+        "v3": "18637af6"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre_id sans doublon",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - duplicate_count(sinistre_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | sinistre_id sans doublon\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 10,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": "sinistre_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-sinistre_id-duplicate_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "11d22093",
+      "identities": {
+        "v1": "67dcb68f",
+        "v2": "e2080d42",
+        "v3": "11d22093"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre_id renseigné",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - missing_count(sinistre_id) = 0:\n      name: RQ-020 | Bronze lot ${BATCH_ID} | sinistre_id renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 12,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": "sinistre_id",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-sinistre_id-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "b839582b",
+      "identities": {
+        "v1": "5934790c",
+        "v2": "3e909f45",
+        "v3": "b839582b"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | code postal de sinistre renseigné",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - missing_count(cp_sinistre) = 0:\n      name: RQ-014 | Bronze lot ${BATCH_ID} | code postal de sinistre renseigné\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 15,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": "cp_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-cp_sinistre-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "af82fc86",
+      "identities": {
+        "v1": "9f70f2b7",
+        "v2": "786323d3",
+        "v3": "af82fc86"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | code postal de sinistre sur 5 chiffres",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - invalid_count(cp_sinistre) = 0:\n      name: RQ-014 | Bronze lot ${BATCH_ID} | code postal de sinistre sur 5 chiffres\n      valid regex: '^[0-9]{5}$'\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 18,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": "cp_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-cp_sinistre-invalid_count-97d6e3d3"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    },
+    {
+      "identity": "bc43eecf",
+      "identities": {
+        "v1": "fb0cc1d2",
+        "v2": "d85d045c",
+        "v3": "bc43eecf"
+      },
+      "migratedIdentities": null,
+      "name": "RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | adresse de sinistre renseignée",
+      "type": "generic",
+      "definition": "checks for crm_sinistre [lot]:\n  - missing_count(adresse_sinistre) = 0:\n      name: RQ-014 | Bronze lot ${BATCH_ID} | adresse de sinistre renseignée\n\n",
+      "resourceAttributes": [],
+      "location": {
+        "filePath": "soda/checks/bronze_sinistre_checks.yml",
+        "line": 21,
+        "col": 5
+      },
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "column": "adresse_sinistre",
+      "metrics": [
+        "metric-Soda Core CLI-bronze-crm_sinistre-lot-adresse_sinistre-missing_count"
+      ],
+      "outcome": "pass",
+      "diagnostics": {
+        "blocks": [],
+        "value": 0,
+        "fail": {
+          "greaterThan": 0.0,
+          "lessThan": 0.0
+        }
+      },
+      "source": "soda-core"
+    }
+  ],
+  "queries": [
+    {
+      "name": "bronze.crm_client[lot].aggregation[0]",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT \n  COUNT(*),\n  COUNT(CASE WHEN client_id IS NULL THEN 1 END) \nFROM crm_client\nWHERE _batch_id = 'LOT_ABSENT_CONFORMITE'",
+      "exception": null,
+      "duration": "0:00:00.000460"
+    },
+    {
+      "name": "bronze.crm_client[lot].client_id.duplicate_count",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": "client_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT COUNT(*) AS frequency\n              FROM crm_client\n              WHERE client_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY client_id)\n          SELECT COUNT(*)\n          FROM frequencies\n          WHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.000411"
+    },
+    {
+      "name": "bronze.crm_client[lot].client_id.duplicate_count.failing_sql",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": "client_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT client_id\n              FROM crm_client\n              WHERE client_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY client_id\n              HAVING COUNT(*) > 1)\n          SELECT main.*\n          FROM crm_client main\n          JOIN frequencies ON main.client_id = frequencies.client_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_client[lot].client_id.duplicate_count.passing_sql",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": "client_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT client_id\n              FROM crm_client\n              WHERE client_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY client_id\n              HAVING COUNT(*) <= 1)\n          SELECT main.*\n          FROM crm_client main\n          JOIN frequencies ON main.client_id = frequencies.client_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_client[lot].client_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": "client_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT client_id, COUNT(*) AS frequency\n              FROM crm_client\n              WHERE client_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY client_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_client[lot].duplicate_count[client_id].failed_rows.aggregated",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": null,
+      "sql": "\n          WITH frequencies AS (\n              SELECT client_id, COUNT(*) AS frequency\n              FROM crm_client\n              WHERE client_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY client_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.000363"
+    },
+    {
+      "name": "bronze.crm_contrat[lot].aggregation[0]",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT \n  COUNT(*),\n  COUNT(CASE WHEN STR_TO_DATE(date_debut, '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin, '%Y-%m-%d') IS NULL OR STR_TO_DATE(date_fin, '%Y-%m-%d') <= STR_TO_DATE(date_debut, '%Y-%m-%d') THEN 1 END),\n  COUNT(CASE WHEN contrat_id IS NULL THEN 1 END),\n  COUNT(CASE WHEN duree_garantie_mois IS NULL THEN 1 END),\n  COUNT(CASE WHEN NOT (duree_garantie_mois IS NULL) AND NOT (duree_garantie_mois IN (12,24,36,60)) THEN 1 END) \nFROM crm_contrat\nWHERE _batch_id = 'LOT_ABSENT_CONFORMITE'",
+      "exception": null,
+      "duration": "0:00:00.000276"
+    },
+    {
+      "name": "bronze.crm_contrat[lot].contrat_id.duplicate_count",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": "contrat_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT COUNT(*) AS frequency\n              FROM crm_contrat\n              WHERE contrat_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY contrat_id)\n          SELECT COUNT(*)\n          FROM frequencies\n          WHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.000248"
+    },
+    {
+      "name": "bronze.crm_contrat[lot].contrat_id.duplicate_count.failing_sql",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": "contrat_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT contrat_id\n              FROM crm_contrat\n              WHERE contrat_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY contrat_id\n              HAVING COUNT(*) > 1)\n          SELECT main.*\n          FROM crm_contrat main\n          JOIN frequencies ON main.contrat_id = frequencies.contrat_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_contrat[lot].contrat_id.duplicate_count.passing_sql",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": "contrat_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT contrat_id\n              FROM crm_contrat\n              WHERE contrat_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY contrat_id\n              HAVING COUNT(*) <= 1)\n          SELECT main.*\n          FROM crm_contrat main\n          JOIN frequencies ON main.contrat_id = frequencies.contrat_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_contrat[lot].contrat_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": "contrat_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT contrat_id, COUNT(*) AS frequency\n              FROM crm_contrat\n              WHERE contrat_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY contrat_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_contrat[lot].duplicate_count[contrat_id].failed_rows.aggregated",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": null,
+      "sql": "\n          WITH frequencies AS (\n              SELECT contrat_id, COUNT(*) AS frequency\n              FROM crm_contrat\n              WHERE contrat_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY contrat_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.000237"
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].aggregation[0]",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT \n  COUNT(*),\n  COUNT(CASE WHEN sinistre_id IS NULL THEN 1 END),\n  COUNT(CASE WHEN cp_sinistre IS NULL THEN 1 END),\n  COUNT(CASE WHEN NOT (cp_sinistre IS NULL) AND NOT (cp_sinistre RLIKE '^[0-9]{5}$') THEN 1 END),\n  COUNT(CASE WHEN adresse_sinistre IS NULL THEN 1 END) \nFROM crm_sinistre\nWHERE _batch_id = 'LOT_ABSENT_CONFORMITE'",
+      "exception": null,
+      "duration": "0:00:00.000433"
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].sinistre_id.duplicate_count",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": "sinistre_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT COUNT(*) AS frequency\n              FROM crm_sinistre\n              WHERE sinistre_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY sinistre_id)\n          SELECT COUNT(*)\n          FROM frequencies\n          WHERE frequency > 1",
+      "exception": null,
+      "duration": "0:00:00.000348"
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].sinistre_id.duplicate_count.failing_sql",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": "sinistre_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT sinistre_id\n              FROM crm_sinistre\n              WHERE sinistre_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY sinistre_id\n              HAVING COUNT(*) > 1)\n          SELECT main.*\n          FROM crm_sinistre main\n          JOIN frequencies ON main.sinistre_id = frequencies.sinistre_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].sinistre_id.duplicate_count.passing_sql",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": "sinistre_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT sinistre_id\n              FROM crm_sinistre\n              WHERE sinistre_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY sinistre_id\n              HAVING COUNT(*) <= 1)\n          SELECT main.*\n          FROM crm_sinistre main\n          JOIN frequencies ON main.sinistre_id = frequencies.sinistre_id\n",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].sinistre_id.duplicate_count.failing_rows_sql_aggregated",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": "sinistre_id",
+      "sql": "\n          WITH frequencies AS (\n              SELECT sinistre_id, COUNT(*) AS frequency\n              FROM crm_sinistre\n              WHERE sinistre_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY sinistre_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": null
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].duplicate_count[sinistre_id].failed_rows.aggregated",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": null,
+      "sql": "\n          WITH frequencies AS (\n              SELECT sinistre_id, COUNT(*) AS frequency\n              FROM crm_sinistre\n              WHERE sinistre_id IS NOT NULL \nAND _batch_id = 'LOT_ABSENT_CONFORMITE'\n              GROUP BY sinistre_id)\n          SELECT *\n          FROM frequencies\n          WHERE frequency > 1\n          ORDER BY frequency DESC\nLIMIT 100",
+      "exception": null,
+      "duration": "0:00:00.000273"
+    },
+    {
+      "name": "bronze.crm_client[lot].failed_rows[failed rows]",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT client_id\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') lot_source\nWHERE type_personne IS NULL OR CASE LOWER(TRIM(type_personne))\n        WHEN 'prosp.' THEN 'prospect'\n        WHEN 'assuré' THEN 'assure'\n        ELSE LOWER(TRIM(type_personne))\n      END NOT IN ('prospect', 'souscripteur', 'assure')",
+      "exception": null,
+      "duration": "0:00:00.005598"
+    },
+    {
+      "name": "bronze.user_defined_query[rq003_taux_telephone]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN telephone IS NOT NULL AND TRIM(telephone) <> '' THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') lot_source\nWHERE LOWER(TRIM(type_personne)) = 'souscripteur'",
+      "exception": null,
+      "duration": "0:00:00.000296"
+    },
+    {
+      "name": "bronze.user_defined_query[rq005_taux_cp_fr]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN cp REGEXP '^[0-9]{5}$' THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') lot_source\nWHERE pays = 'FR'",
+      "exception": null,
+      "duration": "0:00:00.000230"
+    },
+    {
+      "name": "bronze.crm_client[lot].failed_rows[failed rows]",
+      "dataSource": "bronze",
+      "table": "crm_client",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT c.client_id\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE c.pays IS NULL\n   OR NOT EXISTS (\n    SELECT 1 FROM silver.ref_pays p WHERE p.code_pays = c.pays\n  )",
+      "exception": null,
+      "duration": "0:00:00.002057"
+    },
+    {
+      "name": "bronze.user_defined_query[rq015_prospects_avec_contrat]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT COUNT(DISTINCT c.client_id) AS nb\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE LOWER(TRIM(c.type_personne)) IN ('prospect', 'prosp.')\n  AND EXISTS (\n    SELECT 1 FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') k WHERE k.souscripteur_id = c.client_id\n  )",
+      "exception": null,
+      "duration": "0:00:00.000390"
+    },
+    {
+      "name": "bronze.user_defined_query[rq016_taux_souscripteurs_avec_contrat]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(\n         CASE WHEN EXISTS (\n           SELECT 1 FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') k WHERE k.souscripteur_id = c.client_id\n         ) THEN 1 ELSE 0 END\n       ) / NULLIF(COUNT(*), 0) AS taux\nFROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE LOWER(TRIM(c.type_personne)) = 'souscripteur'",
+      "exception": null,
+      "duration": "0:00:00.000321"
+    },
+    {
+      "name": "bronze.crm_contrat[lot].failed_rows[failed rows]",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE c.code_type IS NOT NULL AND NOT EXISTS (\n  SELECT 1 FROM (SELECT * FROM bronze.crm_type_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') r WHERE r.code_type = c.code_type\n)",
+      "exception": null,
+      "duration": "0:00:00.002519"
+    },
+    {
+      "name": "bronze.crm_contrat[lot].failed_rows[failed rows]",
+      "dataSource": "bronze",
+      "table": "crm_contrat",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT c.contrat_id FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE c.souscripteur_id IS NOT NULL AND NOT EXISTS (\n  SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') r WHERE r.client_id = c.souscripteur_id\n)",
+      "exception": null,
+      "duration": "0:00:00.002134"
+    },
+    {
+      "name": "bronze.user_defined_query[rq013_assures_orphelins_apres_nullif]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT COUNT(*) AS nb\nFROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\nWHERE NULLIF(c.assure_id, '0') IS NOT NULL\n  AND NOT EXISTS (\n    SELECT 1 FROM (SELECT * FROM bronze.crm_client WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') k\n    WHERE k.client_id = NULLIF(c.assure_id, '0')\n  )",
+      "exception": null,
+      "duration": "0:00:00.000524"
+    },
+    {
+      "name": "bronze.user_defined_query[rq018_ecart_directions]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT MAX(nb_actifs) - MIN(nb_actifs) AS ecart\nFROM (\n  SELECT COUNT(DISTINCT c.souscripteur_id) AS nb_actifs\n  FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\n  WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('2026-10-01', '%Y-%m-%d'), INTERVAL 3 MONTH)\n  UNION ALL\n  SELECT COUNT(DISTINCT c.souscripteur_id)\n  FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\n  WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('2026-10-01', '%Y-%m-%d'), INTERVAL 3 MONTH)\n  UNION ALL\n  SELECT COUNT(DISTINCT c.souscripteur_id)\n  FROM (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c\n  WHERE STR_TO_DATE(c.date_debut, '%Y-%m-%d') <= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_fin, '%Y-%m-%d') >= STR_TO_DATE('2026-10-01', '%Y-%m-%d')\n    AND STR_TO_DATE(c.date_derniere_cotisation, '%Y-%m-%d') >= DATE_SUB(STR_TO_DATE('2026-10-01', '%Y-%m-%d'), INTERVAL 3 MONTH)\n) directions",
+      "exception": null,
+      "duration": "0:00:00.000439"
+    },
+    {
+      "name": "bronze.crm_sinistre[lot].failed_rows[failed rows]",
+      "dataSource": "bronze",
+      "table": "crm_sinistre",
+      "partition": "lot",
+      "column": null,
+      "sql": "SELECT s.sinistre_id\nFROM (SELECT * FROM bronze.crm_sinistre WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') s\nLEFT JOIN (SELECT * FROM bronze.crm_contrat WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') c ON c.contrat_id = s.contrat_id\nWHERE c.contrat_id IS NULL\n   OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') IS NULL\n   OR STR_TO_DATE(c.date_debut, '%Y-%m-%d') IS NULL\n   OR STR_TO_DATE(c.date_fin, '%Y-%m-%d') IS NULL\n   OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') < STR_TO_DATE(c.date_debut, '%Y-%m-%d')\n   OR STR_TO_DATE(s.date_survenance, '%Y-%m-%d') > STR_TO_DATE(c.date_fin, '%Y-%m-%d')",
+      "exception": null,
+      "duration": "0:00:00.004510"
+    },
+    {
+      "name": "bronze.user_defined_query[taux_erreur_adresse]",
+      "dataSource": "bronze",
+      "table": null,
+      "partition": null,
+      "column": null,
+      "sql": "SELECT 100.0 * SUM(b.id_ban IS NULL) / COUNT(*) AS taux_erreur\nFROM (SELECT * FROM bronze.crm_sinistre WHERE _batch_id = 'LOT_ABSENT_CONFORMITE') s\nLEFT JOIN silver.ref_ban b\n       ON CONCAT(b.numero, ' ', b.voie) = s.adresse_sinistre\n      AND b.code_postal = s.cp_sinistre\n      AND b.commune = s.ville_sinistre",
+      "exception": null,
+      "duration": "0:00:00.000591"
+    }
+  ],
+  "automatedMonitoringChecks": [],
+  "profiling": [],
+  "metadata": [],
+  "logs": [
+    {
+      "level": "info",
+      "message": "Soda Core 3.3.5",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 1
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 2
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 3
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 4
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 5
+    },
+    {
+      "level": "info",
+      "message": "Using DefaultSampler",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 6
+    },
+    {
+      "level": "error",
+      "message": "Metrics '\"rq003_taux_telephone\"' were not computed for check 'rq003_taux_telephone'",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 7
+    },
+    {
+      "level": "error",
+      "message": "Metrics '\"rq005_taux_cp_fr\"' were not computed for check 'rq005_taux_cp_fr'",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 8
+    },
+    {
+      "level": "error",
+      "message": "Metrics '\"rq016_taux_souscripteurs_avec_contrat\"' were not computed for check 'rq016_taux_souscripteurs_avec_contrat'",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 9
+    },
+    {
+      "level": "error",
+      "message": "Metrics '\"taux_erreur_adresse\"' were not computed for check 'taux_erreur_adresse'",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 10
+    },
+    {
+      "level": "info",
+      "message": "Scan summary:",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 11
+    },
+    {
+      "level": "info",
+      "message": "20/27 checks PASSED: ",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 12
+    },
+    {
+      "level": "info",
+      "message": "    crm_client [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 13
+    },
+    {
+      "level": "info",
+      "message": "      RQ-009 | Bronze lot LOT_ABSENT_CONFORMITE | type de personne normalisé autorisé [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 14
+    },
+    {
+      "level": "info",
+      "message": "      RQ-007 | Bronze lot LOT_ABSENT_CONFORMITE | pays présent dans le référentiel [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 15
+    },
+    {
+      "level": "info",
+      "message": "      RQ-015 | Bronze lot LOT_ABSENT_CONFORMITE | prospects normalises avec contrat [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 16
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | client_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 17
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | client_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 18
+    },
+    {
+      "level": "info",
+      "message": "    crm_contrat [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 19
+    },
+    {
+      "level": "info",
+      "message": "      RQ-001 | Bronze lot LOT_ABSENT_CONFORMITE | date_fin postérieure à date_debut [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 20
+    },
+    {
+      "level": "info",
+      "message": "      RQ-011 | Bronze lot LOT_ABSENT_CONFORMITE | type de contrat connu [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 21
+    },
+    {
+      "level": "info",
+      "message": "      RQ-012 | Bronze lot LOT_ABSENT_CONFORMITE | souscripteur existant [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 22
+    },
+    {
+      "level": "info",
+      "message": "      RQ-013 | Bronze lot LOT_ABSENT_CONFORMITE projection NULLIF | assures existants [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 23
+    },
+    {
+      "level": "info",
+      "message": "      RQ-018 | Bronze lot LOT_ABSENT_CONFORMITE | ecart nul entre les trois directions [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 24
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | contrat_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 25
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | contrat_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 26
+    },
+    {
+      "level": "info",
+      "message": "      RQ-010 | Bronze lot LOT_ABSENT_CONFORMITE | durée de garantie renseignée [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 27
+    },
+    {
+      "level": "info",
+      "message": "      RQ-010 | Bronze lot LOT_ABSENT_CONFORMITE | durée de garantie autorisée [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 28
+    },
+    {
+      "level": "info",
+      "message": "    crm_sinistre [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 29
+    },
+    {
+      "level": "info",
+      "message": "      RQ-017 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre dans la période de garantie [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 30
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre_id sans doublon [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 31
+    },
+    {
+      "level": "info",
+      "message": "      RQ-020 | Bronze lot LOT_ABSENT_CONFORMITE | sinistre_id renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 32
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | code postal de sinistre renseigné [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 33
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | code postal de sinistre sur 5 chiffres [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 34
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | adresse de sinistre renseignée [PASSED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 35
+    },
+    {
+      "level": "info",
+      "message": "3/27 checks FAILED: ",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 36
+    },
+    {
+      "level": "info",
+      "message": "    crm_client [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 37
+    },
+    {
+      "level": "info",
+      "message": "      Bronze | client | lot présent [FAILED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 38
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 0",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 39
+    },
+    {
+      "level": "info",
+      "message": "    crm_contrat [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 40
+    },
+    {
+      "level": "info",
+      "message": "      Bronze | contrat | lot présent [FAILED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 41
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 0",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 42
+    },
+    {
+      "level": "info",
+      "message": "    crm_sinistre [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 43
+    },
+    {
+      "level": "info",
+      "message": "      Bronze | sinistre | lot présent [FAILED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 44
+    },
+    {
+      "level": "info",
+      "message": "        check_value: 0",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 45
+    },
+    {
+      "level": "info",
+      "message": "4/27 checks NOT EVALUATED: ",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 46
+    },
+    {
+      "level": "info",
+      "message": "    crm_client [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 47
+    },
+    {
+      "level": "info",
+      "message": "      RQ-003 | Bronze lot LOT_ABSENT_CONFORMITE | taux de telephones renseignes [NOT EVALUATED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 48
+    },
+    {
+      "level": "info",
+      "message": "        check_value: None",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 49
+    },
+    {
+      "level": "info",
+      "message": "      RQ-005 | Bronze lot LOT_ABSENT_CONFORMITE | taux de codes postaux francais valides [NOT EVALUATED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 50
+    },
+    {
+      "level": "info",
+      "message": "        check_value: None",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 51
+    },
+    {
+      "level": "info",
+      "message": "      RQ-016 | Bronze lot LOT_ABSENT_CONFORMITE | taux de souscripteurs avec contrat [NOT EVALUATED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 52
+    },
+    {
+      "level": "info",
+      "message": "        check_value: None",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 53
+    },
+    {
+      "level": "info",
+      "message": "    crm_sinistre [lot] in bronze",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 54
+    },
+    {
+      "level": "info",
+      "message": "      RQ-014 | Bronze lot LOT_ABSENT_CONFORMITE | taux d'adresses non reconnues par la BAN [NOT EVALUATED]",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 55
+    },
+    {
+      "level": "info",
+      "message": "        check_value: None",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 56
+    },
+    {
+      "level": "info",
+      "message": "4 checks not evaluated.",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 57
+    },
+    {
+      "level": "info",
+      "message": "4 errors.",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 58
+    },
+    {
+      "level": "info",
+      "message": "Oops! 4 errors. 3 failures. 0 warnings. 20 pass.",
+      "timestamp": "2026-11-15T14:55:45+00:00",
+      "index": 59
+    }
+  ],
+  "sourceOwner": "soda-core"
+}

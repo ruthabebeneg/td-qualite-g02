@@ -84,3 +84,11 @@ La transaction englobe les trois tables, le journal et RQ-025. Une panne inject�
 - [x] Rôles, catalogue et lineage renseignés.
 
 Réserves métier maintenues : 377 CLI hors publication, 23 consolidations sans confirmation humaine, 1 569 statuts à revoir et 5 190 téléphones absents. Revue Steward avant réintégration ; échéance indiquée dans le dossier du 15/11 : 20/12/2026. Ce sont des conditions de suivi explicites, pas une nouvelle approbation créée par l’audit. Temps historique non mesuré ; aucune restauration pédagogique. US-33 orchestration demeure facultative et non retenue.
+
+## Complément de preuve US-30 et ligne SQL (15/11/2026)
+
+La ligne SQL complète, comparée au SELECT réel sans écriture, est jointe dans `preuves/S5_certificat_ligne_sql.json` : GO, Ruth, 59 bloquantes testées et 59 conformes. Aucune réémission du certificat.
+
+Démonstration pédagogique **synthétique**, distincte des courbes et de l’historique certifiés : `python3 scripts/demo_us30.py --output reports/executions/conformite_prof_20261115/us30_demo.json --svg reports/executions/conformite_prof_20261115/us30_demo.svg`. Le même prédicat SQL RQ-001 est exécuté deux fois sur quatre contrats fictifs SQLite en mémoire : 2 échecs/4 puis 2/4 (50 % → 50 %, plateau). Deux dates de la fixture sont corrigées puis remesurées : 0/4 (100 %, progression). Ce résultat réellement exécuté ne prétend pas documenter une exécution historique du lot nominal. Aucun effet sur les mesures ou le certificat nominaux.
+
+![US30 : démonstration synthétique plateau puis progression](../reports/executions/conformite_prof_20261115/us30_demo.svg)

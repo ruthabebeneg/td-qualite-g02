@@ -1,4 +1,4 @@
-# Les checks actuels ciblent les tables CRM ; les tables Bronze portent le préfixe crm_.
+# *_checks.yml : diagnostic CRM ; bronze_*_checks.yml : Bronze filtré par BATCH_ID.
 data_source crm:
   type: mysql
   host: mariadb
