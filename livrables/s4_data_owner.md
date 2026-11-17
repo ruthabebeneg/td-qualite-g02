@@ -1,12 +1,12 @@
-> **État historique du 08/11/2026.** Le refus ci-dessous concerne la configuration `eed9d...`. Il est conservé comme preuve de gouvernance. La résolution RQ-019 et l’approbation finale du 12/11 concernent une nouvelle configuration : voir `reports/S4_RQ019_resolution.json`, `reports/S5_VALIDATION_DATA_OWNER.json` et `S5_certificat_publication.md`. Les anciennes phrases « pour l’instant » ne décrivent pas l’état final.
+# S4 — Décisions du Data Owner
 
-# S4 — Mon travail de Data Owner
+Groupe G02 · lot `L-2026-10-01` · Data Owner : Ruth.
 
-J'ai examiné le lot `L-2026-10-01` et la configuration `eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61`. Mes décisions figurent dans le [manifeste Data Owner](../reports/S4_VALIDATION_DATA_OWNER.json) et le [journal des décisions](JOURNAL_DECISIONS.md).
+Ce document présente les choix sur le rapprochement des identités, la survie des valeurs et le périmètre Gold. Le [journal des décisions](JOURNAL_DECISIONS.md) conserve les références D-14 à D-27.
 
-## US-25 — Golden record
+## 1. Rapprochement et fiche de référence (US-24/25)
 
-La preuve de traçabilité relie les quatre identifiants de la Société Meunier à la même identité `CLI-033864` :
+La Société Meunier est reliée à l’identité `CLI-033864` à partir de quatre fiches :
 
 | Source | Identifiant |
 |---|---|
@@ -15,46 +15,50 @@ La preuve de traçabilité relie les quatre identifiants de la Société Meunier
 | CRM | `S-2208` |
 | CIF | `K471226` |
 
-J'ai accepté les seuils proposés : fusion automatique à partir de 90, revue de 75 à moins de 90, et pas de fusion sous 75. J'ai aussi accepté les garde-fous sur le type de personne, la date de naissance et les contradictions de pays ou de commune. Le Steward a classé 432 paires : 427 à maintenir séparées et 5 rapprochements à confirmer. Je ne valide pas de fusion sans preuve.
+Le Data Owner a retenu une fusion automatique à partir de 90, une revue de 75 inclus à moins de 90 et un maintien séparé sous 75. La nature de personne doit être connue et identique ; les personnes physiques doivent avoir la même naissance. Les contradictions géographiques et les incompatibilités entre paires empêchent une fusion automatique.
 
-Pour la survie des attributs, j'ai accepté de garder seulement les contacts valides et de mettre `NULL` et le cas en revue s'il n'y en a pas. Pour les noms, la fréquence puis la complétude servent à départager les valeurs. La priorité CRM en cas d'égalité reste provisoire : elle ne prouve pas que la donnée est plus récente.
+Sur les 200 paires évaluées, la précision est de 100 % et le rappel de 95 %. Ce résultat ne garantit pas toutes les identités. Parmi les 432 paires examinées par le Steward, 427 sont recommandées comme distinctes et cinq rapprochements restent à confirmer.
 
-## US-27 — Gold cohérent
+## 2. Choix des valeurs (US-25)
 
-Pour le lot examiné, les tables Gold contiennent 121 073 clients, 139 556 correspondances d'identifiants, 96 159 contrats certifiés et 89 156 sinistres certifiés. Les contrôles ne trouvent pas de liens orphelins dans les populations vérifiées. Cela ne signifie pas que toutes les règles sont conformes.
+Pour les contacts, seuls les candidats valides sont retenus. Sans candidat valide, la valeur reste `NULL` et le dossier part en revue. Pour le nom et le prénom, la fréquence puis la complétude départagent les valeurs. L’adresse, le code postal, la commune et le pays restent un ensemble cohérent.
 
-La vue `v_client_actif` contient 36 165 clients actifs. La définition utilisée exige un contrat en cours au 01/10/2026 et une dernière cotisation depuis le 01/07/2026. Les trois lectures métier donnent le même résultat.
+La priorité CRM dans certains cas d’égalité est provisoire : les sources ne donnent pas un horodatage fiable permettant de choisir systématiquement la valeur la plus récente.
 
-J'ai accepté de garder en `A_REVOIR` les anciens souscripteurs sans contrat certifié : leur absence de contrat dans l'extraction ne suffit pas à dire qu'ils sont prospects. J'ai également demandé une revue des identités en échec RQ-019, sans fusion automatique pour faire baisser le nombre d'anomalies.
+## 3. Adresses et statuts (US-26/27)
 
-## Décisions prises et résultat
+Le rapprochement BAN utilise un seuil de 90 avec concordance du numéro, du code postal et de la commune. En cas d’égalité, aucun candidat n’est choisi automatiquement. Les 7 997 adresses non rapprochées sur 100 000 restent isolées ; la cible de 2 % n’est pas atteinte.
 
-| Proposition | Ma décision |
-|---|---|
-| P-S4-06 — Fusion des identités | Acceptée avec les seuils et garde-fous indiqués ci-dessus. |
-| P-S4-07 — Survie des attributs | Acceptée avec les limites indiquées ci-dessus. |
-| P-S4-08 — Adresses | Seuil de rapprochement accepté, mais la cible n'est pas atteinte : 7 997 adresses sur 100 000 restent non rapprochées. |
-| P-S4-09 — Statuts historiques | Acceptée : conserver les cas incertains en `A_REVOIR`. |
-| P-S4-10 — Acceptation de la configuration | Refusée. |
-| P-S4-11 — Identités résiduelles | Revue acceptée. Pas de fusion automatique supplémentaire. |
-| P-S4-12 — Résultat des contrôles Soda | Acceptée : distinguer le code technique du contrôle de la décision métier. |
+Les anciens souscripteurs sans contrat certifié restent `A_REVOIR`. L’absence de contrat dans l’extraction ne suffit pas à les classer comme prospects.
 
-Je refuse l'acceptation de cette configuration : RQ-019 reste en échec et RQ-016 atteint 96,80 %, sous le seuil de 98 %. Il n'y a donc pas de GO ni d'autorisation de publication pour ce lot.
+## 4. Refus de la configuration S4 du 08/11/2026
 
-## Suite de mes arbitrages
+Le Data Owner a refusé la configuration `eed9d4937fbdd7ef476637ed8bde0f722421a5d7a18804f0a5d04b972e28ba61` : RQ-019 échouait sur quatre populations Gold. RQ-016 atteignait 96,80 %, sous son seuil d’avertissement de 98 %. Le refus de publication reposait sur les échecs bloquants RQ-019 ; l’avertissement RQ-016 restait à suivre.
 
-Pour l'instant, je n'ai pas demandé de travail supplémentaire à Iliana ou Firdaouss. J'ai décidé de ne pas fusionner les identités sans preuve, de garder les adresses non rapprochées en quarantaine et de laisser les statuts incertains en `A_REVOIR`.
+Cette configuration contenait 121 073 identités, 139 556 correspondances, 96 159 contrats et 89 156 sinistres ; la vue des clients actifs comptait 36 165 CLI. Ces volumes décrivent le périmètre examiné à cette date, pas la publication finale.
 
-Les anomalies sont toujours présentes dans la configuration que j'ai refusée. RQ-019 reste en échec et RQ-016 est sous le seuil attendu. Si la configuration change plus tard, les contrôles devront être relancés. Je pourrai alors regarder les nouveaux résultats avant de prendre une autre décision.
+Preuve : [validation S4](../reports/S4_VALIDATION_DATA_OWNER.json), décision D-18.
 
-Le notebook vérifie déjà le fonctionnement des codes Soda PASS, WARN et FAIL. Il n'y a rien à ajouter sur ce point pour le moment.
+## 5. Périmètre accepté le 12/11/2026
 
-Sources : [synthèse Steward](../reports/S4_steward_synthese.json), [couverture des règles](../reports/S4_couverture.json), [rapport d'acceptation](../reports/S4_acceptation.json) et [notebook S4](../notebooks/S4_g02.ipynb).
+La résolution RQ-019 a consolidé 23 cas et isolé 377 CLI, soit 396 identifiants sources, ainsi que 337 contrats et 332 sinistres associés. Le Data Owner a accepté la configuration `59628e7756fc09172c20d08a8cb00aa57defdc1f96f04b9e7aae5780b8156d33` dans D-21.
 
-## Sources
+| Population finale Gold | Volume |
+|---|---:|
+| Clients uniques | 120 673 |
+| Correspondances sources | 139 160 |
+| Contrats certifiés | 95 822 |
+| Sinistres certifiés | 88 824 |
+| Clients actifs selon CD-001 | 36 041 |
 
-- [Gabarit S4](S4_silver_gold.md) — contenu attendu pour la séance.
-- [Manifeste Data Owner](../reports/S4_VALIDATION_DATA_OWNER.json) — décisions et configuration examinée.
-- [Journal des décisions](JOURNAL_DECISIONS.md).
-- [Synthèse d'acceptation](../reports/S4_acceptation.json) et [couverture des règles](../reports/S4_couverture.json).
-- [Traçabilité Meunier](../reports/S4_traces_corrigees.json) et [synthèse Steward](../reports/S4_steward_synthese.json).
+Le certificat `S5-d7c760617b538e9240c8541a4f7` est GO, avec 59 contrôles bloquants conformes sur 59 attendus. Ruth a approuvé le contenu et autorisé sa publication dans D-23/D-27. Les volumes et empreintes Gold/CRM concordent après chargement.
+
+Les 377 CLI restent exclus jusqu’à preuve d’identité. Les 23 consolidations publiées attendent une confirmation humaine. Les 1 569 statuts `A_REVOIR` et les téléphones absents restent suivis ; le GO ne lève pas ces réserves.
+
+## 6. Preuves
+
+- [Résolution des identités](../reports/S4_RQ019_resolution.json).
+- [Traçabilité de Meunier et des deux transformations](../reports/S4_traces_corrigees.json).
+- [Approbation du Data Owner](../reports/S5_VALIDATION_DATA_OWNER.json).
+- [Certificat](../reports/S5_certificat_final.json) et [réconciliation finale](../reports/S5_preuves_finales.json).
+- [Résultats S4](S4_silver_gold.md), [résultats S5](S5_certificat_publication.md) et [dossier de décision](DOSSIER_GO_NOGO.md).

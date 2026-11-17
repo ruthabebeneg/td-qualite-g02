@@ -1,6 +1,6 @@
 # S1 — Bronze et profilage
 
-Groupe G02 · lot `L-2026-10-01` · rôles : `00_equipe.md` · consolidation documentaire du 15/11/2026.
+Groupe G02 · lot `L-2026-10-01` · date de référence : 01/10/2026 · rôles : `00_equipe.md`.
 
 ## 1. Inventaire (US-01)
 
@@ -14,7 +14,7 @@ Groupe G02 · lot `L-2026-10-01` · rôles : `00_equipe.md` · consolidation doc
 | cif | compte | 45 000 | column0 | 0 clé nulle ; 0 doublon |
 | cif | pays | 250 | code_pays | 0 clé nulle ; 0 doublon |
 
-Preuve historique exécutée : `notebooks/S1_g02.ipynb`, `reports/S1_ingenieur_qualite.json`. Total : **385 262 lignes**, sept tables ; aucune des sept clés n’est absente. Ingénieur qualité : Iliana.
+Preuve : `notebooks/S1_g02.ipynb`, `reports/S1_ingenieur_qualite.json`. Total : **385 262 lignes**, sept tables ; aucune des sept clés n’est absente. Ingénieur qualité : Iliana.
 
 ## 2. Bronze et porte B (US-02/03)
 
@@ -86,13 +86,13 @@ Date commune : **01/10/2026**, cotisation depuis le **01/07/2026**, lot filtré 
 | Sinistres | Contrat en cours à la référence | 44 116 | 6 067 |
 | Risques | Contrat en cours et cotisation sur trois mois calendaires | 38 049 | 0 |
 
-Preuve réexécutée : `notebooks/US-09_client_actif.ipynb`, `reports/S1_US09_reference.json`. Les anciens 50 508 / 15 183 / 14 960 relevaient du 31/12/2024 et ne sont plus les chiffres du lot. Trois définitions produisent trois populations ; l’arbitrage D-05/D-06 fixe la définition commune. Cette gouvernance est nécessaire avant de comparer les directions.
+Preuve réexécutée : `notebooks/US-09_client_actif.ipynb`, `reports/S1_US09_reference.json`. Les trois définitions portent sur des populations différentes. Le Data Owner a retenu la définition commune CD-001 dans les décisions D-05/D-06, pour comparer les résultats à date et périmètre identiques.
 
-## 6. Fin et limites
+## 6. Bilan
 
-- [x] Sept tables Bronze et quatre métadonnées, porte B sans écart : preuve S1 historique.
+- [x] Sept tables Bronze et quatre métadonnées, porte B sans écart : preuves S1.
 - [x] Relance et écart volontaire démontrés sur copie : rapport S1.
 - [x] RQ-021/RQ-022 historisées : rapport S1 et historique nominal.
 - [x] US-09 réexécutée sur le lot correct : rapport du 15/11.
 
-Difficulté documentée : conversion décimale, corrigée par lecture exacte. Temps perdu : non mesuré à l’époque, aucune durée inventée. Aucune restauration pédagogique de données déclarée ; reprise du serveur Docker pour la validation du 15/11. Les extensions US-05/08 ne sont pas revendiquées complètes.
+Les décimaux sont lus sans conversion flottante afin de préserver les valeurs, par exemple `184.10`. Les extensions US-05 et US-08 ne font pas partie des travaux terminés. Les temps de traitement ne sont pas disponibles.
