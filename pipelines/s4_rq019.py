@@ -457,7 +457,11 @@ def run(root='/home/jovyan/work',engine=None,tests=None):
     """Point d'entrée unique de la section autonome du notebook S4."""
     from sqlalchemy import create_engine
     from datetime import datetime,timezone
-    engine=engine or create_engine('mysql+pymysql://root:root@mariadb:3306')
+    try:
+        from .runtime_config import database_url
+    except ImportError:
+        from runtime_config import database_url
+    engine=engine or create_engine(database_url())
     root=Path(root)
     labelpath=root/'data/referentiels/paires_etiquetees.csv'
     if hashlib.sha256(labelpath.read_bytes()).hexdigest()!=LABEL_SHA:raise ValueError('Labels modifiés')

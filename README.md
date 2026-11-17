@@ -52,14 +52,19 @@ Le Data Owner valide les conventions et le périmètre, le Data Steward instruit
 
 ## Démarrage
 
-Docker et Docker Compose sont nécessaires. Le dossier de données `data/` doit être présent à la racine ; il n’est pas versionné. Les identifiants de la configuration Docker sont destinés à un environnement local de développement.
+Docker et Docker Compose sont nécessaires. Les secrets locaux sont stockés dans `.venv/.env`, ignoré par Git. Le fichier `.env.example` ne contient aucune valeur secrète. Installer les dépendances de `jupyter/requirements.txt` pour exécuter les scripts sur l’hôte. Sur un volume MariaDB existant, utiliser les identifiants déjà configurés : modifier ce fichier ne change pas les comptes de la base. Le dossier de données `data/` doit être présent à la racine ; il n’est pas versionné. Les identifiants de la configuration Docker sont destinés à un environnement local de développement.
 
 ```bash
-docker compose up -d --build
+mkdir -p .venv
+cp -n .env.example .venv/.env
+# Renseigner les valeurs locales dans .venv/.env avant le démarrage.
+docker compose --env-file .venv/.env up -d --build
 docker exec dq_jupyter python pipelines/load_sources.py
 ```
 
-JupyterLab est accessible sur `http://localhost:8888/lab?token=assurconnect`. L’initialisation des schémas est dans `initdb/` et s’applique lors de la création du volume MariaDB.
+Pour les valeurs contenant un dollar (`$`), utiliser des guillemets simples dans `.venv/.env` afin que Compose et python-dotenv lisent la même valeur littérale. Après toute modification de ce fichier, redémarrer le noyau Jupyter pour recharger la configuration.
+
+JupyterLab est accessible sur `http://localhost:8888/lab` avec le jeton local `JUPYTER_TOKEN`. L’initialisation des schémas est dans `initdb/` et s’applique lors de la création du volume MariaDB.
 
 | Étape | Point d’entrée |
 |---|---|

@@ -2,14 +2,19 @@
 
 Exécuter volontairement avec PyMySQL et PyYAML installés ; aucune découverte CI.
 """
-import json, uuid, re
+import json, uuid, re, sys
 from pathlib import Path
 import pymysql, yaml
 root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root / "pipelines"))
+from runtime_config import database_url
+from sqlalchemy.engine import make_url
+
 out = root / 'reports/executions/conformite_prof_20261115'
 
 def main():
-    c = pymysql.connect(host='127.0.0.1', user='root', password='root', port=3306, autocommit=True)
+    url = make_url(database_url())
+    c = pymysql.connect(host=url.host, user=url.username, password=url.password, port=url.port or 3306, autocommit=True)
     schema = 'test_conformite_' + uuid.uuid4().hex[:12]
     with c.cursor() as q:
         q.execute('SELECT * FROM dq.certificat_qualite WHERE certificat_id = %s', ('S5-d7c760617b538e9240c8541a4f7',))

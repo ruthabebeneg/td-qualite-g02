@@ -28,6 +28,10 @@ def main() -> int:
         except ValueError:
             parser.error("Bronze exige REFERENCE_DATE au format AAAA-MM-JJ.")
 
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pipelines"))
+    from runtime_config import load_local_env
+    load_local_env()
+
     command = ["soda", "scan", "-d", args.data_source, "-c", args.configuration]
     for variable in args.variable:
         command.extend(["-v", variable])

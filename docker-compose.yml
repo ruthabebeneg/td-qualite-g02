@@ -13,7 +13,8 @@ services:
     container_name: dq_mariadb
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_nopad_bin
     environment:
-      MARIADB_ROOT_PASSWORD: root          # développement uniquement
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?MARIADB_ROOT_PASSWORD requis}
+      DQ_READER_PASSWORD: ${DQ_READER_PASSWORD:?DQ_READER_PASSWORD requis}
     ports:
       - "3306:3306"
     volumes:
@@ -37,7 +38,13 @@ services:
       - "8888:8888"
       - "8502:8502"                        # catalogue Streamlit (séance 5)
     environment:
-      JUPYTER_TOKEN: assurconnect          # développement uniquement : http://localhost:8888/lab?token=assurconnect
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:?JUPYTER_TOKEN requis}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?MARIADB_ROOT_PASSWORD requis}
+      DQ_READER_PASSWORD: ${DQ_READER_PASSWORD:?DQ_READER_PASSWORD requis}
+      DQ_DB_HOST: mariadb
+      DQ_DB_PORT: 3306
+      DQ_DB_USER: root
+      DQ_READER_USER: reader
     volumes:
       - jupyter_work:/home/jovyan/work
       - ./notebooks:/home/jovyan/work/notebooks

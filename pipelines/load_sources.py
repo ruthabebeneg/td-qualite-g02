@@ -4,7 +4,6 @@
 Usage (depuis le conteneur Jupyter) :
     python pipelines/load_sources.py                       # charge tout
     python pipelines/load_sources.py --reset               # vide les tables avant chargement
-    python pipelines/load_sources.py --url mysql+pymysql://root:root@mariadb:3306
 
 Convention des CSV : UTF-8, separateur virgule, valeur NULL ecrite \\N, chaine vide = chaine vide (distinction utile pour RQ-003).
 Les tables doivent exister (initdb/00_medallion.sql puis 01_sources.sql). Le script verifie les comptages a l'arrivee.
@@ -12,6 +11,11 @@ Les tables doivent exister (initdb/00_medallion.sql puis 01_sources.sql). Le scr
 import argparse, os, sys
 import pandas as pd
 from sqlalchemy import create_engine, text
+
+try:
+    from .runtime_config import database_url
+except ImportError:
+    from runtime_config import database_url
 
 ROOT = os.environ.get("ASSURCONNECT_DATA", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data"))
 # (fichier relatif, schema, table, colonnes de date)
@@ -34,11 +38,11 @@ def lire(chemin):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--url", default=os.environ.get("DQ_DB_URL", "mysql+pymysql://root:root@mariadb:3306"))
+    ap.add_argument("--url", default=None)
     ap.add_argument("--reset", action="store_true", help="TRUNCATE des tables cibles avant chargement")
     ap.add_argument("--data", default=ROOT)
     a = ap.parse_args()
-    eng = create_engine(a.url)
+    eng = create_engine(a.url or database_url())
     ecarts = 0
     with eng.begin() as cx:
         for rel, schema, table, dates in CIBLES:

@@ -20,6 +20,9 @@ from sqlalchemy import create_engine, text
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "pipelines"))
+from runtime_config import database_url
+
 NOTEBOOKS = (
     "US-09_client_actif", "S2_US10_regles_en_tests",
     "S2_US11_lignes_en_echec", "S2_g02", "S5_data_steward", "S5_g02",
@@ -38,7 +41,7 @@ def main():
         args.notebooks = ["S2_US10_regles_en_tests"]
     date.fromisoformat(args.date_comparaison)
     schema = "s5_test_audit_" + uuid4().hex[:12]
-    engine = create_engine(os.environ.get("DQ_DB_URL", "mysql+pymysql://root:root@mariadb:3306/dq"))
+    engine = create_engine(database_url("dq"))
     variable_names = ("DQ_HISTORY_SCHEMA", "DQ_COMPARISON_DATE", "DQ_WRITE_DATABASE_URL", "DQ_SCHEMA", "DQ_S2_LAYER", "DQ_S2_EXECUTION_REPORT")
     previous = {name: os.environ.get(name) for name in variable_names}
     os.environ["DQ_HISTORY_SCHEMA"] = schema

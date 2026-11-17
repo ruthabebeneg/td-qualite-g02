@@ -98,7 +98,7 @@ class NotebookRegression(unittest.TestCase):
             cx.exec_driver_sql("INSERT INTO bronze.crm_contrat VALUES ('A','2025-01-01','2027-01-01','2026-05-01','L-2026-05-31'),('B','2025-01-01','2027-01-01','2026-02-01','L-2026-05-31'),('OTHER','2025-01-01','2027-01-01','2026-05-01','L-OTHER')")
         transmitted=[]
         event.listen(engine,'before_cursor_execute',lambda cx,cursor,sql,params,context,many:transmitted.append(params))
-        with patch.dict(os.environ, {'DQ_BATCH':'L-2026-05-31','DQ_REFERENCE_DATE':'2026-05-31'}), patch('sqlalchemy.create_engine',return_value=engine):
+        with patch.dict(os.environ, {'DQ_BATCH':'L-2026-05-31','DQ_REFERENCE_DATE':'2026-05-31'}), patch('runtime_config.database_url',return_value='sqlite://'), patch('sqlalchemy.create_engine',return_value=engine):
             scope={}
             exec(compile(''.join(n['cells'][0]['source']),'<us09-init>','exec'),scope)
             exec(compile(''.join(n['cells'][3]['source']),'<us09-calcul>','exec'),scope)

@@ -1,32 +1,32 @@
 # *_checks.yml : diagnostic CRM ; bronze_*_checks.yml : Bronze filtré par BATCH_ID.
 data_source crm:
   type: mysql
-  host: mariadb
-  port: 3306
-  username: root
-  password: root
+  host: ${DQ_DB_HOST}
+  port: ${DQ_DB_PORT}
+  username: ${DQ_DB_USER}
+  password: ${MARIADB_ROOT_PASSWORD}
   database: crm
 
 data_source bronze:
   type: mysql
-  host: mariadb
-  port: 3306
-  username: root
-  password: root
+  host: ${DQ_DB_HOST}
+  port: ${DQ_DB_PORT}
+  username: ${DQ_DB_USER}
+  password: ${MARIADB_ROOT_PASSWORD}
   database: bronze
 
 data_source silver:
   type: mysql
-  host: mariadb
-  port: 3306
-  username: root
-  password: root
+  host: ${DQ_DB_HOST}
+  port: ${DQ_DB_PORT}
+  username: ${DQ_DB_USER}
+  password: ${MARIADB_ROOT_PASSWORD}
   database: silver
 
 data_source gold:
   type: mysql
-  host: mariadb
-  port: 3306
-  username: root
-  password: root
+  host: ${DQ_DB_HOST}
+  port: ${DQ_DB_PORT}
+  username: ${DQ_DB_USER}
+  password: ${MARIADB_ROOT_PASSWORD}
   database: gold
